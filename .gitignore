@@ -2,4 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Htw/Htw/bin/Debug
+/Htw/Htw/bin
+/Htw/Htw/obj
+/Htw/HtwTests/bin
+/Htw/HtwTests/obj
