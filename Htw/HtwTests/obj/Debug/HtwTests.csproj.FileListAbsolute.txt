@@ -1,0 +1,8 @@
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\bin\Debug\HtwTests.dll
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\bin\Debug\HtwTests.pdb
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\bin\Debug\Htw.exe
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\bin\Debug\Htw.pdb
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\obj\Debug\HtwTests.csprojResolveAssemblyReference.cache
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\obj\Debug\HtwTests.dll
+C:\Users\Jordan\Source\Repos\HuntTheWumpus_Reference\Htw\HtwTests\obj\Debug\HtwTests.pdb
