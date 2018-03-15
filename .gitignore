@@ -6,5 +6,7 @@
 /Htw/Htw/obj
 /Htw/HtwTests/bin
 /Htw/HtwTests/obj
+/.vs/**
+/Htw/.vs
 /Htw/.vs/Htw/v15/Server/sqlite3
 /Htw/.vs/Htw/v15
