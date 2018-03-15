@@ -16,3 +16,8 @@
 /.vs/2018_GarWumpusWhite/v15/.suo
 /.vs/VSWorkspaceState.json
 /.vs/ProjectSettings.json
+/Htw/HtwTests/obj
+/.vs/**
+/Htw/.vs
+/Htw/.vs/Htw/v15/Server/sqlite3
+/Htw/.vs/Htw/v15
