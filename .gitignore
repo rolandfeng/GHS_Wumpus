@@ -6,3 +6,13 @@
 /Htw/Htw/obj
 /Htw/HtwTests/bin
 /Htw/HtwTests/obj
+/.vs/slnx.sqlite
+/Htw/.vs/Htw/v15/Server/sqlite3/db.lock
+/Htw/.vs/Htw/v15/Server/sqlite3/storage.ide
+/Htw/.vs/Htw/v15/Server/sqlite3/storage.ide-shm
+/Htw/.vs/Htw/v15/Server/sqlite3/storage.ide-wal
+/samples/ReadAndWriteFiles/obj/Release/ReadAndWriteFiles.csproj.CoreCompileInputs.cache
+/samples/ReadAndWriteFiles/obj/Debug/ReadAndWriteFiles.csproj.CoreCompileInputs.cache
+/.vs/2018_GarWumpusWhite/v15/.suo
+/.vs/VSWorkspaceState.json
+/.vs/ProjectSettings.json
