@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class Player
-    {   
+    class Sound
+    {
     }
 }
