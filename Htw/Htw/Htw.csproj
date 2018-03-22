@@ -50,7 +50,7 @@
     <Compile Include="components\Cave.cs" />
     <Compile Include="components\Trivia.cs" />
     <Compile Include="components\GameControl.cs" />
-    <Compile Include="components\sound.cs" />
+    <Compile Include="components\Sound.cs" />
     <Compile Include="forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +87,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="sounds\SqueekingDoor.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
