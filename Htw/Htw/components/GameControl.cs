@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using wumpus.common.Direction;
 
 namespace wumpus.components {
     class GameControl {
 
-        public void MoveRoom() {
-
+        public GameControl() {
+                    
         }
 
-        public void ShootArrows() {
+        public void moveRoom(wumpus.common.Direction direction) {
+            //wumpus.common.Direction.NORTH_EAST;
+        }
+
+        public void shootArrows() {
         
         }
     }
