@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using wumpus.common.Direction;
+using wumpus.common;
 
 namespace wumpus.components {
     class GameControl {
