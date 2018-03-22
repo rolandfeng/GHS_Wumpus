@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wumpus.components;
 
 namespace wumpus
 {
@@ -20,6 +21,11 @@ namespace wumpus
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void startGameButton_Click(object sender, EventArgs e)
+        {
+            GameControl initialize = new GameControl();
         }
     }
 }
