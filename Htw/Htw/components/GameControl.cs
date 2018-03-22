@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace wumpus.components
-{
-    class GameControl
-    {
+namespace wumpus.components {
+    class GameControl {
+
+        public void MoveRoom() {
+
+        }
+
+        public void ShootArrows() {
+        
+        }
     }
 }
