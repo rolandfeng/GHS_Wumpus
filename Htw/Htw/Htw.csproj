@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="common\Direction.cs" />
     <Compile Include="components\Cave.cs" />
+    <Compile Include="components\HighScores.cs" />
     <Compile Include="components\Trivia.cs" />
     <Compile Include="components\GameControl.cs" />
     <Compile Include="forms\MainMenuForm.cs">
