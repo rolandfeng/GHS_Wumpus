@@ -49,9 +49,10 @@
     <Compile Include="common\Direction.cs" />
     <Compile Include="components\Cave.cs" />
     <Compile Include="components\Map.cs" />
+    <Compile Include="components\HighScores.cs" />
+    <Compile Include="components\Sound.cs" />
     <Compile Include="components\Trivia.cs" />
     <Compile Include="components\GameControl.cs" />
-    <Compile Include="components\sound.cs" />
     <Compile Include="components\Graphics.cs" />
     <Compile Include="forms\MainMenuForm.cs">
       <SubType>Form</SubType>
@@ -60,10 +61,19 @@
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="components\Example.cs" />
+    <Compile Include="forms\TriviaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TriviaForm.Designer.cs">
+      <DependentUpon>TriviaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TriviaForm.resx">
+      <DependentUpon>TriviaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +99,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="sounds\SqueekingDoor.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\TriviaQuestions.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
