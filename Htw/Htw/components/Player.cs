@@ -8,5 +8,12 @@ namespace wumpus.components
 {
     class Player
     {
+        public static int getCurrentLocation();
+
+        public static void changePlayerLocation(int newLocation);
+
+        public static int getArrowCount();
+
+        public static void changeArrowCount(int arrowChange);
     }
 }
