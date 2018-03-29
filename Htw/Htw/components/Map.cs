@@ -8,16 +8,44 @@ namespace wumpus.components
 {
     class Map
     {
-        public static int[] getPitLocations();
+        public Map()
+        {
 
-        public static int[] getBatLocations();
+        }
 
-        public static int getWumpuslocation();
+        public int[] getPitLocations()
+        {
 
-        public static int getPlayerLocation();
+        }
 
-        private static void batMovement(); //bat ai
+        public int[] getBatLocations()
+        {
 
-        private static void wumpusMovement(); //wumpus ai
+        }
+
+        public int getWumpuslocation()
+        {
+
+        }
+
+        public int getPlayerLocation()
+        {
+
+        }
+
+        public void changePlayerLocation()
+        {
+
+        }
+
+        private void batMovement() 
+        {
+
+        }
+
+        private void wumpusMovement()
+        {
+
+        }
     }
 }

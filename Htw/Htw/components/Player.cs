@@ -8,12 +8,49 @@ namespace wumpus.components
 {
     class Player
     {
-        public static int getCurrentLocation();
+        public Player()
+        {
 
-        public static void changePlayerLocation(int newLocation);
+        }
 
-        public static int getArrowCount();
+        public int getArrowCount()
+        {
 
-        public static void changeArrowCount(int arrowChange);
+        }
+
+        public void changeArrowCount() 
+        {
+
+        }
+
+        public int getCoinCount()
+        {
+
+        }
+
+        public void changeCoinCount()
+        {
+
+        }
+
+        public int getPlayerTurn()
+        {
+
+        }
+
+        public void changePlayerTurn()
+        {
+
+        }
+
+        public int getPlayerScore()
+        {
+
+        }
+        
+        public void changePlayerScore()
+        {
+
+        }
     }
 }

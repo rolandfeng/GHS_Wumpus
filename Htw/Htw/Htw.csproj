@@ -49,6 +49,7 @@
     <Compile Include="common\Direction.cs" />
     <Compile Include="components\Cave.cs" />
     <Compile Include="components\Map.cs" />
+    <Compile Include="components\Player.cs" />
     <Compile Include="components\Trivia.cs" />
     <Compile Include="components\GameControl.cs" />
     <Compile Include="components\sound.cs" />
