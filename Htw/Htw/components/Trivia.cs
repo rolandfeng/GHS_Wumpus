@@ -14,14 +14,11 @@ namespace wumpus.components
             TriviaForm TriviaForm = new TriviaForm();
             TriviaForm.Show();
         }
-        public static Boolean ask (int questions, int answer)
+        public static Boolean ask (int questionsAsk, int answerCorrect)
         {
-            return false;
-        }
-
-        private static void readTrivia ()
-        {
+            //read triviaQuestions file and print out question on form
             
+            return false;
         }
 
     }
