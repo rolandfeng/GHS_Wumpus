@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wumpus.forms;
 
 namespace wumpus
 {
@@ -20,6 +21,14 @@ namespace wumpus
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void startGameButton_Click(object sender, EventArgs e)
+        {
+            MainGame mainGame = new MainGame();
+            mainGame.Show();
+
+
         }
     }
 }

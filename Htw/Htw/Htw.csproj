@@ -53,6 +53,12 @@
     <Compile Include="components\GameControl.cs" />
     <Compile Include="components\sound.cs" />
     <Compile Include="components\Graphics.cs" />
+    <Compile Include="forms\MainGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MainGame.Designer.cs">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="components\Example.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\MainGame.resx">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
