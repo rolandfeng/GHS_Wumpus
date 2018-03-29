@@ -9,7 +9,13 @@ namespace wumpus.components {
     class GameControl {
 
         public GameControl() {
-                    
+            Cave newCave = new Cave();
+            Graphics newGraphics = new Graphics();
+            Map newMap = new Map();
+            Sound newSound = new Sound();
+            Trivia newTrivia = new Trivia();
+            //HighScores newHighScores = new HighScores();
+            //Player newPlayer = new Player();
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
