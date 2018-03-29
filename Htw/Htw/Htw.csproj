@@ -50,10 +50,10 @@
     <Compile Include="components\Cave.cs" />
     <Compile Include="components\Map.cs" />
     <Compile Include="components\HighScores.cs" />
+    <Compile Include="components\Sound.cs" />
     <Compile Include="components\Trivia.cs" />
     <Compile Include="components\GameControl.cs" />
     <Compile Include="components\Graphics.cs" />
-    <Compile Include="components\Sound.cs" />
     <Compile Include="forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,16 +8,16 @@ namespace wumpus.components
 {
     class Map
     {
-        public static int[] getPitLocations();
+        public static int[] getPitLocations() { return null; }
 
-        public static int[] getBatLocations();
+        public static int[] getBatLocations() { return null; }
 
-        public static int getWumpuslocation();
+        public static int getWumpuslocation() { return 0; }
 
-        public static int getPlayerLocation();
+        public static int getPlayerLocation() { return 0; }
 
-        private static void batMovement(); //bat ai
+        private static void batMovement() { } //bat ai
 
-        private static void wumpusMovement(); //wumpus ai
+        private static void wumpusMovement() { } //wumpus ai
     }
 }
