@@ -8,11 +8,20 @@ namespace wumpus.components
 {
     class HighScores
     {
-        
-        public int StoreHighScore(int numberOfTurns, int goldCoins, int arrows) 
+        private int highScore;
+        private String playerName;
+
+        public HighScores(int highScore, String playerName)
         {
-            return 0;
+            this.playerName = playerName;
+            this.highScore = highScore;
         }
+
+        public void StoreHighScore(int highScore) 
+        {
+            // load resource file, insert the high score into file, save file 
+        }
+
         public void DisplayHighScores()
         {
             
