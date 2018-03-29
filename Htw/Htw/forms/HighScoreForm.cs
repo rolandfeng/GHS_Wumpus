@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace wumpus.forms
 {
-    public partial class TriviaForm : Form
+    public partial class Form1 : Form
     {
-        public TriviaForm()
+        public Form1()
         {
             InitializeComponent();
         }
