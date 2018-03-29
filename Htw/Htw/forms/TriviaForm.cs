@@ -16,10 +16,5 @@ namespace wumpus.forms
         {
             InitializeComponent();
         }
-
-        private void TriviaForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
