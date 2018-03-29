@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using wumpus.components;
+using wumpus.forms;
 
 namespace wumpus
 {
@@ -26,6 +27,12 @@ namespace wumpus
         private void startGameButton_Click(object sender, EventArgs e)
         {
             GameControl initialize = new GameControl();
+        }
+
+        private void TriviaButton_Click(object sender, EventArgs e)
+        {
+            TriviaForm testTrivia = new TriviaForm();
+            testTrivia.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace wumpus.forms
 {
-    partial class TriviaForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "TriviaForm";
+            this.Text = "Form1";
         }
 
         #endregion
