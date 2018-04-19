@@ -48,8 +48,23 @@
   <ItemGroup>
     <Compile Include="common\Direction.cs" />
     <Compile Include="components\Cave.cs" />
+    <Compile Include="components\Map.cs" />
+    <Compile Include="components\Player.cs" />
     <Compile Include="components\Trivia.cs" />
     <Compile Include="components\GameControl.cs" />
+    <Compile Include="components\Graphics.cs" />
+    <Compile Include="forms\HighScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\HighScoreForm.Designer.cs">
+      <DependentUpon>HighScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MainGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MainGame.Designer.cs">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,10 +72,28 @@
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="components\Example.cs" />
+    <Compile Include="Resource\HighScores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HighScores.resx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TriviaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TriviaForm.Designer.cs">
+      <DependentUpon>TriviaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\MainGame.resx">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\HighScores.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HighScores.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +119,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="sounds\SqueekingDoor.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\TriviaQuestions.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,0 +1,9 @@
+H:\wumpus\samples\ReadAndWriteFiles\bin\Debug\ReadAndWriteFiles.exe.config
+H:\wumpus\samples\ReadAndWriteFiles\bin\Debug\ReadAndWriteFiles.exe
+H:\wumpus\samples\ReadAndWriteFiles\bin\Debug\ReadAndWriteFiles.pdb
+H:\wumpus\samples\ReadAndWriteFiles\obj\Debug\ReadAndWriteFiles.FileHelperTester.resources
+H:\wumpus\samples\ReadAndWriteFiles\obj\Debug\ReadAndWriteFiles.Properties.Resources.resources
+H:\wumpus\samples\ReadAndWriteFiles\obj\Debug\ReadAndWriteFiles.csproj.GenerateResource.Cache
+H:\wumpus\samples\ReadAndWriteFiles\obj\Debug\ReadAndWriteFiles.csproj.CoreCompileInputs.cache
+H:\wumpus\samples\ReadAndWriteFiles\obj\Debug\ReadAndWriteFiles.exe
+H:\wumpus\samples\ReadAndWriteFiles\obj\Debug\ReadAndWriteFiles.pdb
