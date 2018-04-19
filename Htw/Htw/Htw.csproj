@@ -59,6 +59,12 @@
     <Compile Include="forms\HighScoreForm.Designer.cs">
       <DependentUpon>HighScoreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\MainGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MainGame.Designer.cs">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,15 +85,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\MainGame.resx">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\HighScores.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HighScores.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\TriviaForm.resx">
-      <DependentUpon>TriviaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
