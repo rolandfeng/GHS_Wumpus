@@ -67,11 +67,6 @@
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="components\Example.cs" />
-    <Compile Include="Resource\HighScores.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HighScores.resx</DependentUpon>
-    </Compile>
     <Compile Include="forms\TriviaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,10 +77,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resource\HighScores.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>HighScores.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\TriviaForm.resx">
       <DependentUpon>TriviaForm.cs</DependentUpon>
@@ -115,6 +106,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resource\HighScores.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>
