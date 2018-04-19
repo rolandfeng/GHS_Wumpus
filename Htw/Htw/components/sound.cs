@@ -14,7 +14,7 @@ namespace wumpus.components
             //load the file
             //play the sound
         }
-        public enum Sounds{DoorOpen}
+        public enum Sounds { DoorOpen }
 
         public void playSound(Sounds sound)
         {
@@ -25,5 +25,5 @@ namespace wumpus.components
                     break;
             }
         }
-    }     
+    }
 }
