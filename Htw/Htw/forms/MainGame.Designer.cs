@@ -44,6 +44,7 @@
             this.northButton.TabIndex = 0;
             this.northButton.Text = "North";
             this.northButton.UseVisualStyleBackColor = true;
+            this.northButton.Click += new System.EventHandler(this.northButton_Click);
             // 
             // northEastButton
             // 

@@ -16,5 +16,10 @@ namespace wumpus.forms
         {
             InitializeComponent();
         }
+
+        private void northButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -95,9 +95,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HighScores.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\TriviaForm.resx">
-      <DependentUpon>TriviaForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -123,6 +120,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>
