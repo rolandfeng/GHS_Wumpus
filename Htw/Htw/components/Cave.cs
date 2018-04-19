@@ -7,7 +7,6 @@ public class Cave
     private int[][] cave = new int[5][];
     private String caveName;
 
-    // Creates a 2D array by reading in from the given file
     public Cave(String caveName)
     {
         this.caveName = caveName;
@@ -23,8 +22,6 @@ public class Cave
         }
     }
 
-    // Calls get connected room for all directions, adds all the room numbers
-    // to an array and returns that array
     public int[] getAllConnections(int currentRoom)
     {
         int[] connections = new int[6];
