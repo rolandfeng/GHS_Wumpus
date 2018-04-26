@@ -16,36 +16,43 @@ namespace wumpus.forms
         public MainGame()
         {
             InitializeComponent();
+            GameControl gameControl = new GameControl();
         }
 
         private Direction northButton_Click(object sender, EventArgs e)
         {
-            return Direction.NORTH;
+            gameControl.moveRoom(Direction.NORTH);
+            //return Direction.NORTH;
         }
 
         private Direction northEastButton_Click(object sender, EventArgs e)
         {
-            return Direction.NORTH_EAST;
+            gameControl.moveRoom(Direction.NORTH_EAST);
+            //return Direction.NORTH_EAST;
         }
 
         private Direction southEastButton_Click(object sender, EventArgs e)
         {
-            return Direction.SOUTH_EAST;
+            gameControl.moveRoom(Direction.SOUTH_EAST);
+            //return Direction.SOUTH_EAST;
         }
 
         private Direction southButton_Click(object sender, EventArgs e)
         {
-            return Direction.SOUTH;
+            gameControl.moveRoom(Direction.SOUTH);
+            //return Direction.SOUTH;
         }
 
         private Direction southWestButton_Click(object sender, EventArgs e)
         {
-            return Direction.SOUTH_WEST;
+            gameControl.moveRoom(Direction.SOUTH_WEST);
+            //return Direction.SOUTH_WEST;
         }
 
         private Direction northWestButton_Click(object sender, EventArgs e)
         {
-            return Direction.NORTH_WEST;
+            gameControl.moveRoom(Direction.NORTH_WEST);
+            //return Direction.NORTH_WEST;
         }
     }
 }

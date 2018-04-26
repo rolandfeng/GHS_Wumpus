@@ -12,10 +12,11 @@ namespace wumpus.components
         public Graphics()
         {
             GameControl gameControl = new GameControl();
+            MainGame() mainGame = new MainGame();
         }
         public void moveRoom()
         {
-            //if button returns north, pass north direction to game control
+            if (MainGame.northButton_Click() = )
         }
 
 
