@@ -24,7 +24,7 @@ public class Cave
     }
 
     // Calls get connected room for all directions, adds all the room numbers
-    // to an array and returns that array
+    // to an array and returns that array. 0 will be returned for walls
     public int[] getAllConnections(int currentRoom)
     {
         int[] connections = new int[6];
@@ -37,11 +37,14 @@ public class Cave
         return connections;
     }
 
+    // Finds and returns the room adjacent to the given room based on the given direction
+    // Returns 0 if a wall
     public int getConnectedRoom(int currentRoom, Direction direction)
     {
-        int roomRow = findRoomLocation(currentRoom)[0];
-        int roomColumn = findRoomLocation(currentRoom)[1];
-
+        int[] roomLoc = findRoomLocation(currentRoom);
+        int roomRow = roomLoc[0];
+        int roomColumn = roomLoc[1];
+        
         switch (direction)
         {
             case Direction.NORTH:
@@ -51,36 +54,36 @@ public class Cave
 
             case Direction.NORTH_EAST:
                 if (roomRow == 0)
-                    roomRow = 4;
+                    roomRow = 5;
                 if (roomColumn == 5)
-                    roomColumn = 0;
-                return cave[roomRow][roomColumn];
+                    roomColumn = -1;
+                return cave[roomRow - 1][roomColumn + 1];
 
             case Direction.NORTH_WEST:
                 if (roomRow == 0)
-                    roomRow = 4;
+                    roomRow = 5;
                 if (roomColumn == 0)
-                    roomColumn = 5;
-                return cave[roomRow][roomColumn];
+                    roomColumn = 6;
+                return cave[roomRow - 1][roomColumn - 1];
 
             case Direction.SOUTH:
-                if (roomRow == 4)
+                if (roomRow == cave.Length - 1)
                     roomRow = 0;
                 return cave[roomRow][roomColumn];
 
             case Direction.SOUTH_EAST:
-                if (roomRow == 4)
-                    roomRow = 0;
+                if (roomRow == cave.Length - 1)
+                    roomRow = -1;
                 if (roomColumn == 5)
-                    roomColumn = 0;
-                return cave[roomRow][roomColumn];
+                    roomColumn = -1;
+                return cave[roomRow + 1][roomColumn + 1];
 
             case Direction.SOUTH_WEST:
-                if (roomRow == 4)
-                    roomRow = 0;
+                if (roomRow == cave.Length - 1)
+                    roomRow = -1;
                 if (roomColumn == 0)
-                    roomColumn = 5;
-                return cave[roomRow][roomColumn];
+                    roomColumn = 6;
+                return cave[roomRow + 1][roomColumn - 1];
         }
 
         return 0;
@@ -91,6 +94,7 @@ public class Cave
 
     }
 
+    // Searches cave for the given room and returns array of row and column location
     private int[] findRoomLocation(int roomNum)
     {
         int[] roomLocation = new int[2];
