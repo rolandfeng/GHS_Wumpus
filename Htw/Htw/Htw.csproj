@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\creaking-door-1.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
