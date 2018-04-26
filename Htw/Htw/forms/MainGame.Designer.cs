@@ -54,6 +54,7 @@
             this.northEastButton.TabIndex = 1;
             this.northEastButton.Text = "Northeast";
             this.northEastButton.UseVisualStyleBackColor = true;
+            this.northEastButton.Click += new System.EventHandler(this.northEastButton_Click);
             // 
             // southWestButton
             // 
@@ -63,6 +64,7 @@
             this.southWestButton.TabIndex = 2;
             this.southWestButton.Text = "Southwest";
             this.southWestButton.UseVisualStyleBackColor = true;
+            this.southWestButton.Click += new System.EventHandler(this.southWestButton_Click);
             // 
             // northWestButton
             // 
@@ -72,6 +74,7 @@
             this.northWestButton.TabIndex = 3;
             this.northWestButton.Text = "Northwest";
             this.northWestButton.UseVisualStyleBackColor = true;
+            this.northWestButton.Click += new System.EventHandler(this.northWestButton_Click);
             // 
             // southButton
             // 
@@ -81,6 +84,7 @@
             this.southButton.TabIndex = 4;
             this.southButton.Text = "South";
             this.southButton.UseVisualStyleBackColor = true;
+            this.southButton.Click += new System.EventHandler(this.southButton_Click);
             // 
             // southEastButton
             // 
@@ -90,6 +94,7 @@
             this.southEastButton.TabIndex = 5;
             this.southEastButton.Text = "Southeast";
             this.southEastButton.UseVisualStyleBackColor = true;
+            this.southEastButton.Click += new System.EventHandler(this.southEastButton_Click);
             // 
             // MainGame
             // 

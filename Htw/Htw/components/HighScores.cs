@@ -27,7 +27,8 @@ namespace wumpus.components
             string playerInfo = highScore + "; " + playerName + "; " + date.ToShortDateString();
             System.IO.File.AppendAllText(@"H:\APCS\WumpusWhite\Htw\Htw\Resource\HighScores.txt", playerInfo);
             string[] lines = File.ReadAllLines(@"H:\APCS\WumpusWhite\Htw\Htw\Resource\HighScores.txt");
-            foreach (string line in lines){
+            foreach (string line in lines)
+            {
                 HighScores temp = new HighScores(highScore playerName, date);
 
                 string[] segments = line.Split(';');
@@ -37,7 +38,7 @@ namespace wumpus.components
 
         public void DisplayHighScores()
         {
-            
+
         }
     }
 }
