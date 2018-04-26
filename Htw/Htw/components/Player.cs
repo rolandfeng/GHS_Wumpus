@@ -56,9 +56,9 @@ namespace wumpus.components
             return score;
         }
 
-        public void changeScore(int change) //do i change the score myself depending on game conditions or is that roland
+        public void updateScore() //should we do it in real time or at the end. If at end, just make this method return score
         {
-            score += change;
+            score = 100 - turn + coinCount + (10 * arrowCount);
         }
     }
 }
