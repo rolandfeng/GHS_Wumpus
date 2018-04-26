@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using wumpus.components;
 using wumpus.forms;
-using wumpus.forms;
 
 namespace wumpus
 {
