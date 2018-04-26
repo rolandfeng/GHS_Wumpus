@@ -8,5 +8,13 @@ namespace wumpus.components
 {
     class Graphics
     {
+
+        public Graphics()
+        {
+
+        }
+
+
+
     }
 }

@@ -25,11 +25,13 @@ namespace wumpus.components
             foreach(string line in lines)
             {
                 string[] segments = line.Split(';');
+
             }
             for(int i = 0; i < questionsAsk; i++)
             {
                 Console.WriteLine(lines[i]);
             }
+
             
             return false;
         }
