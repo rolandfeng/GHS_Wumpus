@@ -91,6 +91,9 @@
     <EmbeddedResource Include="forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\TriviaForm.resx">
+      <DependentUpon>TriviaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resource\HighScores.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HighScores.Designer.cs</LastGenOutput>

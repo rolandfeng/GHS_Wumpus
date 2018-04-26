@@ -23,42 +23,42 @@ namespace wumpus.components
 
         public int getArrowCount()
         {
-            return 0;
+            return arrowCount;
         }
 
         public int getCoinCount()
         {
-            return 0;
+            return arrowCount;
         }
 
-        public void changeArrowCount()
+        public void changeArrowCount(int change)
         {
-
+            arrowCount += change;
         }
 
-        public void changeCoinCount()
+        public void changeCoinCount(int change)
         {
-
+            coinCount += change;
         }
 
         public int getTurn()
         {
-            return 0;
+            return turn;
         }
 
-        public void changeTurn()
+        public void changeTurn(int change)
         {
-
+            turn += change;
         }
 
         public int getScore()
         {
-            return 0;
+            return score;
         }
 
-        public void changeScore()
+        public void changeScore(int change) //do i change the score myself depending on game conditions or is that roland
         {
-
+            score += change;
         }
     }
 }
