@@ -15,11 +15,13 @@ public class Cave
 
         for(int row = 0; row < lines.Length; row++)
         {
+            
             String line = lines[row];
-            string[] segments = line.Split(';');
+            string[] segments = line.Split(' ');
+            cave[row] = new int[segments.Length];
             for (int column = 0; column < segments.Length; column++)
             {
-                cave[row][column] = Int32.Parse(segments[1]);
+                cave[row][column] = Int32.Parse(segments[column]);
             }
        
         }
