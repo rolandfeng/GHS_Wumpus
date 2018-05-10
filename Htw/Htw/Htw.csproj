@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="common\Direction.cs" />
     <Compile Include="components\Cave.cs" />
+    <Compile Include="components\HighScores.cs" />
     <Compile Include="components\Map.cs" />
     <Compile Include="components\Player.cs" />
     <Compile Include="components\Sound.cs" />
@@ -73,11 +74,6 @@
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="components\Example.cs" />
-    <Compile Include="Resource\HighScores.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HighScores.resx</DependentUpon>
-    </Compile>
     <Compile Include="forms\TriviaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,10 +90,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\TriviaForm.resx">
       <DependentUpon>TriviaForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resource\HighScores.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>HighScores.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
