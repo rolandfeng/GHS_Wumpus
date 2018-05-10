@@ -36,8 +36,8 @@ namespace wumpus
 
         private void TriviaButton_Click(object sender, EventArgs e)
         {
-            TriviaForm testTrivia = new TriviaForm();
-            testTrivia.Show();
+            Trivia testTrivia = new Trivia();
+    
         }
     }
 }

@@ -68,5 +68,16 @@ namespace wumpus.Properties {
                 return ResourceManager.GetStream("creakingdoor", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What was the original flavor of the filling in Twinkies?; Vanilla; Strawberry; Chocolate; Banana
+        ///What is the favorite food of the Teenage Mutant Ninja Turtles?; Cheese; Pizza; Turtle Food; Candy
+        ///Who is the all time leading point scorer in NBA history?; Kareem Abdul-Jabbar; Michael Jordan; Kobe Byrant; Karl Malone.
+        /// </summary>
+        internal static string TriviaQuestions {
+            get {
+                return ResourceManager.GetString("TriviaQuestions", resourceCulture);
+            }
+        }
     }
 }
