@@ -37,6 +37,11 @@ public class Cave
         return connections;
     }
 
+    public Boolean isAdjacent(int room1, int room2)
+    {
+        return false;
+    }
+
     // Finds and returns the room adjacent to the given room based on the given direction
     // Returns 0 if a wall
     public int getConnectedRoom(int currentRoom, Direction direction)
