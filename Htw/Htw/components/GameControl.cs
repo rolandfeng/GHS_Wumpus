@@ -16,7 +16,7 @@ namespace wumpus.components {
         private Player player;
 
         public GameControl() {
-            cave = new Cave("Resource/StandardCave.txt");
+            cave = new Cave("../../Resource/StandardCave.txt");
             map = new Map();
             sound = new Sound();
             trivia = new Trivia();
