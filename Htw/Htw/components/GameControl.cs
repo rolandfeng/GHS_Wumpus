@@ -16,7 +16,7 @@ namespace wumpus.components {
         private Player player;
 
         public GameControl() {
-            cave = new Cave();
+            cave = new Cave("Resource/StandardCave.txt");
             graphics = new Graphics();
             map = new Map();
             sound = new Sound();
@@ -29,14 +29,14 @@ namespace wumpus.components {
             int currentLoc = player.getCurrentLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = new bool[6];
-            int wumpusLoc = map.getWumpus();   
+            int wumpusLoc = map.getWumpusLocation();   
             if (newLoc == wumpusLoc) {
                 hazards[0] = true;
             } else if (cave.isAdjacent(newLoc, wumpusLoc)) {
                 hazards[1] = true;
             }
-            int[] batsLoc = map.getBats();
-            int[] pitsLoc = map.getPits();    
+            int[] batsLoc = map.getBatLocations();
+            int[] pitsLoc = map.getPitLocations();    
             if (newLoc == batsLoc[0] || newLoc == batsLoc[1]) {
                 hazards[2] = true;
             } else if (newLoc == pitsLoc[0] || newLoc == pitsLoc[1]) {

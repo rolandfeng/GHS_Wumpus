@@ -76,7 +76,7 @@ namespace wumpus.components
 
         public Boolean fireArrow(int destination)
         {
-            if (destination == wumpusLocation())
+            if (destination == wumpusLocation)
             {
                 return true;
             }
