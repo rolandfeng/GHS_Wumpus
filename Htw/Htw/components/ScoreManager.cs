@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class ScoreManager : IComparable<ScoreManager>
+    class ScoreManager //: IComparable<ScoreManager>
     {
         private List<HighScore> HighScoresList;
 
