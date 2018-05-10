@@ -59,7 +59,7 @@ namespace wumpus.components
             return batLocations;
         }
 
-        public int getWumpuslocation()
+        public int getWumpusLocation()
         {
             return wumpusLocation;
         }
@@ -72,6 +72,19 @@ namespace wumpus.components
         public void changePlayerLocation(int newLoc)
         {
             playerLocation = newLoc;
+        }
+
+        public Boolean fireArrow(int destination)
+        {
+            if (destination == wumpusLocation())
+            {
+                return true;
+            }
+            else
+            {
+                wumpusMovement();
+                return false;
+            }
         }
 
         private void batMovement() //only changes location
