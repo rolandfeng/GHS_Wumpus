@@ -17,6 +17,8 @@ namespace wumpus
         public MainMenuForm()
         {
             InitializeComponent();
+            Sound test = new Sound();
+            test.playSound(Sound.Sounds.DoorClose);
         }
 
         private void exitButton_Click(object sender, EventArgs e)

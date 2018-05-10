@@ -63,9 +63,27 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream DoorClose {
+            get {
+                return ResourceManager.GetStream("DoorClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream DoorOpen {
             get {
-                return ResourceManager.GetStream("creakingdoor", resourceCulture);
+                return ResourceManager.GetStream("DoorOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream OhMyGod {
+            get {
+                return ResourceManager.GetStream("OhMyGod", resourceCulture);
             }
         }
     }

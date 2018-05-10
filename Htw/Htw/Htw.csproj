@@ -118,6 +118,8 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\DoorOpen.wav" />
+    <None Include="Resources\DoorClose.wav" />
+    <None Include="Resources\OhMyGod.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
