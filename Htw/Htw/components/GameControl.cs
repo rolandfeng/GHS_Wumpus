@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using wumpus.common;
 
 namespace wumpus.components {
-    class GameControl {
+    public class GameControl {
         private Cave cave;
         private Graphics graphics;
         private Map map;
@@ -17,13 +17,14 @@ namespace wumpus.components {
 
         public GameControl() {
             cave = new Cave("Resource/StandardCave.txt");
-            graphics = new Graphics();
+
             map = new Map();
             sound = new Sound();
             trivia = new Trivia();
             highscores = new ScoreManager();
             player = new Player();
-        }
+            graphics = new Graphics(this, player, map, cave);
+      }
 
         public void moveRoom(wumpus.common.Direction direction) {
             int currentLoc = player.getCurrentLocation();
