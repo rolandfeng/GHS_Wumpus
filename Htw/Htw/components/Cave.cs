@@ -11,15 +11,17 @@ public class Cave
     public Cave(String caveName)
     {
         this.caveName = caveName;
-        StreamReader s = new StreamReader(caveName);
-        String line = s.ReadLine();
-        for (int row = 0; line != null; row++)
+        string[] lines = File.ReadAllLines(caveName);
+
+        for(int row = 0; row < lines.Length; row++)
         {
-            StreamReader lineReader = new StreamReader(line);
-            for (int column = 0; column < line.Length; column++)
+            String line = lines[row];
+            string[] segments = line.Split(';');
+            for (int column = 0; column < segments.Length; column++)
             {
-                cave[row][column] = lineReader.Read();
+                cave[row][column] = Int32.Parse(segments[1]);
             }
+       
         }
     }
 
@@ -56,47 +58,53 @@ public class Cave
     {
         int[] roomLoc = findRoomLocation(currentRoom);
         int roomRow = roomLoc[0];
-        int roomColumn = roomLoc[1];
-        
+        int roomColumn = roomLoc[1] - numZerosBeforeIndex(roomLoc[0], roomLoc[1]);
+
         switch (direction)
         {
             case Direction.NORTH:
                 if (roomRow == 0)
-                    roomRow = 4;
-                return cave[roomRow][roomColumn];
+                    roomRow = 5;
+                return cave[roomRow - 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn)];
 
             case Direction.NORTH_EAST:
                 if (roomRow == 0)
                     roomRow = 5;
                 if (roomColumn == 5)
                     roomColumn = -1;
-                return cave[roomRow - 1][roomColumn + 1];
+                return cave[roomRow - 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) + 1];
 
             case Direction.NORTH_WEST:
                 if (roomRow == 0)
                     roomRow = 5;
                 if (roomColumn == 0)
                     roomColumn = 6;
-                return cave[roomRow - 1][roomColumn - 1];
+                return cave[roomRow - 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) - 1];
 
             case Direction.SOUTH:
                 if (roomRow == cave.Length - 1)
-                    roomRow = 0;
-                return cave[roomRow][roomColumn];
+                    roomRow = -1;
+                return cave[roomRow + 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn)];
 
             case Direction.SOUTH_EAST:
                 if (roomRow == cave.Length - 1)
                     roomRow = -1;
                 if (roomColumn == 5)
                     roomColumn = -1;
-                return cave[roomRow + 1][roomColumn + 1];
+                return cave[roomRow + 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) + 1];
 
             case Direction.SOUTH_WEST:
                 if (roomRow == cave.Length - 1)
                     roomRow = -1;
                 if (roomColumn == 0)
                     roomColumn = 6;
-                return cave[roomRow + 1][roomColumn - 1];
+                return cave[roomRow + 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) - 1];
         }
 
         return 0;
@@ -123,5 +131,18 @@ public class Cave
             }
         }
         return roomLocation;
+    }
+
+    private int numZerosBeforeIndex(int row, int column)
+    {
+        int count = 0;
+        for (int i = 0; i < column; i++)
+        {
+            if (cave[row][i] > 0)
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
