@@ -88,7 +88,7 @@ namespace wumpus.components
     
         public void DisplayHighScores()
         {
-            Form1 highScoresForm = new Form1();
+            HighScoresForm highScoresForm = new HighScoresForm();
             highScoresForm.setHighScoresList(highScoresList);
             highScoresForm.update();
         }
