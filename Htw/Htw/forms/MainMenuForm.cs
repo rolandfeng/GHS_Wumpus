@@ -28,18 +28,15 @@ namespace wumpus
 
         private void startGameButton_Click(object sender, EventArgs e)
         {
-            GameControl initialize = new GameControl();
-            MainGame mainGame = new MainGame();
-            mainGame.Show();
-
-
+            GameControl gameControl = new GameControl();
+            gameControl.startGame();
         }
   
 
         private void TriviaButton_Click(object sender, EventArgs e)
         {
-            TriviaForm testTrivia = new TriviaForm();
-            testTrivia.Show();
+            Trivia testTrivia = new Trivia();
+    
         }
     }
 }

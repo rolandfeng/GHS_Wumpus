@@ -32,7 +32,7 @@ namespace wumpus.components
             switch (sound)
             {
                 case Sounds.DoorOpen:
-                    playSoundFromFile(Properties.Resources.DoorOpen);
+                   // playSoundFromFile(Properties.Resources.DoorOpen);
                     break;
                 case Sounds.DoorClose:
                     playSoundFromFile(Properties.Resources.DoorClose);
