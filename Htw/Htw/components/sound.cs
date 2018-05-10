@@ -28,7 +28,7 @@ namespace wumpus.components
             switch (sound)
             {
                 case Sounds.DoorOpen:
-                    playSoundFromFile(Properties.Resources.creakingdoor);
+                    playSoundFromFile(Properties.Resources.DoorOpen);
                     break;
             }
         }
