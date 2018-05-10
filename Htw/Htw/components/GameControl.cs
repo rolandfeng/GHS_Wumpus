@@ -17,12 +17,12 @@ namespace wumpus.components {
 
         public GameControl() {
             cave = new Cave("Resource/StandardCave.txt");
-            graphics = new Graphics();
             map = new Map();
             sound = new Sound();
             trivia = new Trivia();
             highscores = new ScoreManager();
             player = new Player();
+            graphics = new Graphics(this, player, map, cave);
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
@@ -55,5 +55,9 @@ namespace wumpus.components {
         
         }
 
+        public void startGame()
+        {
+            graphics.startGame();
+        }
     }
 }
