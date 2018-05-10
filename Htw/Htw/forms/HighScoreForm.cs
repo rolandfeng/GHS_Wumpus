@@ -11,10 +11,10 @@ using wumpus.components;
 
 namespace wumpus.forms
 {
-    public partial class Form1 : Form
+    public partial class HighScoresForm: Form
     {
         List<HighScore> highScoresList;
-        public Form1()
+        public HighScoresForm()
         {
             InitializeComponent();
         }
@@ -30,6 +30,11 @@ namespace wumpus.forms
         }
 
         private void HighScore1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
