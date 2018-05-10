@@ -37,8 +37,16 @@ public class Cave
         return connections;
     }
 
+    // Finds all rooms connected to first room, if second room is one of them will return
+    // true. Returns false if not adjacent
     public Boolean isAdjacent(int room1, int room2)
     {
+        int[] connections = getAllConnections(room1);
+        for (int i = 0; i < connections.Length; i++)
+        {
+            if (connections[i] == room2)
+                return true;
+        }
         return false;
     }
 
