@@ -12,7 +12,7 @@ namespace wumpus.components {
         private Map map;
         private Sound sound;
         private Trivia trivia;
-        private HighScores highscores;
+        private ScoreManager highscores;
         private Player player;
 
         public GameControl() {
@@ -21,7 +21,7 @@ namespace wumpus.components {
             map = new Map();
             sound = new Sound();
             trivia = new Trivia();
-            highscores = new HighScores();
+            highscores = new ScoreManager();
             player = new Player();
         }
 
