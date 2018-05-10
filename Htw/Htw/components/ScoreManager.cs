@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class ScoreManager : IComparable<ScoreManager>
+    class ScoreManager
     {
         private List<HighScore> HighScoresList;
 
@@ -18,16 +18,15 @@ namespace wumpus.components
         public void LoadHighScores()
         {
             //string[] lines = File.ReadAllLines(@"..\..\Resource\HighScores.txt");
-            //HighScoresList = new List<ScoreManager>();
+            //HighScoresList = new List<HighScore>();
             //foreach (string line in lines) {                 
             //    string[] segments = line.Split(';');
-            //    highScore = Int32.Parse(segments[0]);
+            //    HighScore.highScore = Int32.Parse(segments[0]);
             //    playerName = segments[1];
             //    date = segments[2];
             //    ScoreManager temp = new ScoreManager(highScore, playerName, date);
             //    HighScoresList.Add(temp);
-            // }
-
+            //}
         }
 
         private void SortList()
