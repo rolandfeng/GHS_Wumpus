@@ -15,10 +15,11 @@ namespace wumpus.forms
     public partial class MainGame : Form
     {
         GameControl gameControl; 
-        public MainGame()
+
+        public MainGame(GameControl gameControl)
         {
             InitializeComponent();
-            gameControl = new GameControl();
+            this.gameControl = gameControl;
         }
 
         private void northButton_Click(object sender, EventArgs e)

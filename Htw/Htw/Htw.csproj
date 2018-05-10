@@ -48,7 +48,8 @@
   <ItemGroup>
     <Compile Include="common\Direction.cs" />
     <Compile Include="components\Cave.cs" />
-    <Compile Include="components\HighScores.cs" />
+    <Compile Include="components\HighScore.cs" />
+    <Compile Include="components\ScoreManager.cs" />
     <Compile Include="components\Map.cs" />
     <Compile Include="components\Player.cs" />
     <Compile Include="components\Sound.cs" />
@@ -82,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\HighScoreForm.resx">
+      <DependentUpon>HighScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainGame.resx">
       <DependentUpon>MainGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,7 +120,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\creaking-door-1.wav" />
+    <None Include="Resources\DoorOpen.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>

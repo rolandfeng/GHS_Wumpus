@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace wumpus.components.Tests
 {
     [TestClass()]
-    public class ExampleTests
+    public class SoundTests
     {
         [TestMethod()]
         public void InitializeTest()

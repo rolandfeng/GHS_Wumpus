@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class Map
+    public class Map
     {
         private int[] pitLocations; //2 for now
         private int[] batLocations; //2 for now
@@ -76,7 +76,7 @@ namespace wumpus.components
 
         public Boolean fireArrow(int destination)
         {
-            if (destination == wumpusLocation())
+            if (destination == wumpusLocation)
             {
                 return true;
             }
