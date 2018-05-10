@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class HighScore
+    public class HighScore
     {
         private int highScore;
         private String playerName;
@@ -17,6 +17,21 @@ namespace wumpus.components
             this.playerName = playerName;
             this.highScore = highScore;
             this.date = date;
+        }
+
+        public int getHighScore()
+        {
+            return highScore;
+        }
+
+        public String getPlayerName()
+        {
+            return playerName;
+        }
+
+        public String getDate()
+        {
+            return date;
         }
     }
 }
