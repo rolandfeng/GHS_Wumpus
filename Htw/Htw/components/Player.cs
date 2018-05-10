@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class Player
+    public class Player
     {
         private int arrowCount;
         private int coinCount;
