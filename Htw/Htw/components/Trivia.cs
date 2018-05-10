@@ -8,32 +8,40 @@ using wumpus.forms;
 
 namespace wumpus.components
 {
-    class Trivia
+    public class Trivia
     {
         public Trivia()
         {
-            TriviaForm TriviaForm = new TriviaForm();
+            TriviaForm TriviaForm = new TriviaForm(this);
             TriviaForm.Show();
             //generate different number of buttons for possible trivia answers
         }
-        public static Boolean ask(int questionsAsk, int answerCorrect)
+        public Boolean ask(int questionsAsk, int answerCorrect)
         {
             //read triviaQuestions file and print out question on form
-            
-            //List<string> questions = new List<string>();
-            string[] lines = File.ReadAllLines("TriviaQuestions.txt");
-            foreach(string line in lines)
-            {
-                string[] segments = line.Split(';');
 
-            }
-            for(int i = 0; i < questionsAsk; i++)
-            {
-                Console.WriteLine(lines[i]);
-            }
-
-            
             return false;
+        }
+
+        //separate method to read files
+
+        public String GetQuestions()
+        {
+            String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
+            String[] segments = new String[lines.Length];
+            foreach (String line in lines)
+            {
+                segments = line.Split(';');
+            }
+            int QuestionNumber = 0;
+            return segments[QuestionNumber];
+
+        }
+
+        public String GetAnswers()
+        {
+
+            return null;
         }
 
     }

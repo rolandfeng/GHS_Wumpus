@@ -17,6 +17,8 @@ namespace wumpus
         public MainMenuForm()
         {
             InitializeComponent();
+            Sound test = new Sound();
+            test.playSound(Sound.Sounds.DoorClose);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -33,8 +35,8 @@ namespace wumpus
 
         private void TriviaButton_Click(object sender, EventArgs e)
         {
-            TriviaForm testTrivia = new TriviaForm();
-            testTrivia.Show();
+            Trivia testTrivia = new Trivia();
+    
         }
     }
 }
