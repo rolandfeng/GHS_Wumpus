@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using wumpus.common;
 
 namespace wumpus.components {
-    class GameControl {
+    public class GameControl {
         private Cave cave;
         private Graphics graphics;
         private Map map;
