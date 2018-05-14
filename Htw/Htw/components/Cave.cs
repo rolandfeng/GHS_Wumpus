@@ -17,7 +17,7 @@ public class Cave
         {
             
             String line = lines[row];
-            string[] segments = line.Split(' ');
+            string[] segments = line.Split(';');
             cave[row] = new int[segments.Length];
             for (int column = 0; column < segments.Length; column++)
             {
