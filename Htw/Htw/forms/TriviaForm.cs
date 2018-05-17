@@ -17,13 +17,22 @@ namespace wumpus.forms
         public TriviaForm(Trivia trivia)
         {
             InitializeComponent();
+            
+        }
 
-            questionText.Text = trivia.GetQuestions();
+        public void displayQuestion(String[] trivia)
+        { 
+            questionText.Text = trivia[0];
+            button1.Text = trivia[1];
+            button2.Text = trivia[2];
+            button3.Text = trivia[3];
+            button4.Text = trivia[4];
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            questionText.Text = "Hi";
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,6 +61,11 @@ namespace wumpus.forms
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TriviaForm_Load(object sender, EventArgs e)
         {
 
         }
