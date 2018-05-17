@@ -13,7 +13,15 @@ namespace wumpus.components
         private int turn;
         private int score;
 
-        public Player() //removed your parameters for now might just default them to a set value- roland
+        public Player()
+        {
+            arrowCount = 3;
+            coinCount = 0;
+            turn = 0;
+            score = 0;
+        }
+
+        public Player(int arrows, int coins)
         {
             arrowCount = 0;
             coinCount = 0;
