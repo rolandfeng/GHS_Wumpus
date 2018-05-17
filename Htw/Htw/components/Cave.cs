@@ -28,11 +28,6 @@ public class Cave
         }
     }
 
-
-                     // add new constructor for random cave
-
-
-
     // Calls get connected room for all directions, adds all the room numbers
     // to an array and returns that array. 0 will be returned for walls
     public int[] getAllConnections(int currentRoom)
