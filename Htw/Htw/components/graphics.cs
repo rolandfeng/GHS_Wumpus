@@ -13,6 +13,8 @@ namespace wumpus.components
         Player player;
         Map map;
         Cave cave;
+        MainGame mainGame;
+
 
         public Graphics(GameControl gameControl, Player player, Map map, Cave cave)
         {
@@ -24,13 +26,13 @@ namespace wumpus.components
 
         public void startGame()
         {
-            MainGame mainGame = new MainGame(gameControl);
+            mainGame = new MainGame(gameControl, player, map, cave);
             mainGame.Show();
         }
 
-        public void update()
+        public void update(int currentRoom)
         {
-
+            mainGame.UpdateGraphics(currentRoom);
         }
 
 
