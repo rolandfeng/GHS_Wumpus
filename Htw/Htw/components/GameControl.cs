@@ -28,27 +28,10 @@ namespace wumpus.components {
         public void moveRoom(wumpus.common.Direction direction) {
             int currentLoc = player.getCurrentLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
-            bool[] hazards = new bool[6];
-            int wumpusLoc = map.getWumpusLocation();   
-            if (newLoc == wumpusLoc) {
-                hazards[0] = true;
-            } else if (cave.isAdjacent(newLoc, wumpusLoc)) {
-                hazards[1] = true;
-            }
-            int[] batsLoc = map.getBatLocations();
-            int[] pitsLoc = map.getPitLocations();    
-            if (newLoc == batsLoc[0] || newLoc == batsLoc[1]) {
-                hazards[2] = true;
-            } else if (newLoc == pitsLoc[0] || newLoc == pitsLoc[1]) {
-                hazards[4] = true;
-            }
-            if (cave.isAdjacent(newLoc, batsLoc[0]) || cave.isAdjacent(newLoc, batsLoc[1])) {
-                hazards[3] = true;
-            }
-            if (cave.isAdjacent(newLoc, pitsLoc[0]) || cave.isAdjacent(newLoc, pitsLoc[1])) {
-                hazards[5] = true;
-            }
+            bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
+            graphics.update(newLoc, hazards);
+            //sound.update(hazards);        
             if (map.pitFall()) {
                 pitInstance();
             }
@@ -83,6 +66,32 @@ namespace wumpus.components {
         public void startGame()
         {
             graphics.startGame();
+        }
+
+        private bool[] getHazardArray(int newLoc) {
+            bool[] hazards = new bool[6];
+            int wumpusLoc = map.getWumpusLocation();
+            if (newLoc == wumpusLoc) {
+                hazards[0] = true;
+            }
+            else if (cave.isAdjacent(newLoc, wumpusLoc)) {
+                hazards[1] = true;
+            }
+            int[] batsLoc = map.getBatLocations();
+            int[] pitsLoc = map.getPitLocations();
+            if (newLoc == batsLoc[0] || newLoc == batsLoc[1]) {
+                hazards[2] = true;
+            }
+            else if (newLoc == pitsLoc[0] || newLoc == pitsLoc[1]) {
+                hazards[4] = true;
+            }
+            if (cave.isAdjacent(newLoc, batsLoc[0]) || cave.isAdjacent(newLoc, batsLoc[1])) {
+                hazards[3] = true;
+            }
+            if (cave.isAdjacent(newLoc, pitsLoc[0]) || cave.isAdjacent(newLoc, pitsLoc[1])) {
+                hazards[5] = true;
+            }
+            return hazards;
         }
     }
 }
