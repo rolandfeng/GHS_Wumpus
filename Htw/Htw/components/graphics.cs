@@ -30,7 +30,7 @@ namespace wumpus.components
             mainGame.Show();
         }
 
-        public void update(int currentRoom)
+        public void update(int currentRoom, bool[] hazards)
         {
             mainGame.UpdateGraphics(currentRoom);
         }
