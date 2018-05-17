@@ -13,10 +13,11 @@ namespace wumpus.components
         private int wumpusLocation;
         private int playerLocation;
         private bool[] occupiedHazard; //see if a room has a hazard in it or not
+        private Random num;
 
         public Map()
         {
-            Random num = new Random();
+            num = new Random();
             occupiedHazard = new bool[30];
             playerLocation = 1; //start room is always 1
             wumpusLocation = num.Next(2, 30);
@@ -102,16 +103,41 @@ namespace wumpus.components
 
         public void batAI() //only changes location of player and bat
         {
-            //Random num = new Random();
-            //occupiedHazard[]
+            if (playerLocation == batLocations[0])
+            {
+                occupiedHazard[playerLocation - 1] = false;
+                playerLocation = num.Next(30);
+                occupiedHazard[playerLocation - 1] = true;
+                occupiedHazard[batLocations[0] - 1] = false;
+                batLocations[0] = num.Next(30);
+                while (occupiedHazard[batLocations[0] - 1] == true)
+                {
+                    pitLocations[0] = num.Next(30);
+                }
+                occupiedHazard[batLocations[0] - 1] = true;
+            }
+            if (playerLocation == batLocations[1])
+            {
+                occupiedHazard[playerLocation - 1] = false;
+                playerLocation = num.Next(30);
+                occupiedHazard[playerLocation - 1] = true;
+                occupiedHazard[batLocations[1] - 1] = false;
+                batLocations[0] = num.Next(30);
+                while (occupiedHazard[batLocations[1] - 1] == true)
+                {
+                    pitLocations[1] = num.Next(30);
+                }
+                occupiedHazard[batLocations[1] - 1] = true;
+            }
         }
+                    
 
         public void wumpusAI() //only changes location
         {
-            //if (playerLocation = wumpusLocation)
-            //{
+            /*if (playerLocation = wumpusLocation)
+            {
 
-            //}
+            }*/
         }
     }
 }
