@@ -28,6 +28,11 @@ public class Cave
         }
     }
 
+
+                     // add new constructor for random cave
+
+
+
     // Calls get connected room for all directions, adds all the room numbers
     // to an array and returns that array. 0 will be returned for walls
     public int[] getAllConnections(int currentRoom)
@@ -125,11 +130,23 @@ public class Cave
         Random randNum = new Random();
         for (int i = 0; i < linesArray.Length; i++)
         {
+            int locOf0 = randNum.Next(0, cave.Length + 1);
             for (int j = 0; j < cave.Length + 1; j++)
             {
-                int num = randNum.Next(0, numList.Count);
-                linesArray[i] += num;
-                // remove num from arraylist
+                if (j == locOf0)
+                    if (j == cave.Length)
+                        linesArray[i] += "" + 0;
+                    else
+                        linesArray[i] += "" + 0 + ";" ;
+                else
+                {
+                    int num = randNum.Next(0, numList.Count);
+                    if (j == cave.Length)
+                        linesArray[i] += "" + numList[num];
+                    else
+                        linesArray[i] += "" + numList[num] + ";";
+                    numList.RemoveAt(num);
+                }
             }
         }
         File.WriteAllLines(filename, linesArray);
