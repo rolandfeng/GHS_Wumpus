@@ -12,7 +12,7 @@ namespace wumpus.components
         private int[] batLocations; //2 for now
         private int wumpusLocation;
         private int playerLocation;
-        private Boolean[] occupiedHazard; //see if a room has a hazard in it or not
+        private bool[] occupiedHazard; //see if a room has a hazard in it or not
 
         public Map()
         {
@@ -74,27 +74,44 @@ namespace wumpus.components
             playerLocation = newLoc;
         }
 
-        public Boolean fireArrow(int destination)
+        public bool fireArrow(int destination)
         {
-            if (destination == wumpusLocation())
+            if (destination == wumpusLocation)
             {
                 return true;
             }
             else
             {
-                wumpusMovement();
                 return false;
             }
         }
 
-        private void batMovement() //only changes location
+        public void updateHazardCheck(int room, Boolean change)
         {
-
+            occupiedHazard[room - 1] = change;
         }
 
-        private void wumpusMovement() //only changes location
+        public bool pitFall()
         {
+            if (playerLocation == pitLocations[0] || playerLocation == pitLocations[1])
+            {
+                return true;
+            }
+            return false;
+        }
 
+        public void batAI() //only changes location of player and bat
+        {
+            //Random num = new Random();
+            //occupiedHazard[]
+        }
+
+        public void wumpusAI() //only changes location
+        {
+            //if (playerLocation = wumpusLocation)
+            //{
+
+            //}
         }
     }
 }

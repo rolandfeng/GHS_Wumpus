@@ -13,6 +13,14 @@ namespace wumpus.components
         private int turn;
         private int score;
 
+        public Player()
+        {
+            arrowCount = 3;
+            coinCount = 0;
+            turn = 0;
+            score = 0;
+        }
+
         public Player(int arrows, int coins)
         {
             arrowCount = arrows;
