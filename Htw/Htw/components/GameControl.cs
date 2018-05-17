@@ -48,11 +48,36 @@ namespace wumpus.components {
             if (cave.isAdjacent(newLoc, pitsLoc[0]) || cave.isAdjacent(newLoc, pitsLoc[1])) {
                 hazards[5] = true;
             }
-            player.changePlayerLocation(newLoc, hazards);
+            map.changePlayerLocation(newLoc);
+            if (map.pitFall()) {
+                pitInstance();
+            }
+            map.batAI();
+            map.wumpusAI();
+
         }
 
         public void shootArrows() {
-        
+            player.changeArrowCount(-1);
+        }
+
+        public void buyArrows() {
+            if (openTrivia(3, 2)) {
+                player.changeArrowCount(2);
+            }
+        }
+
+        public bool openTrivia(int asked, int needed) {
+            trivia.ShowTrivia();
+            return trivia.ask(asked, needed);
+        }
+
+        public void pitInstance() {
+            bool getOut = false;
+            while (getOut) {
+                getOut = trivia.ask(3, 2);
+            }
+            map.changePlayerLocation(1);
         }
 
         public void startGame()
