@@ -10,6 +10,10 @@ namespace wumpus.components
 
     public class Sound
     {
+        public Sound()
+        {
+            
+        }
         private void playSoundFromFile(Stream resourceName)
         {
             //load the file
@@ -21,14 +25,20 @@ namespace wumpus.components
          
             //play the sound
         }
-        public enum Sounds {DoorOpen}
+        public enum Sounds {DoorOpen, DoorClose, OhMyGod}
 
         public void playSound(Sounds sound)
         {
             switch (sound)
             {
                 case Sounds.DoorOpen:
-                    playSoundFromFile(Properties.Resources.creakingdoor);
+                   // playSoundFromFile(Properties.Resources.DoorOpen);
+                    break;
+                case Sounds.DoorClose:
+                    playSoundFromFile(Properties.Resources.DoorClose);
+                    break;
+                case Sounds.OhMyGod:
+                    playSoundFromFile(Properties.Resources.OhMyGod);
                     break;
             }
         }

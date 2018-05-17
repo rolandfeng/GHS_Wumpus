@@ -1,6 +1,7 @@
 ﻿using System;
 using wumpus.common;
 using System.IO;
+using System.Collections;
 
 public class Cave
 {
@@ -11,15 +12,19 @@ public class Cave
     public Cave(String caveName)
     {
         this.caveName = caveName;
-        StreamReader s = new StreamReader(caveName);
-        String line = s.ReadLine();
-        for (int row = 0; line != null; row++)
+        string[] lines = File.ReadAllLines(caveName);
+
+        for(int row = 0; row < lines.Length; row++)
         {
-            StreamReader lineReader = new StreamReader(line);
-            for (int column = 0; column < line.Length; column++)
+            
+            String line = lines[row];
+            string[] segments = line.Split(';');
+            cave[row] = new int[segments.Length];
+            for (int column = 0; column < segments.Length; column++)
             {
-                cave[row][column] = lineReader.Read();
+                cave[row][column] = Int32.Parse(segments[column]);
             }
+       
         }
     }
 
@@ -37,61 +42,97 @@ public class Cave
         return connections;
     }
 
+    // Finds all rooms connected to first room, if second room is one of them will return
+    // true. Returns false if not adjacent
+    public Boolean isAdjacent(int room1, int room2)
+    {
+        int[] connections = getAllConnections(room1);
+        for (int i = 0; i < connections.Length; i++)
+        {
+            if (connections[i] == room2)
+                return true;
+        }
+        return false;
+    }
+
     // Finds and returns the room adjacent to the given room based on the given direction
     // Returns 0 if a wall
     public int getConnectedRoom(int currentRoom, Direction direction)
     {
         int[] roomLoc = findRoomLocation(currentRoom);
         int roomRow = roomLoc[0];
-        int roomColumn = roomLoc[1];
-        
+        int roomColumn = roomLoc[1] - numZerosBeforeIndex(roomLoc[0], roomLoc[1]); 
+        // Column offset to compensate for walls
+
         switch (direction)
         {
             case Direction.NORTH:
                 if (roomRow == 0)
-                    roomRow = 4;
-                return cave[roomRow][roomColumn];
+                    roomRow = 5;
+                return cave[roomRow - 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn)];
 
             case Direction.NORTH_EAST:
                 if (roomRow == 0)
                     roomRow = 5;
                 if (roomColumn == 5)
                     roomColumn = -1;
-                return cave[roomRow - 1][roomColumn + 1];
+                return cave[roomRow - 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) + 1];
 
             case Direction.NORTH_WEST:
                 if (roomRow == 0)
                     roomRow = 5;
                 if (roomColumn == 0)
                     roomColumn = 6;
-                return cave[roomRow - 1][roomColumn - 1];
+                return cave[roomRow - 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) - 1];
 
             case Direction.SOUTH:
                 if (roomRow == cave.Length - 1)
-                    roomRow = 0;
-                return cave[roomRow][roomColumn];
+                    roomRow = -1;
+                return cave[roomRow + 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn)];
 
             case Direction.SOUTH_EAST:
                 if (roomRow == cave.Length - 1)
                     roomRow = -1;
                 if (roomColumn == 5)
                     roomColumn = -1;
-                return cave[roomRow + 1][roomColumn + 1];
+                return cave[roomRow + 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) + 1];
 
             case Direction.SOUTH_WEST:
                 if (roomRow == cave.Length - 1)
                     roomRow = -1;
                 if (roomColumn == 0)
                     roomColumn = 6;
-                return cave[roomRow + 1][roomColumn - 1];
+                return cave[roomRow + 1]
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) - 1];
         }
 
         return 0;
     }
 
-    public void generateRandomCave()
+    public void generateRandomCave(String filename)
     {
-
+        String[] linesArray = new String[cave.Length];
+        ArrayList numList = new ArrayList();
+        for (int i = 1; i <= 30; i++)
+        {
+            numList.Add(i);
+        }
+        Random randNum = new Random();
+        for (int i = 0; i < linesArray.Length; i++)
+        {
+            for (int j = 0; j < cave.Length + 1; j++)
+            {
+                int num = randNum.Next(0, numList.Count);
+                linesArray[i] += num;
+                // remove num from arraylist
+            }
+        }
+        File.WriteAllLines(filename, linesArray);
     }
 
     // Searches cave for the given room and returns array of row and column location
@@ -110,5 +151,19 @@ public class Cave
             }
         }
         return roomLocation;
+    }
+
+    // Returns the number of zeros found in the given row before the given column
+    private int numZerosBeforeIndex(int row, int column)
+    {
+        int count = 0;
+        for (int i = 0; i < column; i++)
+        {
+            if (cave[row][i] > 0)
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }

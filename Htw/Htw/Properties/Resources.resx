@@ -118,7 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="creakingdoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\creaking-door-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TriviaQuestions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\TriviaQuestions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="DoorClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DoorClose.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DoorOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DoorOpen.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OhMyGod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OhMyGod.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

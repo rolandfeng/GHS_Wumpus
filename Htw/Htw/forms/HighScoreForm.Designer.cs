@@ -1,6 +1,6 @@
 ﻿namespace wumpus.forms
 {
-    partial class Form1
+    partial class HighScoresForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.HighScore1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // HighScore1
+            // 
+            this.HighScore1.AutoSize = true;
+            this.HighScore1.Location = new System.Drawing.Point(23, 40);
+            this.HighScore1.Name = "HighScore1";
+            this.HighScore1.Size = new System.Drawing.Size(35, 13);
+            this.HighScore1.TabIndex = 0;
+            this.HighScore1.Text = "label1";
+            this.HighScore1.Click += new System.EventHandler(this.HighScore1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.HighScore1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label HighScore1;
     }
 }

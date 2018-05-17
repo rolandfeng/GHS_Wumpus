@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class Map
+    public class Map
     {
         private int[] pitLocations; //2 for now
         private int[] batLocations; //2 for now

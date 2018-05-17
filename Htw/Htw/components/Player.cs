@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    class Player
+    public class Player
     {
         private int arrowCount;
         private int coinCount;
@@ -23,8 +23,8 @@ namespace wumpus.components
 
         public Player(int arrows, int coins)
         {
-            arrowCount = arrows;
-            coinCount = coins;
+            arrowCount = 0;
+            coinCount = 0;
             turn = 0;
             score = 0;
         }
@@ -62,6 +62,16 @@ namespace wumpus.components
         public int getScore()
         {
             return score;
+        }
+
+        public int getCurrentLocation() //aaron fill this method in when you get back- roland
+        {
+            return 0;       
+        }
+
+        public void changePlayerLocation(int newLoc, bool[] hazards) //also fill this in
+        {
+
         }
 
         public void updateScore() //should we do it in real time or at the end. If at end, just make this method return score
