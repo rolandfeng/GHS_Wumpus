@@ -28,7 +28,7 @@ namespace wumpus.forms
             this.cave = cave;
         }
 
-        public void UpdateGraphics(int currentRoom)
+        public void UpdateGraphics(int currentRoom, bool[] hazards)
         {
             // update coins
             NumberOfCoinsLabel.Text = "" + player.getCoinCount();
@@ -43,32 +43,32 @@ namespace wumpus.forms
             NorthRoomsLabel.Text = "" + connections[0];
             if (connections[0] == 0)
             {
-                //disable north button
+                northButton.Enabled = false;
             }
             NorthEastRoomsLabel.Text = "" + connections[1];
             if (connections[1] == 0)
             {
-                //disable northeast button
+                northEastButton.Enabled = false;
             }
             NorthWestRoomsLabel.Text = "" + connections[2];
             if (connections[2] == 0)
             {
-                //disable northwest button
+                northWestButton.Enabled = false;
             }
             SouthRoomsLabel.Text = "" + connections[3];
             if (connections[3] == 0)
             {
-                //disable south button
+                southButton.Enabled = false;
             }
             SouthEastRoomsLabel.Text = "" + connections[4];
             if (connections[4] == 0)
             {
-                //disable southeast button
+                southEastButton.Enabled = false;
             }
             SouthWestRoomsLabel.Text = "" + connections[5];
             if (connections[6] == 0)
             {
-                //disable southwest button
+                southWestButton.Enabled = false;
             }
         }
 
