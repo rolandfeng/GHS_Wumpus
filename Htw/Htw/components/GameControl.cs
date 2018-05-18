@@ -40,8 +40,15 @@ namespace wumpus.components {
 
         }
 
-        public void shootArrows() {
+        public void shootArrows(wumpus.common.Direction direction) {
             player.changeArrowCount(-1);
+            int currentLoc = player.getCurrentLocation();
+            /*if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
+                //end game
+            } else {
+                //display message they missed
+                //continue game
+            }*/
         }
 
         public void buyArrows() {
