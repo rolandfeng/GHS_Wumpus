@@ -72,7 +72,9 @@ namespace wumpus.components
 
         public void changePlayerLocation(int newLoc)
         {
+            occupiedHazard[playerLocation - 1] = false;
             playerLocation = newLoc;
+            occupiedHazard[playerLocation - 1] = true;
         }
 
         /*public bool fireArrow(int destination)
@@ -87,7 +89,7 @@ namespace wumpus.components
             }
         } */
 
-        public void updateHazardCheck(int room, Boolean change)
+        private void updateHazardCheck(int room, Boolean change) //idk if this is better than what i have been doing
         {
             occupiedHazard[room - 1] = change;
         }

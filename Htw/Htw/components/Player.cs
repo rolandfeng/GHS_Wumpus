@@ -12,21 +12,24 @@ namespace wumpus.components
         private int coinCount;
         private int turn;
         private int score;
+        //private String name;
 
-        public Player()
+        public Player() //put back names in these two constructors
         {
             arrowCount = 3;
             coinCount = 0;
             turn = 0;
             score = 0;
+            //this.name = name;
         }
-
+        
         public Player(int arrows, int coins)
         {
-            arrowCount = 0;
-            coinCount = 0;
+            this.arrowCount = arrows;
+            this.coinCount = coins;
             turn = 0;
             score = 0;
+            //this.name = name;
         }
 
         public int getArrowCount()
@@ -62,16 +65,6 @@ namespace wumpus.components
         public int getScore()
         {
             return score;
-        }
-
-        public int getCurrentLocation() //aaron fill this method in when you get back- roland
-        {
-            return 0;       
-        }
-
-        public void changePlayerLocation(int newLoc, bool[] hazards) //also fill this in
-        {
-
         }
 
         public void updateScore() //should we do it in real time or at the end. If at end, just make this method return score
