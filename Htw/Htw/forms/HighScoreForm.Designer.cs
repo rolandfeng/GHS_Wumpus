@@ -147,7 +147,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.096408F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(473, 441);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+        
             // 
             // ScoreColumn
             // 
@@ -159,7 +159,6 @@
             this.ScoreColumn.Size = new System.Drawing.Size(88, 31);
             this.ScoreColumn.TabIndex = 1;
             this.ScoreColumn.Text = "Score";
-            this.ScoreColumn.Click += new System.EventHandler(this.label2_Click);
             // 
             // DateColumn
             // 
@@ -171,7 +170,6 @@
             this.DateColumn.Size = new System.Drawing.Size(78, 31);
             this.DateColumn.TabIndex = 2;
             this.DateColumn.Text = "Date";
-            this.DateColumn.Click += new System.EventHandler(this.label3_Click);
             // 
             // PlayerColumn
             // 
@@ -253,7 +251,6 @@
             this.HighScore6.Size = new System.Drawing.Size(63, 13);
             this.HighScore6.TabIndex = 10;
             this.HighScore6.Text = "HighScore6";
-            this.HighScore6.Click += new System.EventHandler(this.label9_Click);
             // 
             // HighScore7
             // 
@@ -362,7 +359,6 @@
             this.Player5.Size = new System.Drawing.Size(42, 13);
             this.Player5.TabIndex = 19;
             this.Player5.Text = "Player5";
-            this.Player5.Click += new System.EventHandler(this.label9_Click_1);
             // 
             // Player6
             // 
