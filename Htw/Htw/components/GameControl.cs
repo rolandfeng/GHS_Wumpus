@@ -26,7 +26,7 @@ namespace wumpus.components {
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
-            int currentLoc = player.getCurrentLocation();
+            int currentLoc = map.getPlayerLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
@@ -35,13 +35,34 @@ namespace wumpus.components {
             if (map.pitFall()) {
                 pitInstance();
             }
-            map.batAI();
-            map.wumpusAI();
-
+            map.batCheck();
+            if (newLoc == map.getWumpusLocation()) {
+                if (wumpusInstance()) {
+                    map.wumpusMovement();
+                } else {
+                    //end game
+                }  
+            }
         }
 
-        public void shootArrows() {
+        public void shootArrows(wumpus.common.Direction direction) {
             player.changeArrowCount(-1);
+            int currentLoc = map.getPlayerLocation();
+            if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
+                //call on graphics method to display victory message
+                int playerScore = player.getScore();
+                /*if (highscores.testScore(playerScore)) {
+                    //method to get the user to input their name
+                    //method to get the current date
+                    //highscores.StoreHighScore(playerScore); 
+                    //highscores.DisplayHighScores();
+                }*/
+                //end game --- option to play again?
+            } else {
+                //graphics display message they missed
+                map.wumpusMovement();
+                //continue game
+            }
         }
 
         public void buyArrows() {
@@ -63,9 +84,8 @@ namespace wumpus.components {
             map.changePlayerLocation(1);
         }
 
-        public void startGame()
-        {
-            graphics.startGame();
+        public bool wumpusInstance() {
+            return (trivia.ask(5, 3));
         }
 
         private bool[] getHazardArray(int newLoc) {
@@ -92,6 +112,11 @@ namespace wumpus.components {
                 hazards[5] = true;
             }
             return hazards;
+        }
+
+        public void startGame()
+        {
+            graphics.startGame();
         }
     }
 }
