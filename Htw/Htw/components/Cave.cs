@@ -12,19 +12,14 @@ public class Cave
     public Cave(String caveName)
     {
         this.caveName = caveName;
-        string[] lines = File.ReadAllLines(caveName);
-
-        for(int row = 0; row < lines.Length; row++)
+        if (File.Exists(caveName))
         {
-            
-            String line = lines[row];
-            string[] segments = line.Split(';');
-            cave[row] = new int[segments.Length];
-            for (int column = 0; column < segments.Length; column++)
-            {
-                cave[row][column] = Int32.Parse(segments[column]);
-            }
-       
+            fillCave();
+        }
+        else
+        {
+            generateRandomCave(caveName);
+            fillCave();
         }
     }
 
@@ -110,11 +105,12 @@ public class Cave
                 return cave[roomRow + 1]
                            [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) - 1];
         }
-
         return 0;
     }
 
-    public void generateRandomCave(String filename)
+    // Makes cave full of randomly ordered numbers
+    // Is standard size and has 1 wall per row
+    private void generateRandomCave(String filename)
     {
         String[] linesArray = new String[cave.Length];
         ArrayList numList = new ArrayList();
@@ -145,6 +141,21 @@ public class Cave
             }
         }
         File.WriteAllLines(filename, linesArray);
+    }
+
+    private void fillCave()
+    {
+        string[] lines = File.ReadAllLines(caveName);
+        for (int row = 0; row < lines.Length; row++)
+        {
+            String line = lines[row];
+            string[] segments = line.Split(';');
+            cave[row] = new int[segments.Length];
+            for (int column = 0; column < segments.Length; column++)
+            {
+                cave[row][column] = Int32.Parse(segments[column]);
+            }
+        }
     }
 
     // Searches cave for the given room and returns array of row and column location
