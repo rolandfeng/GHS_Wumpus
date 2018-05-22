@@ -31,45 +31,69 @@ namespace wumpus.forms
         public void UpdateGraphics(int currentRoom, bool[] hazards)
         {
             // update coins
-            NumberOfCoinsLabel.Text = "" + player.getCoinCount();
+            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
 
             //update arrows
-            NumberOfArrowsLabel.Text = "" + player.getArrowCount();
+            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
         
-
             //update available doors
             int[] connections;
             connections = cave.getAllConnections(currentRoom);
-            NorthRoomsLabel.Text = "" + connections[0];
+
             if (connections[0] == 0)
             {
-                northButton.Enabled = false;
+                northButton.Visible = false;
+                NorthRoomsLabel.Visible = false;
+                
+            } else
+            {
+                NorthRoomsLabel.Text = "" + connections[0];
             }
-            NorthEastRoomsLabel.Text = "" + connections[1];
+
+            
             if (connections[1] == 0)
             {
-                northEastButton.Enabled = false;
+                northEastButton.Visible = false;
+                NorthEastRoomsLabel.Visible = false;
+            } else {
+                NorthEastRoomsLabel.Text = "" + connections[1];                
             }
-            NorthWestRoomsLabel.Text = "" + connections[2];
+            
             if (connections[2] == 0)
             {
-                northWestButton.Enabled = false;
-            }
-            SouthRoomsLabel.Text = "" + connections[3];
+                northWestButton.Visible = false;
+                NorthWestRoomsLabel.Visible = false;
+            } else {
+                NorthWestRoomsLabel.Text = "" + connections[2];
+            }       
+
             if (connections[3] == 0)
             {
-                southButton.Enabled = false;
+                southButton.Visible = false;
+                SouthRoomsLabel.Visible = false;
+            } else {
+                SouthRoomsLabel.Text = "" + connections[3];
             }
-            SouthEastRoomsLabel.Text = "" + connections[4];
-            if (connections[4] == 0)
+            
+            if (connections[4] == 0) {
+                southEastButton.Visible = false;
+                SouthEastRoomsLabel.Visible = false;
+            } else
             {
-                southEastButton.Enabled = false;
+                SouthEastRoomsLabel.Text = "" + connections[4];
             }
-            SouthWestRoomsLabel.Text = "" + connections[5];
-            if (connections[6] == 0)
+          
+            if (connections[5] == 0)
             {
-                southWestButton.Enabled = false;
+                southWestButton.Visible = false;
+                SouthWestRoomsLabel.Visible = false;
+            } else
+            {
+                SouthWestRoomsLabel.Text = "" + connections[5];
             }
+
+            //update room
+
         }
 
         private void northButton_Click(object sender, EventArgs e)
@@ -111,12 +135,13 @@ namespace wumpus.forms
 
         private void ShootArrowButton_Click(object sender, EventArgs e)
         {
-            //gameControl.shootArrow();
+
+           // gameControl.shootArrows( );
         }
 
         private void PurchaseArrowsButton_Click(object sender, EventArgs e)
         {
-            //gameControl.buyArrow();
+            gameControl.buyArrows();
         }
     }
 }
