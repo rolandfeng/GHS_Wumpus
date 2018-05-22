@@ -134,7 +134,7 @@ namespace wumpus.components
         }
                     
 
-        public void wumpusMovement() //only changes location
+        public void wumpusMovement(bool multiple) //only changes location
         {
             occupiedHazard[wumpusLocation - 1] = false;
             wumpusLocation = num.Next(30);

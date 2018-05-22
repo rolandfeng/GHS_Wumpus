@@ -30,15 +30,17 @@ namespace wumpus.components {
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
+            //player.updateScore();
             graphics.update(newLoc, hazards);
-            //sound.update(hazards);        
+            //sound.update(hazards);      
+            //
             if (map.pitFall()) {
                 pitInstance();
             }
             map.batCheck();
             if (newLoc == map.getWumpusLocation()) {
-                if (wumpusInstance()) {
-                    map.wumpusMovement();
+                if (openTrivia(5, 3)) {
+                    map.wumpusMovement(true);
                 } else {
                     //end game
                 }  
@@ -60,7 +62,7 @@ namespace wumpus.components {
                 //end game --- option to play again?
             } else {
                 //graphics display message they missed
-                map.wumpusMovement();
+                map.wumpusMovement(false);
                 //continue game
             }
         }
@@ -82,10 +84,6 @@ namespace wumpus.components {
                 getOut = trivia.ask(3, 2);
             }
             map.changePlayerLocation(1);
-        }
-
-        public bool wumpusInstance() {
-            return (trivia.ask(5, 3));
         }
 
         private bool[] getHazardArray(int newLoc) {
