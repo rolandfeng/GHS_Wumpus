@@ -72,10 +72,12 @@ namespace wumpus.components
 
         public void changePlayerLocation(int newLoc)
         {
+            occupiedHazard[playerLocation - 1] = false;
             playerLocation = newLoc;
+            occupiedHazard[playerLocation - 1] = true;
         }
 
-        public bool fireArrow(int destination)
+        /*public bool fireArrow(int destination)
         {
             if (destination == wumpusLocation)
             {
@@ -85,9 +87,9 @@ namespace wumpus.components
             {
                 return false;
             }
-        }
+        } */
 
-        public void updateHazardCheck(int room, Boolean change)
+        private void updateHazardCheck(int room, Boolean change) //idk if this is better than what i have been doing
         {
             occupiedHazard[room - 1] = change;
         }
@@ -101,7 +103,7 @@ namespace wumpus.components
             return false;
         }
 
-        public void batAI() //only changes location of player and bat
+        public void batCheck() //only changes location of player and bat
         {
             if (playerLocation == batLocations[0])
             {
@@ -132,12 +134,11 @@ namespace wumpus.components
         }
                     
 
-        public void wumpusAI() //only changes location
+        public void wumpusMovement() //only changes location
         {
-            /*if (playerLocation = wumpusLocation)
-            {
-
-            }*/
-        }
+            occupiedHazard[wumpusLocation - 1] = false;
+            wumpusLocation = num.Next(30);
+            occupiedHazard[wumpusLocation - 1] = true;
+        } 
     }
 }
