@@ -62,6 +62,10 @@ namespace wumpus.components {
                 //end game --- option to play again?
             } else {
                 //graphics display message they missed
+                if (player.getArrowCount() == 0) {
+                    //graphics display message game over; no more arrows
+                    //end game
+                }
                 map.wumpusMovement(false);
                 //continue game
             }
@@ -70,20 +74,55 @@ namespace wumpus.components {
         public void buyArrows() {
             if (openTrivia(3, 2)) {
                 player.changeArrowCount(2);
+                //well done message
+            } else {
+                //better luck next time message
             }
         }
 
         public bool openTrivia(int asked, int needed) {
-            trivia.ShowTrivia();
-            return trivia.ask(asked, needed);
+            if (player.getCoinCount() < asked) {
+                //graphics method to display not enough coins message
+                return false;
+            } else {
+                player.changeCoinCount(asked * -1);
+                trivia.ShowTrivia();
+                return trivia.ask(asked, needed);
+            }
         }
 
-        public void pitInstance() {
-            bool getOut = false;
-            while (getOut) {
-                getOut = trivia.ask(3, 2);
+        public string buySecret() {
+            if (openTrivia(3, 2)) {
+                Random r = new Random();
+                int whichHint = r.Next(0, 7); //(0, n) = range from 0 to n-1
+                if (whichHint == 0 || whichHint == 1) { //bat rooms
+                    int[] bats = map.getBatLocations();
+                    return ("There is a bat in room " + bats[whichHint] + "!");
+                } else if (whichHint == 2 || whichHint == 3) { //pit rooms
+                    int[] pits = map.getPitLocations();
+                    return ("There is a pit in room " + pits[whichHint - 2] + "!");
+                } else if (whichHint == 4 ) { //Wumpus location
+                    return ("The Wumpus is in room " + map.getWumpusLocation() + "!");
+                } else if (whichHint == 5) { //bogus hint
+                    return ("You are in room " + map.getPlayerLocation() + "!");
+                } else { //more troll hints, can add more
+                    return ("It is turn " + player.getTurn() + "!");
+                }
+            } else { //false case
+                return "Better luck next time!";
             }
-            map.changePlayerLocation(1);
+        }
+        public void pitInstance() {
+            /*bool getOut = false;
+            while (getOut) {
+                getOut = openTrivia(3, 2);
+            }*/
+            if (openTrivia(3, 2)) {
+                map.changePlayerLocation(1);
+                //graphics message telling them they survived the pit?
+            } else {
+                //end game
+            }     
         }
 
         private bool[] getHazardArray(int newLoc) {
