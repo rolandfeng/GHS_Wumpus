@@ -30,18 +30,22 @@ namespace wumpus.components {
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
-            //player.updateScore();
+            player.updateScore();
             graphics.update(newLoc, hazards);
-            //sound.update(hazards);      
-            //
+            //callSounds(hazards);
             if (map.pitFall()) {
                 pitInstance();
             }
             map.batCheck();
             if (newLoc == map.getWumpusLocation()) {
                 if (openTrivia(5, 3)) {
+                    //graphics message telling them they survived wumpus
+                    //sound.playSound("TriviaRight");
                     map.wumpusMovement(true);
                 } else {
+                    //sound.playSound("TriviaWrong");
+                    //graphics message saying game over
+                    //sound.playSound("PlayerDie");
                     //end game
                 }  
             }
@@ -51,6 +55,7 @@ namespace wumpus.components {
             player.changeArrowCount(-1);
             int currentLoc = map.getPlayerLocation();
             if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
+                //sound.playSound("MonsterDie");
                 //call on graphics method to display victory message
                 int playerScore = player.getScore();
                 /*if (highscores.testScore(playerScore)) {
@@ -64,6 +69,7 @@ namespace wumpus.components {
                 //graphics display message they missed
                 if (player.getArrowCount() == 0) {
                     //graphics display message game over; no more arrows
+                    //sound.playSound("PlayerDie");
                     //end game
                 }
                 map.wumpusMovement(false);
@@ -74,8 +80,10 @@ namespace wumpus.components {
         public void buyArrows() {
             if (openTrivia(3, 2)) {
                 player.changeArrowCount(2);
+                //sound.play("TriviaRight");
                 //well done message
             } else {
+                //sound.play("TriviaWrong");
                 //better luck next time message
             }
         }
@@ -93,6 +101,7 @@ namespace wumpus.components {
 
         public string buySecret() {
             if (openTrivia(3, 2)) {
+                //sound.playSound("TriviaRight");
                 Random r = new Random();
                 int whichHint = r.Next(0, 7); //(0, n) = range from 0 to n-1
                 if (whichHint == 0 || whichHint == 1) { //bat rooms
@@ -109,6 +118,7 @@ namespace wumpus.components {
                     return ("It is turn " + player.getTurn() + "!");
                 }
             } else { //false case
+                //sound.playSound("TriviaWrong");
                 return "Better luck next time!";
             }
         }
@@ -118,14 +128,18 @@ namespace wumpus.components {
                 getOut = openTrivia(3, 2);
             }*/
             if (openTrivia(3, 2)) {
+                //sound.playSound("TriviaRight");
                 map.changePlayerLocation(1);
                 //graphics message telling them they survived the pit?
             } else {
+                //sound.playSound("TriviaWrong");
+                //graphics message telling them they died in pit
+                //sound.playSound("PlayerDie");
                 //end game
             }     
         }
 
-        private bool[] getHazardArray(int newLoc) {
+        private bool[] getHazardArray(int newLoc) { //create array of booleans for each obstacle, if near or same room
             bool[] hazards = new bool[6];
             int wumpusLoc = map.getWumpusLocation();
             if (newLoc == wumpusLoc) {
@@ -151,9 +165,24 @@ namespace wumpus.components {
             return hazards;
         }
 
-        public void startGame()
-        {
+        /*private void callSounds(bool[] hazards) {
+            if (hazards[0]) //same room as wumpus
+                sound.playSound("MonsterRoar");
+            if (hazards[1]) //adjacent to wumpus
+                sound.playSound("MonsterGrowl");
+            if (hazards[2]) //same room as bats
+                sound.playSound("BatInCave");
+            if (hazards[3]) //adjacent to bats
+                sound.playSound("BatCall");
+            if (hazards[4]) //same room as pits
+                sound.playSound("ScaryScream");
+            if (hazards[5]) //adjacent to pits
+                sound.playSound("ScarySound");
+        }*/
+
+        public void startGame() {
             graphics.startGame();
+            //sound.playSound("BackgroundMusic");
         }
     }
 }
