@@ -130,11 +130,60 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\DoorOpen.wav" />
-    <None Include="Resources\DoorClose.wav" />
-    <None Include="Resources\OhMyGod.wav" />
     <None Include="Pics\startBackground.jpg" />
     <None Include="Pics\startBackgroundCrop.jpg" />
+    <EmbeddedResource Include="Resources\startBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\startBackgroundCrop.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\planet1.bmp" />
+    <None Include="Resources\planet1.jpg" />
+    <None Include="Resources\planet2.jpg" />
+    <None Include="Resources\planet3.jpg" />
+    <None Include="Resources\planet4.jpg" />
+    <None Include="Resources\planet5.jpg" />
+    <None Include="Resources\planet6.jpg" />
+    <None Include="Resources\planet7.png" />
+    <None Include="Resources\planet8.jpg" />
+    <None Include="Resources\planet9.jpg" />
+    <None Include="Resources\planet10.jpg" />
+    <None Include="Resources\planet11.jpg" />
+    <None Include="Resources\planet12.jpg" />
+    <None Include="Resources\planet13.jpg" />
+    <None Include="Resources\planet14.jpg" />
+    <None Include="Resources\planet15.jpg" />
+    <None Include="Resources\planet16.jpg" />
+    <None Include="Resources\planet17.jpg" />
+    <None Include="Resources\planet18.jpg" />
+    <None Include="Resources\planet19.jpg" />
+    <None Include="Resources\planet20.jpg" />
+    <None Include="Resources\planet21.jpg" />
+    <None Include="Resources\planet22.png" />
+    <None Include="Resources\planet23.jpg" />
+    <None Include="Resources\planet24.jpg" />
+    <None Include="Resources\planet25.jpg" />
+    <None Include="Resources\planet26.jpg" />
+    <None Include="Resources\planet27.jpg" />
+    <None Include="Resources\planet28.png" />
+    <None Include="Resources\planet29.jpg" />
+    <None Include="Resources\planet30.jpg" />
+    <None Include="Resources\ArrowImpact.wav" />
+    <None Include="Resources\ArrowMiss.wav" />
+    <None Include="Resources\BatCall.wav" />
+    <None Include="Resources\BatsInCave.wav" />
+    <None Include="Resources\MonsterDie.wav" />
+    <None Include="Resources\MonsterGrowl.wav" />
+    <None Include="Resources\MonsterRoar.wav" />
+    <None Include="Resources\MonsterWalk.wav" />
+    <None Include="Resources\NoError.wav" />
+    <None Include="Resources\PlayerDie.wav" />
+    <None Include="Resources\PlayerWalk.wav" />
+    <None Include="Resources\ScaryScream.wav" />
+    <None Include="Resources\ScarySound.wav" />
+    <None Include="Resources\TriviaRight.wav" />
+    <None Include="Resources\TriviaWrong.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>

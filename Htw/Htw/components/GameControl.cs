@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using wumpus.common;
+using wumpus.forms;
 
 namespace wumpus.components {
     public class GameControl {
@@ -26,6 +27,7 @@ namespace wumpus.components {
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
+            //sounds.playSound(Sound.Sounds.PlayerWalk);
             int currentLoc = map.getPlayerLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
@@ -39,8 +41,9 @@ namespace wumpus.components {
             map.batCheck();
             if (newLoc == map.getWumpusLocation()) {
                 if (openTrivia(5, 3)) {
-                    //graphics.Show("You survived the Wumpus!");
                     //sound.playSound(Sound.Sounds.TriviaRight);
+                    //graphics.Show("You survived the Wumpus and forced it to flee!");
+                    //sounds.playSound(Sound.Sounds.MonsterWalk);
                     map.changeWumpusLocation(wumpusFleeLoc(true));
                 } else {
                     //sound.playSound(Sound.Sounds.TriviaWrong);
@@ -55,6 +58,7 @@ namespace wumpus.components {
             player.changeArrowCount(-1);
             int currentLoc = map.getPlayerLocation();
             if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
+                //sound.playSound(Sound.Sounds.ArrowImapct);
                 //sound.playSound(Sound.Sounds.MonsterDie);
                 //graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
@@ -66,6 +70,7 @@ namespace wumpus.components {
                 }*/
                 //end game --- option to play again?
             } else {
+                //sound.playSound("Sound.Sounds.ArrowMiss");
                 //graphics.Show("You missed!");
                 if (player.getArrowCount() == 0) {
                     //graphics.Show("You ran out of arrows!");
@@ -80,17 +85,18 @@ namespace wumpus.components {
         public void buyArrows() {
             if (openTrivia(3, 2)) {
                 player.changeArrowCount(2);
-                //sound.play(Sound.Sounds.TriviaRight);
+                //sound.playSound(Sound.Sounds.TriviaRight);
                 //graphics.Show("Well done!");
             }
             else {
-                //sound.play(Sound.Sounds.TriviaWrong);
+                //sound.playSound(Sound.Sounds.TriviaWrong);
                 //graphics.Show("Better luck next time!");
             }
         }
 
         public bool openTrivia(int asked, int needed) {
             if (player.getCoinCount() < asked) {
+                //sound.playSound(Sound.Sounds.NoError);
                 //graphics.Show("Not enough coins for this action");
                 return false;
             } else {
@@ -129,12 +135,8 @@ namespace wumpus.components {
             }
         }
         public void pitInstance() {
-            /*bool getOut = false;
-            while (getOut) {
-                getOut = openTrivia(3, 2);
-            }*/
             if (openTrivia(3, 2)) {
-                //sound.playSound("TriviaRight");
+                //sound.playSound(Sounds.Sound.TriviaRight);
                 map.changePlayerLocation(1);
                 //graphics.Show("You survived the pit!");
             }
@@ -215,6 +217,7 @@ namespace wumpus.components {
                             prevLoc = initialLoc;
                             finalLoc = possibilities[nextRoom];
                             initialLoc = finalLoc;
+                            notPrevious = false;
                         }     
                     }
                 }
@@ -239,6 +242,9 @@ namespace wumpus.components {
 
         public void startGame() {
             graphics.startGame();
+            //InputForm form = new InputForm();
+            //form.Show();
+            //String name = nameBox.Text();
             //sound.playSound(Sound.Sounds.BackgroundMusic);
         }
     }
