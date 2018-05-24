@@ -126,7 +126,9 @@
     <None Include="Resources\OhMyGod.wav" />
     <None Include="Pics\startBackground.jpg" />
     <None Include="Pics\startBackgroundCrop.jpg" />
-    <Content Include="Resource\StandardCave.txt" />
+    <EmbeddedResource Include="Resource\StandardCave.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>

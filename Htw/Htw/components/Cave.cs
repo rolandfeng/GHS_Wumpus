@@ -63,24 +63,32 @@ public class Cave
         {
             case Direction.NORTH:
                 if (roomRow == 0)
-                    roomRow = 5;
-                return cave[roomRow - 1]
+                    roomRow = cave.Length - 1;
+                return cave[roomRow]
                            [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn)];
 
             case Direction.NORTH_EAST:
                 if (roomRow == 0)
-                    roomRow = 5;
+                    roomRow = cave.Length - 1;
                 if (roomColumn == 5)
+                {
                     roomColumn = -1;
-                return cave[roomRow - 1]
+                    return cave[roomRow]
+                               [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn + 1) + 1];
+                }
+                return cave[roomRow]
                            [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) + 1];
 
             case Direction.NORTH_WEST:
                 if (roomRow == 0)
-                    roomRow = 5;
+                    roomRow = cave.Length - 1;
                 if (roomColumn == 0)
+                {
                     roomColumn = 6;
-                return cave[roomRow - 1]
+                    return cave[roomRow]
+                               [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn - 1) - 1];
+                }
+                return cave[roomRow]
                            [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) - 1];
 
             case Direction.SOUTH:
@@ -93,17 +101,25 @@ public class Cave
                 if (roomRow == cave.Length - 1)
                     roomRow = -1;
                 if (roomColumn == 5)
+                {
                     roomColumn = -1;
+                    return cave[roomRow + 1]
+                               [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn + 1) + 1];
+                }
                 return cave[roomRow + 1]
-                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) + 1];
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) + 1];
 
             case Direction.SOUTH_WEST:
                 if (roomRow == cave.Length - 1)
                     roomRow = -1;
                 if (roomColumn == 0)
+                {
                     roomColumn = 6;
+                    return cave[roomRow + 1]
+                               [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn - 1) - 1];
+                }
                 return cave[roomRow + 1]
-                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) - 1];
+                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) - 1];
         }
         return 0;
     }
@@ -143,6 +159,7 @@ public class Cave
         File.WriteAllLines(filename, linesArray);
     }
 
+    // Reads in a given text file and initializes the cave array to hold all the values
     private void fillCave()
     {
         string[] lines = File.ReadAllLines(caveName);
@@ -170,6 +187,7 @@ public class Cave
                 {
                     roomLocation[0] = row;
                     roomLocation[1] = column;
+                    return roomLocation;
                 }
             }
         }
