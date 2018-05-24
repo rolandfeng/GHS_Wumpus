@@ -136,4 +136,94 @@
   <data name="startBackgroundCrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\startBackgroundCrop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="planet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet23.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet25.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet26.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet27.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet29.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet30.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
