@@ -187,15 +187,24 @@ namespace wumpus.components {
 
         private int wumpusFleeLoc(bool multiple) { 
             Random r = new Random();
+            int prevLoc = 0;
             int initialLoc = map.getWumpusLocation();
             int finalLoc = map.getWumpusLocation(); //only temporary
             if (multiple) { //wumpus runs 2-4 rooms away
                 int howMany = r.Next(2, 5);
                 for (int i = 0; i < howMany; i++)
-                { //currently has a possibility that the wumpus runs back into the same room
+                { 
                     int[] possibilities = cave.getAllConnections(initialLoc);
-                    finalLoc = possibilities[r.Next(0, 6)];
-                    initialLoc = finalLoc;
+                    bool notPrevious = true;                   
+                    while (notPrevious) { //to ensure does not run into the room it came from
+                        int nextRoom = r.Next(0, 6);
+                        if (prevLoc != possibilities[nextRoom])
+                        {
+                            prevLoc = initialLoc;
+                            finalLoc = possibilities[nextRoom];
+                            initialLoc = finalLoc;
+                        }     
+                    }
                 }
             } else {
                 int randomRoom = r.Next(0, 6);
