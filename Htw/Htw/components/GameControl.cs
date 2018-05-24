@@ -197,8 +197,7 @@ namespace wumpus.components {
                     bool notPrevious = true;                   
                     while (notPrevious) { //to ensure does not run into the room it came from
                         int nextRoom = r.Next(0, 6);
-                        if (prevLoc != possibilities[nextRoom])
-                        {
+                        if (prevLoc != possibilities[nextRoom]) {
                             prevLoc = initialLoc;
                             finalLoc = possibilities[nextRoom];
                             initialLoc = finalLoc;
