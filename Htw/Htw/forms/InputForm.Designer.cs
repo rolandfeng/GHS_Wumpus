@@ -26,6 +26,12 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        public string getName()
+        {
+            return nameBox.Text;
+        }
+
+
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputForm));
@@ -50,7 +56,7 @@
             this.nameBox.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameBox.Location = new System.Drawing.Point(177, 269);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(300, 50);
+            this.nameBox.Size = new System.Drawing.Size(300, 39);
             this.nameBox.TabIndex = 0;
             this.nameBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
