@@ -88,6 +88,26 @@ namespace wumpus.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startBackground {
+            get {
+                object obj = ResourceManager.GetObject("startBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startBackgroundCrop {
+            get {
+                object obj = ResourceManager.GetObject("startBackgroundCrop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to What was the original flavor of the filling in Twinkies?; Vanilla; Strawberry; Chocolate; Banana
         ///What is the favorite food of the Teenage Mutant Ninja Turtles?; Cheese; Pizza; Turtle Food; Candy
         ///Who is the all time leading point scorer in NBA history?; Kareem Abdul-Jabbar; Michael Jordan; Kobe Byrant; Karl Malone.

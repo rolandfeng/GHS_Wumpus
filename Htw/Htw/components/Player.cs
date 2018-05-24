@@ -11,7 +11,7 @@ namespace wumpus.components
         private int arrowCount;
         private int coinCount;
         private int turn;
-        private int score;
+        //private int score;
         //private String name;
 
         public Player() //put back names in these two constructors
@@ -19,7 +19,7 @@ namespace wumpus.components
             arrowCount = 3;
             coinCount = 0;
             turn = 0;
-            score = 0;
+            //score = 0;
             //this.name = name;
         }
         
@@ -28,7 +28,7 @@ namespace wumpus.components
             this.arrowCount = arrows;
             this.coinCount = coins;
             turn = 0;
-            score = 0;
+            //score = 0;
             //this.name = name;
         }
 
@@ -64,12 +64,14 @@ namespace wumpus.components
 
         public int getScore()
         {
-            return score;
+            return 100 - turn + coinCount + (10 * arrowCount); 
         }
 
-        public void updateScore() //should we do it in real time or at the end. If at end, just make this method return score
+        public void updateStatus() //should we do it in real time or at the end. If at end, just make this method return score
         {
-            score = 100 - turn + coinCount + (10 * arrowCount);
+            turn++;
+            coinCount++;
+            //score = 100 - turn + coinCount + (10 * arrowCount);
         }
     }
 }
