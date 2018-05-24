@@ -13,6 +13,7 @@ namespace wumpus.components {
         private Map map;
         private Sound sound;
         private Trivia trivia;
+        private InputForm form;
         private ScoreManager highscores;
         private Player player;
 
@@ -21,7 +22,8 @@ namespace wumpus.components {
             map = new Map();
             sound = new Sound();
             trivia = new Trivia();
-            highscores = new ScoreManager();
+            form = new InputForm();
+            highscores = new ScoreManager(form.getName());
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
         }
@@ -42,12 +44,12 @@ namespace wumpus.components {
             if (newLoc == map.getWumpusLocation()) {
                 if (openTrivia(5, 3)) {
                     //sound.playSound(Sound.Sounds.TriviaRight);
-                    //graphics.Show("You survived the Wumpus and forced it to flee!");
+                    graphics.Show("You survived the Wumpus and forced it to flee!");
                     //sounds.playSound(Sound.Sounds.MonsterWalk);
                     map.changeWumpusLocation(wumpusFleeLoc(true));
                 } else {
                     //sound.playSound(Sound.Sounds.TriviaWrong);
-                    //graphics.Show("Game Over");
+                    graphics.Show("Game Over");
                     //sound.playSound(Sound.Sounds.PlayerDie);
                     //end game
                 }
@@ -60,25 +62,22 @@ namespace wumpus.components {
             if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
                 //sound.playSound(Sound.Sounds.ArrowImapct);
                 //sound.playSound(Sound.Sounds.MonsterDie);
-                //graphics.Show("You killed the Wumpus!");
+                graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
                 /*if (highscores.testScore(playerScore)) {
-                    //method to get the user to input their name
-                    //method to get the current date
-                    //highscores.StoreHighScore(playerScore); 
-                    //highscores.DisplayHighScores();
+                    highscores.StoreHighScore(playerScore); 
                 }*/
+                highscores.DisplayHighScores();
                 //end game --- option to play again?
             } else {
                 //sound.playSound("Sound.Sounds.ArrowMiss");
-                //graphics.Show("You missed!");
+                graphics.Show("You missed!");
                 if (player.getArrowCount() == 0) {
-                    //graphics.Show("You ran out of arrows!");
+                    graphics.Show("You ran out of arrows!");
                     //sound.playSound(Sound.Sounds.PlayerDie);
                     //end game
                 }
                 map.changeWumpusLocation(wumpusFleeLoc(false));
-                //continue game
             }
         }
 
@@ -86,18 +85,18 @@ namespace wumpus.components {
             if (openTrivia(3, 2)) {
                 player.changeArrowCount(2);
                 //sound.playSound(Sound.Sounds.TriviaRight);
-                //graphics.Show("Well done!");
+                graphics.Show("Well done!");
             }
             else {
                 //sound.playSound(Sound.Sounds.TriviaWrong);
-                //graphics.Show("Better luck next time!");
+                graphics.Show("Better luck next time!");
             }
         }
 
         public bool openTrivia(int asked, int needed) {
             if (player.getCoinCount() < asked) {
                 //sound.playSound(Sound.Sounds.NoError);
-                //graphics.Show("Not enough coins for this action");
+                graphics.Show("Not enough coins for this action");
                 return false;
             } else {
                 player.changeCoinCount(asked * -1);
@@ -138,11 +137,11 @@ namespace wumpus.components {
             if (openTrivia(3, 2)) {
                 //sound.playSound(Sounds.Sound.TriviaRight);
                 map.changePlayerLocation(1);
-                //graphics.Show("You survived the pit!");
+                graphics.Show("You survived the pit!");
             }
             else {
                 //sound.playSound(Sound.Sounds.TriviaWrong);
-                //graphics.Show("You succumbed to the pit!");
+                graphics.Show("You succumbed to the pit!");
                 //sound.playSound(Sound.Sounds.PlayerDie);
                 //end game
             }
@@ -242,9 +241,6 @@ namespace wumpus.components {
 
         public void startGame() {
             graphics.startGame();
-            //InputForm form = new InputForm();
-            //form.Show();
-            //String name = nameBox.Text();
             //sound.playSound(Sound.Sounds.BackgroundMusic);
         }
     }
