@@ -192,8 +192,7 @@ namespace wumpus.components {
             int finalLoc = map.getWumpusLocation(); //only temporary
             if (multiple) { //wumpus runs 2-4 rooms away
                 int howMany = r.Next(2, 5);
-                for (int i = 0; i < howMany; i++)
-                { 
+                for (int i = 0; i < howMany; i++) { 
                     int[] possibilities = cave.getAllConnections(initialLoc);
                     bool notPrevious = true;                   
                     while (notPrevious) { //to ensure does not run into the room it came from
