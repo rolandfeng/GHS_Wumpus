@@ -33,7 +33,7 @@ namespace wumpus.components {
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
             player.updateStatus();
-            //graphics.update(newLoc);
+            graphics.update(newLoc);
             //hazardWarnings(hazards);
             if (map.pitFall()) {
                 pitInstance();
