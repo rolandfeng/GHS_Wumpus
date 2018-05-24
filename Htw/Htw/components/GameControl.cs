@@ -30,7 +30,7 @@ namespace wumpus.components {
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
-            player.updateScore();
+            player.updateStatus();
             graphics.update(newLoc, hazards);
             //callSounds(hazards);
             if (map.pitFall()) {
@@ -41,7 +41,7 @@ namespace wumpus.components {
                 if (openTrivia(5, 3)) {
                     //graphics message telling them they survived wumpus
                     //sound.playSound("TriviaRight");
-                    map.wumpusMovement(true);
+                    map.changeWumpusLocation(wumpusFleeLoc(true));
                 } else {
                     //sound.playSound("TriviaWrong");
                     //graphics message saying game over
@@ -72,7 +72,7 @@ namespace wumpus.components {
                     //sound.playSound("PlayerDie");
                     //end game
                 }
-                map.wumpusMovement(false);
+                map.changeWumpusLocation(wumpusFleeLoc(false));
                 //continue game
             }
         }
@@ -103,7 +103,7 @@ namespace wumpus.components {
             if (openTrivia(3, 2)) {
                 //sound.playSound("TriviaRight");
                 Random r = new Random();
-                int whichHint = r.Next(0, 7); //(0, n) = range from 0 to n-1
+                int whichHint = r.Next(0, 8); //(0, n) = range from 0 to n-1
                 if (whichHint == 0 || whichHint == 1) { //bat rooms
                     int[] bats = map.getBatLocations();
                     return ("There is a bat in room " + bats[whichHint] + "!");
@@ -114,6 +114,11 @@ namespace wumpus.components {
                     return ("The Wumpus is in room " + map.getWumpusLocation() + "!");
                 } else if (whichHint == 5) { //bogus hint
                     return ("You are in room " + map.getPlayerLocation() + "!");
+                } else if (whichHint == 6) {//Wumpus is 2 rooms away or not
+                    if (withinTwoRooms())
+                        return ("The Wumpus is 2 rooms away!");
+                    else
+                        return ("The Wumpus is further than 2 rooms away!");
                 } else { //more troll hints, can add more
                     return ("It is turn " + player.getTurn() + "!");
                 }
@@ -179,6 +184,37 @@ namespace wumpus.components {
             if (hazards[5]) //adjacent to pits
                 sound.playSound("ScarySound");
         }*/
+
+        private int wumpusFleeLoc(bool multiple) { 
+            Random r = new Random();
+            int initialLoc = map.getWumpusLocation();
+            int finalLoc = map.getWumpusLocation(); //only temporary
+            if (multiple) { //wumpus runs 2-4 rooms away
+                int howMany = r.Next(2, 5);
+                for (int i = 0; i < howMany; i++)
+                { //currently has a possibility that the wumpus runs back into the same room
+                    int[] possibilities = cave.getAllConnections(initialLoc);
+                    finalLoc = possibilities[r.Next(0, 6)];
+                    initialLoc = finalLoc;
+                }
+            } else {
+                int randomRoom = r.Next(0, 6);
+                int[] connections = cave.getAllConnections(initialLoc);
+                finalLoc = connections[randomRoom];
+            }
+            return finalLoc;
+        }
+
+        private bool withinTwoRooms() { //returns if wumpus is 2 rooms away from player
+            int[] currentConnections = cave.getAllConnections(map.getPlayerLocation());
+            int[] wumpusConnections = cave.getAllConnections(map.getWumpusLocation());
+            for (int i = 0; i < currentConnections.Length; i++) {
+                if (currentConnections[i] == wumpusConnections[i]) {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         public void startGame() {
             graphics.startGame();
