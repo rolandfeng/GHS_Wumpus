@@ -83,6 +83,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="forms\HighScoreForm.resx">
       <DependentUpon>HighScoreForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,13 +125,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\DoorOpen.wav" />
-    <None Include="Resources\DoorClose.wav" />
-    <None Include="Resources\OhMyGod.wav" />
+    <None Include="Resources\ArrowImpact.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resource\TriviaQuestions.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
