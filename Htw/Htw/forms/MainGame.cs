@@ -19,6 +19,8 @@ namespace wumpus.forms
         Map map;
         Cave cave;
         Direction direction;
+        Image[] image;
+
 
         public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
         {
@@ -27,10 +29,19 @@ namespace wumpus.forms
             this.player = player;
             this.map = map;
             this.cave = cave;
-       
+            this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
+                                     Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
+                                     Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
+                                     Properties.Resources.planet10, Properties.Resources.planet11, Properties.Resources.planet12,
+                                     Properties.Resources.planet13, Properties.Resources.planet14, Properties.Resources.planet15,
+                                     Properties.Resources.planet16, Properties.Resources.planet17, Properties.Resources.planet18,
+                                     Properties.Resources.planet19, Properties.Resources.planet20, Properties.Resources.planet21,
+                                     Properties.Resources.planet22, Properties.Resources.planet23, Properties.Resources.planet24,
+                                     Properties.Resources.planet25, Properties.Resources.planet26, Properties.Resources.planet27,
+                                     Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30 };
         }
 
-        public void UpdateGraphics(int currentRoom, bool[] hazards)
+        public void UpdateGraphics(int currentRoom)
         {
             // update coins
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
@@ -90,9 +101,9 @@ namespace wumpus.forms
             {
                 SouthWestRoomsLabel.Text = "" + connections[5];
             }
-         
-            //update room
 
+            //update room
+            BackgroundImage = image[currentRoom - 1];            
         }
 
         private void northButton_Click(object sender, EventArgs e)

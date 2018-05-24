@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using wumpus.forms;
+using System.Drawing;
 //using System.Windows.Forms;
 
 namespace wumpus.components
@@ -22,7 +23,7 @@ namespace wumpus.components
             this.gameControl = gameControl;
             this.player = player;
             this.map = map;
-            this.cave = cave; 
+            this.cave = cave;
         }
 
         public void startGame()
@@ -31,9 +32,9 @@ namespace wumpus.components
             mainGame.Show();
         }
 
-        public void update(int currentRoom, bool[] hazards)
+        public void update(int currentRoom)
         {
-            mainGame.UpdateGraphics(currentRoom, hazards);
+            mainGame.UpdateGraphics(currentRoom);
         }
 
         public void Show(String message)
