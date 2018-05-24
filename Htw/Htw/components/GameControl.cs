@@ -217,6 +217,7 @@ namespace wumpus.components {
                             prevLoc = initialLoc;
                             finalLoc = possibilities[nextRoom];
                             initialLoc = finalLoc;
+                            notPrevious = false;
                         }     
                     }
                 }
