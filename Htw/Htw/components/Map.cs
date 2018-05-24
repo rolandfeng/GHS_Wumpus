@@ -133,12 +133,11 @@ namespace wumpus.components
             }
         }
                     
-
-        public void wumpusMovement(bool multiple) //only changes location
+        public void changeWumpusLocation(int room)
         {
             occupiedHazard[wumpusLocation - 1] = false;
-            wumpusLocation = num.Next(30);
+            wumpusLocation = room;
             occupiedHazard[wumpusLocation - 1] = true;
-        } 
+        }
     }
 }
