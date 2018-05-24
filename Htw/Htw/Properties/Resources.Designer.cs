@@ -63,27 +63,137 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream DoorClose {
+        internal static System.IO.UnmanagedMemoryStream ArrowImpact {
             get {
-                return ResourceManager.GetStream("DoorClose", resourceCulture);
+                return ResourceManager.GetStream("ArrowImpact", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream DoorOpen {
+        internal static System.IO.UnmanagedMemoryStream ArrowMiss {
             get {
-                return ResourceManager.GetStream("DoorOpen", resourceCulture);
+                return ResourceManager.GetStream("ArrowMiss", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream OhMyGod {
+        internal static System.IO.UnmanagedMemoryStream BatCall {
             get {
-                return ResourceManager.GetStream("OhMyGod", resourceCulture);
+                return ResourceManager.GetStream("BatCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream BatsInCave {
+            get {
+                return ResourceManager.GetStream("BatsInCave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterDie {
+            get {
+                return ResourceManager.GetStream("MonsterDie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterGrowl {
+            get {
+                return ResourceManager.GetStream("MonsterGrowl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterRoar {
+            get {
+                return ResourceManager.GetStream("MonsterRoar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterWalk {
+            get {
+                return ResourceManager.GetStream("MonsterWalk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream NoError {
+            get {
+                return ResourceManager.GetStream("NoError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream PlayerDie {
+            get {
+                return ResourceManager.GetStream("PlayerDie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream PlayerWalk {
+            get {
+                return ResourceManager.GetStream("PlayerWalk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ScaryScream {
+            get {
+                return ResourceManager.GetStream("ScaryScream", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ScarySound {
+            get {
+                return ResourceManager.GetStream("ScarySound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startBackground {
+            get {
+                object obj = ResourceManager.GetObject("startBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startBackgroundCrop {
+            get {
+                object obj = ResourceManager.GetObject("startBackgroundCrop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -95,6 +205,24 @@ namespace wumpus.Properties {
         internal static string TriviaQuestions {
             get {
                 return ResourceManager.GetString("TriviaQuestions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream TriviaRight {
+            get {
+                return ResourceManager.GetStream("TriviaRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream TriviaWrong {
+            get {
+                return ResourceManager.GetStream("TriviaWrong", resourceCulture);
             }
         }
     }

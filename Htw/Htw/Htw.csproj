@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>wumpus</RootNamespace>
     <AssemblyName>Htw</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -83,10 +84,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Resource1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resource2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource2.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="forms\HighScoreForm.resx">
       <DependentUpon>HighScoreForm.cs</DependentUpon>
@@ -102,14 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,6 +132,20 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\ArrowImpact.wav" />
+    <None Include="Resources\ArrowMiss.wav" />
+    <None Include="Resources\BatCall.wav" />
+    <None Include="Resources\BatsInCave.wav" />
+    <None Include="Resources\MonsterDie.wav" />
+    <None Include="Resources\MonsterGrowl.wav" />
+    <None Include="Resources\MonsterRoar.wav" />
+    <None Include="Resources\MonsterWalk.wav" />
+    <None Include="Resources\NoError.wav" />
+    <None Include="Resources\PlayerDie.wav" />
+    <None Include="Resources\PlayerWalk.wav" />
+    <None Include="Resources\ScaryScream.wav" />
+    <None Include="Resources\ScarySound.wav" />
+    <None Include="Resources\TriviaRight.wav" />
+    <None Include="Resources\TriviaWrong.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
@@ -133,6 +153,10 @@
     <EmbeddedResource Include="Resources\Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource2.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\TriviaQuestions.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -10,38 +10,36 @@ namespace wumpus.components
 {
     public class Trivia
     {
+        private TriviaForm triviaForm;
+        private String[][] questions;
+
         public Trivia()
         {
-            TriviaForm TriviaForm = new TriviaForm(this);
-            TriviaForm.Show();
-            //generate different number of buttons for possible trivia answers
+           triviaForm = new TriviaForm(this);
         }
-        public Boolean ask(int questionsAsk, int answerCorrect)
-        {
-            //read triviaQuestions file and print out question on form
 
+        public void ShowTrivia()
+        {
+         triviaForm.Show();
+        }
+
+        public bool ask(int questionsAsk, int answerCorrect)
+        {
+            triviaForm.displayQuestion(questions[0]);
             return false;
         }
 
-        //separate method to read files
-
-        public String GetQuestions()
+       
+        
+        public String[][] ReadFile()
         {
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
-            String[] segments = new String[lines.Length];
-            foreach (String line in lines)
+            String[][] segments = new String[lines.Length][];
+            for(int i = 0; i < lines.Length; i++)
             {
-                segments = line.Split(';');
+                segments[i] = lines[i].Split(';');
             }
-            int QuestionNumber = 0;
-            return segments[QuestionNumber];
-
-        }
-
-        public String GetAnswers()
-        {
-
-            return null;
+            return segments;
         }
 
     }
