@@ -37,12 +37,13 @@ namespace wumpus.components
             mainGame.UpdateGraphics(currentRoom);
         }
 
-        /* public void Show(String message)
+        /*public void Show(String message)
          {
              System.Windows.Forms.MessageBox.Show(message);
-             break;
+
          }
          */
+         
 
 
     
