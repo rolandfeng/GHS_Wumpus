@@ -56,54 +56,87 @@ public class Cave
     {
         int[] roomLoc = findRoomLocation(currentRoom);
         int roomRow = roomLoc[0];
-        int roomColumn = roomLoc[1] - numZerosBeforeIndex(roomLoc[0], roomLoc[1]); 
+        int roomColumn = roomLoc[1] - numZerosBeforeIndex(roomLoc[0], roomLoc[1]);
+        bool even = false;
+        if ((roomColumn + 1) % 2 == 0)
+            even = true;
         // Column offset to compensate for walls
 
         switch (direction)
         {
             case Direction.NORTH:
                 if (roomRow == 0)
-                    roomRow = 5;
+                    roomRow = cave.Length;
                 return cave[roomRow - 1]
                            [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn)];
 
             case Direction.NORTH_EAST:
-                if (roomRow == 0)
-                    roomRow = 5;
-                if (roomColumn == 5)
+                if (roomColumn == cave[0].Length - 1)
                     roomColumn = -1;
-                return cave[roomRow - 1]
-                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) + 1];
+                if (even)
+                {
+                    return cave[roomRow]
+                               [roomColumn + 1];
+                } else
+                {
+                    if (roomRow == 0)
+                        roomRow = cave.Length;
+                    return cave[roomRow - 1]
+                               [roomColumn + 1];
+                }
+                
 
             case Direction.NORTH_WEST:
-                if (roomRow == 0)
-                    roomRow = 5;
                 if (roomColumn == 0)
-                    roomColumn = 6;
-                return cave[roomRow - 1]
-                           [roomColumn - numZerosBeforeIndex(roomRow - 1, roomColumn) - 1];
+                    roomColumn = cave[0].Length;
+                if (even)
+                {
+                    return cave[roomRow]
+                               [roomColumn - 1];
+                } else
+                {
+                    if (roomRow == 0)
+                        roomRow = cave.Length;
+                    return cave[roomRow - 1]
+                               [roomColumn - 1];
+                }
 
             case Direction.SOUTH:
                 if (roomRow == cave.Length - 1)
-                    roomRow = -1;
+                    roomRow = -1; 
                 return cave[roomRow + 1]
                            [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn)];
 
             case Direction.SOUTH_EAST:
-                if (roomRow == cave.Length - 1)
-                    roomRow = -1;
-                if (roomColumn == 5)
+                if (roomColumn == cave[0].Length)
                     roomColumn = -1;
-                return cave[roomRow + 1]
-                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) + 1];
+                if (even)
+                {
+                    return cave[roomRow]
+                               [roomColumn + 1];
+                } else
+                {
+                    if (roomRow == cave.Length - 1)
+                        roomRow = -1;
+                    return cave[roomRow + 1]
+                               [roomColumn + 1];
+                }
 
             case Direction.SOUTH_WEST:
-                if (roomRow == cave.Length - 1)
-                    roomRow = -1;
                 if (roomColumn == 0)
-                    roomColumn = 6;
-                return cave[roomRow + 1]
-                           [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn) - 1];
+                    roomColumn = cave[0].Length;
+                if (even)
+                {
+                    return cave[roomRow]
+                               [roomColumn - 1];
+                } else
+                {
+                    if (roomRow == cave.Length - 1)
+                        roomRow = -1;
+                    return cave[roomRow + 1]
+                               [roomColumn - 1];
+                }
+                
         }
         return 0;
     }

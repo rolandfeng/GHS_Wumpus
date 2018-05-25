@@ -67,7 +67,7 @@ namespace wumpus.components
             return 100 - turn + coinCount + (10 * arrowCount); 
         }
 
-        public void updateScore() //should we do it in real time or at the end. If at end, just make this method return score
+        public void updateStatus() //should we do it in real time or at the end. If at end, just make this method return score
         {
             turn++;
             coinCount++;
