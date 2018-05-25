@@ -64,9 +64,9 @@ namespace wumpus.components {
                 sound.playSound(Sound.Sounds.MonsterDie);
                 graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
-                /*if (highscores.testScore(playerScore)) {
+                if (highscores.testScore(playerScore)) {
                     highscores.StoreHighScore(playerScore); 
-                }*/
+                }
                 highscores.DisplayHighScores();
                 //end game --- option to play again?
             } else {
