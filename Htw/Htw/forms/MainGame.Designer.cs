@@ -46,6 +46,7 @@
             this.ShootArrowButton = new System.Windows.Forms.Button();
             this.PurchaseSecretButton = new System.Windows.Forms.Button();
             this.buySecretButton = new System.Windows.Forms.Button();
+            this.messageLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // northButton
@@ -220,12 +221,22 @@
             this.buySecretButton.UseVisualStyleBackColor = true;
             this.buySecretButton.Click += new System.EventHandler(this.buySecretButton_Click);
             // 
+            // messageLabel
+            // 
+            this.messageLabel.AutoSize = true;
+            this.messageLabel.Location = new System.Drawing.Point(46, 100);
+            this.messageLabel.Name = "messageLabel";
+            this.messageLabel.Size = new System.Drawing.Size(50, 13);
+            this.messageLabel.TabIndex = 18;
+            this.messageLabel.Text = "Message";
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.ClientSize = new System.Drawing.Size(669, 586);
+            this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.buySecretButton);
             this.Controls.Add(this.ShootArrowButton);
             this.Controls.Add(this.PurchaseArrowsButton);
@@ -270,5 +281,6 @@
         private System.Windows.Forms.Button ShootArrowButton;
         private System.Windows.Forms.Button PurchaseSecretButton;
         private System.Windows.Forms.Button buySecretButton;
+        private System.Windows.Forms.Label messageLabel;
     }
 }
