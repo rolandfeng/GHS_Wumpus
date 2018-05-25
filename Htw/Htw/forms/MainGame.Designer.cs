@@ -45,6 +45,7 @@
             this.PurchaseArrowsButton = new System.Windows.Forms.Button();
             this.ShootArrowButton = new System.Windows.Forms.Button();
             this.PurchaseSecretButton = new System.Windows.Forms.Button();
+            this.buySecretButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // northButton
@@ -208,7 +209,16 @@
             this.PurchaseSecretButton.TabIndex = 17;
             this.PurchaseSecretButton.Text = "Purchase Secret ";
             this.PurchaseSecretButton.UseVisualStyleBackColor = true;
-            this.PurchaseSecretButton.Click += new System.EventHandler(this.PurchaseSecretButton_Click);
+            // 
+            // buySecretButton
+            // 
+            this.buySecretButton.Location = new System.Drawing.Point(59, 12);
+            this.buySecretButton.Name = "buySecretButton";
+            this.buySecretButton.Size = new System.Drawing.Size(122, 23);
+            this.buySecretButton.TabIndex = 17;
+            this.buySecretButton.Text = "Purchase Secret";
+            this.buySecretButton.UseVisualStyleBackColor = true;
+            this.buySecretButton.Click += new System.EventHandler(this.buySecretButton_Click);
             // 
             // MainGame
             // 
@@ -216,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.ClientSize = new System.Drawing.Size(669, 586);
-            this.Controls.Add(this.PurchaseSecretButton);
+            this.Controls.Add(this.buySecretButton);
             this.Controls.Add(this.ShootArrowButton);
             this.Controls.Add(this.PurchaseArrowsButton);
             this.Controls.Add(this.SouthWestRoomsLabel);
@@ -259,5 +269,6 @@
         private System.Windows.Forms.Button PurchaseArrowsButton;
         private System.Windows.Forms.Button ShootArrowButton;
         private System.Windows.Forms.Button PurchaseSecretButton;
+        private System.Windows.Forms.Button buySecretButton;
     }
 }

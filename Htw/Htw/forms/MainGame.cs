@@ -29,7 +29,7 @@ namespace wumpus.forms
             this.player = player;
             this.map = map;
             this.cave = cave;
-            /*this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
+            this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
                                      Properties.Resources.planet10, Properties.Resources.planet11, Properties.Resources.planet12,
@@ -39,7 +39,7 @@ namespace wumpus.forms
                                      Properties.Resources.planet22, Properties.Resources.planet23, Properties.Resources.planet24,
                                      Properties.Resources.planet25, Properties.Resources.planet26, Properties.Resources.planet27,
                                      Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30 };
-        */
+        
     }
 
 
@@ -115,12 +115,12 @@ namespace wumpus.forms
             }
 
             //update button pictures
-            //northButton.Image = image[connections[0]];
-            //northEastButton.Image = image[connections[1]];
-            //northWestButton.Image = image[connections[2]];
-            //southButton.Image = image[connections[3]];
-            //southEastButton.Image = image[connections[4]];
-            //southWestButton.Image = image[connections[5]];
+            northButton.Image = image[connections[0]];
+            northEastButton.Image = image[connections[1]];
+            northWestButton.Image = image[connections[2]];
+            southButton.Image = image[connections[3]];
+            southEastButton.Image = image[connections[4]];
+            southWestButton.Image = image[connections[5]];
 
 
             //update room
@@ -174,6 +174,11 @@ namespace wumpus.forms
         private void PurchaseArrowsButton_Click(object sender, EventArgs e)
         {
             gameControl.buyArrows();
+        }
+
+        private void buySecretButton_Click(object sender, EventArgs e)
+        {
+            gameControl.buySecret();
         }
     }
 }
