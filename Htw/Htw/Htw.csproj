@@ -184,9 +184,8 @@
     <None Include="Resources\ScarySound.wav" />
     <None Include="Resources\TriviaRight.wav" />
     <None Include="Resources\TriviaWrong.wav" />
-    <EmbeddedResource Include="Resource\StandardCave.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <None Include="Resources\MainMenu.wav" />
+    <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>

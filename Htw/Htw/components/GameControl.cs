@@ -29,28 +29,28 @@ namespace wumpus.components {
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
-            //sounds.playSound(Sound.Sounds.PlayerWalk);
+            sound.playSound(Sound.Sounds.PlayerWalk);
             int currentLoc = map.getPlayerLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
             player.updateStatus();
             graphics.update(newLoc);
-            //hazardWarnings(hazards);
+            hazardWarnings(hazards);
             if (map.pitFall()) {
                 pitInstance();
             }
             map.batCheck();
             if (newLoc == map.getWumpusLocation()) {
                 if (openTrivia(5, 3)) {
-                    //sound.playSound(Sound.Sounds.TriviaRight);
-                    graphics.Show("You survived the Wumpus and forced it to flee!");
-                    //sounds.playSound(Sound.Sounds.MonsterWalk);
+                    sound.playSound(Sound.Sounds.TriviaRight);
+                    //graphics.Show("You survived the Wumpus and forced it to flee!");
+                    sound.playSound(Sound.Sounds.MonsterWalk);
                     map.changeWumpusLocation(wumpusFleeLoc(true));
                 } else {
-                    //sound.playSound(Sound.Sounds.TriviaWrong);
-                    graphics.Show("Game Over");
-                    //sound.playSound(Sound.Sounds.PlayerDie);
+                    sound.playSound(Sound.Sounds.TriviaWrong);
+                    //graphics.Show("Game Over");
+                    sound.playSound(Sound.Sounds.PlayerDie);
                     //end game
                 }
             }
@@ -60,21 +60,21 @@ namespace wumpus.components {
             player.changeArrowCount(-1);
             int currentLoc = map.getPlayerLocation();
             if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
-                //sound.playSound(Sound.Sounds.ArrowImapct);
-                //sound.playSound(Sound.Sounds.MonsterDie);
-                graphics.Show("You killed the Wumpus!");
+                sound.playSound(Sound.Sounds.ArrowImpact);
+                sound.playSound(Sound.Sounds.MonsterDie);
+                //graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
-                /*if (highscores.testScore(playerScore)) {
+                if (highscores.testScore(playerScore)) {
                     highscores.StoreHighScore(playerScore); 
-                }*/
+                }
                 highscores.DisplayHighScores();
                 //end game --- option to play again?
             } else {
-                //sound.playSound("Sound.Sounds.ArrowMiss");
-                graphics.Show("You missed!");
+                sound.playSound(Sound.Sounds.ArrowMiss);
+                //graphics.Show("You missed!");
                 if (player.getArrowCount() == 0) {
-                    graphics.Show("You ran out of arrows!");
-                    //sound.playSound(Sound.Sounds.PlayerDie);
+                    //graphics.Show("You ran out of arrows!");
+                    sound.playSound(Sound.Sounds.PlayerDie);
                     //end game
                 }
                 map.changeWumpusLocation(wumpusFleeLoc(false));
@@ -84,19 +84,19 @@ namespace wumpus.components {
         public void buyArrows() {
             if (openTrivia(3, 2)) {
                 player.changeArrowCount(2);
-                //sound.playSound(Sound.Sounds.TriviaRight);
-                graphics.Show("Well done!");
+                sound.playSound(Sound.Sounds.TriviaRight);
+                //graphics.Show("Well done!");
             }
             else {
-                //sound.playSound(Sound.Sounds.TriviaWrong);
-                graphics.Show("Better luck next time!");
+                sound.playSound(Sound.Sounds.TriviaWrong);
+                //graphics.Show("Better luck next time!");
             }
         }
 
         public bool openTrivia(int asked, int needed) {
             if (player.getCoinCount() < asked) {
-                //sound.playSound(Sound.Sounds.NoError);
-                graphics.Show("Not enough coins for this action");
+                sound.playSound(Sound.Sounds.NoError);
+                //graphics.Show("Not enough coins for this action");
                 return false;
             } else {
                 player.changeCoinCount(asked * -1);
@@ -107,7 +107,7 @@ namespace wumpus.components {
 
         public string buySecret() {
             if (openTrivia(3, 2)) {
-                //sound.playSound(Sound.Sounds.TriviaRight);
+                sound.playSound(Sound.Sounds.TriviaRight);
                 Random r = new Random();
                 int whichHint = r.Next(0, 8); //(0, n) = range from 0 to n-1
                 if (whichHint == 0 || whichHint == 1) { //bat rooms
@@ -129,20 +129,20 @@ namespace wumpus.components {
                     return ("It is turn " + player.getTurn() + "!");
                 }
             } else { //false case
-                //sound.playSound(Sound.Sounds.TriviaWrong);
+                sound.playSound(Sound.Sounds.TriviaWrong);
                 return "Better luck next time!";
             }
         }
         public void pitInstance() {
             if (openTrivia(3, 2)) {
-                //sound.playSound(Sounds.Sound.TriviaRight);
+                sound.playSound(Sound.Sounds.TriviaRight);
                 map.changePlayerLocation(1);
-                graphics.Show("You survived the pit!");
+                //graphics.Show("You survived the pit!");
             }
             else {
-                //sound.playSound(Sound.Sounds.TriviaWrong);
-                graphics.Show("You succumbed to the pit!");
-                //sound.playSound(Sound.Sounds.PlayerDie);
+                sound.playSound(Sound.Sounds.TriviaWrong);
+                //graphics.Show("You succumbed to the pit!");
+                sound.playSound(Sound.Sounds.PlayerDie);
                 //end game
             }
         }
@@ -173,32 +173,32 @@ namespace wumpus.components {
             return hazards;
         }
 
-        /*private void hazardWarnings(bool[] hazards) {
+        private void hazardWarnings(bool[] hazards) {
             if (hazards[0]) {//same room as wumpus 
-                graphics.Show("You found the Wumpus!");
+                //graphics.Show("You found the Wumpus!");
                 sound.playSound(Sound.Sounds.MonsterRoar);
             }
             if (hazards[1]) {//adjacent to wumpus
-                graphics.Show("You smell a Wumpus!");
+                //graphics.Show("You smell a Wumpus!");
                 sound.playSound(Sound.Sounds.MonsterGrowl);
             }
             if (hazards[2]) {//same room as bats
-                graphics.Show("You stumbled upon some bats!");
-                sound.playSound(Sound.Sounds.BatInCave);
+                //graphics.Show("You stumbled upon some bats!");
+                sound.playSound(Sound.Sounds.BatsInCave);
             }
             if (hazards[3]) {//adjacent to bats
-                graphics.Show("Bats nearby!");
+                //graphics.Show("Bats nearby!");
                 sound.playSound(Sound.Sounds.BatCall);
             }
-            if (hazards[4]) //same room as pits {
-                graphics.Show("You fallen into a pit!");
+            if (hazards[4]) {//same room as pits 
+                //.Show("You fallen into a pit!");
                 sound.playSound(Sound.Sounds.ScaryScream);
             }
             if (hazards[5]) {//adjacent to pits
-                graphics.Show("You feel a draft...");
+                //graphics.Show("You feel a draft...");
                 sound.playSound(Sound.Sounds.ScarySound);
             }
-        }*/
+        }
 
         private int wumpusFleeLoc(bool multiple) { 
             Random r = new Random();
@@ -241,7 +241,7 @@ namespace wumpus.components {
 
         public void startGame() {
             graphics.startGame();
-            //sound.playSound(Sound.Sounds.BackgroundMusic);
+            sound.playSound(Sound.Sounds.BackgroundMusic);
         }
     }
 }
