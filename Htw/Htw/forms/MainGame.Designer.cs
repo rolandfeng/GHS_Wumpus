@@ -44,13 +44,15 @@
             this.SouthWestRoomsLabel = new System.Windows.Forms.Label();
             this.PurchaseArrowsButton = new System.Windows.Forms.Button();
             this.ShootArrowButton = new System.Windows.Forms.Button();
+            this.PurchaseSecretButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // northButton
             // 
-            this.northButton.Location = new System.Drawing.Point(269, 149);
+            this.northButton.Image = global::wumpus.Properties.Resources.startBackground;
+            this.northButton.Location = new System.Drawing.Point(269, -2);
             this.northButton.Name = "northButton";
-            this.northButton.Size = new System.Drawing.Size(75, 23);
+            this.northButton.Size = new System.Drawing.Size(123, 57);
             this.northButton.TabIndex = 0;
             this.northButton.Text = "North";
             this.northButton.UseVisualStyleBackColor = true;
@@ -198,12 +200,23 @@
             this.ShootArrowButton.UseVisualStyleBackColor = true;
             this.ShootArrowButton.Click += new System.EventHandler(this.ShootArrowButton_Click);
             // 
+            // PurchaseSecretButton
+            // 
+            this.PurchaseSecretButton.Location = new System.Drawing.Point(13, 23);
+            this.PurchaseSecretButton.Name = "PurchaseSecretButton";
+            this.PurchaseSecretButton.Size = new System.Drawing.Size(75, 23);
+            this.PurchaseSecretButton.TabIndex = 17;
+            this.PurchaseSecretButton.Text = "Purchase Secret ";
+            this.PurchaseSecretButton.UseVisualStyleBackColor = true;
+            this.PurchaseSecretButton.Click += new System.EventHandler(this.PurchaseSecretButton_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.ClientSize = new System.Drawing.Size(669, 586);
+            this.Controls.Add(this.PurchaseSecretButton);
             this.Controls.Add(this.ShootArrowButton);
             this.Controls.Add(this.PurchaseArrowsButton);
             this.Controls.Add(this.SouthWestRoomsLabel);
@@ -245,5 +258,6 @@
         private System.Windows.Forms.Label SouthWestRoomsLabel;
         private System.Windows.Forms.Button PurchaseArrowsButton;
         private System.Windows.Forms.Button ShootArrowButton;
+        private System.Windows.Forms.Button PurchaseSecretButton;
     }
 }
