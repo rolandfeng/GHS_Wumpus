@@ -78,8 +78,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.TriviaWrong);
                     break;
                 case Sounds.MainMenu:
-                    playSoundFromFile(Properties.Resources.TriviaWrong);
-                    //change
+                    playSoundFromFile(Properties.Resources.MainMenu);
                     break;
                 case Sounds.BackgroundMusic:
                     playSoundFromFile(Properties.Resources.TriviaWrong);
