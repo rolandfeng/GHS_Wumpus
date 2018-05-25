@@ -16,6 +16,7 @@ namespace wumpus.components
         private int answerCorrect;
         private int incrementCorrect;
         private int rightAnswerIndex;
+        private int numQuestions;
 
         public Trivia()
         {
@@ -35,17 +36,23 @@ namespace wumpus.components
 
         public bool ask(int questionsAsk, int answerCorrect) 
         {
+            bool statement = false;
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
-            if (answerCorrect == incrementCorrect)
+            if (numQuestions == questionsAsk)
             {
                 triviaForm.Close();
             }
             else
             {
                 askQuestion();
+                if (answerCorrect == incrementCorrect)
+                {
+                    triviaForm.Close();
+                    statement = true;
+                }
             }
-            return true;
+            return statement; 
         }
 
         public void increment()
@@ -69,6 +76,8 @@ namespace wumpus.components
 
             rightAnswerIndex = Int32.Parse(questions[randomIndex][5]);
             triviaForm.SetRightIndex(rightAnswerIndex);
+
+            numQuestions++; 
         }
 
 
