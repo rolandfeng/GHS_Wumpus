@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using wumpus.common;
 using wumpus.components;
+using System.Drawing.Drawing2D;
 
 namespace wumpus.forms
 {
@@ -39,17 +40,17 @@ namespace wumpus.forms
                                      Properties.Resources.planet22, Properties.Resources.planet23, Properties.Resources.planet24,
                                      Properties.Resources.planet25, Properties.Resources.planet26, Properties.Resources.planet27,
                                      Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30 };
-        
+
+            
     }
 
 
         public void UpdateGraphics(int currentRoom)
         { 
-            Timer timer = new Timer();
-            timer.Interval = 5000;
-            timer.Tick += delegate (object sender, EventArgs e)
-            {
-
+            //Timer timer = new Timer();
+            //timer.Interval = 5000;
+            //timer.Tick += delegate (object sender, EventArgs e)
+            //{
 
                 // update coins
                 NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
@@ -68,7 +69,8 @@ namespace wumpus.forms
                 else
                 {
                     NorthRoomsLabel.Text = "" + connections[0];
-                }
+                    northButton.Image = image[connections[0] - 1];
+            }
 
                 if (connections[1] == 0)
                 {
@@ -78,7 +80,8 @@ namespace wumpus.forms
                 else
                 {
                     NorthEastRoomsLabel.Text = "" + connections[1];
-                }
+                    northEastButton.Image = image[connections[1] - 1];
+            }
 
                 if (connections[2] == 0)
                 {
@@ -88,7 +91,8 @@ namespace wumpus.forms
                 else
                 {
                     NorthWestRoomsLabel.Text = "" + connections[2];
-                }
+                    northWestButton.Image = image[connections[2] - 1];
+            }
 
                 if (connections[3] == 0)
                 {
@@ -98,7 +102,8 @@ namespace wumpus.forms
                 else
                 {
                     SouthRoomsLabel.Text = "" + connections[3];
-                }
+                    southButton.Image = image[connections[3] - 1];
+            }
 
                 if (connections[4] == 0)
                 {
@@ -108,7 +113,8 @@ namespace wumpus.forms
                 else
                 {
                     SouthEastRoomsLabel.Text = "" + connections[4];
-                }
+                    southEastButton.Image = image[connections[4] - 1];
+            }
 
                 if (connections[5] == 0)
                 {
@@ -118,22 +124,25 @@ namespace wumpus.forms
                 else
                 {
                     SouthWestRoomsLabel.Text = "" + connections[5];
-                }
+                    southWestButton.Image = image[connections[5] - 1];
+            }
 
                 //update button pictures
-                northButton.Image = image[connections[0]];
-                northEastButton.Image = image[connections[1]];
-                northWestButton.Image = image[connections[2]];
-                southButton.Image = image[connections[3]];
-                southEastButton.Image = image[connections[4]];
-                southWestButton.Image = image[connections[5]];
+
+                
+    
+                
+                
+                
+                
+               
 
 
 
                 //update room
                 BackgroundImage = image[currentRoom - 1];
-                timer.Stop();
-            };
+            //timer.Stop();
+            //};
         }
 
         private void northButton_Click(object sender, EventArgs e)
@@ -188,7 +197,22 @@ namespace wumpus.forms
         {
             gameControl.buySecret();
         }
+
+        //private void MainGame_Load(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
 
+public class RoundButton : Button
+{
+    protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+    {
+        GraphicsPath grPath = new GraphicsPath();
+        grPath.AddEllipse(100, 100, 50, 50);
+        this.Region = new System.Drawing.Region(grPath);
+        base.OnPaint(e);
+    }
+}
 
