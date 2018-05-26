@@ -11,11 +11,12 @@ namespace wumpus.components
     class ScoreManager
     {
         private List<HighScore> highScoresList;
-
+        private string name;
         private const int MAX_NUMBER_OF_HIGH_SCORES = 10;
 
-        public ScoreManager()
+        public ScoreManager(string name)
         {
+        this.name = name;
         }
 
         private void LoadHighScores()
@@ -57,9 +58,11 @@ namespace wumpus.components
             return newScore > highScoresList[9].getHighScore();    
         }
 
-        public void StoreHighScore(int highScore, String playerName, String date)
+        public void StoreHighScore(int highScore)
         {
-            HighScore newScore = new HighScore(highScore, playerName, date);
+            DateTime dateTime = DateTime.UtcNow.Date;
+            string date = dateTime.ToString("MM/dd/yyyy");
+            HighScore newScore = new HighScore(highScore, name, date);
             highScoresList.Add(newScore);
             SortList();
             trimHighScores();
