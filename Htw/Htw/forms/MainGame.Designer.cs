@@ -230,7 +230,7 @@
             this.northEastButton.BackColor = System.Drawing.Color.Red;
             this.northEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northEastButton.Location = new System.Drawing.Point(715, 173);
+            this.northEastButton.Location = new System.Drawing.Point(715, 48);
             this.northEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.northEastButton.Name = "northEastButton";
             this.northEastButton.Size = new System.Drawing.Size(293, 276);
