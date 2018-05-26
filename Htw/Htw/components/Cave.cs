@@ -58,7 +58,7 @@ public class Cave
         int roomRow = roomLoc[0];
         int roomColumn = roomLoc[1] - numZerosBeforeIndex(roomLoc[0], roomLoc[1]);
         bool even = false;
-        if ((roomColumn + 1) % 2 == 0)
+        if ((roomColumn + 1 - numZerosBeforeIndex(roomRow, roomColumn)) % 2 == 0)
             even = true;
         // Column offset to compensate for walls
 
@@ -108,12 +108,12 @@ public class Cave
                            [roomColumn - numZerosBeforeIndex(roomRow + 1, roomColumn)];
 
             case Direction.SOUTH_EAST:
-                if (roomColumn == cave[0].Length)
+                if (roomColumn == cave[0].Length - 1)
                     roomColumn = -1;
-                if (even)
+                if (!even)
                 {
                     return cave[roomRow]
-                               [roomColumn + 1];
+                               [roomColumn + numZerosBeforeIndex(roomRow,roomColumn + 1)+ 1];
                 } else
                 {
                     if (roomRow == cave.Length - 1)
@@ -125,7 +125,7 @@ public class Cave
             case Direction.SOUTH_WEST:
                 if (roomColumn == 0)
                     roomColumn = cave[0].Length;
-                if (even)
+                if (!even)
                 {
                     return cave[roomRow]
                                [roomColumn - 1];
@@ -203,6 +203,7 @@ public class Cave
                 {
                     roomLocation[0] = row;
                     roomLocation[1] = column;
+                    return roomLocation;
                 }
             }
         }
@@ -215,7 +216,7 @@ public class Cave
         int count = 0;
         for (int i = 0; i < column; i++)
         {
-            if (cave[row][i] > 0)
+            if (cave[row][i] == 0)
             {
                 count++;
             }
