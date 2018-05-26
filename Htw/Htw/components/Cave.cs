@@ -176,6 +176,7 @@ public class Cave
         File.WriteAllLines(filename, linesArray);
     }
 
+    // Takes all numbers from given file and reads them into the cave array
     private void fillCave()
     {
         string[] lines = File.ReadAllLines(caveName);
