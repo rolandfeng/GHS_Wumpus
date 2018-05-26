@@ -45,10 +45,10 @@ namespace wumpus.forms
 
         public void UpdateGraphics(int currentRoom)
         { 
-            Timer timer = new Timer();
-            timer.Interval = 5000;
-            timer.Tick += delegate (object sender, EventArgs e)
-            {
+            //Timer timer = new Timer();
+            //timer.Interval = 5000;
+            //timer.Tick += delegate (object sender, EventArgs e)
+            //{
 
 
                 // update coins
@@ -121,19 +121,20 @@ namespace wumpus.forms
                 }
 
                 //update button pictures
-                northButton.Image = image[connections[0]];
-                northEastButton.Image = image[connections[1]];
-                northWestButton.Image = image[connections[2]];
-                southButton.Image = image[connections[3]];
-                southEastButton.Image = image[connections[4]];
-                southWestButton.Image = image[connections[5]];
+                northButton.Image = image[connections[0]-1];
+                //messageLabel.Text = "" + connections[1];
+                northEastButton.Image = image[connections[1]-1];
+                northWestButton.Image = image[connections[2]-1];
+                southButton.Image = image[connections[3]-1];
+                southEastButton.Image = image[connections[4]-1];
+                southWestButton.Image = image[connections[5]-1];
 
 
 
                 //update room
                 BackgroundImage = image[currentRoom - 1];
-                timer.Stop();
-            };
+                //timer.Stop();
+            //};
         }
 
         private void northButton_Click(object sender, EventArgs e)
