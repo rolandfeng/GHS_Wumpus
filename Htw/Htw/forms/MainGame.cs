@@ -68,7 +68,8 @@ namespace wumpus.forms
                 else
                 {
                     NorthRoomsLabel.Text = "" + connections[0];
-                }
+                    northButton.Image = image[connections[0] - 1];
+            }
 
                 if (connections[1] == 0)
                 {
@@ -78,7 +79,8 @@ namespace wumpus.forms
                 else
                 {
                     NorthEastRoomsLabel.Text = "" + connections[1];
-                }
+                    northEastButton.Image = image[connections[1] - 1];
+            }
 
                 if (connections[2] == 0)
                 {
@@ -88,7 +90,8 @@ namespace wumpus.forms
                 else
                 {
                     NorthWestRoomsLabel.Text = "" + connections[2];
-                }
+                    northWestButton.Image = image[connections[2] - 1];
+            }
 
                 if (connections[3] == 0)
                 {
@@ -98,7 +101,8 @@ namespace wumpus.forms
                 else
                 {
                     SouthRoomsLabel.Text = "" + connections[3];
-                }
+                    southButton.Image = image[connections[3] - 1];
+            }
 
                 if (connections[4] == 0)
                 {
@@ -108,7 +112,8 @@ namespace wumpus.forms
                 else
                 {
                     SouthEastRoomsLabel.Text = "" + connections[4];
-                }
+                    southEastButton.Image = image[connections[4] - 1];
+            }
 
                 if (connections[5] == 0)
                 {
@@ -118,16 +123,18 @@ namespace wumpus.forms
                 else
                 {
                     SouthWestRoomsLabel.Text = "" + connections[5];
-                }
+                    southWestButton.Image = image[connections[5] - 1];
+            }
 
                 //update button pictures
-                northButton.Image = image[connections[0]-1];
-                //messageLabel.Text = "" + connections[1];
-                northEastButton.Image = image[connections[1]-1];
-                northWestButton.Image = image[connections[2]-1];
-                southButton.Image = image[connections[3]-1];
-                southEastButton.Image = image[connections[4]-1];
-                southWestButton.Image = image[connections[5]-1];
+
+                
+    
+                
+                
+                
+                
+               
 
 
 
