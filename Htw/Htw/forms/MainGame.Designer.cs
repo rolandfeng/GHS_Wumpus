@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.southWestButton = new System.Windows.Forms.Button();
-            this.northWestButton = new System.Windows.Forms.Button();
-            this.southButton = new System.Windows.Forms.Button();
             this.southEastButton = new System.Windows.Forms.Button();
             this.NumberOfCoinsLabel = new System.Windows.Forms.Label();
             this.NumberOfArrowsLabel = new System.Windows.Forms.Label();
@@ -45,6 +43,8 @@
             this.PurchaseSecretButton = new System.Windows.Forms.Button();
             this.buySecretButton = new System.Windows.Forms.Button();
             this.messageLabel = new System.Windows.Forms.Label();
+            this.southButton = new RoundButton();
+            this.northWestButton = new RoundButton();
             this.northEastButton = new RoundButton();
             this.northButton = new RoundButton();
             this.SuspendLayout();
@@ -59,28 +59,6 @@
             this.southWestButton.Text = "Southwest";
             this.southWestButton.UseVisualStyleBackColor = true;
             this.southWestButton.Click += new System.EventHandler(this.southWestButton_Click);
-            // 
-            // northWestButton
-            // 
-            this.northWestButton.Location = new System.Drawing.Point(195, 311);
-            this.northWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.northWestButton.Name = "northWestButton";
-            this.northWestButton.Size = new System.Drawing.Size(112, 35);
-            this.northWestButton.TabIndex = 3;
-            this.northWestButton.Text = "Northwest";
-            this.northWestButton.UseVisualStyleBackColor = true;
-            this.northWestButton.Click += new System.EventHandler(this.northWestButton_Click);
-            // 
-            // southButton
-            // 
-            this.southButton.Location = new System.Drawing.Point(404, 598);
-            this.southButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.southButton.Name = "southButton";
-            this.southButton.Size = new System.Drawing.Size(112, 35);
-            this.southButton.TabIndex = 4;
-            this.southButton.Text = "South";
-            this.southButton.UseVisualStyleBackColor = true;
-            this.southButton.Click += new System.EventHandler(this.southButton_Click);
             // 
             // southEastButton
             // 
@@ -225,6 +203,32 @@
             this.messageLabel.TabIndex = 18;
             this.messageLabel.Text = "Message";
             // 
+            // southButton
+            // 
+            this.southButton.BackColor = System.Drawing.Color.Red;
+            this.southButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.southButton.ForeColor = System.Drawing.Color.Transparent;
+            this.southButton.Location = new System.Drawing.Point(387, 424);
+            this.southButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.southButton.Name = "southButton";
+            this.southButton.Size = new System.Drawing.Size(293, 276);
+            this.southButton.TabIndex = 19;
+            this.southButton.UseVisualStyleBackColor = true;
+            this.southButton.Click += new System.EventHandler(this.northButton_Click);
+            // 
+            // northWestButton
+            // 
+            this.northWestButton.BackColor = System.Drawing.Color.Red;
+            this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
+            this.northWestButton.Location = new System.Drawing.Point(715, 250);
+            this.northWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.northWestButton.Name = "northWestButton";
+            this.northWestButton.Size = new System.Drawing.Size(293, 276);
+            this.northWestButton.TabIndex = 19;
+            this.northWestButton.UseVisualStyleBackColor = true;
+            this.northWestButton.Click += new System.EventHandler(this.northButton_Click);
+            // 
             // northEastButton
             // 
             this.northEastButton.BackColor = System.Drawing.Color.Red;
@@ -285,8 +289,6 @@
 
         #endregion
         private System.Windows.Forms.Button southWestButton;
-        private System.Windows.Forms.Button northWestButton;
-        private System.Windows.Forms.Button southButton;
         private System.Windows.Forms.Button southEastButton;
         private System.Windows.Forms.Label NumberOfCoinsLabel;
         private System.Windows.Forms.Label NumberOfArrowsLabel;
@@ -303,5 +305,7 @@
         private System.Windows.Forms.Label messageLabel;
         private RoundButton northButton;
         private RoundButton northEastButton;
+        private RoundButton northWestButton;
+        private RoundButton southButton;
     }
 }
