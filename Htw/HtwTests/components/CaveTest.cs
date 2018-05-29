@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,23 +13,36 @@ namespace HtwTests.components
     public class CaveTest
     {
         [TestMethod()]
-        public void InitializeTest()
+        public void initializeTest()  
         {
             Cave cave = new Cave("Resource/StandardCave.txt");
+            //int[] connectedTo1 = cave.getAllConnections(1);
+            //for (int i = 0; i < connectedTo1.Length; i++)
+                //File.AppendAllText("CaveTestResults.txt", " " + connectedTo1[i]); // Correct nums are 25, 26, 30, 7, 2, 6
+
+            int[] connectedTo4 = cave.getAllConnections(4); 
+            //for (int i = 0; i < connectedTo4.Length; i++)
+               //File.AppendAllText("CaveTestResults.txt", " " + connectedTo4[i]);
+
+            int[] connectedTo3 = cave.getAllConnections(3);
+            //for (int i = 0; i < connectedTo3.Length; i++)
+              //File.AppendAllText("CaveTestResults.txt", " " + connectedTo3[i]);
+
+            int[] connectedTo26 = cave.getAllConnections(26);
+            //for (int i = 0; i < connectedTo26.Length; i++)
+               //File.AppendAllText("CaveTestResults.txt", " " + connectedTo26[i]);
+
+            int[] connectedTo6 = cave.getAllConnections(6);
+            int[] connectedTo12 = cave.getAllConnections(12);
+            int[] connectedTo18 = cave.getAllConnections(18);
+            int[] connectedTo5 = cave.getAllConnections(5);
+            //for (int i = 0; i < connectedTo6.Length; i++)
+            //File.AppendAllText("CaveTestResults.txt", " " + connectedTo6[i]);
+
+            int[] connectedTo7 = cave.getAllConnections(7);
             int[] connectedTo1 = cave.getAllConnections(1);
-            for (int i = 0; i < connectedTo1.Length; i++)
-                File.AppendAllText("CaveTestText.txt", " " + connectedTo1[i]); // Correct nums are 25, 26, 6, 7, 8, 12
-            File.AppendAllText("CaveTestText.txt", " " + cave.getConnectedRoom(19, wumpus.common.Direction.NORTH)); // Should be 0
-            File.AppendAllText("CaveTestText.txt", " " + cave.getConnectedRoom(22, wumpus.common.Direction.SOUTH)); // Should be 0
-            File.AppendAllText("CaveTestText.txt", " " + cave.getConnectedRoom(16, wumpus.common.Direction.NORTH)); // Should be 0
-            Cave altCave = new Cave("AlternativeCave.txt");
-            int[] connectedTo22 = altCave.getAllConnections(22);
-            foreach (int num in connectedTo22)
-                Debug.WriteLine(num); // Correct nums are 16, 17, 15, 0, 28, 27
-            File.AppendAllText("CaveTestText.txt", " " + cave.getConnectedRoom(30, wumpus.common.Direction.SOUTH)); // Should be 6
-            File.AppendAllText("CaveTestText.txt", " " + cave.getConnectedRoom(30, wumpus.common.Direction.SOUTH_EAST)); // Should be 1
-            File.AppendAllText("CaveTestText.txt", " " + cave.getConnectedRoom(1, wumpus.common.Direction.NORTH)); // Should be 25
-            File.AppendAllText("CaveTestText.txt", " " + cave.getConnectedRoom(1, wumpus.common.Direction.NORTH_WEST)); // Should be 30
+            int[] connectedTo2 = cave.getAllConnections(2);
+
             Cave randCave = new Cave("RandCave.txt");
         }
     }

@@ -18,7 +18,7 @@ namespace wumpus
         {
             InitializeComponent();
             Sound test = new Sound();
-            test.playSound(Sound.Sounds.DoorClose);
+            test.playSound(Sound.Sounds.ArrowImpact);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -36,7 +36,9 @@ namespace wumpus
         private void TriviaButton_Click(object sender, EventArgs e)
         {
             Trivia testTrivia = new Trivia();
-    
+            testTrivia.ask(5, 3);
+            testTrivia.ShowTrivia();
+
         }
     }
 }
