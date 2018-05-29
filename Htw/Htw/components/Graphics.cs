@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using wumpus.forms;
+using System.Drawing;
+//using System.Windows.Forms;
 
 namespace wumpus.components
 {
@@ -30,11 +32,19 @@ namespace wumpus.components
             mainGame.Show();
         }
 
-        public void update(int currentRoom, bool[] hazards)
+        public void update(int currentRoom)
         {
             mainGame.UpdateGraphics(currentRoom, hazards);
         }
 
+        /*public void Show(String message)
+         {
+             System.Windows.Forms.MessageBox.Show(message);
 
+         }
+         */
     }
 }
+
+
+

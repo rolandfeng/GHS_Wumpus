@@ -15,7 +15,7 @@ namespace wumpus.components.Tests
         public void InitializeTest()
         {
             Sound example = new Sound();
-            example.playSound(Sound.Sounds.DoorOpen);
+            example.playSound(Sound.Sounds.ArrowImpact);
         }
     }
 }
