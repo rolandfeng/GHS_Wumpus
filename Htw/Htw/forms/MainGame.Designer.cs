@@ -180,6 +180,7 @@
             this.messageLabel.Size = new System.Drawing.Size(74, 20);
             this.messageLabel.TabIndex = 18;
             this.messageLabel.Text = "Message";
+            this.messageLabel.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0, 0);
             // 
             // southEastButton
             // 
