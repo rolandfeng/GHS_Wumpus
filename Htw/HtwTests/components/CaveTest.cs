@@ -20,11 +20,11 @@ namespace HtwTests.components
             //for (int i = 0; i < connectedTo1.Length; i++)
                 //File.AppendAllText("CaveTestResults.txt", " " + connectedTo1[i]); // Correct nums are 25, 26, 30, 7, 2, 6
 
-            int[] connectedTo4 = cave.getAllConnections(4); 
+            int[] connectedTo20 = cave.getAllConnections(20); 
             //for (int i = 0; i < connectedTo4.Length; i++)
                //File.AppendAllText("CaveTestResults.txt", " " + connectedTo4[i]);
 
-            int[] connectedTo3 = cave.getAllConnections(3);
+            int[] connectedTo27 = cave.getAllConnections(27);
             //for (int i = 0; i < connectedTo3.Length; i++)
               //File.AppendAllText("CaveTestResults.txt", " " + connectedTo3[i]);
 
