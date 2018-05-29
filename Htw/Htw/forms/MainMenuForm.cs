@@ -38,5 +38,10 @@ namespace wumpus
             Trivia testTrivia = new Trivia();
     
         }
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
