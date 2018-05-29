@@ -74,7 +74,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Replay = new System.Windows.Forms.Button();
+            this.Quit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.39682F));
@@ -298,7 +300,7 @@
             this.Player0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player0.AutoSize = true;
             this.Player0.BackColor = System.Drawing.Color.Transparent;
-            this.Player0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Player0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Player0.ForeColor = System.Drawing.Color.White;
             this.Player0.Location = new System.Drawing.Point(168, 56);
             this.Player0.Name = "Player0";
@@ -621,28 +623,41 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "10";
             // 
-            // button2
+            // Replay
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(241, 506);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Replay.BackColor = System.Drawing.Color.Transparent;
+            this.Replay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Replay.BackgroundImage")));
+            this.Replay.ForeColor = System.Drawing.Color.White;
+            this.Replay.Location = new System.Drawing.Point(155, 506);
+            this.Replay.Name = "Replay";
+            this.Replay.Size = new System.Drawing.Size(113, 43);
+            this.Replay.TabIndex = 1;
+            this.Replay.Text = "Play Again";
+            this.Replay.UseVisualStyleBackColor = false;
+            // 
+            // Quit
+            // 
+            this.Quit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Quit.BackgroundImage")));
+            this.Quit.ForeColor = System.Drawing.Color.White;
+            this.Quit.Location = new System.Drawing.Point(321, 507);
+            this.Quit.Name = "Quit";
+            this.Quit.Size = new System.Drawing.Size(107, 42);
+            this.Quit.TabIndex = 2;
+            this.Quit.Text = "Quit";
+            this.Quit.UseVisualStyleBackColor = true;
+            this.Quit.Click += new System.EventHandler(this.Quit_Click);
             // 
             // HighScoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Quit);
+            this.Controls.Add(this.Replay);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "HighScoresForm";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -655,6 +670,8 @@
         private System.Windows.Forms.Label ScoreColumn;
         private System.Windows.Forms.Label DateColumn;
         private System.Windows.Forms.Label PlayerColumn;
+        private System.Windows.Forms.Button Replay;
+        private System.Windows.Forms.Button Quit;
         private System.Windows.Forms.Label HighScore0;
         private System.Windows.Forms.Label HighScore1;
         private System.Windows.Forms.Label HighScore2;
@@ -696,6 +713,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
     }
 }

@@ -34,7 +34,7 @@ namespace wumpus.components
 
         public void update(int currentRoom)
         {
-            mainGame.UpdateGraphics(currentRoom);
+            mainGame.UpdateGraphics(currentRoom, hazards);
         }
 
         /*public void Show(String message)
