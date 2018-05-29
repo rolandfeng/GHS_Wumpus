@@ -217,6 +217,9 @@
     <Content Include="Pics\planet9.jpg" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="Resource\HighScores.txt" />
+    <Content Include="Resource\AlternativeCave.txt" />
+    <Content Include="Resource\ExtraWallsCave.txt" />
+    <Content Include="Resource\SpiralCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>
