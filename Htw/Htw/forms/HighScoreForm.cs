@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wumpus.common;
 using wumpus.components;
-
 namespace wumpus.forms
 {
     public partial class HighScoresForm: Form
@@ -58,9 +58,16 @@ namespace wumpus.forms
             Date9.Text = "" + highScoresList.ElementAt(9).getHighScore();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Replay_Click(object sender, EventArgs e)
         {
+            this.Close();
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+        }
 
+        private void Quit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

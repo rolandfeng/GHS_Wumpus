@@ -94,6 +94,7 @@ namespace wumpus.components
             HighScoresForm highScoresForm = new HighScoresForm();
             highScoresForm.setHighScoresList(highScoresList);
             highScoresForm.update();
+            highScoresForm.Show();
         }
     }
 }
