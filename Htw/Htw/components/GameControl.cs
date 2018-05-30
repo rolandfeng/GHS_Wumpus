@@ -62,7 +62,7 @@ namespace wumpus.components {
             if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
                 sound.playSound(Sound.Sounds.ArrowImpact);
                 sound.playSound(Sound.Sounds.MonsterDie);
-                //graphics.Show("You killed the Wumpus!");
+                graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
                 if (highscores.testScore(playerScore)) {
                     highscores.StoreHighScore(playerScore); 
@@ -71,9 +71,9 @@ namespace wumpus.components {
                 //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);
-                //graphics.Show("You missed!");
+                graphics.Show("You missed!");
                 if (player.getArrowCount() == 0) {
-                    //graphics.Show("You ran out of arrows!");
+                    graphics.Show("You ran out of arrows!");
                     sound.playSound(Sound.Sounds.PlayerDie);
                     //end game
                 }
@@ -85,18 +85,18 @@ namespace wumpus.components {
             if (openTrivia(3, 2)) {
                 player.changeArrowCount(2);
                 sound.playSound(Sound.Sounds.TriviaRight);
-                //graphics.Show("Well done!");
+                graphics.Show("Well done!");
             }
             else {
                 sound.playSound(Sound.Sounds.TriviaWrong);
-                //graphics.Show("Better luck next time!");
+                graphics.Show("Better luck next time!");
             }
         }
 
         public bool openTrivia(int asked, int needed) {
             if (player.getCoinCount() < asked) {
                 sound.playSound(Sound.Sounds.NoError);
-                //graphics.Show("Not enough coins for this action");
+                graphics.Show("Not enough coins for this action");
                 return false;
             } else {
                 player.changeCoinCount(asked * -1);
@@ -137,11 +137,11 @@ namespace wumpus.components {
             if (openTrivia(3, 2)) {
                 sound.playSound(Sound.Sounds.TriviaRight);
                 map.changePlayerLocation(1);
-                //graphics.Show("You survived the pit!");
+                graphics.Show("You survived the pit!");
             }
             else {
                 sound.playSound(Sound.Sounds.TriviaWrong);
-                //graphics.Show("You succumbed to the pit!");
+                graphics.Show("You succumbed to the pit!");
                 sound.playSound(Sound.Sounds.PlayerDie);
                 //end game
             }
@@ -175,27 +175,27 @@ namespace wumpus.components {
 
         private void hazardWarnings(bool[] hazards) {
             if (hazards[0]) {//same room as wumpus 
-                //graphics.Show("You found the Wumpus!");
+                graphics.Show("You found the Wumpus!");
                 sound.playSound(Sound.Sounds.MonsterRoar);
             }
             if (hazards[1]) {//adjacent to wumpus
-                //graphics.Show("You smell a Wumpus!");
+                graphics.Show("You smell a Wumpus!");
                 sound.playSound(Sound.Sounds.MonsterGrowl);
             }
             if (hazards[2]) {//same room as bats
-                //graphics.Show("You stumbled upon some bats!");
+                graphics.Show("You stumbled upon some bats!");
                 sound.playSound(Sound.Sounds.BatsInCave);
             }
             if (hazards[3]) {//adjacent to bats
-                //graphics.Show("Bats nearby!");
+                graphics.Show("Bats nearby!");
                 sound.playSound(Sound.Sounds.BatCall);
             }
             if (hazards[4]) {//same room as pits 
-                //.Show("You fallen into a pit!");
+                graphics.Show("You fallen into a pit!");
                 sound.playSound(Sound.Sounds.ScaryScream);
             }
             if (hazards[5]) {//adjacent to pits
-                //graphics.Show("You feel a draft...");
+                graphics.Show("You feel a draft...");
                 sound.playSound(Sound.Sounds.ScarySound);
             }
         }

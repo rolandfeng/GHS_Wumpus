@@ -22,6 +22,9 @@ namespace wumpus.forms
         Direction direction;
         Image[] image;
         System.Timers.Timer timer;
+        System.Drawing.Graphics formGraphics;
+        System.Timers.Timer timer2;
+        int opacity;
 
         public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
         {
@@ -30,6 +33,7 @@ namespace wumpus.forms
             this.player = player;
             this.map = map;
             this.cave = cave;
+            formGraphics = this.CreateGraphics();
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -48,113 +52,106 @@ namespace wumpus.forms
 
         public void UpdateGraphics(int currentRoom)
         {
+            System.Diagnostics.Debug.WriteLine("IN UPDATE METHOD");
+            opacity = 255;
+
             /*System.Diagnostics.Debug.WriteLine("HELLO2");
             System.Timers.Timer timer = new System.Timers.Timer(10000);
             timer.Interval = 2000;
             timer.Elapsed += new System.Timers.ElapsedEventHandler(timer1_Tick);
-            timer.Start();*/
-
-            System.Diagnostics.Debug.WriteLine("HELLO2");
+            timer.Start();
             timer.Enabled = true;
+
+            timer2 = new System.Timers.Timer(10000);
+            timer2.Interval = 500;
+            timer2.Elapsed += new System.Timers.ElapsedEventHandler(timer2_Tick);
+            timer2.Start();
+            timer2.Enabled = true;*/
+
+            // update coins
+            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+
+            //update arrows
+            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+
+            //update available doors
+            int[] connections;
+            connections = cave.getAllConnections(currentRoom);
+            if (connections[0] == 0)
             {
+                northButton.Visible = false;
+                NorthRoomsLabel.Visible = false;
+            }
+            else
+            {
+                NorthRoomsLabel.Text = "" + connections[0];
+                northButton.Image = image[connections[0] - 1];
+            }
 
-                // update coins
-                NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+            if (connections[1] == 0)
+            {
+                northEastButton.Visible = false;
+                NorthEastRoomsLabel.Visible = false;
+            }
+            else
+            {
+                NorthEastRoomsLabel.Text = "" + connections[1];
+                northEastButton.Image = image[connections[1] - 1];
+            }
 
-                //update arrows
-                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+            if (connections[2] == 0)
+            {
+                northWestButton.Visible = false;
+                NorthWestRoomsLabel.Visible = false;
+            }
+            else
+            {
+                NorthWestRoomsLabel.Text = "" + connections[2];
+                northWestButton.Image = image[connections[2] - 1];
+            }
 
-                //update available doors
-                int[] connections;
-                connections = cave.getAllConnections(currentRoom);
-                if (connections[0] == 0)
-                {
-                    northButton.Visible = false;
-                    NorthRoomsLabel.Visible = false;
-                }
-                else
-                {
-                    NorthRoomsLabel.Text = "" + connections[0];
-                    northButton.Image = image[connections[0] - 1];
-                }
+            if (connections[3] == 0)
+            {
+                southButton.Visible = false;
+                SouthRoomsLabel.Visible = false;
+            }
+            else
+            {
+                SouthRoomsLabel.Text = "" + connections[3];
+                southButton.Image = image[connections[3] - 1];
+            }
 
-                if (connections[1] == 0)
-                {
-                    northEastButton.Visible = false;
-                    NorthEastRoomsLabel.Visible = false;
-                }
-                else
-                {
-                    NorthEastRoomsLabel.Text = "" + connections[1];
-                    northEastButton.Image = image[connections[1] - 1];
-                }
+            if (connections[4] == 0)
+            {
+                southEastButton.Visible = false;
+                SouthEastRoomsLabel.Visible = false;
+            }
+            else
+            {
+                SouthEastRoomsLabel.Text = "" + connections[4];
+                southEastButton.Image = image[connections[4] - 1];
+            }
 
-                if (connections[2] == 0)
-                {
-                    northWestButton.Visible = false;
-                    NorthWestRoomsLabel.Visible = false;
-                }
-                else
-                {
-                    NorthWestRoomsLabel.Text = "" + connections[2];
-                    northWestButton.Image = image[connections[2] - 1];
-                }
+            if (connections[5] == 0)
+            {
+                southWestButton.Visible = false;
+                SouthWestRoomsLabel.Visible = false;
+            }
+            else
+            {
+                SouthWestRoomsLabel.Text = "" + connections[5];
+                southWestButton.Image = image[connections[5] - 1];
+            }
+            //update room
+            BackgroundImage = image[currentRoom - 1];
 
-                if (connections[3] == 0)
-                {
-                    southButton.Visible = false;
-                    SouthRoomsLabel.Visible = false;
-                }
-                else
-                {
-                    SouthRoomsLabel.Text = "" + connections[3];
-                    southButton.Image = image[connections[3] - 1];
-                }
-
-                if (connections[4] == 0)
-                {
-                    southEastButton.Visible = false;
-                    SouthEastRoomsLabel.Visible = false;
-                }
-                else
-                {
-                    SouthEastRoomsLabel.Text = "" + connections[4];
-                    southEastButton.Image = image[connections[4] - 1];
-                }
-
-                if (connections[5] == 0)
-                {
-                    southWestButton.Visible = false;
-                    SouthWestRoomsLabel.Visible = false;
-                }
-                else
-                {
-                    SouthWestRoomsLabel.Text = "" + connections[5];
-                    southWestButton.Image = image[connections[5] - 1];
-                }
-                //update room
-                BackgroundImage = image[currentRoom - 1];
-
-                System.Drawing.Graphics formGraphics = this.CreateGraphics();
-                string drawString = "Sample Text";
-                System.Drawing.Font drawFont = new System.Drawing.Font("Arial", 16);
-                System.Drawing.SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
-                float x = 150.0F;
-                float y = 50.0F;
-                System.Drawing.StringFormat drawFormat = new System.Drawing.StringFormat();
-                formGraphics.DrawString(drawString, drawFont, drawBrush, x, y, drawFormat);
-                //drawFont.Dispose();
-                //drawBrush.Dispose();
-                //formGraphics.Dispose();
-
-                // stop timer
-                //timer.Stop();
-            };
+            // stop timer
+            //timer.Stop();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("HELLO");
+            //System.Diagnostics.Debug.WriteLine("HELLO");
             int fadingSpeed = 3;
             int opacityFadingSpeed = -10;
             //messageLabel.ForeColor = Color.FromArgb(updateColorNum(messageLabel.ForeColor.A, opacityFadingSpeed), updateColorNum(messageLabel.ForeColor.R, fadingSpeed), updateColorNum(messageLabel.ForeColor.G, fadingSpeed), updateColorNum(messageLabel.ForeColor.B, fadingSpeed));
@@ -167,6 +164,23 @@ namespace wumpus.forms
             {
                 messageLabel.BackColor = Color.FromArgb(updateColorNum(messageLabel.BackColor.A, opacityFadingSpeed), updateColorNum(messageLabel.BackColor.R, fadingSpeed), updateColorNum(messageLabel.BackColor.G, fadingSpeed), updateColorNum(messageLabel.BackColor.B, fadingSpeed));
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            
+            int opacityFadingSpeed = -10;
+            opacity = updateColorNum(opacity, opacityFadingSpeed);
+            System.Diagnostics.Debug.WriteLine(opacity);
+            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(Color.FromArgb(0, Color.White));
+            formGraphics.FillRectangle(myBrush, 0, 0, 400, 100);
+
+            formGraphics.DrawString("This is a watermark",
+                new Font("Arial", 40),
+                new SolidBrush(Color.FromArgb(0, Color.Red)),
+                0,
+                0);
+            formGraphics.Clear(Color.Teal);
         }
 
         private int updateColorNum(int colorNum, int fadingSpeed)
