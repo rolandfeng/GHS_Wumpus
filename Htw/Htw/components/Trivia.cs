@@ -11,14 +11,16 @@ namespace wumpus.components
     public class Trivia
     {
         private TriviaForm triviaForm;
+        private GameControl gameControl;
         private String[][] questions;
         private int questionsAsk;
         private int answerCorrect;
         private int incrementCorrect;
         private int rightAnswerIndex;
         private int numQuestions;
+        private int type;
 
-        public Trivia()
+        public Trivia(GameControl gameControl)
         {
             triviaForm = new TriviaForm(this);
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
@@ -34,11 +36,12 @@ namespace wumpus.components
             triviaForm.Show();
         }
 
-        public bool ask(int questionsAsk, int answerCorrect) 
+        public void ask(int questionsAsk, int answerCorrect, int type) 
         {
-            bool statement = false;
+           // bool statement = false;
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
+            this.type = type;
             if (numQuestions == questionsAsk || answerCorrect == incrementCorrect)
             {
                 triviaForm.Hide();
@@ -47,11 +50,12 @@ namespace wumpus.components
             } 
                 if (answerCorrect == incrementCorrect)
                 {
-                    statement = true;
+                    //statement = true;
+                GameControl.doneWithTrivia(true, type);
                 }
                 askQuestion();
-            
-            return statement; 
+
+            GameControl.doneWithTrivia(false, type);
         }
 
         public void increment()
@@ -60,7 +64,7 @@ namespace wumpus.components
             {
                 incrementCorrect++;
             } 
-            ask(questionsAsk, answerCorrect); 
+            ask(questionsAsk, answerCorrect, type); 
         }
 
         public void askQuestion()
