@@ -17,7 +17,7 @@ namespace wumpus.components
         public Player() //put back names in these two constructors
         {
             arrowCount = 3;
-            coinCount = 0;
+            coinCount = 10;
             turn = 0;
             //score = 0;
             //this.name = name;

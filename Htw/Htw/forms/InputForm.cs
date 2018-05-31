@@ -17,8 +17,9 @@ namespace wumpus.forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Proceed_Click(object sender, EventArgs e)
         {
+            name = nameBox.Text;
             this.Close();
         }
     }

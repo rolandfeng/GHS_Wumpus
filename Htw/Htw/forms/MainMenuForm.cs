@@ -39,15 +39,6 @@ namespace wumpus
 
             //this.Close();
         }
-  
-
-        private void TriviaButton_Click(object sender, EventArgs e)
-        {
-            Trivia testTrivia = new Trivia();
-            testTrivia.ask(5, 3);
-            testTrivia.ShowTrivia();
-
-        }
 
     }
 }

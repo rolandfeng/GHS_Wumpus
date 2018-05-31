@@ -31,7 +31,6 @@
             this.startGameButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.TriviaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startGameButton
@@ -68,16 +67,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Hunt the Wumpus";
             // 
-            // TriviaButton
-            // 
-            this.TriviaButton.Location = new System.Drawing.Point(12, 12);
-            this.TriviaButton.Name = "TriviaButton";
-            this.TriviaButton.Size = new System.Drawing.Size(136, 23);
-            this.TriviaButton.TabIndex = 3;
-            this.TriviaButton.Text = "TriviaFormButton";
-            this.TriviaButton.UseVisualStyleBackColor = true;
-            this.TriviaButton.Click += new System.EventHandler(this.TriviaButton_Click);
-            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,7 +91,6 @@
         private System.Windows.Forms.Button startGameButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button TriviaButton;
     }
 }
 
