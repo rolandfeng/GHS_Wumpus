@@ -11,16 +11,19 @@ namespace wumpus.components
     public class Trivia
     {
         private TriviaForm triviaForm;
+        private GameControl gameControl;
         private String[][] questions;
         private int questionsAsk;
         private int answerCorrect;
         private int incrementCorrect;
         private int rightAnswerIndex;
         private int numQuestions;
+        private int type;
 
-        public Trivia()
+        public Trivia(GameControl gameControl)
         {
             triviaForm = new TriviaForm(this);
+            this.gameControl = gameControl;
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
             questions = new String[lines.Length][];
             for (int i = 0; i < lines.Length; i++)
@@ -34,24 +37,29 @@ namespace wumpus.components
             triviaForm.Show();
         }
 
-        public bool ask(int questionsAsk, int answerCorrect) 
+        public void ask(int questionsAsk, int answerCorrect, int type) 
         {
-            bool statement = false;
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
-            if (numQuestions == questionsAsk || answerCorrect == incrementCorrect)
+            this.type = type;
+            if (numQuestions == questionsAsk)
             {
                 triviaForm.Hide();
                 numQuestions = 0;
                 incrementCorrect = 0;
+                gameControl.doneWithTrivia(false, type);
             } 
+
                 if (answerCorrect == incrementCorrect)
                 {
-                    statement = true;
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
                 }
                 askQuestion();
-            
-            return statement; 
+
+        
         }
 
         public void increment()
@@ -60,7 +68,7 @@ namespace wumpus.components
             {
                 incrementCorrect++;
             } 
-            ask(questionsAsk, answerCorrect); 
+            ask(questionsAsk, answerCorrect, type); 
         }
 
         public void askQuestion()

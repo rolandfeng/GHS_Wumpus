@@ -31,6 +31,12 @@ namespace wumpus.components
         public void startGame()
         {
             mainGame = new MainGame(gameControl, player, map, cave, shootButtonClicked);
+
+            mainGame.FormClosed += (sender, e) =>
+            {
+                gameControl.closeGame();
+            };
+
             mainGame.Show();
         }
 

@@ -30,15 +30,14 @@ namespace wumpus
         {
             GameControl gameControl = new GameControl();
             gameControl.startGame();
-        }
-  
+            this.Visible = false;
 
-        private void TriviaButton_Click(object sender, EventArgs e)
-        {
-            Trivia testTrivia = new Trivia();
-            testTrivia.ask(5, 3);
-            testTrivia.ShowTrivia();
+            gameControl.GameClosing += (send, args) =>
+            {
+                this.Close();
+            };
 
+            //this.Close();
         }
 
     }

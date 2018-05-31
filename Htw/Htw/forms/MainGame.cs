@@ -28,6 +28,14 @@ namespace wumpus.forms
         public MainGame(GameControl gameControl, Player player, Map map, Cave cave, bool shootButtonClicked)
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.DoubleBuffer, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, false);
+            this.SetStyle(ControlStyles.Opaque, false);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
             this.gameControl = gameControl;
             this.player = player;
             this.map = map;
@@ -140,7 +148,7 @@ namespace wumpus.forms
         }
 
 
-
+        //buttons clicked
         private void northButton_Click(object sender, EventArgs e)
         {
             if (shootButtonClicked == false)
@@ -152,6 +160,7 @@ namespace wumpus.forms
             {
                 this.direction = Direction.NORTH;
                 gameControl.shootArrows(this.direction);
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
             }
         }
 
@@ -166,6 +175,7 @@ namespace wumpus.forms
             {
                 this.direction = Direction.NORTH_EAST;
                 gameControl.shootArrows(this.direction);
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
             }
         }
 
@@ -180,6 +190,7 @@ namespace wumpus.forms
             {
                 this.direction = Direction.SOUTH_EAST;
                 gameControl.shootArrows(this.direction);
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
             }
         }
 
@@ -194,6 +205,7 @@ namespace wumpus.forms
             {
                 this.direction = Direction.SOUTH;
                 gameControl.shootArrows(this.direction);
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
             }
         }
 
@@ -209,6 +221,7 @@ namespace wumpus.forms
             {
                 this.direction = Direction.SOUTH_WEST;
                 gameControl.shootArrows(this.direction);
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
             }
         }
 
@@ -218,14 +231,15 @@ namespace wumpus.forms
             {
                 gameControl.moveRoom(Direction.NORTH_WEST);
                 this.direction = Direction.NORTH_WEST;
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
             }
             else
             {
                 this.direction = Direction.NORTH_WEST;
                 gameControl.shootArrows(this.direction);
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
             }
         }
-
 
         private void ShootArrowButton_Click(object sender, EventArgs e)
         {
@@ -236,6 +250,7 @@ namespace wumpus.forms
         private void PurchaseArrowsButton_Click(object sender, EventArgs e)
         {
             gameControl.buyArrows();
+            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
         }
 
         private void buySecretButton_Click(object sender, EventArgs e)
