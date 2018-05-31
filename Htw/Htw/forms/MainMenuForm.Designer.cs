@@ -36,6 +36,7 @@
             // startGameButton
             // 
             this.startGameButton.BackColor = System.Drawing.Color.MistyRose;
+            this.startGameButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startGameButton.Location = new System.Drawing.Point(593, 528);
             this.startGameButton.Name = "startGameButton";
             this.startGameButton.Size = new System.Drawing.Size(97, 35);
@@ -47,6 +48,7 @@
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.MistyRose;
+            this.exitButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.Location = new System.Drawing.Point(604, 569);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(71, 25);
@@ -59,11 +61,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(475, 456);
+            this.label1.Location = new System.Drawing.Point(458, 456);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 58);
+            this.label1.Size = new System.Drawing.Size(373, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "Hunt the Wumpus";
             // 
@@ -75,7 +77,6 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1268, 989);
-            //this.Controls.Add(this.TriviaButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startGameButton);
