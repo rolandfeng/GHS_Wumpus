@@ -23,6 +23,7 @@ namespace wumpus.components
         public Trivia(GameControl gameControl)
         {
             triviaForm = new TriviaForm(this);
+            this.gameControl = gameControl;
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
             questions = new String[lines.Length][];
             for (int i = 0; i < lines.Length; i++)
