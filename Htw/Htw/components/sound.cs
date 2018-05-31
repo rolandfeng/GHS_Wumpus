@@ -33,7 +33,7 @@ namespace wumpus.components
             switch (sound)
             {
                 case Sounds.ArrowImpact:
-                    playSoundFromFile(Properties.Resources.ArrowImpact);
+                    playSoundFromFile(Properties.Resources.ArrowImpact2);
                     break;
                 case Sounds.ArrowMiss:
                     playSoundFromFile(Properties.Resources.ArrowMiss);
@@ -42,22 +42,22 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.BatCall);
                     break;
                 case Sounds.BatsInCave:
-                    playSoundFromFile(Properties.Resources.BatsInCave);
+                    playSoundFromFile(Properties.Resources.BatsInCave2);
                     break;
                 case Sounds.MonsterDie:
-                    playSoundFromFile(Properties.Resources.MonsterDie);
+                    playSoundFromFile(Properties.Resources.MonsterDie2);
                     break;
                 case Sounds.MonsterGrowl:
                     playSoundFromFile(Properties.Resources.MonsterGrowl);
                     break;
                 case Sounds.MonsterRoar:
-                    playSoundFromFile(Properties.Resources.MonsterRoar);
+                    playSoundFromFile(Properties.Resources.MonsterRoar2);
                     break;
                 case Sounds.MonsterWalk:
                     playSoundFromFile(Properties.Resources.MonsterWalk);
                     break;
                 case Sounds.NoError:
-                    playSoundFromFile(Properties.Resources.NoError);
+                    playSoundFromFile(Properties.Resources.NoError2);
                     break;
                 case Sounds.PlayerDie:
                     playSoundFromFile(Properties.Resources.PlayerDie);
@@ -66,16 +66,16 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.PlayerWalk2);
                     break;
                 case Sounds.ScaryScream:
-                    playSoundFromFile(Properties.Resources.ScaryScream);
+                    playSoundFromFile(Properties.Resources.ScaryScream2);
                     break;
                 case Sounds.ScarySound:
-                    playSoundFromFile(Properties.Resources.ScarySound);
+                    playSoundFromFile(Properties.Resources.ScarySound2);
                     break;
                 case Sounds.TriviaRight:
-                    playSoundFromFile(Properties.Resources.TriviaRight);
+                    playSoundFromFile(Properties.Resources.TriviaRight2);
                     break;
                 case Sounds.TriviaWrong:
-                    playSoundFromFile(Properties.Resources.TriviaWrong);
+                    playSoundFromFile(Properties.Resources.TriviaWrong2);
                     break;
                 case Sounds.MainMenu:
                     playSoundFromFile(Properties.Resources.MainMenu);
