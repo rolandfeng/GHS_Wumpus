@@ -21,15 +21,18 @@ namespace wumpus.forms
         Cave cave;
         Direction direction;
         Image[] image;
+        bool shootButtonClicked;
 
 
-        public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
+
+        public MainGame(GameControl gameControl, Player player, Map map, Cave cave, bool shootButtonClicked)
         {
             InitializeComponent();
             this.gameControl = gameControl;
             this.player = player;
             this.map = map;
             this.cave = cave;
+            this.shootButtonClicked = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -140,46 +143,94 @@ namespace wumpus.forms
 
         private void northButton_Click(object sender, EventArgs e)
         {
-            gameControl.moveRoom(Direction.NORTH);
-            this.direction = Direction.NORTH;
+            if (shootButtonClicked == false)
+            {
+                gameControl.moveRoom(Direction.NORTH);
+                this.direction = Direction.NORTH;
+            }
+            else
+            {
+                this.direction = Direction.NORTH;
+                gameControl.shootArrows(this.direction);
+            }
         }
 
         private void northEastButton_Click(object sender, EventArgs e)
         {
-            gameControl.moveRoom(Direction.NORTH_EAST);
-            this.direction = Direction.NORTH_EAST;
+            if (shootButtonClicked == false)
+            {
+                gameControl.moveRoom(Direction.NORTH_EAST);
+                this.direction = Direction.NORTH_EAST;
+            }
+            else
+            {
+                this.direction = Direction.NORTH_EAST;
+                gameControl.shootArrows(this.direction);
+            }
         }
 
         private void southEastButton_Click(object sender, EventArgs e)
         {
-            gameControl.moveRoom(Direction.SOUTH_EAST);
-            this.direction = Direction.SOUTH_EAST;
+            if (shootButtonClicked == false)
+            {
+                gameControl.moveRoom(Direction.SOUTH_EAST);
+                this.direction = Direction.SOUTH_EAST;
+            }
+            else
+            {
+                this.direction = Direction.SOUTH_EAST;
+                gameControl.shootArrows(this.direction);
+            }
         }
 
         private void southButton_Click(object sender, EventArgs e)
         {
-            gameControl.moveRoom(Direction.SOUTH);
-            this.direction = Direction.SOUTH;
+            if (shootButtonClicked == false)
+            {
+                gameControl.moveRoom(Direction.SOUTH);
+                this.direction = Direction.SOUTH;
+            } 
+            else
+            {
+                this.direction = Direction.SOUTH;
+                gameControl.shootArrows(this.direction);
+            }
         }
 
         private void southWestButton_Click(object sender, EventArgs e)
+
         {
-            gameControl.moveRoom(Direction.SOUTH_WEST);
-            this.direction = Direction.SOUTH_WEST;
+            if (shootButtonClicked == false)
+            {
+                gameControl.moveRoom(Direction.SOUTH_WEST);
+                this.direction = Direction.SOUTH_WEST;
+            }
+            else
+            {
+                this.direction = Direction.SOUTH_WEST;
+                gameControl.shootArrows(this.direction);
+            }
         }
 
         private void northWestButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Clicked NorthWest");
-            gameControl.moveRoom(Direction.NORTH_WEST);
-            this.direction = Direction.NORTH_WEST;
+            if (shootButtonClicked == false)
+            {
+                gameControl.moveRoom(Direction.NORTH_WEST);
+                this.direction = Direction.NORTH_WEST;
+            }
+            else
+            {
+                this.direction = Direction.NORTH_WEST;
+                gameControl.shootArrows(this.direction);
+            }
         }
 
 
         private void ShootArrowButton_Click(object sender, EventArgs e)
         {
+            shootButtonClicked = true;
 
-            gameControl.shootArrows(this.direction);
         }
 
         private void PurchaseArrowsButton_Click(object sender, EventArgs e)
@@ -192,11 +243,6 @@ namespace wumpus.forms
             gameControl.buySecret();
         }
 
-
-        //private void MainGame_Load(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }
 
