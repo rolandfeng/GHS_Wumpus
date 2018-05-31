@@ -271,4 +271,31 @@
   <data name="PlayerWalk2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerWalk2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ArrowImpact2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowImpact2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BatsInCave2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BatsInCave2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterDie2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterDie2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterRoar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterRoar2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NoError2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoError2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScaryScream2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScaryScream2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScarySound2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScarySound2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TriviaRight2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriviaRight2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TriviaWrong2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriviaWrong2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

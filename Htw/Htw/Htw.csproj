@@ -217,6 +217,15 @@
     <Content Include="Pics\planet9.jpg" />
     <None Include="Resources\BackgroundMusic.wav" />
     <None Include="Resources\PlayerWalk2.wav" />
+    <None Include="Resources\ScarySound2.wav" />
+    <None Include="Resources\ArrowImpact2.wav" />
+    <None Include="Resources\BatsInCave2.wav" />
+    <None Include="Resources\MonsterDie2.wav" />
+    <None Include="Resources\MonsterRoar2.wav" />
+    <None Include="Resources\ScaryScream2.wav" />
+    <None Include="Resources\TriviaRight2.wav" />
+    <None Include="Resources\TriviaWrong2.wav" />
+    <None Include="Resources\NoError2.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="Resource\HighScores.txt" />
     <Content Include="Resource\AlternativeCave.txt" />

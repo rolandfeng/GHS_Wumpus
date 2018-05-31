@@ -72,6 +72,15 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ArrowImpact2 {
+            get {
+                return ResourceManager.GetStream("ArrowImpact2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream ArrowMiss {
             get {
                 return ResourceManager.GetStream("ArrowMiss", resourceCulture);
@@ -108,6 +117,15 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream BatsInCave2 {
+            get {
+                return ResourceManager.GetStream("BatsInCave2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream MainMenu {
             get {
                 return ResourceManager.GetStream("MainMenu", resourceCulture);
@@ -120,6 +138,15 @@ namespace wumpus.Properties {
         internal static System.IO.UnmanagedMemoryStream MonsterDie {
             get {
                 return ResourceManager.GetStream("MonsterDie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterDie2 {
+            get {
+                return ResourceManager.GetStream("MonsterDie2", resourceCulture);
             }
         }
         
@@ -144,6 +171,15 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterRoar2 {
+            get {
+                return ResourceManager.GetStream("MonsterRoar2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream MonsterWalk {
             get {
                 return ResourceManager.GetStream("MonsterWalk", resourceCulture);
@@ -156,6 +192,15 @@ namespace wumpus.Properties {
         internal static System.IO.UnmanagedMemoryStream NoError {
             get {
                 return ResourceManager.GetStream("NoError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream NoError2 {
+            get {
+                return ResourceManager.GetStream("NoError2", resourceCulture);
             }
         }
         
@@ -498,9 +543,27 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ScaryScream2 {
+            get {
+                return ResourceManager.GetStream("ScaryScream2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream ScarySound {
             get {
                 return ResourceManager.GetStream("ScarySound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ScarySound2 {
+            get {
+                return ResourceManager.GetStream("ScarySound2", resourceCulture);
             }
         }
         
@@ -525,12 +588,12 @@ namespace wumpus.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to What was the original flavor of the filling in Twinkies?; Vanilla; Strawberry; Chocolate; Banana; 4
-        ///What is the favorite food of the Teenage Mutant Ninja Turtles?; Cheese; Pizza; Turtle Food; Candy; 2
-        ///Who is the all time leading point scorer in NBA history?; Kareem Abdul-Jabbar; Michael Jordan; Kobe Byrant; Karl Malone; 1
-        ///What percent of the solar system’s mass does the Sun hold?; 85.3%; 99.8%; 94.6%; 89.2%; 2
+        ///   Looks up a localized string similar to What percent of the solar system’s mass does the Sun hold?; 85.3%; 99.8%; 94.6%; 89.2%; 2
         ///Each time that a loop &quot;loops&quot; is known as a(n); Index; Count; Increment; Iteration; 4
-        ///Which o [rest of string was truncated]&quot;;.
+        ///Which of the following is not a primitive data type?; String; Int; Double; Char; 1
+        ///Which of the following classes is included in the java.util package?; Color; Image; Scanner; Graphics2D; 3
+        ///Which of the following data types are ideal for numbers?; String; Boolean; Char; Double; 4
+        ///Which one is not a type of galaxy?; Spiral; Orbita [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string TriviaQuestions {
             get {
@@ -550,9 +613,27 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream TriviaRight2 {
+            get {
+                return ResourceManager.GetStream("TriviaRight2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream TriviaWrong {
             get {
                 return ResourceManager.GetStream("TriviaWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream TriviaWrong2 {
+            get {
+                return ResourceManager.GetStream("TriviaWrong2", resourceCulture);
             }
         }
     }
