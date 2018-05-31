@@ -31,7 +31,7 @@ namespace wumpus.components
 
         public void ShowTrivia()
         {
-         triviaForm.Show();
+            triviaForm.Show();
         }
 
         public bool ask(int questionsAsk, int answerCorrect) 
@@ -39,19 +39,18 @@ namespace wumpus.components
             bool statement = false;
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
-            if (numQuestions == questionsAsk)
+            if (numQuestions == questionsAsk || answerCorrect == incrementCorrect)
             {
-                triviaForm.Close();
-            }
-            else
-            {
-                askQuestion();
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+            } 
                 if (answerCorrect == incrementCorrect)
                 {
-                    triviaForm.Close();
                     statement = true;
                 }
-            }
+                askQuestion();
+            
             return statement; 
         }
 

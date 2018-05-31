@@ -63,7 +63,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.PlayerDie);
                     break;
                 case Sounds.PlayerWalk:
-                    playSoundFromFile(Properties.Resources.PlayerWalk);
+                    playSoundFromFile(Properties.Resources.PlayerWalk2);
                     break;
                 case Sounds.ScaryScream:
                     playSoundFromFile(Properties.Resources.ScaryScream);
@@ -81,7 +81,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.MainMenu);
                     break;
                 case Sounds.BackgroundMusic:
-                    playSoundFromFile(Properties.Resources.TriviaWrong);
+                    playSoundFromFile(Properties.Resources.BackgroundMusic);
                     //change
                     break;
             }
