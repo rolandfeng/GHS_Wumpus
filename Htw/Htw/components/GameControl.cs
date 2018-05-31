@@ -240,6 +240,28 @@ namespace wumpus.components {
             return false;
         }
 
+        public void doneWithTrivia(bool succeed, int type) {
+            if (type == 1 || type == 2) {//wumpus or pit
+                if (!succeed) {
+                    //endgame
+                } else {
+                    graphics.Show("You survived!");
+                }
+            } else if (type == 3) {//arrows
+                if (succeed) {
+                    player.changeArrowCount(2);
+                } else {
+                    graphics.Show("Better luck next time!");
+                }
+            } else if (type == 4) {//secret
+                if (succeed) {
+                    graphics.Show(buySecret());
+                } else {
+                    graphics.Show("Better luck next time!");
+                }
+            }
+        }
+
         public void startGame() {
             graphics.startGame();
             sound.playSound(Sound.Sounds.BackgroundMusic);
