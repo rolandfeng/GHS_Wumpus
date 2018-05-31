@@ -40,5 +40,6 @@ namespace wumpus
             testTrivia.ShowTrivia();
 
         }
+
     }
 }

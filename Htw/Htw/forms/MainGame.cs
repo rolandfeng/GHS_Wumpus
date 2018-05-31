@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using wumpus.common;
 using wumpus.components;
+using System.Drawing.Drawing2D;
 
 namespace wumpus.forms
 {
@@ -39,8 +40,7 @@ namespace wumpus.forms
                                      Properties.Resources.planet22, Properties.Resources.planet23, Properties.Resources.planet24,
                                      Properties.Resources.planet25, Properties.Resources.planet26, Properties.Resources.planet27,
                                      Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30 };
-        
-    }
+        }
 
 
         public void UpdateGraphics(int currentRoom)
@@ -61,7 +61,10 @@ namespace wumpus.forms
             }
             else
             {
+                northButton.Visible = true;
+                NorthRoomsLabel.Visible = true;
                 NorthRoomsLabel.Text = "" + connections[0];
+                northButton.Image = image[connections[0] - 1];
             }
 
             if (connections[1] == 0)
@@ -71,7 +74,10 @@ namespace wumpus.forms
             }
             else
             {
+                northEastButton.Visible = true;
+                NorthEastRoomsLabel.Visible = true;
                 NorthEastRoomsLabel.Text = "" + connections[1];
+                northEastButton.Image = image[connections[1] - 1];
             }
 
             if (connections[2] == 0)
@@ -81,7 +87,10 @@ namespace wumpus.forms
             }
             else
             {
+                northWestButton.Visible = true;
+                NorthWestRoomsLabel.Visible = true;
                 NorthWestRoomsLabel.Text = "" + connections[2];
+                northWestButton.Image = image[connections[2] - 1];
             }
 
             if (connections[3] == 0)
@@ -91,7 +100,10 @@ namespace wumpus.forms
             }
             else
             {
+                southButton.Visible = true;
+                SouthRoomsLabel.Visible = true;
                 SouthRoomsLabel.Text = "" + connections[3];
+                southButton.Image = image[connections[3] - 1];
             }
 
             if (connections[4] == 0)
@@ -101,7 +113,10 @@ namespace wumpus.forms
             }
             else
             {
+                southEastButton.Visible = true;
+                SouthEastRoomsLabel.Visible = true;
                 SouthEastRoomsLabel.Text = "" + connections[4];
+                southEastButton.Image = image[connections[4] - 1];
             }
 
             if (connections[5] == 0)
@@ -111,27 +126,22 @@ namespace wumpus.forms
             }
             else
             {
+                southWestButton.Visible = true;
+                SouthWestRoomsLabel.Visible = true;
                 SouthWestRoomsLabel.Text = "" + connections[5];
+                southWestButton.Image = image[connections[5] - 1];
             }
-
-            //update button pictures
-            northButton.Image = image[connections[0]];
-            northEastButton.Image = image[connections[1]];
-            northWestButton.Image = image[connections[2]];
-            southButton.Image = image[connections[3]];
-            southEastButton.Image = image[connections[4]];
-            southWestButton.Image = image[connections[5]];
-
-
             //update room
             BackgroundImage = image[currentRoom - 1];
+
         }
+
+
 
         private void northButton_Click(object sender, EventArgs e)
         {
             gameControl.moveRoom(Direction.NORTH);
             this.direction = Direction.NORTH;
-            //if label = 1, show image 1; if label = 2, show image 2...etc...
         }
 
         private void northEastButton_Click(object sender, EventArgs e)
@@ -160,6 +170,7 @@ namespace wumpus.forms
 
         private void northWestButton_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("Clicked NorthWest");
             gameControl.moveRoom(Direction.NORTH_WEST);
             this.direction = Direction.NORTH_WEST;
         }
@@ -180,5 +191,23 @@ namespace wumpus.forms
         {
             gameControl.buySecret();
         }
+
+
+        //private void MainGame_Load(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
+
+public class RoundButton : Button
+{
+    protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+    {
+        GraphicsPath grPath = new GraphicsPath();
+        grPath.AddEllipse(200, 200, 100, 100);
+        this.Region = new System.Drawing.Region(grPath);
+        base.OnPaint(e);
+    }
+}
+

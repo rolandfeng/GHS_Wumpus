@@ -24,15 +24,6 @@ namespace wumpus.forms
             triviaObject = trivia;
         }
 
-        public void displayQuestion(String[] trivia)
-        { 
-            questionText.Text = trivia[0];
-            button1.Text = trivia[1];
-            button2.Text = trivia[2];
-            button3.Text = trivia[3];
-            button4.Text = trivia[4];
-        }
-
         public void SetQuestion(String question)
         {
             questionText.Text = question;
@@ -74,12 +65,10 @@ namespace wumpus.forms
             if (rightAnswerIndex == x)
             {
                 answerRight = true;
-                button1.Text = "Correct!";
             }
             else
             {
                 answerRight = false;
-                button1.Text = "Wrong!";
             }
             triviaObject.increment();
         }
@@ -90,12 +79,10 @@ namespace wumpus.forms
             if (rightAnswerIndex == x)
             {
                 answerRight = true;
-                button2.Text = "Correct!";
             }
             else
             {
                 answerRight = false;
-                button2.Text = "Wrong!";
             }
             triviaObject.increment();
         }
@@ -106,12 +93,10 @@ namespace wumpus.forms
             if (rightAnswerIndex == x)
             {
                 answerRight = true;
-                button3.Text = "Correct!";
             }
             else
             {
                 answerRight = false;
-                button3.Text = "Wrong!";
             }
             triviaObject.increment();
         }
@@ -122,12 +107,10 @@ namespace wumpus.forms
             if (rightAnswerIndex == x)
             {
                 answerRight = true;
-                button4.Text = "Correct!";
             }
             else
             {
                 answerRight = false;
-                button4.Text = "Wrong!";
             }
             triviaObject.increment();
         }

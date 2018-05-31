@@ -31,6 +31,7 @@ namespace wumpus.components {
         public void moveRoom(wumpus.common.Direction direction) {
             sound.playSound(Sound.Sounds.PlayerWalk);
             int currentLoc = map.getPlayerLocation();
+            System.Diagnostics.Debug.WriteLine("Direction: " + direction);
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
@@ -44,12 +45,12 @@ namespace wumpus.components {
             if (newLoc == map.getWumpusLocation()) {
                 if (openTrivia(5, 3)) {
                     sound.playSound(Sound.Sounds.TriviaRight);
-                    graphics.Show("You survived the Wumpus and forced it to flee!");
+                    //graphics.Show("You survived the Wumpus and forced it to flee!");
                     sound.playSound(Sound.Sounds.MonsterWalk);
                     map.changeWumpusLocation(wumpusFleeLoc(true));
                 } else {
                     sound.playSound(Sound.Sounds.TriviaWrong);
-                    graphics.Show("Game Over");
+                    //graphics.Show("Game Over");
                     sound.playSound(Sound.Sounds.PlayerDie);
                     //end game
                 }
@@ -64,9 +65,9 @@ namespace wumpus.components {
                 sound.playSound(Sound.Sounds.MonsterDie);
                 graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
-                /*if (highscores.testScore(playerScore)) {
+                if (highscores.testScore(playerScore)) {
                     highscores.StoreHighScore(playerScore); 
-                }*/
+                }
                 highscores.DisplayHighScores();
                 //end game --- option to play again?
             } else {
