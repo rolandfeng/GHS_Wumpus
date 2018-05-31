@@ -23,7 +23,7 @@ namespace wumpus.forms
         Image[] image;
         System.Timers.Timer timer;
         System.Drawing.Graphics formGraphics;
-        System.Timers.Timer timer2;
+        //System.Timers.Timer timer2;
         int opacity;
 
         public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
@@ -252,6 +252,7 @@ namespace wumpus.forms
             gameControl.buySecret();
         }
 
+
         //private void MainGame_Load(object sender, EventArgs e)
         //{
 
@@ -264,7 +265,7 @@ public class RoundButton : Button
     protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
     {
         GraphicsPath grPath = new GraphicsPath();
-        grPath.AddEllipse(100, 100, 50, 50);
+        grPath.AddEllipse(200, 200, 100, 100);
         this.Region = new System.Drawing.Region(grPath);
         base.OnPaint(e);
     }
