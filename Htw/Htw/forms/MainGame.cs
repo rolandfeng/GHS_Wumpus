@@ -21,10 +21,7 @@ namespace wumpus.forms
         Cave cave;
         Direction direction;
         Image[] image;
-        System.Timers.Timer timer;
-        System.Drawing.Graphics formGraphics;
-        //System.Timers.Timer timer2;
-        int opacity;
+
 
         public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
         {
@@ -33,7 +30,6 @@ namespace wumpus.forms
             this.player = player;
             this.map = map;
             this.cave = cave;
-            formGraphics = this.CreateGraphics();
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -44,30 +40,11 @@ namespace wumpus.forms
                                      Properties.Resources.planet22, Properties.Resources.planet23, Properties.Resources.planet24,
                                      Properties.Resources.planet25, Properties.Resources.planet26, Properties.Resources.planet27,
                                      Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30 };
-            this.timer = new System.Timers.Timer(10000);
-            timer.Elapsed += new System.Timers.ElapsedEventHandler(timer1_Tick);
-            timer.Interval = 100;
         }
 
 
         public void UpdateGraphics(int currentRoom)
         {
-            System.Diagnostics.Debug.WriteLine("IN UPDATE METHOD");
-            opacity = 255;
-
-            /*System.Diagnostics.Debug.WriteLine("HELLO2");
-            System.Timers.Timer timer = new System.Timers.Timer(10000);
-            timer.Interval = 2000;
-            timer.Elapsed += new System.Timers.ElapsedEventHandler(timer1_Tick);
-            timer.Start();
-            timer.Enabled = true;
-
-            timer2 = new System.Timers.Timer(10000);
-            timer2.Interval = 500;
-            timer2.Elapsed += new System.Timers.ElapsedEventHandler(timer2_Tick);
-            timer2.Start();
-            timer2.Enabled = true;*/
-
             // update coins
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
 
@@ -84,6 +61,8 @@ namespace wumpus.forms
             }
             else
             {
+                northButton.Visible = true;
+                NorthRoomsLabel.Visible = true;
                 NorthRoomsLabel.Text = "" + connections[0];
                 northButton.Image = image[connections[0] - 1];
             }
@@ -95,6 +74,8 @@ namespace wumpus.forms
             }
             else
             {
+                northEastButton.Visible = true;
+                NorthEastRoomsLabel.Visible = true;
                 NorthEastRoomsLabel.Text = "" + connections[1];
                 northEastButton.Image = image[connections[1] - 1];
             }
@@ -106,6 +87,8 @@ namespace wumpus.forms
             }
             else
             {
+                northWestButton.Visible = true;
+                NorthWestRoomsLabel.Visible = true;
                 NorthWestRoomsLabel.Text = "" + connections[2];
                 northWestButton.Image = image[connections[2] - 1];
             }
@@ -117,6 +100,8 @@ namespace wumpus.forms
             }
             else
             {
+                southButton.Visible = true;
+                SouthRoomsLabel.Visible = true;
                 SouthRoomsLabel.Text = "" + connections[3];
                 southButton.Image = image[connections[3] - 1];
             }
@@ -128,6 +113,8 @@ namespace wumpus.forms
             }
             else
             {
+                southEastButton.Visible = true;
+                SouthEastRoomsLabel.Visible = true;
                 SouthEastRoomsLabel.Text = "" + connections[4];
                 southEastButton.Image = image[connections[4] - 1];
             }
@@ -139,65 +126,17 @@ namespace wumpus.forms
             }
             else
             {
+                southWestButton.Visible = true;
+                SouthWestRoomsLabel.Visible = true;
                 SouthWestRoomsLabel.Text = "" + connections[5];
                 southWestButton.Image = image[connections[5] - 1];
             }
             //update room
             BackgroundImage = image[currentRoom - 1];
 
-            // stop timer
-            //timer.Stop();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //System.Diagnostics.Debug.WriteLine("HELLO");
-            int fadingSpeed = 3;
-            int opacityFadingSpeed = -10;
-            //messageLabel.ForeColor = Color.FromArgb(updateColorNum(messageLabel.ForeColor.A, opacityFadingSpeed), updateColorNum(messageLabel.ForeColor.R, fadingSpeed), updateColorNum(messageLabel.ForeColor.G, fadingSpeed), updateColorNum(messageLabel.ForeColor.B, fadingSpeed));
-            //messageLabel.BackColor = Color.FromArgb(updateColorNum(messageLabel.BackColor.A, opacityFadingSpeed), updateColorNum(messageLabel.BackColor.R, fadingSpeed), updateColorNum(messageLabel.BackColor.G, fadingSpeed), updateColorNum(messageLabel.BackColor.B, fadingSpeed));
-            messageLabel.ForeColor = Color.Transparent;
-            if (messageLabel.ForeColor.R < 244 || messageLabel.ForeColor.G < 244 || messageLabel.ForeColor.B < 244)
-            {
-                messageLabel.ForeColor = Color.FromArgb(updateColorNum(messageLabel.ForeColor.A, opacityFadingSpeed), updateColorNum(messageLabel.ForeColor.R, fadingSpeed), updateColorNum(messageLabel.ForeColor.G, fadingSpeed), updateColorNum(messageLabel.ForeColor.B, fadingSpeed));
-            } else
-            {
-                messageLabel.BackColor = Color.FromArgb(updateColorNum(messageLabel.BackColor.A, opacityFadingSpeed), updateColorNum(messageLabel.BackColor.R, fadingSpeed), updateColorNum(messageLabel.BackColor.G, fadingSpeed), updateColorNum(messageLabel.BackColor.B, fadingSpeed));
-            }
-        }
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            
-            int opacityFadingSpeed = -10;
-            opacity = updateColorNum(opacity, opacityFadingSpeed);
-            System.Diagnostics.Debug.WriteLine(opacity);
-            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(Color.FromArgb(0, Color.White));
-            formGraphics.FillRectangle(myBrush, 0, 0, 400, 100);
-
-            formGraphics.DrawString("This is a watermark",
-                new Font("Arial", 40),
-                new SolidBrush(Color.FromArgb(0, Color.Red)),
-                0,
-                0);
-            formGraphics.Clear(Color.Teal);
-        }
-
-        private int updateColorNum(int colorNum, int fadingSpeed)
-        {
-            int updatedColorNum = colorNum + fadingSpeed;
-            if (updatedColorNum > 255)
-            {
-                return 255;
-            }
-            else if (updatedColorNum < 0) {
-                return 0;
-            }
-            else
-            {
-                return updatedColorNum;
-            }
-        }
 
         private void northButton_Click(object sender, EventArgs e)
         {
@@ -231,6 +170,7 @@ namespace wumpus.forms
 
         private void northWestButton_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("Clicked NorthWest");
             gameControl.moveRoom(Direction.NORTH_WEST);
             this.direction = Direction.NORTH_WEST;
         }

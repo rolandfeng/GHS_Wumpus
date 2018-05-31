@@ -187,13 +187,13 @@
             this.southEastButton.BackColor = System.Drawing.Color.Red;
             this.southEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southEastButton.Location = new System.Drawing.Point(-114, -64);
+            this.southEastButton.Location = new System.Drawing.Point(617, 203);
             this.southEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.southEastButton.Name = "southEastButton";
             this.southEastButton.Size = new System.Drawing.Size(461, 516);
             this.southEastButton.TabIndex = 19;
             this.southEastButton.UseVisualStyleBackColor = true;
-            this.southEastButton.Click += new System.EventHandler(this.northButton_Click);
+            this.southEastButton.Click += new System.EventHandler(this.southEastButton_Click);
             // 
             // southButton
             // 
@@ -206,20 +206,20 @@
             this.southButton.Size = new System.Drawing.Size(537, 466);
             this.southButton.TabIndex = 19;
             this.southButton.UseVisualStyleBackColor = true;
-            this.southButton.Click += new System.EventHandler(this.northButton_Click);
+            this.southButton.Click += new System.EventHandler(this.southButton_Click);
             // 
             // northWestButton
             // 
             this.northWestButton.BackColor = System.Drawing.Color.Red;
             this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northWestButton.Location = new System.Drawing.Point(588, 185);
+            this.northWestButton.Location = new System.Drawing.Point(-109, -124);
             this.northWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.northWestButton.Name = "northWestButton";
             this.northWestButton.Size = new System.Drawing.Size(475, 552);
             this.northWestButton.TabIndex = 19;
             this.northWestButton.UseVisualStyleBackColor = true;
-            this.northWestButton.Click += new System.EventHandler(this.northButton_Click);
+            this.northWestButton.Click += new System.EventHandler(this.northWestButton_Click);
             // 
             // southWestButton
             // 
@@ -232,7 +232,7 @@
             this.southWestButton.Size = new System.Drawing.Size(530, 495);
             this.southWestButton.TabIndex = 19;
             this.southWestButton.UseVisualStyleBackColor = true;
-            this.southWestButton.Click += new System.EventHandler(this.northButton_Click);
+            this.southWestButton.Click += new System.EventHandler(this.southWestButton_Click);
             // 
             // northEastButton
             // 
@@ -245,7 +245,7 @@
             this.northEastButton.Size = new System.Drawing.Size(531, 589);
             this.northEastButton.TabIndex = 19;
             this.northEastButton.UseVisualStyleBackColor = true;
-            this.northEastButton.Click += new System.EventHandler(this.northButton_Click);
+            this.northEastButton.Click += new System.EventHandler(this.northEastButton_Click);
             // 
             // northButton
             // 
