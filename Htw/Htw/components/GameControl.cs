@@ -17,6 +17,8 @@ namespace wumpus.components {
         private ScoreManager highscores;
         private Player player;
 
+        public event EventHandler GameClosing;
+
         public GameControl() {
             cave = new Cave("../../Resource/StandardCave.txt");
             map = new Map();
@@ -26,6 +28,11 @@ namespace wumpus.components {
             highscores = new ScoreManager(form.getName());
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
+        }
+
+        public void closeGame()
+        {
+            GameClosing.Invoke(this, null);
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
