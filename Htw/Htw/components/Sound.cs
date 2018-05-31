@@ -69,7 +69,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.ScaryScream2);
                     break;
                 case Sounds.ScarySound:
-                    playSoundFromFile(Properties.Resources.ScarySound2);
+                    playSoundFromFile(Properties.Resources.ScarySound3);
                     break;
                 case Sounds.TriviaRight:
                     playSoundFromFile(Properties.Resources.TriviaRight2);
