@@ -69,56 +69,68 @@
             // NorthRoomsLabel
             // 
             this.NorthRoomsLabel.AutoSize = true;
-            this.NorthRoomsLabel.Location = new System.Drawing.Point(690, 112);
+            this.NorthRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NorthRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NorthRoomsLabel.Location = new System.Drawing.Point(704, 36);
             this.NorthRoomsLabel.Name = "NorthRoomsLabel";
-            this.NorthRoomsLabel.Size = new System.Drawing.Size(69, 13);
+            this.NorthRoomsLabel.Size = new System.Drawing.Size(33, 20);
             this.NorthRoomsLabel.TabIndex = 8;
-            this.NorthRoomsLabel.Text = "North Rooms";
+            this.NorthRoomsLabel.Text = "NN";
             // 
             // NorthEastRoomsLabel
             // 
             this.NorthEastRoomsLabel.AutoSize = true;
-            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(993, 250);
+            this.NorthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NorthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(1015, 174);
             this.NorthEastRoomsLabel.Name = "NorthEastRoomsLabel";
-            this.NorthEastRoomsLabel.Size = new System.Drawing.Size(89, 13);
+            this.NorthEastRoomsLabel.Size = new System.Drawing.Size(50, 33);
             this.NorthEastRoomsLabel.TabIndex = 9;
-            this.NorthEastRoomsLabel.Text = "Northeast Rooms";
+            this.NorthEastRoomsLabel.Text = "NE";
             // 
             // NorthWestRoomsLabel
             // 
             this.NorthWestRoomsLabel.AutoSize = true;
-            this.NorthWestRoomsLabel.Location = new System.Drawing.Point(133, 159);
+            this.NorthWestRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NorthWestRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NorthWestRoomsLabel.Location = new System.Drawing.Point(153, 86);
             this.NorthWestRoomsLabel.Name = "NorthWestRoomsLabel";
-            this.NorthWestRoomsLabel.Size = new System.Drawing.Size(91, 13);
+            this.NorthWestRoomsLabel.Size = new System.Drawing.Size(39, 20);
             this.NorthWestRoomsLabel.TabIndex = 10;
-            this.NorthWestRoomsLabel.Text = "Northwest Rooms";
+            this.NorthWestRoomsLabel.Text = "NW";
             // 
             // SouthRoomsLabel
             // 
             this.SouthRoomsLabel.AutoSize = true;
-            this.SouthRoomsLabel.Location = new System.Drawing.Point(690, 729);
+            this.SouthRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SouthRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SouthRoomsLabel.Location = new System.Drawing.Point(705, 650);
             this.SouthRoomsLabel.Name = "SouthRoomsLabel";
-            this.SouthRoomsLabel.Size = new System.Drawing.Size(71, 13);
+            this.SouthRoomsLabel.Size = new System.Drawing.Size(43, 33);
             this.SouthRoomsLabel.TabIndex = 11;
-            this.SouthRoomsLabel.Text = "South Rooms";
+            this.SouthRoomsLabel.Text = "SS";
             // 
             // SouthEastRoomsLabel
             // 
             this.SouthEastRoomsLabel.AutoSize = true;
-            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(993, 580);
+            this.SouthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SouthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(1015, 501);
             this.SouthEastRoomsLabel.Name = "SouthEastRoomsLabel";
-            this.SouthEastRoomsLabel.Size = new System.Drawing.Size(91, 13);
+            this.SouthEastRoomsLabel.Size = new System.Drawing.Size(46, 33);
             this.SouthEastRoomsLabel.TabIndex = 12;
-            this.SouthEastRoomsLabel.Text = "Southeast Rooms";
+            this.SouthEastRoomsLabel.Text = "SE";
             // 
             // SouthWestRoomsLabel
             // 
             this.SouthWestRoomsLabel.AutoSize = true;
-            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(131, 558);
+            this.SouthWestRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SouthWestRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(142, 467);
             this.SouthWestRoomsLabel.Name = "SouthWestRoomsLabel";
-            this.SouthWestRoomsLabel.Size = new System.Drawing.Size(93, 13);
+            this.SouthWestRoomsLabel.Size = new System.Drawing.Size(59, 33);
             this.SouthWestRoomsLabel.TabIndex = 13;
-            this.SouthWestRoomsLabel.Text = "Southwest Rooms";
+            this.SouthWestRoomsLabel.Text = "SW";
             // 
             // PurchaseArrowsButton
             // 
