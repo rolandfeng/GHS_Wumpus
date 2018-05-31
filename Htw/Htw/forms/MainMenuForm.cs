@@ -30,6 +30,14 @@ namespace wumpus
         {
             GameControl gameControl = new GameControl();
             gameControl.startGame();
+            this.Visible = false;
+
+            gameControl.GameClosing += (send, args) =>
+            {
+                this.Close();
+            };
+
+            //this.Close();
         }
 
     }
