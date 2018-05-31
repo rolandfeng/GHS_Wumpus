@@ -19,7 +19,7 @@ namespace wumpus.forms
 
         private void Proceed_Click(object sender, EventArgs e)
         {
-            String name = nameBox.Text;
+            name = nameBox.Text;
             this.Close();
         }
     }

@@ -64,13 +64,12 @@ public class Cave
 
         switch (direction)
         {
-            case Direction.NORTH:
-                {
+            case Direction.NORTH:              
                     if (roomRow == 0)
                         roomRow = cave.Length;
                     return cave[roomRow - 1]
                                [roomColumn + numZerosBeforeIndex(roomRow - 1, roomColumn)];
-                }
+                
             case Direction.NORTH_EAST:
                 if (roomColumn + numZerosBeforeIndex(roomRow, roomColumn) == cave[0].Length - 1)
                     roomColumn = -1;

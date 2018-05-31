@@ -2,6 +2,7 @@
 {
     partial class InputForm
     {
+        string name;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,7 +29,7 @@
         /// </summary>
         public string getName()
         {
-            return nameBox.Text;
+            return this.name;
         }
 
 
