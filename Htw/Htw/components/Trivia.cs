@@ -39,24 +39,27 @@ namespace wumpus.components
 
         public void ask(int questionsAsk, int answerCorrect, int type) 
         {
-           // bool statement = false;
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
             this.type = type;
-            if (numQuestions == questionsAsk || answerCorrect == incrementCorrect)
+            if (numQuestions == questionsAsk)
             {
                 triviaForm.Hide();
                 numQuestions = 0;
                 incrementCorrect = 0;
+                gameControl.doneWithTrivia(false, type);
             } 
+
                 if (answerCorrect == incrementCorrect)
                 {
-                    //statement = true;
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
                 gameControl.doneWithTrivia(true, type);
                 }
                 askQuestion();
 
-            gameControl.doneWithTrivia(false, type);
+        
         }
 
         public void increment()

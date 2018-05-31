@@ -12,7 +12,7 @@ namespace wumpus.components.Tests
     public class SoundTests
     {
         [TestMethod()]
-        public void InitializeTest()
+        public void PlaySound()
         {
             Sound example = new Sound();
             example.playSound(Sound.Sounds.ArrowImpact);
