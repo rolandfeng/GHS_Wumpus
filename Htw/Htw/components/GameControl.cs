@@ -257,6 +257,8 @@ namespace wumpus.components {
             graphics.startGame();
             sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
+            highscores.setName("bokchewy");
+            highscores.StoreHighScore(234);
             highscores.DisplayHighScores();
         }
     }
