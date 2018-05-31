@@ -97,7 +97,7 @@
             this.Proceed.TabIndex = 3;
             this.Proceed.Text = "Proceed";
             this.Proceed.UseVisualStyleBackColor = false;
-            this.Proceed.Click += new System.EventHandler(this.button1_Click);
+            this.Proceed.Click += new System.EventHandler(this.Proceed_Click);
             // 
             // InputForm
             // 
@@ -105,6 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(663, 461);
             this.Controls.Add(this.Proceed);
             this.Controls.Add(this.label2);
