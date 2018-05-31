@@ -60,6 +60,7 @@ namespace wumpus.components
 
         public void StoreHighScore(int highScore)
         {
+            LoadHighScores();
             DateTime dateTime = DateTime.UtcNow.Date;
             string date = dateTime.ToString("MM/dd/yyyy");
             HighScore newScore = new HighScore(highScore, name, date);
@@ -97,7 +98,7 @@ namespace wumpus.components
         public void DisplayHighScores()
         {
             HighScoresForm highScoresForm = new HighScoresForm();
-            highScoresForm.setHighScoresList(highScoresList);
+            highScoresForm.setHighScoresList(this.highScoresList);
             highScoresForm.update();
             highScoresForm.Show();
         }

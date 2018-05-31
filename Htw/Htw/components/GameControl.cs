@@ -257,6 +257,7 @@ namespace wumpus.components {
             graphics.startGame();
             sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
+            highscores.StoreHighScore(2);
             highscores.DisplayHighScores();
         }
     }
