@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
+            this.BackgroundImage = global::wumpus.Properties.Resources.startBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1268, 989);
             this.Controls.Add(this.TriviaButton);
