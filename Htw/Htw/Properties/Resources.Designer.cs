@@ -81,6 +81,15 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream BackgroundMusic {
+            get {
+                return ResourceManager.GetStream("BackgroundMusic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream BatCall {
             get {
                 return ResourceManager.GetStream("BatCall", resourceCulture);
@@ -471,6 +480,15 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream PlayerWalk2 {
+            get {
+                return ResourceManager.GetStream("PlayerWalk2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream ScaryScream {
             get {
                 return ResourceManager.GetStream("ScaryScream", resourceCulture);
@@ -510,7 +528,9 @@ namespace wumpus.Properties {
         ///   Looks up a localized string similar to What was the original flavor of the filling in Twinkies?; Vanilla; Strawberry; Chocolate; Banana; 4
         ///What is the favorite food of the Teenage Mutant Ninja Turtles?; Cheese; Pizza; Turtle Food; Candy; 2
         ///Who is the all time leading point scorer in NBA history?; Kareem Abdul-Jabbar; Michael Jordan; Kobe Byrant; Karl Malone; 1
-        ///What percent of the solar system’s mass does the Sun hold?; 85.3%; 99.8%; 94.6%; 89.2%; 2.
+        ///What percent of the solar system’s mass does the Sun hold?; 85.3%; 99.8%; 94.6%; 89.2%; 2
+        ///Each time that a loop &quot;loops&quot; is known as a(n); Index; Count; Increment; Iteration; 4
+        ///Which o [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string TriviaQuestions {
             get {

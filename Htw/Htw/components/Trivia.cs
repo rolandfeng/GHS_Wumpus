@@ -39,19 +39,18 @@ namespace wumpus.components
             bool statement = false;
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
-            if (numQuestions == questionsAsk)
+            if (numQuestions == questionsAsk || answerCorrect == incrementCorrect)
             {
-                triviaForm.Hide();  //Close
-            }
-            else
-            {
-                askQuestion();
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+            } 
                 if (answerCorrect == incrementCorrect)
                 {
-                    triviaForm.Hide();  //Close
                     statement = true;
                 }
-            }
+                askQuestion();
+            
             return statement; 
         }
 
