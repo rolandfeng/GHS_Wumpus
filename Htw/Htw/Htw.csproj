@@ -185,6 +185,8 @@
     <None Include="Resources\TriviaRight.wav" />
     <None Include="Resources\TriviaWrong.wav" />
     <None Include="Resources\MainMenu.wav" />
+    <None Include="Resources\BackgroundMusic.wav" />
+    <None Include="Resources\PlayerWalk2.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
