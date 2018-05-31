@@ -88,6 +88,11 @@ namespace wumpus.components
             string[] dataArray = data.ToArray();
             File.WriteAllLines(filename, dataArray);
         }
+
+        public void setName(String name)
+        {
+            this.name = name;
+        }
     
         public void DisplayHighScores()
         {
