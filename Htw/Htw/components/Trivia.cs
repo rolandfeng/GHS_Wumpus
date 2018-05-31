@@ -51,11 +51,11 @@ namespace wumpus.components
                 if (answerCorrect == incrementCorrect)
                 {
                     //statement = true;
-                GameControl.doneWithTrivia(true, type);
+                gameControl.doneWithTrivia(true, type);
                 }
                 askQuestion();
 
-            GameControl.doneWithTrivia(false, type);
+            gameControl.doneWithTrivia(false, type);
         }
 
         public void increment()
