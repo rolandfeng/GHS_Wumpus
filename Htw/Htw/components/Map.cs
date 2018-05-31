@@ -103,7 +103,7 @@ namespace wumpus.components
             return false;
         }
 
-        public void batCheck() //only changes location of player and bat
+        public bool batCheck() //only changes location of player and bat
         {
             if (playerLocation == batLocations[0])
             {
@@ -117,6 +117,7 @@ namespace wumpus.components
                     pitLocations[0] = num.Next(30);
                 }
                 occupiedHazard[batLocations[0] - 1] = true;
+                return true;
             }
             if (playerLocation == batLocations[1])
             {
@@ -130,6 +131,11 @@ namespace wumpus.components
                     pitLocations[1] = num.Next(30);
                 }
                 occupiedHazard[batLocations[1] - 1] = true;
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
                     
