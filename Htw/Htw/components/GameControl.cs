@@ -95,12 +95,12 @@ namespace wumpus.components {
         }
 
         public bool openTrivia(int asked, int needed) {
-            if (player.getCoinCount() < asked) {
+            if (player.getCoinCount() < 1) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for this action");
                 return false;
             } else {
-                player.changeCoinCount(asked * -1);
+                player.changeCoinCount(-1);
                 trivia.ShowTrivia();
                 return trivia.ask(asked, needed);
             }
@@ -243,6 +243,7 @@ namespace wumpus.components {
         public void startGame() {
             graphics.startGame();
             sound.playSound(Sound.Sounds.BackgroundMusic);
+            form.Show();
         }
     }
 }

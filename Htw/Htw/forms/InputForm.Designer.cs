@@ -39,6 +39,7 @@
             this.nameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Proceed = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // process1
@@ -85,12 +86,27 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "IS REQUESTING YOUR NAME";
             // 
+            // Proceed
+            // 
+            this.Proceed.BackColor = System.Drawing.Color.Navy;
+            this.Proceed.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Proceed.ForeColor = System.Drawing.Color.White;
+            this.Proceed.Location = new System.Drawing.Point(248, 330);
+            this.Proceed.Name = "Proceed";
+            this.Proceed.Size = new System.Drawing.Size(165, 42);
+            this.Proceed.TabIndex = 3;
+            this.Proceed.Text = "Proceed";
+            this.Proceed.UseVisualStyleBackColor = false;
+            this.Proceed.Click += new System.EventHandler(this.button1_Click);
+            // 
             // InputForm
             // 
+            this.AcceptButton = this.Proceed;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(663, 461);
+            this.Controls.Add(this.Proceed);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameBox);
@@ -107,5 +123,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Proceed;
     }
 }
