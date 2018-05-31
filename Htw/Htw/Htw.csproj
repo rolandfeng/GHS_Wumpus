@@ -226,6 +226,7 @@
     <None Include="Resources\TriviaRight2.wav" />
     <None Include="Resources\TriviaWrong2.wav" />
     <None Include="Resources\NoError2.wav" />
+    <None Include="Resources\ScarySound3.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="Resource\HighScores.txt" />
     <Content Include="Resource\AlternativeCave.txt" />

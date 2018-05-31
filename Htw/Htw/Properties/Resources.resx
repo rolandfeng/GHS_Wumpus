@@ -292,6 +292,9 @@
   <data name="ScarySound2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ScarySound2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ScarySound3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScarySound3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="TriviaRight2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TriviaRight2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
