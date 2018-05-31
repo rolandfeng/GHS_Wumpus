@@ -95,12 +95,12 @@ namespace wumpus.components {
         }
 
         public bool openTrivia(int asked, int needed) {
-            if (player.getCoinCount() < asked) {
+            if (player.getCoinCount() < 1) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for this action");
                 return false;
             } else {
-                player.changeCoinCount(asked * -1);
+                player.changeCoinCount(-1);
                 trivia.ShowTrivia();
                 return trivia.ask(asked, needed);
             }
@@ -240,9 +240,32 @@ namespace wumpus.components {
             return false;
         }
 
+        public void doneWithTrivia(bool succeed, int type) {
+            if (type == 1 || type == 2) {//wumpus or pit
+                if (!succeed) {
+                    //endgame
+                } else {
+                    graphics.Show("You survived!");
+                }
+            } else if (type == 3) {//arrows
+                if (succeed) {
+                    player.changeArrowCount(2);
+                } else {
+                    graphics.Show("Better luck next time!");
+                }
+            } else if (type == 4) {//secret
+                if (succeed) {
+                    graphics.Show(buySecret());
+                } else {
+                    graphics.Show("Better luck next time!");
+                }
+            }
+        }
+
         public void startGame() {
             graphics.startGame();
             sound.playSound(Sound.Sounds.BackgroundMusic);
+            form.Show();
         }
     }
 }

@@ -36,7 +36,7 @@
             // startGameButton
             // 
             this.startGameButton.BackColor = System.Drawing.Color.MistyRose;
-            this.startGameButton.Location = new System.Drawing.Point(298, 280);
+            this.startGameButton.Location = new System.Drawing.Point(593, 528);
             this.startGameButton.Name = "startGameButton";
             this.startGameButton.Size = new System.Drawing.Size(97, 35);
             this.startGameButton.TabIndex = 0;
@@ -47,7 +47,7 @@
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.MistyRose;
-            this.exitButton.Location = new System.Drawing.Point(311, 321);
+            this.exitButton.Location = new System.Drawing.Point(604, 569);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(71, 25);
             this.exitButton.TabIndex = 1;
@@ -61,7 +61,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(186, 205);
+            this.label1.Location = new System.Drawing.Point(475, 456);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 58);
             this.label1.TabIndex = 2;
@@ -73,7 +73,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
-            this.ClientSize = new System.Drawing.Size(995, 710);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1268, 989);
+            this.Controls.Add(this.TriviaButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startGameButton);
