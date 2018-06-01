@@ -18,7 +18,7 @@ namespace wumpus
         {
             InitializeComponent();
             Sound test = new Sound();
-            test.playSound(Sound.Sounds.ArrowImpact);
+            //test.playSound(Sound.Sounds.ArrowImpact);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
