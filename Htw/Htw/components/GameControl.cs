@@ -95,7 +95,11 @@ namespace wumpus.components {
             }
         }
 
-        public string buySecret() {
+
+        public void buySecret() {
+            openTrivia(3, 2, 4);
+        }
+        public string produceSecret() {
             Random r = new Random();
             int whichHint = r.Next(0, 8); //(0, n) = range from 0 to n-1
             if (whichHint == 0 || whichHint == 1)
@@ -160,28 +164,28 @@ namespace wumpus.components {
 
         private void hazardWarnings(bool[] hazards) {
             if (hazards[0]) {//same room as wumpus 
-                graphics.Show("You found the Wumpus!");
                 sound.playSound(Sound.Sounds.MonsterRoar);
+                graphics.Show("You found the Wumpus!");
             }
             if (hazards[1]) {//adjacent to wumpus
-                graphics.Show("You smell a Wumpus!");
                 sound.playSound(Sound.Sounds.MonsterGrowl);
+                graphics.Show("You smell a Wumpus!");
             }
             if (hazards[2]) {//same room as bats
-                graphics.Show("You stumbled upon some bats!");
                 sound.playSound(Sound.Sounds.BatsInCave);
+                graphics.Show("You stumbled upon some bats!");
             }
             if (hazards[3]) {//adjacent to bats
-                graphics.Show("Bats nearby!");
                 sound.playSound(Sound.Sounds.BatCall);
+                graphics.Show("Bats nearby!");
             }
             if (hazards[4]) {//same room as pits 
-                graphics.Show("You fallen into a pit!");
                 sound.playSound(Sound.Sounds.ScaryScream);
+                graphics.Show("You fallen into a pit!");
             }
             if (hazards[5]) {//adjacent to pits
-                graphics.Show("You feel a draft...");
                 sound.playSound(Sound.Sounds.ScarySound);
+                graphics.Show("You feel a draft...");
             }
         }
 
@@ -245,7 +249,7 @@ namespace wumpus.components {
             } else if (type == 4) {//secret
                 if (succeed) {
                     sound.playSound(Sound.Sounds.TriviaRight);
-                    graphics.Show(buySecret());
+                    graphics.Show(produceSecret());
                 } else {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     graphics.Show("Better luck next time!");
