@@ -39,7 +39,7 @@ namespace wumpus.components
 
         public int getCoinCount()
         {
-            return arrowCount;
+            return coinCount;
         }
 
         public void changeArrowCount(int change)
