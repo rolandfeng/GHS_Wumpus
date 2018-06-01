@@ -52,12 +52,12 @@ namespace wumpus.forms
                                      Properties.Resources.planet22, Properties.Resources.planet23, Properties.Resources.planet24,
                                      Properties.Resources.planet25, Properties.Resources.planet26, Properties.Resources.planet27,
                                      Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30 };
-            this.name = new string[] {"Planet Pandora", "Planet Aurora", "Planet Avalon", "Planet Zion", "Planet Nova",
-                                      "Planet Spartania", "Planet Artemis", "Planet Genesis", "Planet Xenon", "Planet Orion",
-                                      "Planet Apollo", "Planet Stardust", "Planet Hyperion", "Planet Divinity", "Planet Trinity",
-                                      "Planet Osiris", "Planet Elysium", "Planet Nirvana", "Planet Styx", "Planet Vortex",
-                                      "Planet Oblivion", "Planet Argon", "Planet Exodus", "Planet Celestial", "Planet Equinox",            
-                                      "Planet Nebula", "Planet Andromeda", "Planet Galactic", "Planet Titanium", "Planet Sagittarius"};
+            this.name = new string[] {"Pandora-1", "Aurora-2", "Avalon-3", "Zion-4", "Nova-5",
+                                      "Spartania-6", "Artemis-7", "Genesis-8", "Xenon-9", "Orion-10",
+                                      "Apollo-11", "Stardust-12", "Hyperion-13", "Divinity-14", "Trinity-15",
+                                      "Osiris-16", "Elysium-17", "Nirvana-18", "Styx-19", "Vortex-20",
+                                      "Oblivion-21", "Argon-22", "Exodus-23", "Celestial-24", "Equinox-25",            
+                                      "Nebula-26", "Andromeda-27", "Galactic-28", "Titanium-29", "Sagittarius-30"};
         }
 
 
@@ -150,8 +150,9 @@ namespace wumpus.forms
                 southWestButton.Image = image[connections[5] - 1];
             }
             //update room
-            BackgroundImage = image[currentRoom - 1];
-
+            //BackgroundImage = image[currentRoom - 1];
+            
+            planetButton.BackgroundImage = image[currentRoom - 1];
         }
 
 
@@ -284,4 +285,16 @@ public class RoundButton : Button
         base.OnPaint(e);
     }
 }
+
+public class BigRoundButton : Button
+{
+    protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+    {
+        GraphicsPath grPath = new GraphicsPath();
+        grPath.AddEllipse(200, 200, 300, 300);
+        this.Region = new System.Drawing.Region(grPath);
+        base.OnPaint(e);
+    }
+}
+
 

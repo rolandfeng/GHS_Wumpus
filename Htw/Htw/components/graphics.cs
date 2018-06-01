@@ -16,7 +16,6 @@ namespace wumpus.components
         Map map;
         Cave cave;
         MainGame mainGame;
-        bool shootButtonClicked;
 
 
         public Graphics(GameControl gameControl, Player player, Map map, Cave cave)
