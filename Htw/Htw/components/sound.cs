@@ -25,6 +25,16 @@ namespace wumpus.components
          
             //play the sound
         }
+
+        private void playMp3()
+        {
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            
+            wplayer.URL = @"../../sounds/SqueekingDoor.mp3";
+            wplayer.controls.play();
+
+        }
+
         public enum Sounds {ArrowImpact, ArrowMiss, BatCall, BatsInCave, MonsterDie, MonsterGrowl, MonsterRoar, MonsterWalk,
         NoError, PlayerDie, PlayerWalk, ScaryScream, ScarySound, TriviaRight, TriviaWrong, MainMenu, BackgroundMusic}
 
@@ -33,6 +43,7 @@ namespace wumpus.components
             switch (sound)
             {
                 case Sounds.ArrowImpact:
+                    //playMp3();
                     playSoundFromFile(Properties.Resources.ArrowImpact2);
                     break;
                 case Sounds.ArrowMiss:
@@ -54,7 +65,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.MonsterRoar2);
                     break;
                 case Sounds.MonsterWalk:
-                    playSoundFromFile(Properties.Resources.MonsterWalk);
+                    playSoundFromFile(Properties.Resources.MonsterTeleport);
                     break;
                 case Sounds.NoError:
                     playSoundFromFile(Properties.Resources.NoError2);
@@ -63,7 +74,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.PlayerDie);
                     break;
                 case Sounds.PlayerWalk:
-                    playSoundFromFile(Properties.Resources.PlayerWalk2);
+                    playSoundFromFile(Properties.Resources.ShipMove);
                     break;
                 case Sounds.ScaryScream:
                     playSoundFromFile(Properties.Resources.ScaryScream2);
@@ -78,10 +89,10 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.TriviaWrong2);
                     break;
                 case Sounds.MainMenu:
-                    playSoundFromFile(Properties.Resources.MainMenu);
+                    playSoundFromFile(Properties.Resources.MainMenu3);
                     break;
                 case Sounds.BackgroundMusic:
-                    playSoundFromFile(Properties.Resources.BackgroundMusic);
+                    playSoundFromFile(Properties.Resources.BackgroundMusic3);
                     //change
                     break;
             }
