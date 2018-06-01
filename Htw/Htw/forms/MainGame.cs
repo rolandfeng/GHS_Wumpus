@@ -20,12 +20,13 @@ namespace wumpus.forms
         Map map;
         Cave cave;
         Direction direction;
-        Image[] image;
         bool shootButtonClicked;
+        Image[] image;
+        String[] name;
 
 
 
-        public MainGame(GameControl gameControl, Player player, Map map, Cave cave, bool shootButtonClicked)
+        public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
         {
             InitializeComponent();
 
@@ -51,6 +52,12 @@ namespace wumpus.forms
                                      Properties.Resources.planet22, Properties.Resources.planet23, Properties.Resources.planet24,
                                      Properties.Resources.planet25, Properties.Resources.planet26, Properties.Resources.planet27,
                                      Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30 };
+            this.name = new string[] {"Planet Pandora", "Planet Aurora", "Planet Avalon", "Planet Zion", "Planet Nova",
+                                      "Planet Spartania", "Planet Artemis", "Planet Genesis", "Planet Xenon", "Planet Orion",
+                                      "Planet Apollo", "Planet Stardust", "Planet Hyperion", "Planet Divinity", "Planet Trinity",
+                                      "Planet Osiris", "Planet Elysium", "Planet Nirvana", "Planet Styx", "Planet Vortex",
+                                      "Planet Oblivion", "Planet Argon", "Planet Exodus", "Planet Celestial", "Planet Equinox",            
+                                      "Planet Nebula", "Planet Andromeda", "Planet Galactic", "Planet Titanium", "Planet Sagittarius"};
         }
 
 
@@ -74,7 +81,7 @@ namespace wumpus.forms
             {
                 northButton.Visible = true;
                 NorthRoomsLabel.Visible = true;
-                NorthRoomsLabel.Text = "" + connections[0];
+                NorthRoomsLabel.Text = name[connections[0]-1];
                 northButton.Image = image[connections[0] - 1];
             }
 
@@ -87,7 +94,7 @@ namespace wumpus.forms
             {
                 northEastButton.Visible = true;
                 NorthEastRoomsLabel.Visible = true;
-                NorthEastRoomsLabel.Text = "" + connections[1];
+                NorthEastRoomsLabel.Text = name[connections[1] - 1];
                 northEastButton.Image = image[connections[1] - 1];
             }
 
@@ -100,7 +107,7 @@ namespace wumpus.forms
             {
                 northWestButton.Visible = true;
                 NorthWestRoomsLabel.Visible = true;
-                NorthWestRoomsLabel.Text = "" + connections[2];
+                NorthWestRoomsLabel.Text = name[connections[2] - 1];
                 northWestButton.Image = image[connections[2] - 1];
             }
 
@@ -113,7 +120,7 @@ namespace wumpus.forms
             {
                 southButton.Visible = true;
                 SouthRoomsLabel.Visible = true;
-                SouthRoomsLabel.Text = "" + connections[3];
+                SouthRoomsLabel.Text = name[connections[3] - 1];
                 southButton.Image = image[connections[3] - 1];
             }
 
@@ -126,7 +133,7 @@ namespace wumpus.forms
             {
                 southEastButton.Visible = true;
                 SouthEastRoomsLabel.Visible = true;
-                SouthEastRoomsLabel.Text = "" + connections[4];
+                SouthEastRoomsLabel.Text = name[connections[4] - 1];
                 southEastButton.Image = image[connections[4] - 1];
             }
 
@@ -139,7 +146,7 @@ namespace wumpus.forms
             {
                 southWestButton.Visible = true;
                 SouthWestRoomsLabel.Visible = true;
-                SouthWestRoomsLabel.Text = "" + connections[5];
+                SouthWestRoomsLabel.Text = name[connections[5] - 1];
                 southWestButton.Image = image[connections[5] - 1];
             }
             //update room
@@ -161,6 +168,7 @@ namespace wumpus.forms
                 this.direction = Direction.NORTH;
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                shootButtonClicked = false;
             }
         }
 
@@ -176,6 +184,7 @@ namespace wumpus.forms
                 this.direction = Direction.NORTH_EAST;
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                shootButtonClicked = false;
             }
         }
 
@@ -191,6 +200,7 @@ namespace wumpus.forms
                 this.direction = Direction.SOUTH_EAST;
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                shootButtonClicked = false;
             }
         }
 
@@ -206,6 +216,7 @@ namespace wumpus.forms
                 this.direction = Direction.SOUTH;
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                shootButtonClicked = false;
             }
         }
 
@@ -222,6 +233,7 @@ namespace wumpus.forms
                 this.direction = Direction.SOUTH_WEST;
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                shootButtonClicked = false;
             }
         }
 
@@ -238,6 +250,7 @@ namespace wumpus.forms
                 this.direction = Direction.NORTH_WEST;
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                shootButtonClicked = false;
             }
         }
 
