@@ -150,9 +150,9 @@ namespace wumpus.forms
                 southWestButton.Image = image[connections[5] - 1];
             }
             //update room
-            //BackgroundImage = image[currentRoom - 1];
+            BackgroundImage = image[currentRoom - 1];
             
-            planetButton.BackgroundImage = image[currentRoom - 1];
+            //planetButton.BackgroundImage = image[currentRoom - 1];
         }
 
 
@@ -286,15 +286,5 @@ public class RoundButton : Button
     }
 }
 
-public class BigRoundButton : Button
-{
-    protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
-    {
-        GraphicsPath grPath = new GraphicsPath();
-        grPath.AddEllipse(200, 200, 300, 300);
-        this.Region = new System.Drawing.Region(grPath);
-        base.OnPaint(e);
-    }
-}
 
 
