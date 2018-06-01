@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wumpus.components
 {
-    public class HighScore
+    public class HighScore: IComparable<HighScore>
     {
         private int highScore;
         private String playerName;
@@ -32,6 +32,15 @@ namespace wumpus.components
         public String getDate()
         {
             return date;
+        }
+
+        public int CompareTo(HighScore that)
+        {
+            if (this.highScore > that.highScore)
+                return -1;
+            else if (this.highScore < that.highScore)
+                return 1;
+            else return 0;
         }
     }
 }

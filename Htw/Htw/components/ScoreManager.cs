@@ -33,28 +33,8 @@ namespace wumpus.components
             }
         }
 
-        private void SortList()
-        {
-            highScoresList.Sort((HighScore first, HighScore second) =>
-            {
-                if (first.getHighScore() < second.getHighScore())
-                {
-                    return -1;
-                }
-                else if (first.getHighScore() > second.getHighScore())
-                {
-                    return 1;
-                }
-                else
-                {
-                    return 0;
-                }
-            });
-        }
-
         public Boolean testScore(int newScore)
         {
-           
             return newScore > highScoresList[9].getHighScore();    
         }
 
@@ -63,9 +43,9 @@ namespace wumpus.components
             LoadHighScores();
             DateTime dateTime = DateTime.UtcNow.Date;
             string date = dateTime.ToString("MM/dd/yyyy");
-            HighScore newScore = new HighScore(highScore, name, date);
+            HighScore newScore = new HighScore(highScore, this.name, date);
             highScoresList.Add(newScore);
-            SortList();
+            highScoresList.Sort();
             trimHighScores();
         }
 
