@@ -89,7 +89,7 @@ namespace wumpus.components {
         public void openTrivia(int asked, int needed, int type) {
             if (player.getCoinCount() < 1) {
                 sound.playSound(Sound.Sounds.NoError);
-                graphics.Show("Not enough coins for this action");
+                graphics.Show("Not enough coins for trivia!");
             } else {
                 player.changeCoinCount(-1);
                 trivia.ShowTrivia();
@@ -104,33 +104,27 @@ namespace wumpus.components {
         public string produceSecret() {
             Random r = new Random();
             int whichHint = r.Next(0, 8); //(0, n) = range from 0 to n-1
-            if (whichHint == 0 || whichHint == 1)
-            { //bat rooms
+            if (whichHint == 0 || whichHint == 1) { //bat rooms
                 int[] bats = map.getBatLocations();
                 return ("There is a bat in room " + bats[whichHint] + "!");
             }
-            else if (whichHint == 2 || whichHint == 3)
-            { //pit rooms
+            else if (whichHint == 2 || whichHint == 3) { //pit rooms
                 int[] pits = map.getPitLocations();
                 return ("There is a pit in room " + pits[whichHint - 2] + "!");
             }
-            else if (whichHint == 4)
-            { //Wumpus location
+            else if (whichHint == 4) { //Wumpus location
                 return ("The Wumpus is in room " + map.getWumpusLocation() + "!");
             }
-            else if (whichHint == 5)
-            { //bogus hint
+            else if (whichHint == 5) { //bogus hint
                 return ("You are in room " + map.getPlayerLocation() + "!");
             }
-            else if (whichHint == 6)
-            {//Wumpus is 2 rooms away or not
+            else if (whichHint == 6) {//Wumpus is 2 rooms away or not
                 if (withinTwoRooms())
                     return ("The Wumpus is 2 rooms away!");
                 else
                     return ("The Wumpus is further than 2 rooms away!");
             }
-            else
-            { //more troll hints, can add more
+            else { //more troll hints, can add more
                 return ("It is turn " + player.getTurn() + "!");
             }
         }
@@ -143,16 +137,14 @@ namespace wumpus.components {
             int wumpusLoc = map.getWumpusLocation();
             if (newLoc == wumpusLoc) {
                 hazards[0] = true;
-            }
-            else if (cave.isAdjacent(newLoc, wumpusLoc)) {
+            } else if (cave.isAdjacent(newLoc, wumpusLoc)) {
                 hazards[1] = true;
             }
             int[] batsLoc = map.getBatLocations();
             int[] pitsLoc = map.getPitLocations();
             if (newLoc == batsLoc[0] || newLoc == batsLoc[1]) {
                 hazards[2] = true;
-            }
-            else if (newLoc == pitsLoc[0] || newLoc == pitsLoc[1]) {
+            } else if (newLoc == pitsLoc[0] || newLoc == pitsLoc[1]) {
                 hazards[4] = true;
             }
             if (cave.isAdjacent(newLoc, batsLoc[0]) || cave.isAdjacent(newLoc, batsLoc[1])) {
@@ -175,19 +167,19 @@ namespace wumpus.components {
             }
             if (hazards[2]) {//same room as bats
                 sound.playSound(Sound.Sounds.BatsInCave);
-                graphics.Show("You stumbled upon some bats!");
+                graphics.Show("You've been teleported by a UFO!");
             }
             if (hazards[3]) {//adjacent to bats
                 sound.playSound(Sound.Sounds.BatCall);
-                graphics.Show("Bats nearby!");
+                graphics.Show("You sense a UFO is nearby...");
             }
             if (hazards[4]) {//same room as pits 
                 sound.playSound(Sound.Sounds.ScaryScream);
-                graphics.Show("You fallen into a pit!");
+                graphics.Show("You've been sucked into a black hole!");
             }
             if (hazards[5]) {//adjacent to pits
                 sound.playSound(Sound.Sounds.ScarySound);
-                graphics.Show("You feel a draft...");
+                graphics.Show("You can feel a black hole nearby...");
             }
         }
 
@@ -212,9 +204,10 @@ namespace wumpus.components {
                     }
                 }
             } else {
-                int randomRoom = r.Next(0, 6);
                 int[] connections = cave.getAllConnections(initialLoc);
-                finalLoc = connections[randomRoom];
+                do {
+                    finalLoc = connections[r.Next(0, 6)];
+                } while (finalLoc == 0);
             }
             return finalLoc;
         }
