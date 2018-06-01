@@ -159,7 +159,7 @@ namespace wumpus.components {
         private void hazardWarnings(bool[] hazards) {
             if (hazards[0]) {//same room as wumpus 
                 sound.playSound(Sound.Sounds.MonsterRoar);
-                graphics.Show("You found the Wumpus!");
+                graphics.Show("You found the Wumpus! Answer 3 of 5 trivia questions correctly to escape!");
             }
             if (hazards[1]) {//adjacent to wumpus
                 sound.playSound(Sound.Sounds.MonsterGrowl);
@@ -175,7 +175,7 @@ namespace wumpus.components {
             }
             if (hazards[4]) {//same room as pits 
                 sound.playSound(Sound.Sounds.ScaryScream);
-                graphics.Show("You've been sucked into a black hole!");
+                graphics.Show("You've been sucked into a black hole! Answer 2 of 3 trivia questions correctly to escape!");
             }
             if (hazards[5]) {//adjacent to pits
                 sound.playSound(Sound.Sounds.ScarySound);
