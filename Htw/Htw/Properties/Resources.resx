@@ -124,16 +124,181 @@
   <data name="startBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\startBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DoorClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DoorClose.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OhMyGod" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OhMyGod.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DoorOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DoorOpen.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="startBackgroundCrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\startBackgroundCrop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet23.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet25.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet26.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet27.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet29.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet30.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="planet9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planet9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowImpact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowImpact.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ArrowMiss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowMiss.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BatCall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BatCall.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BatsInCave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BatsInCave.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterDie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterDie.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterGrowl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterGrowl.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterRoar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterRoar.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterWalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterWalk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NoError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoError.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PlayerDie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerDie.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PlayerWalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWalk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScaryScream" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScaryScream.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScarySound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScarySound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TriviaRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriviaRight.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TriviaWrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriviaWrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MainMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainMenu.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BackgroundMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PlayerWalk2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWalk2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ArrowImpact2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowImpact2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BatsInCave2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BatsInCave2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterDie2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterDie2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterRoar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterRoar2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NoError2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoError2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScaryScream2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScaryScream2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScarySound2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScarySound2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScarySound3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScarySound3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TriviaRight2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriviaRight2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TriviaWrong2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriviaWrong2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

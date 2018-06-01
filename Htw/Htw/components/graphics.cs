@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using wumpus.forms;
+using System.Drawing;
+//using System.Windows.Forms;
 
 namespace wumpus.components
 {
@@ -14,6 +16,7 @@ namespace wumpus.components
         Map map;
         Cave cave;
         MainGame mainGame;
+        bool shootButtonClicked;
 
 
         public Graphics(GameControl gameControl, Player player, Map map, Cave cave)
@@ -27,14 +30,28 @@ namespace wumpus.components
         public void startGame()
         {
             mainGame = new MainGame(gameControl, player, map, cave);
+
+            mainGame.FormClosed += (sender, e) =>
+            {
+                gameControl.closeGame();
+            };
+
             mainGame.Show();
         }
 
-        public void update(int currentRoom, bool[] hazards)
+        public void update(int currentRoom)
         {
-            mainGame.UpdateGraphics(currentRoom, hazards);
+            mainGame.UpdateGraphics(currentRoom);
         }
 
+        public void Show(String message)
+         {
+             System.Windows.Forms.MessageBox.Show(message);
 
+         }
+         
     }
 }
+
+
+

@@ -25,20 +25,75 @@ namespace wumpus.components
          
             //play the sound
         }
-        public enum Sounds {DoorOpen, DoorClose, OhMyGod}
+
+        private void playMp3()
+        {
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            
+            wplayer.URL = @"../../sounds/SqueekingDoor.mp3";
+            wplayer.controls.play();
+
+        }
+
+        public enum Sounds {ArrowImpact, ArrowMiss, BatCall, BatsInCave, MonsterDie, MonsterGrowl, MonsterRoar, MonsterWalk,
+        NoError, PlayerDie, PlayerWalk, ScaryScream, ScarySound, TriviaRight, TriviaWrong, MainMenu, BackgroundMusic}
 
         public void playSound(Sounds sound)
         {
             switch (sound)
             {
-                case Sounds.DoorOpen:
-                   // playSoundFromFile(Properties.Resources.DoorOpen);
+                case Sounds.ArrowImpact:
+                    //playMp3();
+                    playSoundFromFile(Properties.Resources.ArrowImpact2);
                     break;
-                case Sounds.DoorClose:
-                    playSoundFromFile(Properties.Resources.DoorClose);
+                case Sounds.ArrowMiss:
+                    playSoundFromFile(Properties.Resources.ArrowMiss);
                     break;
-                case Sounds.OhMyGod:
-                    playSoundFromFile(Properties.Resources.OhMyGod);
+                case Sounds.BatCall:
+                    playSoundFromFile(Properties.Resources.BatCall);
+                    break;
+                case Sounds.BatsInCave:
+                    playSoundFromFile(Properties.Resources.BatsInCave2);
+                    break;
+                case Sounds.MonsterDie:
+                    playSoundFromFile(Properties.Resources.MonsterDie2);
+                    break;
+                case Sounds.MonsterGrowl:
+                    playSoundFromFile(Properties.Resources.MonsterGrowl);
+                    break;
+                case Sounds.MonsterRoar:
+                    playSoundFromFile(Properties.Resources.MonsterRoar2);
+                    break;
+                case Sounds.MonsterWalk:
+                    playSoundFromFile(Properties.Resources.MonsterWalk);
+                    break;
+                case Sounds.NoError:
+                    playSoundFromFile(Properties.Resources.NoError2);
+                    break;
+                case Sounds.PlayerDie:
+                    playSoundFromFile(Properties.Resources.PlayerDie);
+                    break;
+                case Sounds.PlayerWalk:
+                    playSoundFromFile(Properties.Resources.PlayerWalk2);
+                    break;
+                case Sounds.ScaryScream:
+                    playSoundFromFile(Properties.Resources.ScaryScream2);
+                    break;
+                case Sounds.ScarySound:
+                    playSoundFromFile(Properties.Resources.ScarySound3);
+                    break;
+                case Sounds.TriviaRight:
+                    playSoundFromFile(Properties.Resources.TriviaRight2);
+                    break;
+                case Sounds.TriviaWrong:
+                    playSoundFromFile(Properties.Resources.TriviaWrong2);
+                    break;
+                case Sounds.MainMenu:
+                    playSoundFromFile(Properties.Resources.MainMenu);
+                    break;
+                case Sounds.BackgroundMusic:
+                    playSoundFromFile(Properties.Resources.BackgroundMusic);
+                    //change
                     break;
             }
         }

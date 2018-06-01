@@ -74,8 +74,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Replay = new System.Windows.Forms.Button();
+            this.Quit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,7 @@
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.39682F));
@@ -196,11 +197,11 @@
             this.HighScore0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore0.AutoSize = true;
             this.HighScore0.BackColor = System.Drawing.Color.Transparent;
-            this.HighScore0.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HighScore0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.HighScore0.ForeColor = System.Drawing.Color.White;
-            this.HighScore0.Location = new System.Drawing.Point(311, 57);
+            this.HighScore0.Location = new System.Drawing.Point(300, 56);
             this.HighScore0.Name = "HighScore0";
-            this.HighScore0.Size = new System.Drawing.Size(117, 21);
+            this.HighScore0.Size = new System.Drawing.Size(140, 23);
             this.HighScore0.TabIndex = 4;
             this.HighScore0.Text = "HighScore0";
             // 
@@ -299,11 +300,11 @@
             this.Player0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player0.AutoSize = true;
             this.Player0.BackColor = System.Drawing.Color.Transparent;
-            this.Player0.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Player0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Player0.ForeColor = System.Drawing.Color.White;
-            this.Player0.Location = new System.Drawing.Point(176, 57);
+            this.Player0.Location = new System.Drawing.Point(168, 56);
             this.Player0.Name = "Player0";
-            this.Player0.Size = new System.Drawing.Size(83, 21);
+            this.Player0.Size = new System.Drawing.Size(100, 23);
             this.Player0.TabIndex = 14;
             this.Player0.Text = "Player0";
             // 
@@ -402,11 +403,11 @@
             this.Date0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date0.AutoSize = true;
             this.Date0.BackColor = System.Drawing.Color.Transparent;
-            this.Date0.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Date0.ForeColor = System.Drawing.Color.White;
-            this.Date0.Location = new System.Drawing.Point(489, 57);
+            this.Date0.Location = new System.Drawing.Point(485, 56);
             this.Date0.Name = "Date0";
-            this.Date0.Size = new System.Drawing.Size(68, 21);
+            this.Date0.Size = new System.Drawing.Size(76, 23);
             this.Date0.TabIndex = 24;
             this.Date0.Text = "Date0";
             // 
@@ -415,11 +416,11 @@
             this.Date1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date1.AutoSize = true;
             this.Date1.BackColor = System.Drawing.Color.Transparent;
-            this.Date1.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Date1.ForeColor = System.Drawing.Color.White;
-            this.Date1.Location = new System.Drawing.Point(489, 102);
+            this.Date1.Location = new System.Drawing.Point(486, 101);
             this.Date1.Name = "Date1";
-            this.Date1.Size = new System.Drawing.Size(68, 21);
+            this.Date1.Size = new System.Drawing.Size(73, 23);
             this.Date1.TabIndex = 25;
             this.Date1.Text = "Date1";
             // 
@@ -428,11 +429,11 @@
             this.Date2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date2.AutoSize = true;
             this.Date2.BackColor = System.Drawing.Color.Transparent;
-            this.Date2.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date2.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Date2.ForeColor = System.Drawing.Color.White;
-            this.Date2.Location = new System.Drawing.Point(489, 147);
+            this.Date2.Location = new System.Drawing.Point(486, 146);
             this.Date2.Name = "Date2";
-            this.Date2.Size = new System.Drawing.Size(68, 21);
+            this.Date2.Size = new System.Drawing.Size(74, 23);
             this.Date2.TabIndex = 26;
             this.Date2.Text = "Date2";
             // 
@@ -622,41 +623,41 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "10";
             // 
-            // button1
+            // Replay
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(155, 506);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 43);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Play Again";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Replay.BackColor = System.Drawing.Color.Transparent;
+            this.Replay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Replay.BackgroundImage")));
+            this.Replay.ForeColor = System.Drawing.Color.White;
+            this.Replay.Location = new System.Drawing.Point(155, 506);
+            this.Replay.Name = "Replay";
+            this.Replay.Size = new System.Drawing.Size(113, 43);
+            this.Replay.TabIndex = 1;
+            this.Replay.Text = "Play Again";
+            this.Replay.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // Quit
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(321, 507);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Quit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Quit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Quit.BackgroundImage")));
+            this.Quit.ForeColor = System.Drawing.Color.White;
+            this.Quit.Location = new System.Drawing.Point(321, 507);
+            this.Quit.Name = "Quit";
+            this.Quit.Size = new System.Drawing.Size(107, 42);
+            this.Quit.TabIndex = 2;
+            this.Quit.Text = "Quit";
+            this.Quit.UseVisualStyleBackColor = true;
+            this.Quit.Click += new System.EventHandler(this.Quit_Click);
             // 
             // HighScoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Quit);
+            this.Controls.Add(this.Replay);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "HighScoresForm";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -669,8 +670,8 @@
         private System.Windows.Forms.Label ScoreColumn;
         private System.Windows.Forms.Label DateColumn;
         private System.Windows.Forms.Label PlayerColumn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Replay;
+        private System.Windows.Forms.Button Quit;
         private System.Windows.Forms.Label HighScore0;
         private System.Windows.Forms.Label HighScore1;
         private System.Windows.Forms.Label HighScore2;

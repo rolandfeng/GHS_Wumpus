@@ -18,7 +18,7 @@ namespace wumpus
         {
             InitializeComponent();
             Sound test = new Sound();
-            test.playSound(Sound.Sounds.DoorClose);
+            test.playSound(Sound.Sounds.MainMenu);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -30,13 +30,15 @@ namespace wumpus
         {
             GameControl gameControl = new GameControl();
             gameControl.startGame();
-        }
-  
+            this.Visible = false;
 
-        private void TriviaButton_Click(object sender, EventArgs e)
-        {
-            Trivia testTrivia = new Trivia();
-    
+            gameControl.GameClosing += (send, args) =>
+            {
+                this.Close();
+            };
+
+            //this.Close();
         }
+
     }
 }

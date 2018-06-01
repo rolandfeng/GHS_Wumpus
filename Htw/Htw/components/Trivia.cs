@@ -11,36 +11,82 @@ namespace wumpus.components
     public class Trivia
     {
         private TriviaForm triviaForm;
+        private GameControl gameControl;
         private String[][] questions;
+        private int questionsAsk;
+        private int answerCorrect;
+        private int incrementCorrect;
+        private int rightAnswerIndex;
+        private int numQuestions;
+        private int type;
 
-        public Trivia()
+        public Trivia(GameControl gameControl)
         {
-           triviaForm = new TriviaForm(this);
+            triviaForm = new TriviaForm(this);
+            this.gameControl = gameControl;
+            String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
+            questions = new String[lines.Length][];
+            for (int i = 0; i < lines.Length; i++)
+            {
+                questions[i] = lines[i].Split(';');
+            }
         }
 
         public void ShowTrivia()
         {
-         triviaForm.Show();
+            triviaForm.Show();
         }
 
-        public bool ask(int questionsAsk, int answerCorrect)
+        public void ask(int questionsAsk, int answerCorrect, int type) 
         {
-            triviaForm.displayQuestion(questions[0]);
-            return false;
-        }
-
-       
-        
-        public String[][] ReadFile()
-        {
-            String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
-            String[][] segments = new String[lines.Length][];
-            for(int i = 0; i < lines.Length; i++)
+            this.questionsAsk = questionsAsk;
+            this.answerCorrect = answerCorrect;
+            this.type = type;
+            if (numQuestions == questionsAsk)
             {
-                segments[i] = lines[i].Split(';');
-            }
-            return segments;
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(false, type);
+            } 
+
+                if (answerCorrect == incrementCorrect)
+                {
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
+                }
+                askQuestion();
+
+        
         }
+
+        public void increment()
+        {
+            if (triviaForm.RightAnswer())
+            {
+                incrementCorrect++;
+            } 
+            ask(questionsAsk, answerCorrect, type); 
+        }
+
+        public void askQuestion()
+        {
+            Random random = new Random();
+            int randomIndex = random.Next(0, questions.Length);
+            triviaForm.SetQuestion(questions[randomIndex][0]);
+            triviaForm.SetAnswer1(questions[randomIndex][1]);
+            triviaForm.SetAnswer2(questions[randomIndex][2]);
+            triviaForm.SetAnswer3(questions[randomIndex][3]);
+            triviaForm.SetAnswer4(questions[randomIndex][4]);
+
+            rightAnswerIndex = Int32.Parse(questions[randomIndex][5]);
+            triviaForm.SetRightIndex(rightAnswerIndex);
+
+            numQuestions++; 
+        }
+
 
     }
 }

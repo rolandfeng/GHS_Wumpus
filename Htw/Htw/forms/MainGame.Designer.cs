@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.northButton = new System.Windows.Forms.Button();
-            this.northEastButton = new System.Windows.Forms.Button();
-            this.southWestButton = new System.Windows.Forms.Button();
-            this.northWestButton = new System.Windows.Forms.Button();
-            this.southButton = new System.Windows.Forms.Button();
-            this.southEastButton = new System.Windows.Forms.Button();
             this.NumberOfCoinsLabel = new System.Windows.Forms.Label();
             this.NumberOfArrowsLabel = new System.Windows.Forms.Label();
             this.NorthRoomsLabel = new System.Windows.Forms.Label();
@@ -44,145 +38,123 @@
             this.SouthWestRoomsLabel = new System.Windows.Forms.Label();
             this.PurchaseArrowsButton = new System.Windows.Forms.Button();
             this.ShootArrowButton = new System.Windows.Forms.Button();
+            this.PurchaseSecretButton = new System.Windows.Forms.Button();
+            this.buySecretButton = new System.Windows.Forms.Button();
+            this.southEastButton = new RoundButton();
+            this.southButton = new RoundButton();
+            this.northWestButton = new RoundButton();
+            this.southWestButton = new RoundButton();
+            this.northEastButton = new RoundButton();
+            this.northButton = new RoundButton();
             this.SuspendLayout();
-            // 
-            // northButton
-            // 
-            this.northButton.Location = new System.Drawing.Point(269, 149);
-            this.northButton.Name = "northButton";
-            this.northButton.Size = new System.Drawing.Size(75, 23);
-            this.northButton.TabIndex = 0;
-            this.northButton.Text = "North";
-            this.northButton.UseVisualStyleBackColor = true;
-            this.northButton.Click += new System.EventHandler(this.northButton_Click);
-            // 
-            // northEastButton
-            // 
-            this.northEastButton.Location = new System.Drawing.Point(393, 202);
-            this.northEastButton.Name = "northEastButton";
-            this.northEastButton.Size = new System.Drawing.Size(75, 23);
-            this.northEastButton.TabIndex = 1;
-            this.northEastButton.Text = "Northeast";
-            this.northEastButton.UseVisualStyleBackColor = true;
-            this.northEastButton.Click += new System.EventHandler(this.northEastButton_Click);
-            // 
-            // southWestButton
-            // 
-            this.southWestButton.Location = new System.Drawing.Point(130, 307);
-            this.southWestButton.Name = "southWestButton";
-            this.southWestButton.Size = new System.Drawing.Size(75, 23);
-            this.southWestButton.TabIndex = 2;
-            this.southWestButton.Text = "Southwest";
-            this.southWestButton.UseVisualStyleBackColor = true;
-            this.southWestButton.Click += new System.EventHandler(this.southWestButton_Click);
-            // 
-            // northWestButton
-            // 
-            this.northWestButton.Location = new System.Drawing.Point(130, 202);
-            this.northWestButton.Name = "northWestButton";
-            this.northWestButton.Size = new System.Drawing.Size(75, 23);
-            this.northWestButton.TabIndex = 3;
-            this.northWestButton.Text = "Northwest";
-            this.northWestButton.UseVisualStyleBackColor = true;
-            this.northWestButton.Click += new System.EventHandler(this.northWestButton_Click);
-            // 
-            // southButton
-            // 
-            this.southButton.Location = new System.Drawing.Point(269, 389);
-            this.southButton.Name = "southButton";
-            this.southButton.Size = new System.Drawing.Size(75, 23);
-            this.southButton.TabIndex = 4;
-            this.southButton.Text = "South";
-            this.southButton.UseVisualStyleBackColor = true;
-            this.southButton.Click += new System.EventHandler(this.southButton_Click);
-            // 
-            // southEastButton
-            // 
-            this.southEastButton.Location = new System.Drawing.Point(393, 307);
-            this.southEastButton.Name = "southEastButton";
-            this.southEastButton.Size = new System.Drawing.Size(75, 23);
-            this.southEastButton.TabIndex = 5;
-            this.southEastButton.Text = "Southeast";
-            this.southEastButton.UseVisualStyleBackColor = true;
-            this.southEastButton.Click += new System.EventHandler(this.southEastButton_Click);
             // 
             // NumberOfCoinsLabel
             // 
             this.NumberOfCoinsLabel.AutoSize = true;
-            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(522, 472);
+            this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(1669, 15);
+            this.NumberOfCoinsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
-            this.NumberOfCoinsLabel.Size = new System.Drawing.Size(85, 13);
+            this.NumberOfCoinsLabel.Size = new System.Drawing.Size(167, 20);
             this.NumberOfCoinsLabel.TabIndex = 6;
             this.NumberOfCoinsLabel.Text = "Number of Coins";
             // 
             // NumberOfArrowsLabel
             // 
             this.NumberOfArrowsLabel.AutoSize = true;
-            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(542, 23);
+            this.NumberOfArrowsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(1660, 53);
+            this.NumberOfArrowsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NumberOfArrowsLabel.Name = "NumberOfArrowsLabel";
-            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(91, 13);
+            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(190, 20);
             this.NumberOfArrowsLabel.TabIndex = 7;
             this.NumberOfArrowsLabel.Text = "Number of Arrows";
             // 
             // NorthRoomsLabel
             // 
             this.NorthRoomsLabel.AutoSize = true;
-            this.NorthRoomsLabel.Location = new System.Drawing.Point(275, 122);
+            this.NorthRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NorthRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NorthRoomsLabel.ForeColor = System.Drawing.Color.White;
+            this.NorthRoomsLabel.Location = new System.Drawing.Point(928, -5);
+            this.NorthRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NorthRoomsLabel.Name = "NorthRoomsLabel";
-            this.NorthRoomsLabel.Size = new System.Drawing.Size(69, 13);
+            this.NorthRoomsLabel.Size = new System.Drawing.Size(61, 40);
             this.NorthRoomsLabel.TabIndex = 8;
-            this.NorthRoomsLabel.Text = "North Rooms";
+            this.NorthRoomsLabel.Text = "NN";
             // 
             // NorthEastRoomsLabel
             // 
             this.NorthEastRoomsLabel.AutoSize = true;
-            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(474, 207);
+            this.NorthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NorthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NorthEastRoomsLabel.ForeColor = System.Drawing.Color.White;
+            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(1396, 112);
+            this.NorthEastRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NorthEastRoomsLabel.Name = "NorthEastRoomsLabel";
-            this.NorthEastRoomsLabel.Size = new System.Drawing.Size(89, 13);
+            this.NorthEastRoomsLabel.Size = new System.Drawing.Size(58, 40);
             this.NorthEastRoomsLabel.TabIndex = 9;
-            this.NorthEastRoomsLabel.Text = "Northeast Rooms";
+            this.NorthEastRoomsLabel.Text = "NE";
             // 
             // NorthWestRoomsLabel
             // 
             this.NorthWestRoomsLabel.AutoSize = true;
-            this.NorthWestRoomsLabel.Location = new System.Drawing.Point(21, 207);
+            this.NorthWestRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NorthWestRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NorthWestRoomsLabel.ForeColor = System.Drawing.Color.White;
+            this.NorthWestRoomsLabel.Location = new System.Drawing.Point(117, 93);
+            this.NorthWestRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NorthWestRoomsLabel.Name = "NorthWestRoomsLabel";
-            this.NorthWestRoomsLabel.Size = new System.Drawing.Size(91, 13);
+            this.NorthWestRoomsLabel.Size = new System.Drawing.Size(73, 40);
             this.NorthWestRoomsLabel.TabIndex = 10;
-            this.NorthWestRoomsLabel.Text = "Northwest Rooms";
+            this.NorthWestRoomsLabel.Text = "NW";
             // 
             // SouthRoomsLabel
             // 
             this.SouthRoomsLabel.AutoSize = true;
-            this.SouthRoomsLabel.Location = new System.Drawing.Point(273, 430);
+            this.SouthRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SouthRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SouthRoomsLabel.ForeColor = System.Drawing.Color.White;
+            this.SouthRoomsLabel.Location = new System.Drawing.Point(930, 810);
+            this.SouthRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SouthRoomsLabel.Name = "SouthRoomsLabel";
-            this.SouthRoomsLabel.Size = new System.Drawing.Size(71, 13);
+            this.SouthRoomsLabel.Size = new System.Drawing.Size(51, 40);
             this.SouthRoomsLabel.TabIndex = 11;
-            this.SouthRoomsLabel.Text = "South Rooms";
+            this.SouthRoomsLabel.Text = "SS";
             // 
             // SouthEastRoomsLabel
             // 
             this.SouthEastRoomsLabel.AutoSize = true;
-            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(474, 312);
+            this.SouthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SouthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SouthEastRoomsLabel.ForeColor = System.Drawing.Color.White;
+            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(1396, 556);
+            this.SouthEastRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SouthEastRoomsLabel.Name = "SouthEastRoomsLabel";
-            this.SouthEastRoomsLabel.Size = new System.Drawing.Size(91, 13);
+            this.SouthEastRoomsLabel.Size = new System.Drawing.Size(54, 40);
             this.SouthEastRoomsLabel.TabIndex = 12;
-            this.SouthEastRoomsLabel.Text = "Southeast Rooms";
+            this.SouthEastRoomsLabel.Text = "SE";
             // 
             // SouthWestRoomsLabel
             // 
             this.SouthWestRoomsLabel.AutoSize = true;
-            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(21, 317);
+            this.SouthWestRoomsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SouthWestRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SouthWestRoomsLabel.ForeColor = System.Drawing.Color.White;
+            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(99, 556);
+            this.SouthWestRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SouthWestRoomsLabel.Name = "SouthWestRoomsLabel";
-            this.SouthWestRoomsLabel.Size = new System.Drawing.Size(93, 13);
+            this.SouthWestRoomsLabel.Size = new System.Drawing.Size(69, 40);
             this.SouthWestRoomsLabel.TabIndex = 13;
-            this.SouthWestRoomsLabel.Text = "Southwest Rooms";
+            this.SouthWestRoomsLabel.Text = "SW";
             // 
             // PurchaseArrowsButton
             // 
-            this.PurchaseArrowsButton.Location = new System.Drawing.Point(534, 53);
+            this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseArrowsButton.Location = new System.Drawing.Point(1664, 93);
+            this.PurchaseArrowsButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
-            this.PurchaseArrowsButton.Size = new System.Drawing.Size(112, 23);
+            this.PurchaseArrowsButton.Size = new System.Drawing.Size(168, 35);
             this.PurchaseArrowsButton.TabIndex = 15;
             this.PurchaseArrowsButton.Text = "Purchase Arrows";
             this.PurchaseArrowsButton.UseVisualStyleBackColor = true;
@@ -190,20 +162,122 @@
             // 
             // ShootArrowButton
             // 
-            this.ShootArrowButton.Location = new System.Drawing.Point(534, 100);
+            this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShootArrowButton.Location = new System.Drawing.Point(1664, 138);
+            this.ShootArrowButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ShootArrowButton.Name = "ShootArrowButton";
-            this.ShootArrowButton.Size = new System.Drawing.Size(112, 23);
+            this.ShootArrowButton.Size = new System.Drawing.Size(168, 35);
             this.ShootArrowButton.TabIndex = 16;
             this.ShootArrowButton.Text = "Shoot Arrow";
             this.ShootArrowButton.UseVisualStyleBackColor = true;
             this.ShootArrowButton.Click += new System.EventHandler(this.ShootArrowButton_Click);
             // 
+            // PurchaseSecretButton
+            // 
+            this.PurchaseSecretButton.Location = new System.Drawing.Point(13, 23);
+            this.PurchaseSecretButton.Name = "PurchaseSecretButton";
+            this.PurchaseSecretButton.Size = new System.Drawing.Size(75, 23);
+            this.PurchaseSecretButton.TabIndex = 17;
+            this.PurchaseSecretButton.Text = "Purchase Secret ";
+            this.PurchaseSecretButton.UseVisualStyleBackColor = true;
+            // 
+            // buySecretButton
+            // 
+            this.buySecretButton.Location = new System.Drawing.Point(14, 14);
+            this.buySecretButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buySecretButton.Name = "buySecretButton";
+            this.buySecretButton.Size = new System.Drawing.Size(183, 35);
+            this.buySecretButton.TabIndex = 17;
+            this.buySecretButton.Text = "Purchase Secret";
+            this.buySecretButton.UseVisualStyleBackColor = true;
+            this.buySecretButton.Click += new System.EventHandler(this.buySecretButton_Click);
+            // 
+            // southEastButton
+            // 
+            this.southEastButton.BackColor = System.Drawing.Color.Red;
+            this.southEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.southEastButton.ForeColor = System.Drawing.Color.Transparent;
+            this.southEastButton.Location = new System.Drawing.Point(1184, 345);
+            this.southEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.southEastButton.Name = "southEastButton";
+            this.southEastButton.Size = new System.Drawing.Size(460, 515);
+            this.southEastButton.TabIndex = 19;
+            this.southEastButton.UseVisualStyleBackColor = true;
+            this.southEastButton.Click += new System.EventHandler(this.southEastButton_Click);
+            // 
+            // southButton
+            // 
+            this.southButton.BackColor = System.Drawing.Color.Red;
+            this.southButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.southButton.ForeColor = System.Drawing.Color.Transparent;
+            this.southButton.Location = new System.Drawing.Point(703, 588);
+            this.southButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.southButton.Name = "southButton";
+            this.southButton.Size = new System.Drawing.Size(552, 485);
+            this.southButton.TabIndex = 19;
+            this.southButton.UseVisualStyleBackColor = true;
+            this.southButton.Click += new System.EventHandler(this.southButton_Click);
+            // 
+            // northWestButton
+            // 
+            this.northWestButton.BackColor = System.Drawing.Color.Red;
+            this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
+            this.northWestButton.Location = new System.Drawing.Point(-147, -56);
+            this.northWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.northWestButton.Name = "northWestButton";
+            this.northWestButton.Size = new System.Drawing.Size(476, 552);
+            this.northWestButton.TabIndex = 19;
+            this.northWestButton.UseVisualStyleBackColor = true;
+            this.northWestButton.Click += new System.EventHandler(this.northWestButton_Click);
+            // 
+            // southWestButton
+            // 
+            this.southWestButton.BackColor = System.Drawing.Color.Red;
+            this.southWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.southWestButton.ForeColor = System.Drawing.Color.Transparent;
+            this.southWestButton.Location = new System.Drawing.Point(-147, 345);
+            this.southWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.southWestButton.Name = "southWestButton";
+            this.southWestButton.Size = new System.Drawing.Size(530, 495);
+            this.southWestButton.TabIndex = 19;
+            this.southWestButton.UseVisualStyleBackColor = true;
+            this.southWestButton.Click += new System.EventHandler(this.southWestButton_Click);
+            // 
+            // northEastButton
+            // 
+            this.northEastButton.BackColor = System.Drawing.Color.Red;
+            this.northEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.northEastButton.ForeColor = System.Drawing.Color.Transparent;
+            this.northEastButton.Location = new System.Drawing.Point(1184, -56);
+            this.northEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.northEastButton.Name = "northEastButton";
+            this.northEastButton.Size = new System.Drawing.Size(531, 589);
+            this.northEastButton.TabIndex = 19;
+            this.northEastButton.UseVisualStyleBackColor = true;
+            this.northEastButton.Click += new System.EventHandler(this.northEastButton_Click);
+            // 
+            // northButton
+            // 
+            this.northButton.BackColor = System.Drawing.Color.Red;
+            this.northButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.northButton.ForeColor = System.Drawing.Color.Transparent;
+            this.northButton.Location = new System.Drawing.Point(716, -277);
+            this.northButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.northButton.Name = "northButton";
+            this.northButton.Size = new System.Drawing.Size(494, 575);
+            this.northButton.TabIndex = 19;
+            this.northButton.UseVisualStyleBackColor = true;
+            this.northButton.Click += new System.EventHandler(this.northButton_Click);
+            // 
             // MainGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
-            this.ClientSize = new System.Drawing.Size(669, 586);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1902, 1050);
+            this.Controls.Add(this.buySecretButton);
             this.Controls.Add(this.ShootArrowButton);
             this.Controls.Add(this.PurchaseArrowsButton);
             this.Controls.Add(this.SouthWestRoomsLabel);
@@ -220,6 +294,7 @@
             this.Controls.Add(this.southWestButton);
             this.Controls.Add(this.northEastButton);
             this.Controls.Add(this.northButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainGame";
             this.Text = "MainGame";
             this.ResumeLayout(false);
@@ -228,13 +303,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button northButton;
-        private System.Windows.Forms.Button northEastButton;
-        private System.Windows.Forms.Button southWestButton;
-        private System.Windows.Forms.Button northWestButton;
-        private System.Windows.Forms.Button southButton;
-        private System.Windows.Forms.Button southEastButton;
         private System.Windows.Forms.Label NumberOfCoinsLabel;
         private System.Windows.Forms.Label NumberOfArrowsLabel;
         private System.Windows.Forms.Label NorthRoomsLabel;
@@ -245,5 +313,13 @@
         private System.Windows.Forms.Label SouthWestRoomsLabel;
         private System.Windows.Forms.Button PurchaseArrowsButton;
         private System.Windows.Forms.Button ShootArrowButton;
+        private System.Windows.Forms.Button PurchaseSecretButton;
+        private System.Windows.Forms.Button buySecretButton;
+        private RoundButton northButton;
+        private RoundButton northEastButton;
+        private RoundButton northWestButton;
+        private RoundButton southButton;
+        private RoundButton southWestButton;
+        private RoundButton southEastButton;
     }
 }
