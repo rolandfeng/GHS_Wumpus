@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using wumpus.forms;
+using System.Collections;
 
 namespace wumpus.components
 {
@@ -19,11 +20,13 @@ namespace wumpus.components
         private int rightAnswerIndex;
         private int numQuestions;
         private int type;
+        private ArrayList randomArr;
 
         public Trivia(GameControl gameControl)
         {
             triviaForm = new TriviaForm(this);
             this.gameControl = gameControl;
+            randomArr = new ArrayList();
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
             questions = new String[lines.Length][];
             for (int i = 0; i < lines.Length; i++)
@@ -58,8 +61,7 @@ namespace wumpus.components
                 gameControl.doneWithTrivia(true, type);
                 }
                 askQuestion();
-
-        
+            numQuestions++;
         }
 
         public void increment()
@@ -71,10 +73,24 @@ namespace wumpus.components
             ask(questionsAsk, answerCorrect, type); 
         }
 
-        public void askQuestion()
+        public int randomGenerator()
         {
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
+            if (randomArr.Contains(randomIndex))
+            {
+                int randomIndex2 = random.Next(0, questions.Length);
+                return randomIndex2; 
+            }
+            return randomIndex;
+            
+        }
+
+        public void askQuestion()
+        {
+            int randomIndex = randomGenerator();
+            //Random random = new Random();
+            //int randomIndex = random.Next(0, questions.Length);
             triviaForm.SetQuestion(questions[randomIndex][0]);
             triviaForm.SetAnswer1(questions[randomIndex][1]);
             triviaForm.SetAnswer2(questions[randomIndex][2]);
@@ -84,7 +100,7 @@ namespace wumpus.components
             rightAnswerIndex = Int32.Parse(questions[randomIndex][5]);
             triviaForm.SetRightIndex(rightAnswerIndex);
 
-            numQuestions++; 
+            //numQuestions++; 
         }
 
 
