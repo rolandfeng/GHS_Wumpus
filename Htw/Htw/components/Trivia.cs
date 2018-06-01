@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using wumpus.forms;
+using System.Collections;
 
 namespace wumpus.components
 {
@@ -19,6 +20,7 @@ namespace wumpus.components
         private int rightAnswerIndex;
         private int numQuestions;
         private int type;
+        //private ArrayList randomArr;
 
         public Trivia(GameControl gameControl)
         {
@@ -42,6 +44,13 @@ namespace wumpus.components
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
             this.type = type;
+            if (answerCorrect == incrementCorrect)
+            {
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
+            }
             if (numQuestions == questionsAsk)
             {
                 triviaForm.Hide();
@@ -50,13 +59,6 @@ namespace wumpus.components
                 gameControl.doneWithTrivia(false, type);
             } 
 
-                if (answerCorrect == incrementCorrect)
-                {
-                triviaForm.Hide();
-                numQuestions = 0;
-                incrementCorrect = 0;
-                gameControl.doneWithTrivia(true, type);
-                }
                 askQuestion();
 
         
@@ -75,6 +77,8 @@ namespace wumpus.components
         {
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
+            //randomArr.Add(randomIndex);
+
             triviaForm.SetQuestion(questions[randomIndex][0]);
             triviaForm.SetAnswer1(questions[randomIndex][1]);
             triviaForm.SetAnswer2(questions[randomIndex][2]);
