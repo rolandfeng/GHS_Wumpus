@@ -228,6 +228,7 @@ namespace wumpus.components {
                 if (!succeed) {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     sound.playSound(Sound.Sounds.PlayerDie);
+                    graphics.Show("Oh dear, you are dead!");
                     //endgame
                 } else {
                     graphics.Show("You survived!");
