@@ -72,7 +72,7 @@ namespace wumpus.components {
                 //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);
-                graphics.Show("You missed!");
+                graphics.Show("You missed! The Wumpus has moved to a new planet!");
                 if (player.getArrowCount() == 0) {
                     graphics.Show("You ran out of arrows!");
                     sound.playSound(Sound.Sounds.PlayerDie);
@@ -106,23 +106,23 @@ namespace wumpus.components {
             int whichHint = r.Next(0, 8); //(0, n) = range from 0 to n-1
             if (whichHint == 0 || whichHint == 1) { //bat rooms
                 int[] bats = map.getBatLocations();
-                return ("There is a bat in room " + bats[whichHint] + "!");
+                return ("There is a UFO in planet " + bats[whichHint] + "!");
             }
             else if (whichHint == 2 || whichHint == 3) { //pit rooms
                 int[] pits = map.getPitLocations();
-                return ("There is a pit in room " + pits[whichHint - 2] + "!");
+                return ("There is a black hole in planet " + pits[whichHint - 2] + "!");
             }
             else if (whichHint == 4) { //Wumpus location
-                return ("The Wumpus is in room " + map.getWumpusLocation() + "!");
+                return ("The Wumpus is in planet " + map.getWumpusLocation() + "!");
             }
             else if (whichHint == 5) { //bogus hint
-                return ("You are in room " + map.getPlayerLocation() + "!");
+                return ("You are in planet " + map.getPlayerLocation() + "!");
             }
             else if (whichHint == 6) {//Wumpus is 2 rooms away or not
                 if (withinTwoRooms())
-                    return ("The Wumpus is 2 rooms away!");
+                    return ("The Wumpus is 2 planets away!");
                 else
-                    return ("The Wumpus is further than 2 rooms away!");
+                    return ("The Wumpus is further than 2 planets away!");
             }
             else { //more troll hints, can add more
                 return ("It is turn " + player.getTurn() + "!");
@@ -167,7 +167,7 @@ namespace wumpus.components {
             }
             if (hazards[2]) {//same room as bats
                 sound.playSound(Sound.Sounds.BatsInCave);
-                graphics.Show("You've been teleported by a UFO!");
+                graphics.Show("You were teleported to a random planet by a UFO!");
             }
             if (hazards[3]) {//adjacent to bats
                 sound.playSound(Sound.Sounds.BatCall);
