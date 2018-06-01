@@ -16,7 +16,6 @@ namespace wumpus.components
         Map map;
         Cave cave;
         MainGame mainGame;
-        bool shootButtonClicked;
 
 
         public Graphics(GameControl gameControl, Player player, Map map, Cave cave)
@@ -25,12 +24,11 @@ namespace wumpus.components
             this.player = player;
             this.map = map;
             this.cave = cave;
-            this.shootButtonClicked = false;
         }
 
         public void startGame()
         {
-            mainGame = new MainGame(gameControl, player, map, cave, shootButtonClicked);
+            mainGame = new MainGame(gameControl, player, map, cave);
 
             mainGame.FormClosed += (sender, e) =>
             {
