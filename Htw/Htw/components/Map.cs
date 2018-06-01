@@ -20,32 +20,32 @@ namespace wumpus.components
             num = new Random();
             occupiedHazard = new bool[30];
             playerLocation = 1; //start room is always 1
-            wumpusLocation = num.Next(2, 30);
+            wumpusLocation = num.Next(2, 31);
             occupiedHazard[wumpusLocation - 1] = true;
             pitLocations = new int[2];
-            pitLocations[0] = num.Next(2, 30);
+            pitLocations[0] = num.Next(2, 31);
             while (occupiedHazard[pitLocations[0]-1] == true)
             {
-                pitLocations[0] = num.Next(2, 30);
+                pitLocations[0] = num.Next(2, 31);
             }
             occupiedHazard[pitLocations[0] - 1] = true;
-            pitLocations[1] = num.Next(2, 30);
+            pitLocations[1] = num.Next(2, 31);
             while (occupiedHazard[pitLocations[1] - 1] == true)
             {
-                pitLocations[1] = num.Next(2, 30);
+                pitLocations[1] = num.Next(2, 31);
             }
             occupiedHazard[pitLocations[1] - 1] = true;
             batLocations = new int[2];
-            batLocations[0] = num.Next(2, 30);
+            batLocations[0] = num.Next(2, 31);
             while (occupiedHazard[batLocations[0] - 1] == true)
             {
-                batLocations[0] = num.Next(2, 30);
+                batLocations[0] = num.Next(2, 31);
             }
             occupiedHazard[batLocations[0] - 1] = true;
-            batLocations[1] = num.Next(2, 30);
+            batLocations[1] = num.Next(2, 31);
             while (occupiedHazard[pitLocations[1] - 1] == true)
             {
-                pitLocations[1] = num.Next(2, 30);
+                pitLocations[1] = num.Next(2, 31);
             }
             occupiedHazard[batLocations[1] - 1] = true;
         }
@@ -77,18 +77,6 @@ namespace wumpus.components
             occupiedHazard[playerLocation - 1] = true;
         }
 
-        /*public bool fireArrow(int destination)
-        {
-            if (destination == wumpusLocation)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        } */
-
         private void updateHazardCheck(int room, Boolean change) //idk if this is better than what i have been doing
         {
             occupiedHazard[room - 1] = change;
@@ -108,26 +96,26 @@ namespace wumpus.components
             if (playerLocation == batLocations[0])
             {
                 occupiedHazard[playerLocation - 1] = false;
-                playerLocation = num.Next(30);
+                playerLocation = num.Next(1, 31);
                 occupiedHazard[playerLocation - 1] = true;
                 occupiedHazard[batLocations[0] - 1] = false;
-                batLocations[0] = num.Next(30);
+                batLocations[0] = num.Next(1, 31);
                 while (occupiedHazard[batLocations[0] - 1] == true)
                 {
-                    pitLocations[0] = num.Next(30);
+                    pitLocations[0] = num.Next(1, 31);
                 }
                 occupiedHazard[batLocations[0] - 1] = true;
             }
             if (playerLocation == batLocations[1])
             {
                 occupiedHazard[playerLocation - 1] = false;
-                playerLocation = num.Next(30);
+                playerLocation = num.Next(1, 31);
                 occupiedHazard[playerLocation - 1] = true;
                 occupiedHazard[batLocations[1] - 1] = false;
-                batLocations[0] = num.Next(30);
+                batLocations[0] = num.Next(1, 31);
                 while (occupiedHazard[batLocations[1] - 1] == true)
                 {
-                    pitLocations[1] = num.Next(30);
+                    pitLocations[1] = num.Next(1, 31);
                 }
                 occupiedHazard[batLocations[1] - 1] = true;
             }
