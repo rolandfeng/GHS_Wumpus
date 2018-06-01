@@ -187,7 +187,7 @@ namespace wumpus.components {
             Random r = new Random();
             int prevLoc = 0;
             int initialLoc = map.getWumpusLocation();
-            int finalLoc = map.getWumpusLocation(); //only temporary
+            int finalLoc = -1; //only temporary
             if (multiple) { //wumpus runs 2-4 rooms away
                 int howMany = r.Next(2, 5);
                 for (int i = 0; i < howMany; i++) { 
@@ -195,7 +195,7 @@ namespace wumpus.components {
                     bool notPrevious = true;                   
                     while (notPrevious) { //to ensure does not run into the room it came from
                         int nextRoom = r.Next(0, 6);
-                        if (prevLoc != possibilities[nextRoom]) {
+                        if (prevLoc != possibilities[nextRoom] && possibilities[nextRoom] != 0) {
                             prevLoc = initialLoc;
                             finalLoc = possibilities[nextRoom];
                             initialLoc = finalLoc;
@@ -254,6 +254,7 @@ namespace wumpus.components {
 
         public void startGame() {
             graphics.startGame();
+            graphics.update(1);
             sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
             highscores.setName("bokchewy");
