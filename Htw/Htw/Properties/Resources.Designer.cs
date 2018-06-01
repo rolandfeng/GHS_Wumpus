@@ -99,6 +99,15 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream BackgroundMusic3 {
+            get {
+                return ResourceManager.GetStream("BackgroundMusic3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream BatCall {
             get {
                 return ResourceManager.GetStream("BatCall", resourceCulture);
@@ -129,6 +138,15 @@ namespace wumpus.Properties {
         internal static System.IO.UnmanagedMemoryStream MainMenu {
             get {
                 return ResourceManager.GetStream("MainMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MainMenu3 {
+            get {
+                return ResourceManager.GetStream("MainMenu3", resourceCulture);
             }
         }
         
@@ -174,6 +192,15 @@ namespace wumpus.Properties {
         internal static System.IO.UnmanagedMemoryStream MonsterRoar2 {
             get {
                 return ResourceManager.GetStream("MonsterRoar2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterTeleport {
+            get {
+                return ResourceManager.GetStream("MonsterTeleport", resourceCulture);
             }
         }
         
@@ -573,6 +600,15 @@ namespace wumpus.Properties {
         internal static System.IO.UnmanagedMemoryStream ScarySound3 {
             get {
                 return ResourceManager.GetStream("ScarySound3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ShipMove {
+            get {
+                return ResourceManager.GetStream("ShipMove", resourceCulture);
             }
         }
         

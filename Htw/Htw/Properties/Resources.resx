@@ -301,4 +301,16 @@
   <data name="TriviaWrong2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TriviaWrong2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="BackgroundMusic3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundMusic3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MainMenu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainMenu3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MonsterTeleport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterTeleport.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ShipMove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShipMove.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

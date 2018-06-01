@@ -45,6 +45,13 @@ namespace wumpus.components
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
             this.type = type;
+            if (answerCorrect == incrementCorrect)
+            {
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
+            }
             if (numQuestions == questionsAsk)
             {
                 triviaForm.Hide();
@@ -53,13 +60,6 @@ namespace wumpus.components
                 gameControl.doneWithTrivia(false, type);
             } 
 
-                if (answerCorrect == incrementCorrect)
-                {
-                triviaForm.Hide();
-                numQuestions = 0;
-                incrementCorrect = 0;
-                gameControl.doneWithTrivia(true, type);
-                }
                 askQuestion();
             numQuestions++;
         }
@@ -77,20 +77,6 @@ namespace wumpus.components
         {
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
-            if (randomArr.Contains(randomIndex))
-            {
-                int randomIndex2 = random.Next(0, questions.Length);
-                return randomIndex2; 
-            }
-            return randomIndex;
-            
-        }
-
-        public void askQuestion()
-        {
-            int randomIndex = randomGenerator();
-            //Random random = new Random();
-            //int randomIndex = random.Next(0, questions.Length);
             triviaForm.SetQuestion(questions[randomIndex][0]);
             triviaForm.SetAnswer1(questions[randomIndex][1]);
             triviaForm.SetAnswer2(questions[randomIndex][2]);
