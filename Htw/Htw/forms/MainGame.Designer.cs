@@ -51,20 +51,22 @@
             // NumberOfCoinsLabel
             // 
             this.NumberOfCoinsLabel.AutoSize = true;
-            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(1660, 55);
+            this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(1669, 15);
             this.NumberOfCoinsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
-            this.NumberOfCoinsLabel.Size = new System.Drawing.Size(127, 20);
+            this.NumberOfCoinsLabel.Size = new System.Drawing.Size(167, 20);
             this.NumberOfCoinsLabel.TabIndex = 6;
             this.NumberOfCoinsLabel.Text = "Number of Coins";
             // 
             // NumberOfArrowsLabel
             // 
             this.NumberOfArrowsLabel.AutoSize = true;
-            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(1660, 88);
+            this.NumberOfArrowsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(1660, 53);
             this.NumberOfArrowsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NumberOfArrowsLabel.Name = "NumberOfArrowsLabel";
-            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(136, 20);
+            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(190, 20);
             this.NumberOfArrowsLabel.TabIndex = 7;
             this.NumberOfArrowsLabel.Text = "Number of Arrows";
             // 
@@ -148,7 +150,8 @@
             // 
             // PurchaseArrowsButton
             // 
-            this.PurchaseArrowsButton.Location = new System.Drawing.Point(1650, 112);
+            this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseArrowsButton.Location = new System.Drawing.Point(1664, 93);
             this.PurchaseArrowsButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(168, 35);
@@ -159,7 +162,8 @@
             // 
             // ShootArrowButton
             // 
-            this.ShootArrowButton.Location = new System.Drawing.Point(1650, 157);
+            this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShootArrowButton.Location = new System.Drawing.Point(1664, 138);
             this.ShootArrowButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(168, 35);
@@ -219,7 +223,7 @@
             this.northWestButton.BackColor = System.Drawing.Color.Red;
             this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northWestButton.Location = new System.Drawing.Point(-90, -19);
+            this.northWestButton.Location = new System.Drawing.Point(-147, -56);
             this.northWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.northWestButton.Name = "northWestButton";
             this.northWestButton.Size = new System.Drawing.Size(476, 552);
@@ -232,7 +236,7 @@
             this.southWestButton.BackColor = System.Drawing.Color.Red;
             this.southWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southWestButton.Location = new System.Drawing.Point(-114, 345);
+            this.southWestButton.Location = new System.Drawing.Point(-147, 345);
             this.southWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.southWestButton.Name = "southWestButton";
             this.southWestButton.Size = new System.Drawing.Size(530, 495);
