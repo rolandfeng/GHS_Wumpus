@@ -48,7 +48,9 @@ namespace wumpus.components {
             if (map.pitFall()) {
                 pitInstance();
             }
-            map.batCheck();
+            if (map.batCheck()){
+                graphics.update(map.getPlayerLocation());
+            }
             if (newLoc == map.getWumpusLocation()) {
                 openTrivia(5, 3, 1);
                 map.changeWumpusLocation(wumpusFleeLoc(true));
