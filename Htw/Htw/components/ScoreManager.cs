@@ -81,6 +81,7 @@ namespace wumpus.components
             highScoresForm.setHighScoresList(this.highScoresList);
             highScoresForm.update();
             highScoresForm.Show();
+            WriteHighScoresToFile(@"..\..\Resource\HighScores.txt", this.highScoresList);
         }
     }
 }

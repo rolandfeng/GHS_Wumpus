@@ -25,6 +25,7 @@ namespace wumpus.components {
             sound = new Sound();
             trivia = new Trivia(this);
             form = new InputForm();
+            form.Show();
             highscores = new ScoreManager(form.getName());
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
@@ -256,9 +257,9 @@ namespace wumpus.components {
             graphics.startGame();
             graphics.update(1);
             sound.playSound(Sound.Sounds.BackgroundMusic);
-            form.Show();
-            highscores.setName("bokchewy");
-            highscores.StoreHighScore(234);
+
+            highscores.setName(form.getName());
+            highscores.StoreHighScore(11);
             highscores.DisplayHighScores();
         }
     }
