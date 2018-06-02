@@ -231,6 +231,7 @@ namespace wumpus.components {
                     graphics.Show("Oh dear, you are dead!");
                     //endgame
                 } else {
+                    sound.playSound(Sound.Sounds.TriviaRight);
                     graphics.Show("You survived!");
                 }
             } else if (type == 3) {//arrows
