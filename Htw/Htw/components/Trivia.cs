@@ -45,23 +45,29 @@ namespace wumpus.components
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
             this.type = type;
-            if (answerCorrect == incrementCorrect)
+            if (incrementCorrect == answerCorrect || numQuestions == questionsAsk)
             {
                 triviaForm.Hide();
+                if (incrementCorrect == answerCorrect && numQuestions == questionsAsk)
+                {
+                    gameControl.doneWithTrivia(true, type);
+                }
+                else if (incrementCorrect == answerCorrect)
+                {
+                    gameControl.doneWithTrivia(true, type);
+                }
+                else if (numQuestions == questionsAsk)
+                {
+                    gameControl.doneWithTrivia(false, type);
+                }
                 numQuestions = 0;
                 incrementCorrect = 0;
-                gameControl.doneWithTrivia(true, type);
+                randomArr.Clear();
             }
-            if (numQuestions == questionsAsk)
+            else
             {
-                triviaForm.Hide();
-                numQuestions = 0;
-                incrementCorrect = 0;
-                gameControl.doneWithTrivia(false, type);
-            } 
-
                 askQuestion();
-            numQuestions++;
+            }
         }
 
         public void increment()
@@ -77,6 +83,19 @@ namespace wumpus.components
         {
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
+            if (randomArr.Contains(randomIndex))
+            {
+                int randomIndex2 = random.Next(0, questions.Length);
+                randomArr.Add(randomIndex2);
+                return randomIndex2;
+            }
+            randomArr.Add(randomIndex);
+            return randomIndex;
+
+        }
+        public void askQuestion()
+        {
+            int randomIndex = randomGenerator();
             triviaForm.SetQuestion(questions[randomIndex][0]);
             triviaForm.SetAnswer1(questions[randomIndex][1]);
             triviaForm.SetAnswer2(questions[randomIndex][2]);
@@ -86,7 +105,7 @@ namespace wumpus.components
             rightAnswerIndex = Int32.Parse(questions[randomIndex][5]);
             triviaForm.SetRightIndex(rightAnswerIndex);
 
-            //numQuestions++; 
+            numQuestions++; 
         }
 
 
