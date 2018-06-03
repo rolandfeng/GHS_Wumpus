@@ -50,6 +50,7 @@ namespace wumpus.components {
             }
             if (map.batCheck()){
                 graphics.update(map.getPlayerLocation());
+                hazardWarnings(getHazardArray(map.getPlayerLocation()));
             }
             if (newLoc == map.getWumpusLocation()) {
                 openTrivia(5, 3, 1);
@@ -120,7 +121,7 @@ namespace wumpus.components {
             }
             else if (whichHint == 6) {//Wumpus is 2 rooms away or not
                 if (withinTwoRooms())
-                    return ("The Wumpus is 2 planets away!");
+                    return ("The Wumpus is 1 or 2 planets away!");
                 else
                     return ("The Wumpus is further than 2 planets away!");
             }
@@ -215,10 +216,13 @@ namespace wumpus.components {
         private bool withinTwoRooms() { //returns if wumpus is 2 rooms away from player
             int[] currentConnections = cave.getAllConnections(map.getPlayerLocation());
             int[] wumpusConnections = cave.getAllConnections(map.getWumpusLocation());
-            for (int i = 0; i < currentConnections.Length; i++) {
-                if (currentConnections[i] == wumpusConnections[i]) {
-                    return true;
+            for (int i = 0; i < currentConnections.Length; i++) {//outer loop
+                for (int j = 0; j < wumpusConnections.Length; j++) {//nested for loop to traverse through arrays
+                    if (currentConnections[i] == wumpusConnections[j] && currentConnections[i] != 0) {
+                        return true;
+                    }
                 }
+
             }
             return false;
         }
@@ -257,11 +261,17 @@ namespace wumpus.components {
         public void startGame() {
             graphics.startGame();
             graphics.update(1);
-            sound.playSound(Sound.Sounds.BackgroundMusic);
+            //sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
             highscores.setName("bokchewy");
             highscores.StoreHighScore(234);
             highscores.DisplayHighScores();
+            int x = 0;
+            while (x < 5)
+            {
+                sound.playSound(Sound.Sounds.BackgroundMusic);
+                x++;
+            }
         }
     }
 }
