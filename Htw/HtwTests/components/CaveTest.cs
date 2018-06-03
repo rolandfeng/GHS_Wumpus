@@ -15,7 +15,7 @@ namespace HtwTests.components
         [TestMethod()]
         public void initializeTest()  
         {
-            Cave cave = new Cave("Resource/StandardCave.txt");
+            Cave cave = new Cave("StandardCave.txt");
             int[] connectedTo3 = cave.getAllConnections(3);
             int[] connectedTo9 = cave.getAllConnections(9);
             int[] connectedTo18 = cave.getAllConnections(18);
@@ -24,7 +24,7 @@ namespace HtwTests.components
             int[] connectedTo1 = cave.getAllConnections(1);
             int[] connectedTo2 = cave.getAllConnections(2);
 
-            Cave randCave = new Cave("RandCave.txt");
+           // Cave randCave = new Cave("RandCave.txt");
         }
     }
 }
