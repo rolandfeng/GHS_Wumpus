@@ -50,6 +50,7 @@ namespace wumpus.components {
             }
             if (map.batCheck()){
                 graphics.update(map.getPlayerLocation());
+                hazardWarnings(getHazardArray(map.getPlayerLocation()));
             }
             if (newLoc == map.getWumpusLocation()) {
                 openTrivia(5, 3, 1);
@@ -72,7 +73,11 @@ namespace wumpus.components {
                 //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);
-                graphics.Show("You missed! The Wumpus has moved to a new planet!");
+                if (cave.isAdjacent(map.getPlayerLocation(), map.getWumpusLocation())) {
+                    graphics.Show("You missed but alerted the Wumpus! The Wumpus has moved to a new planet!");
+                } else {
+                    graphics.Show("You missed!");
+                }
                 if (player.getArrowCount() == 0) {
                     graphics.Show("You ran out of arrows!");
                     sound.playSound(Sound.Sounds.PlayerDie);
@@ -87,16 +92,16 @@ namespace wumpus.components {
         }
 
         public void openTrivia(int asked, int needed, int type) {
-            if (player.getCoinCount() < 1) {
+            if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for trivia!");
             } else {
-                player.changeCoinCount(-1);
+                player.changeCoinCount(-2);
+                graphics.updateCoins();
                 trivia.ShowTrivia();
                 trivia.ask(asked, needed, type);
             }
         }
-
 
         public void buySecret() {
             openTrivia(3, 2, 4);
@@ -120,7 +125,7 @@ namespace wumpus.components {
             }
             else if (whichHint == 6) {//Wumpus is 2 rooms away or not
                 if (withinTwoRooms())
-                    return ("The Wumpus is 2 planets away!");
+                    return ("The Wumpus is 1 or 2 planets away!");
                 else
                     return ("The Wumpus is further than 2 planets away!");
             }
@@ -130,6 +135,12 @@ namespace wumpus.components {
         }
         public void pitInstance() {
             openTrivia(3, 2, 2);
+        }
+
+        public void displayHighscores() {
+            highscores.setName("bokchewy");
+            highscores.StoreHighScore(234);
+            highscores.DisplayHighScores();
         }
 
         private bool[] getHazardArray(int newLoc) { //create array of booleans for each obstacle, if near or same room
@@ -212,13 +223,16 @@ namespace wumpus.components {
             return finalLoc;
         }
 
-        private bool withinTwoRooms() { //returns if wumpus is 2 rooms away from player
+        private bool withinTwoRooms() { //returns if wumpus is 1 or 2 rooms away from player
             int[] currentConnections = cave.getAllConnections(map.getPlayerLocation());
             int[] wumpusConnections = cave.getAllConnections(map.getWumpusLocation());
-            for (int i = 0; i < currentConnections.Length; i++) {
-                if (currentConnections[i] == wumpusConnections[i]) {
-                    return true;
+            for (int i = 0; i < currentConnections.Length; i++) {//outer loop
+                for (int j = 0; j < wumpusConnections.Length; j++) {//nested for loop to traverse through arrays
+                    if (currentConnections[i] == wumpusConnections[j] && currentConnections[i] != 0) {
+                        return true;
+                    }
                 }
+
             }
             return false;
         }
@@ -228,8 +242,10 @@ namespace wumpus.components {
                 if (!succeed) {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     sound.playSound(Sound.Sounds.PlayerDie);
+                    graphics.Show("Oh dear, you are dead!");
                     //endgame
                 } else {
+                    sound.playSound(Sound.Sounds.TriviaRight);
                     graphics.Show("You survived!");
                 }
             } else if (type == 3) {//arrows
@@ -241,6 +257,7 @@ namespace wumpus.components {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     graphics.Show("Better luck next time!");
                 }
+                graphics.updateArrows();
             } else if (type == 4) {//secret
                 if (succeed) {
                     sound.playSound(Sound.Sounds.TriviaRight);
@@ -255,11 +272,10 @@ namespace wumpus.components {
         public void startGame() {
             graphics.startGame();
             graphics.update(1);
+            hazardWarnings(getHazardArray(1));
             sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
-            highscores.setName("bokchewy");
-            highscores.StoreHighScore(234);
-            highscores.DisplayHighScores();
+            displayHighscores();
         }
     }
 }

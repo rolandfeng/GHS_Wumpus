@@ -5,7 +5,7 @@ using System.Collections;
 
 public class Cave
 {
-    private int[][] cave = new int[5][];
+    private int[][] cave = new int[30][];
     private String caveName;
 
     // Creates a 2D array by reading in from the given file
@@ -18,9 +18,10 @@ public class Cave
         }
         else
         {
-            generateRandomCave(caveName);
+            this.caveName = "CaveStarter.txt";
             fillCave();
-        }
+            randomize();
+        } 
     }
 
     // Calls get connected room for all directions, adds all the room numbers
@@ -54,126 +55,65 @@ public class Cave
     // Returns 0 if a wall
     public int getConnectedRoom(int currentRoom, Direction direction)
     {
-        int[] roomLoc = findRoomLocation(currentRoom);
-        int roomRow = roomLoc[0];
-        int roomColumn = roomLoc[1] - numZerosBeforeIndex(roomLoc[0], roomLoc[1]);
-        bool even = false;
-        if ((roomColumn + 1) % 2 == 0)
-            even = true;
-        // Column offset to compensate for walls
-
         switch (direction)
         {
-            case Direction.NORTH:              
-                    if (roomRow == 0)
-                        roomRow = cave.Length;
-                    return cave[roomRow - 1]
-                               [roomColumn + numZerosBeforeIndex(roomRow - 1, roomColumn)];
+            case Direction.NORTH:
+                if (cave[currentRoom - 1][1] < 0)
+                    return 0;
+                return cave[currentRoom - 1][1];
                 
             case Direction.NORTH_EAST:
-                if (roomColumn + numZerosBeforeIndex(roomRow, roomColumn) == cave[0].Length - 1)
-                    roomColumn = -1;
-                if (even)
-                {
-                    return cave[roomRow]
-                               [roomColumn + numZerosBeforeIndex(roomRow, roomColumn + 1) + 1];
-                } else
-                {
-                    if (roomRow == 0)
-                        roomRow = cave.Length;
-                    return cave[roomRow - 1]
-                               [roomColumn + numZerosBeforeIndex(roomRow - 1, roomColumn + 1) + 1];
-                }
-                
+                if (cave[currentRoom - 1][2] < 0)
+                    return 0;
+                return cave[currentRoom - 1][2];
 
             case Direction.NORTH_WEST:
-                if (roomColumn == 0)
-                    roomColumn = cave[0].Length - 1;
-                if (even)
-                {
-                    return cave[roomRow]
-                               [roomColumn + numZerosBeforeIndex(roomRow, roomColumn) - 1];
-                } else
-                {
-                    if (roomRow == 0)
-                        roomRow = cave.Length;
-                    return cave[roomRow - 1]
-                               [roomColumn + numZerosBeforeIndex(roomRow - 1, roomColumn - 1) - 1];
-                }
+                if (cave[currentRoom - 1][3] < 0)
+                    return 0;
+                return cave[currentRoom - 1][3];
 
             case Direction.SOUTH:
-                if (roomRow == cave.Length - 1)
-                    roomRow = -1; 
-                return cave[roomRow + 1]
-                           [roomColumn + numZerosBeforeIndex(roomRow + 1, roomColumn)];
+                if (cave[currentRoom - 1][4] < 0)
+                    return 0;
+                return cave[currentRoom - 1][4];
 
             case Direction.SOUTH_EAST:
-                if (roomColumn + numZerosBeforeIndex(roomRow, roomColumn) == cave[0].Length - 1)
-                    roomColumn = -1;
-                if (!even)
-                {
-                    return cave[roomRow]
-                               [roomColumn + numZerosBeforeIndex(roomRow, roomColumn + 1) + 1];
-                } else
-                {
-                    if (roomRow == cave.Length - 1)
-                        roomRow = -1;
-                    return cave[roomRow + 1]
-                               [roomColumn + numZerosBeforeIndex(roomRow + 1, roomColumn + 1) + 1];
-                }
+                if (cave[currentRoom - 1][5] < 0)
+                    return 0;
+                return cave[currentRoom - 1][5];
 
             case Direction.SOUTH_WEST:
-                if (roomColumn == 0)
-                    roomColumn = cave[0].Length - 1;
-                if (!even)
-                {
-                    return cave[roomRow]
-                               [roomColumn + numZerosBeforeIndex(roomRow, roomColumn) - 1];
-                } else
-                {
-                    if (roomRow == cave.Length - 1)
-                        roomRow = -1;
-                    return cave[roomRow + 1]
-                               [roomColumn + numZerosBeforeIndex(roomRow + 1, roomColumn - 1)- 1];
-                }
-                
+                if (cave[currentRoom - 1][6] < 0)
+                    return 0;
+                return cave[currentRoom - 1][6];
+
         }
         return 0;
     }
 
-    // Makes cave full of randomly ordered numbers
-    // Is standard size and has 1 wall per row
-    private void generateRandomCave(String filename)
+    private void randomize()
     {
-        String[] linesArray = new String[cave.Length];
-        ArrayList numList = new ArrayList();
-        for (int i = 1; i <= 30; i++)
+        Random random = new Random();
+        for (int row = 0; row < cave.Length; row++)
         {
-            numList.Add(i);
-        }
-        Random randNum = new Random();
-        for (int i = 0; i < linesArray.Length; i++)
-        {
-            int locOf0 = randNum.Next(0, cave.Length + 1);
-            for (int j = 0; j < cave.Length + 1; j++)
+            // Choosing 3 random locations for walls
+            ArrayList list = new ArrayList(6);
+            for (int i = 1; i <= 6; i++)
+                list[i - 1] = i;
+            int[] locs = new int[3];
+            int num;
+            for (int j = 0; j < 3; j++)
             {
-                if (j == locOf0)
-                    if (j == cave.Length)
-                        linesArray[i] += "" + 0;
-                    else
-                        linesArray[i] += "" + 0 + ";" ;
-                else
-                {
-                    int num = randNum.Next(0, numList.Count);
-                    if (j == cave.Length)
-                        linesArray[i] += "" + numList[num];
-                    else
-                        linesArray[i] += "" + numList[num] + ";";
-                    numList.RemoveAt(num);
-                }
+                num = random.Next(0, list.Count);
+                locs[j] = (int)list[num];
+                list.RemoveAt(num);
+            }
+
+            for (int column = 1; column < cave[row].Length; column++)
+            {
+                
             }
         }
-        File.WriteAllLines(filename, linesArray);
     }
 
     // Takes all numbers from given file and reads them into the cave array
@@ -190,38 +130,5 @@ public class Cave
                 cave[row][column] = Int32.Parse(segments[column]);
             }
         }
-    }
-
-    // Searches cave for the given room and returns array of row and column location
-    private int[] findRoomLocation(int roomNum)
-    {
-        int[] roomLocation = new int[2];
-        for (int row = 0; row < cave.Length; row++)
-        {
-            for (int column = 0; column < cave[row].Length; column++)
-            {
-                if (cave[row][column] == roomNum)
-                {
-                    roomLocation[0] = row;
-                    roomLocation[1] = column;
-                    return roomLocation;
-                }
-            }
-        }
-        return roomLocation;
-    }
-
-    // Returns the number of zeros found in the given row before the given column
-    private int numZerosBeforeIndex(int row, int column)
-    {
-        int count = 0;
-        for (int i = 0; i < column; i++)
-        {
-            if (cave[row][i] == 0)
-            {
-                count++;
-            }
-        }
-        return count;
     }
 }
