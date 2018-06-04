@@ -44,7 +44,7 @@ namespace wumpus.components
             {
                 case Sounds.ArrowImpact:
                     //playMp3();
-                    playSoundFromFile(Properties.Resources.ArrowImpact2);
+                    playSoundFromFile(Properties.Resources.LaserShoot);
                     break;
                 case Sounds.ArrowMiss:
                     playSoundFromFile(Properties.Resources.ArrowMiss);
@@ -92,7 +92,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.MainMenu3);
                     break;
                 case Sounds.BackgroundMusic:
-                    playSoundFromFile(Properties.Resources.BackgroundMusic3);
+                    playSoundFromFile(Properties.Resources.BackgroundMusicRepeat);
                     //change
                     break;
             }
