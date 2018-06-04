@@ -48,6 +48,11 @@ namespace wumpus.components
             mainGame.updateCoins();
         }
 
+        public void updateArrows()
+        {
+            mainGame.updateArrows();
+        }
+
         public void Show(String message)
          {
              System.Windows.Forms.MessageBox.Show(message);

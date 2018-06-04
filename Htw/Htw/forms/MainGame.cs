@@ -179,10 +179,15 @@ namespace wumpus.forms
         }
 
         // update coins
-
         public void updateCoins()
         {
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+        }
+
+        // update arrows
+        public void updateArrows()
+        {
+            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
         }
 
         //buttons clicked
