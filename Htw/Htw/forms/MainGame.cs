@@ -21,8 +21,16 @@ namespace wumpus.forms
         Cave cave;
         Direction direction;
         bool shootButtonClicked;
+        bool northClicked;
+        bool northWestClicked;
+        bool northEastClicked;
+        bool southClicked;
+        bool southWestClicked;
+        bool southEastClicked;
         Image[] image;
         String[] name;
+        int x;
+        int y;
 
 
 
@@ -42,6 +50,12 @@ namespace wumpus.forms
             this.map = map;
             this.cave = cave;
             this.shootButtonClicked = false;
+            this.northClicked = false;
+            this.northWestClicked = false;
+            this.northEastClicked = false;
+            this.southClicked = false;
+            this.southWestClicked = false;
+            this.southEastClicked = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -58,11 +72,24 @@ namespace wumpus.forms
                                       "Osiris-16", "Elysium-17", "Nirvana-18", "Styx-19", "Vortex-20",
                                       "Oblivion-21", "Argon-22", "Exodus-23", "Celestial-24", "Equinox-25",            
                                       "Nebula-26", "Andromeda-27", "Galactic-28", "Titanium-29", "Sagittarius-30"};
+            //this.x = 962;
+            this.y = 900;
+            //this.x = 560;
+
+
         }
 
 
         public void UpdateGraphics(int currentRoom)
         {
+            
+
+            // start timer
+            timer1.Enabled = true;
+
+            // laser
+            arrowPicture.Visible = false;
+
             // update coins
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
 
@@ -163,6 +190,8 @@ namespace wumpus.forms
             {
                 gameControl.moveRoom(Direction.NORTH);
                 this.direction = Direction.NORTH;
+                System.Diagnostics.Debug.WriteLine("if");
+                
             }
             else
             {
@@ -170,6 +199,8 @@ namespace wumpus.forms
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
                 shootButtonClicked = false;
+                this.northClicked = true;
+                System.Diagnostics.Debug.WriteLine("else");
             }
         }
 
@@ -179,6 +210,7 @@ namespace wumpus.forms
             {
                 gameControl.moveRoom(Direction.NORTH_EAST);
                 this.direction = Direction.NORTH_EAST;
+                
             }
             else
             {
@@ -186,6 +218,7 @@ namespace wumpus.forms
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
                 shootButtonClicked = false;
+                this.northEastClicked = true;
             }
         }
 
@@ -195,6 +228,7 @@ namespace wumpus.forms
             {
                 gameControl.moveRoom(Direction.SOUTH_EAST);
                 this.direction = Direction.SOUTH_EAST;
+                
             }
             else
             {
@@ -202,6 +236,7 @@ namespace wumpus.forms
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
                 shootButtonClicked = false;
+                this.southEastClicked = true;
             }
         }
 
@@ -211,6 +246,7 @@ namespace wumpus.forms
             {
                 gameControl.moveRoom(Direction.SOUTH);
                 this.direction = Direction.SOUTH;
+                
             } 
             else
             {
@@ -218,6 +254,7 @@ namespace wumpus.forms
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
                 shootButtonClicked = false;
+                this.southClicked = true;
             }
         }
 
@@ -228,6 +265,7 @@ namespace wumpus.forms
             {
                 gameControl.moveRoom(Direction.SOUTH_WEST);
                 this.direction = Direction.SOUTH_WEST;
+                
             }
             else
             {
@@ -235,6 +273,7 @@ namespace wumpus.forms
                 gameControl.shootArrows(this.direction);
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
                 shootButtonClicked = false;
+                this.southWestClicked = true;
             }
         }
 
@@ -244,14 +283,15 @@ namespace wumpus.forms
             {
                 gameControl.moveRoom(Direction.NORTH_WEST);
                 this.direction = Direction.NORTH_WEST;
-                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                
             }
             else
             {
                 this.direction = Direction.NORTH_WEST;
                 gameControl.shootArrows(this.direction);
-                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                NumberOfArrowsLabel.Text = "Number of Arrows: " +  player.getArrowCount();
                 shootButtonClicked = false;
+                this.northWestClicked = true;
             }
         }
 
@@ -271,6 +311,25 @@ namespace wumpus.forms
         {
             gameControl.buySecret();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (this.northClicked == true)
+            {
+                arrowPicture.Visible = true;
+                this.x = 535; 
+                this.y = this.y - 5;
+                arrowPicture.Location = new Point(x, y);
+                //System.Diagnostics.Debug.WriteLine(x + "," + y);
+                if (arrowPicture.Location.Y == 100)
+                {
+                    timer1.Enabled = false;
+                    arrowPicture.Visible = false;
+                }
+            }          
+
+        }
+
 
     }
 }

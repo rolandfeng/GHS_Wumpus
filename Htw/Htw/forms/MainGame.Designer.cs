@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGame));
             this.NumberOfCoinsLabel = new System.Windows.Forms.Label();
             this.NumberOfArrowsLabel = new System.Windows.Forms.Label();
             this.NorthRoomsLabel = new System.Windows.Forms.Label();
@@ -46,6 +48,9 @@
             this.southWestButton = new RoundButton();
             this.northEastButton = new RoundButton();
             this.northButton = new RoundButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.arrowPicture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.arrowPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // NumberOfCoinsLabel
@@ -198,7 +203,7 @@
             this.southEastButton.BackColor = System.Drawing.Color.Red;
             this.southEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southEastButton.Location = new System.Drawing.Point(1282, 802);
+            this.southEastButton.Location = new System.Drawing.Point(1212, 666);
             this.southEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.southEastButton.Name = "southEastButton";
             this.southEastButton.Size = new System.Drawing.Size(460, 515);
@@ -211,10 +216,10 @@
             this.southButton.BackColor = System.Drawing.Color.Red;
             this.southButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southButton.Location = new System.Drawing.Point(510, 997);
+            this.southButton.Location = new System.Drawing.Point(746, 760);
             this.southButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.southButton.Name = "southButton";
-            this.southButton.Size = new System.Drawing.Size(552, 485);
+            this.southButton.Size = new System.Drawing.Size(552, 739);
             this.southButton.TabIndex = 19;
             this.southButton.UseVisualStyleBackColor = true;
             this.southButton.Click += new System.EventHandler(this.southButton_Click);
@@ -271,6 +276,21 @@
             this.northButton.UseVisualStyleBackColor = true;
             this.northButton.Click += new System.EventHandler(this.northButton_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // arrowPicture
+            // 
+            this.arrowPicture.BackColor = System.Drawing.Color.Transparent;
+            this.arrowPicture.ErrorImage = ((System.Drawing.Image)(resources.GetObject("arrowPicture.ErrorImage")));
+            this.arrowPicture.Image = ((System.Drawing.Image)(resources.GetObject("arrowPicture.Image")));
+            this.arrowPicture.Location = new System.Drawing.Point(674, 760);
+            this.arrowPicture.Name = "arrowPicture";
+            this.arrowPicture.Size = new System.Drawing.Size(195, 904);
+            this.arrowPicture.TabIndex = 20;
+            this.arrowPicture.TabStop = false;
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -278,6 +298,7 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1050);
+            this.Controls.Add(this.arrowPicture);
             this.Controls.Add(this.buySecretButton);
             this.Controls.Add(this.ShootArrowButton);
             this.Controls.Add(this.PurchaseArrowsButton);
@@ -298,6 +319,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainGame";
             this.Text = "MainGame";
+            ((System.ComponentModel.ISupportInitialize)(this.arrowPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,5 +344,7 @@
         private RoundButton southWestButton;
         private RoundButton southEastButton;
         private System.Windows.Forms.Button buySecretButton;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox arrowPicture;
     }
 }
