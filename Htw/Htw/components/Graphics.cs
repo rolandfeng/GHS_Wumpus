@@ -58,7 +58,9 @@ namespace wumpus.components
              System.Windows.Forms.MessageBox.Show(message);
 
          }
-         
+
+
+
     }
 }
 
