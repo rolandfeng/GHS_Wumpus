@@ -73,7 +73,11 @@ namespace wumpus.components {
                 //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);
-                graphics.Show("You missed! The Wumpus has moved to a new planet!");
+                if (cave.isAdjacent(map.getPlayerLocation(), map.getWumpusLocation())) {
+                    graphics.Show("You missed but alerted the Wumpus! The Wumpus has moved to a new planet!");
+                } else {
+                    graphics.Show("You missed!");
+                }
                 if (player.getArrowCount() == 0) {
                     graphics.Show("You ran out of arrows!");
                     sound.playSound(Sound.Sounds.PlayerDie);
@@ -93,11 +97,11 @@ namespace wumpus.components {
                 graphics.Show("Not enough coins for trivia!");
             } else {
                 player.changeCoinCount(-2);
+                graphics.updateCoins();
                 trivia.ShowTrivia();
                 trivia.ask(asked, needed, type);
             }
         }
-
 
         public void buySecret() {
             openTrivia(3, 2, 4);
@@ -131,6 +135,12 @@ namespace wumpus.components {
         }
         public void pitInstance() {
             openTrivia(3, 2, 2);
+        }
+
+        public void displayHighscores() {
+            highscores.setName("bokchewy");
+            highscores.StoreHighScore(234);
+            highscores.DisplayHighScores();
         }
 
         private bool[] getHazardArray(int newLoc) { //create array of booleans for each obstacle, if near or same room
@@ -247,6 +257,7 @@ namespace wumpus.components {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     graphics.Show("Better luck next time!");
                 }
+                //graphics.updateArrows();
             } else if (type == 4) {//secret
                 if (succeed) {
                     sound.playSound(Sound.Sounds.TriviaRight);
@@ -263,9 +274,7 @@ namespace wumpus.components {
             graphics.update(1);
             sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
-            highscores.setName("bokchewy");
-            highscores.StoreHighScore(234);
-            highscores.DisplayHighScores();
+            displayHighscores();
         }
     }
 }
