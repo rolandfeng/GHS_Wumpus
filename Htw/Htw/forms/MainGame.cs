@@ -33,12 +33,14 @@ namespace wumpus.forms
         bool southShootClicked = false;
         bool southWestShootClicked = false;
         bool southEastShootClicked = false;
+        bool timer;
         Image[] image;
         String[] name;
         int spaceshipX;
         int spaceshipY;
         int laserX;
         int laserY;
+        //int count;
         int currentRoom;
 
         public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
@@ -69,6 +71,7 @@ namespace wumpus.forms
             this.southShootClicked = false;
             this.southWestShootClicked = false;
             this.southEastShootClicked = false;
+            this.timer = true;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -88,6 +91,7 @@ namespace wumpus.forms
             this.spaceshipX = 540;
             this.spaceshipY = 300;
             this.laserY = 270;
+           // this.count = 0;
         }
 
         // update graphics
@@ -107,57 +111,73 @@ namespace wumpus.forms
             NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
 
             //update available doors
+            
+            //if (count == 0)
+            //{
+                //moveRoom(currentRoom);
+            //}
+            //count++;
             int[] connections;
             connections = cave.getAllConnections(currentRoom);
+
+            //count++;
 
             if (connections[0] == 0) {
                 northButton.Visible = false;
                 NorthRoomsLabel.Visible = false;
             } else {
-                northButton.Visible = true;
-                NorthRoomsLabel.Visible = true;
-                NorthRoomsLabel.Text = name[connections[0]-1];
-                northButton.Image = image[connections[0] - 1];
+                
+                    northButton.Visible = true;
+                    NorthRoomsLabel.Visible = true;
+                    NorthRoomsLabel.Text = name[connections[0] - 1];
+                    northButton.Image = image[connections[0] - 1];
+                
             }
 
             if (connections[1] == 0) {
                 northEastButton.Visible = false;
                 NorthEastRoomsLabel.Visible = false;
             } else {
-                northEastButton.Visible = true;
-                NorthEastRoomsLabel.Visible = true;
-                NorthEastRoomsLabel.Text = name[connections[1] - 1];
-                northEastButton.Image = image[connections[1] - 1];
+                    northEastButton.Visible = true;
+                    NorthEastRoomsLabel.Visible = true;
+                    NorthEastRoomsLabel.Text = name[connections[1] - 1];
+                    northEastButton.Image = image[connections[1] - 1];
+                
             }
 
             if (connections[2] == 0) {
                 northWestButton.Visible = false;
                 NorthWestRoomsLabel.Visible = false;
             } else {
-                northWestButton.Visible = true;
-                NorthWestRoomsLabel.Visible = true;
-                NorthWestRoomsLabel.Text = name[connections[2] - 1];
-                northWestButton.Image = image[connections[2] - 1];
+                    northWestButton.Visible = true;
+                    NorthWestRoomsLabel.Visible = true;
+                    NorthWestRoomsLabel.Text = name[connections[2] - 1];
+                    northWestButton.Image = image[connections[2] - 1];
+                
             }
 
             if (connections[3] == 0) {
                 southButton.Visible = false;
                 SouthRoomsLabel.Visible = false;
             } else {
-                southButton.Visible = true;
-                SouthRoomsLabel.Visible = true;
-                SouthRoomsLabel.Text = name[connections[3] - 1];
-                southButton.Image = image[connections[3] - 1];
+
+                    southButton.Visible = true;
+                    SouthRoomsLabel.Visible = true;
+                    SouthRoomsLabel.Text = name[connections[3] - 1];
+                    southButton.Image = image[connections[3] - 1];
+              
             }
 
             if (connections[4] == 0) {
                 southEastButton.Visible = false;
                 SouthEastRoomsLabel.Visible = false;
             } else {
-                southEastButton.Visible = true;
-                SouthEastRoomsLabel.Visible = true;
-                SouthEastRoomsLabel.Text = name[connections[4] - 1];
-                southEastButton.Image = image[connections[4] - 1];
+
+                    southEastButton.Visible = true;
+                    SouthEastRoomsLabel.Visible = true;
+                    SouthEastRoomsLabel.Text = name[connections[4] - 1];
+                    southEastButton.Image = image[connections[4] - 1];
+                
             }
 
             if (connections[5] == 0) {
@@ -171,6 +191,8 @@ namespace wumpus.forms
             }
             
 
+
+
             //update room
             //BackgroundImage = image[currentRoom - 1];
 
@@ -180,6 +202,100 @@ namespace wumpus.forms
         public void updateCoins() {
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
         }
+
+        /*public void moveRoom(int currentRoom)
+        {
+            this.currentRoom = currentRoom;
+            int[] connections;
+            connections = cave.getAllConnections(currentRoom);
+            if (connections[0] == 0)
+            {
+                northButton.Visible = false;
+                NorthRoomsLabel.Visible = false;
+            }
+            else
+            {
+
+                northButton.Visible = true;
+                NorthRoomsLabel.Visible = true;
+                NorthRoomsLabel.Text = name[connections[0] - 1];
+                northButton.Image = image[connections[0] - 1];
+
+            }
+
+            if (connections[1] == 0)
+            {
+                northEastButton.Visible = false;
+                NorthEastRoomsLabel.Visible = false;
+            }
+            else
+            {
+                northEastButton.Visible = true;
+                NorthEastRoomsLabel.Visible = true;
+                NorthEastRoomsLabel.Text = name[connections[1] - 1];
+                northEastButton.Image = image[connections[1] - 1];
+
+            }
+
+            if (connections[2] == 0)
+            {
+                northWestButton.Visible = false;
+                NorthWestRoomsLabel.Visible = false;
+            }
+            else
+            {
+                northWestButton.Visible = true;
+                NorthWestRoomsLabel.Visible = true;
+                NorthWestRoomsLabel.Text = name[connections[2] - 1];
+                northWestButton.Image = image[connections[2] - 1];
+
+            }
+
+            if (connections[3] == 0)
+            {
+                southButton.Visible = false;
+                SouthRoomsLabel.Visible = false;
+            }
+            else
+            {
+
+                southButton.Visible = true;
+                SouthRoomsLabel.Visible = true;
+                SouthRoomsLabel.Text = name[connections[3] - 1];
+                southButton.Image = image[connections[3] - 1];
+
+            }
+
+            if (connections[4] == 0)
+            {
+                southEastButton.Visible = false;
+                SouthEastRoomsLabel.Visible = false;
+            }
+            else
+            {
+
+                southEastButton.Visible = true;
+                SouthEastRoomsLabel.Visible = true;
+                SouthEastRoomsLabel.Text = name[connections[4] - 1];
+                southEastButton.Image = image[connections[4] - 1];
+
+            }
+
+            if (connections[5] == 0)
+            {
+                southWestButton.Visible = false;
+                SouthWestRoomsLabel.Visible = false;
+            }
+            else
+            {
+                southWestButton.Visible = true;
+                SouthWestRoomsLabel.Visible = true;
+                SouthWestRoomsLabel.Text = name[connections[5] - 1];
+                southWestButton.Image = image[connections[5] - 1];
+            }
+
+        }
+        */
 
         // update arrows
         public void updateArrows() {
@@ -324,6 +440,7 @@ namespace wumpus.forms
                 if (spaceshipPicture.Location.Y == 200) {
                     //System.Diagnostics.Debug.WriteLine("entered inner if");
                     timer1.Enabled = false;
+                    //moveRoom(currentRoom);
                     this.northClicked = false;
                     this.spaceshipY = 300;
                     BackgroundImage = image[currentRoom - 1];
@@ -337,8 +454,10 @@ namespace wumpus.forms
                 this.spaceshipY = this.spaceshipY - 3;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 if (spaceshipPicture.Location.X == 600 && spaceshipPicture.Location.Y == 240) {
-                    timer1.Enabled = false;                  
+                    timer1.Enabled = false;
+                    //moveRoom(currentRoom);
                     this.northEastClicked = false;
+                    this.timer = false;
                     this.spaceshipX = 540;
                     this.spaceshipY = 300;
                     BackgroundImage = image[currentRoom - 1];
