@@ -81,13 +81,11 @@ namespace wumpus.forms
 
 
         public void UpdateGraphics(int currentRoom)
-        {
-            
-
+        {            
             // start timer
             timer1.Enabled = true;
 
-            // laser
+            // laser picture
             arrowPicture.Visible = false;
 
             // update coins
@@ -178,10 +176,14 @@ namespace wumpus.forms
             }
             //update room
             BackgroundImage = image[currentRoom - 1];
-            
-            //planetButton.BackgroundImage = image[currentRoom - 1];
         }
 
+        // update coins
+
+        public void updateCoins()
+        {
+            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+        }
 
         //buttons clicked
         private void northButton_Click(object sender, EventArgs e)
@@ -298,6 +300,7 @@ namespace wumpus.forms
         private void ShootArrowButton_Click(object sender, EventArgs e)
         {
             shootButtonClicked = true;
+            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
 
         }
 
