@@ -241,6 +241,8 @@
     <None Include="Resources\ShipMove.wav" />
     <None Include="Resources\MainMenu3.wav" />
     <None Include="Resources\MonsterTeleport.wav" />
+    <None Include="Resources\BackgroundMusicRepeat.wav" />
+    <None Include="Resources\LaserShoot.wav" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="Resource\HighScores.txt" />
     <Content Include="Resource\AlternativeCave.txt" />
