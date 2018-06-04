@@ -88,11 +88,11 @@ namespace wumpus.components {
         }
 
         public void openTrivia(int asked, int needed, int type) {
-            if (player.getCoinCount() < 1) {
+            if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for trivia!");
             } else {
-                player.changeCoinCount(-1);
+                player.changeCoinCount(-2);
                 trivia.ShowTrivia();
                 trivia.ask(asked, needed, type);
             }
@@ -213,7 +213,7 @@ namespace wumpus.components {
             return finalLoc;
         }
 
-        private bool withinTwoRooms() { //returns if wumpus is 2 rooms away from player
+        private bool withinTwoRooms() { //returns if wumpus is 1 or 2 rooms away from player
             int[] currentConnections = cave.getAllConnections(map.getPlayerLocation());
             int[] wumpusConnections = cave.getAllConnections(map.getWumpusLocation());
             for (int i = 0; i < currentConnections.Length; i++) {//outer loop
@@ -261,17 +261,11 @@ namespace wumpus.components {
         public void startGame() {
             graphics.startGame();
             graphics.update(1);
-            //sound.playSound(Sound.Sounds.BackgroundMusic);
+            sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
             highscores.setName("bokchewy");
             highscores.StoreHighScore(234);
             highscores.DisplayHighScores();
-            int x = 0;
-            while (x < 5)
-            {
-                sound.playSound(Sound.Sounds.BackgroundMusic);
-                x++;
-            }
         }
     }
 }
