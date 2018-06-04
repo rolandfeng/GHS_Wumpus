@@ -257,7 +257,7 @@ namespace wumpus.components {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     graphics.Show("Better luck next time!");
                 }
-                //graphics.updateArrows();
+                graphics.updateArrows();
             } else if (type == 4) {//secret
                 if (succeed) {
                     sound.playSound(Sound.Sounds.TriviaRight);
@@ -272,6 +272,7 @@ namespace wumpus.components {
         public void startGame() {
             graphics.startGame();
             graphics.update(1);
+            hazardWarnings(getHazardArray(1));
             sound.playSound(Sound.Sounds.BackgroundMusic);
             form.Show();
             displayHighscores();
