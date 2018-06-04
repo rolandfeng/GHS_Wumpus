@@ -43,6 +43,11 @@ namespace wumpus.components
             mainGame.UpdateGraphics(currentRoom);
         }
 
+        public void updateCoins()
+        {
+            mainGame.updateCoins();
+        }
+
         public void Show(String message)
          {
              System.Windows.Forms.MessageBox.Show(message);
