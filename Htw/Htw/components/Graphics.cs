@@ -54,7 +54,7 @@ namespace wumpus.components
         }
 
         public void Show(String message)
-         {
+        {
              System.Windows.Forms.MessageBox.Show(message);
 
          }
