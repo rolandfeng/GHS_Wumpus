@@ -23,3 +23,18 @@ What is the main ingedient of rocket fuel?; Methane gas; Liquid oxygen; Vinegar 
 How many stars are in the big dipper?; 5; 9; 7; 11; 3
 Which planet is nicknamed the "Red Planet"?; Mercury; Uranus; Jupiter; Mars; 4
 How many dwarf planets are in our solar system?; 5; 3; 6; 9; 1
+Which planet is sometimes called Earth's sister planet?; Neptune; Saturn; Venus; Mercury; 3
+How many planets in our solar system are made from gas?; 2; 4; 5; 1; 2
+Which planet is known for having a big red spot?; Jupiter; Mars; Uranus; Saturn; 1
+From what direction do we see the sun rise?; North; South; West; East; 4
+Which planet is the second largest in our solar system?; Earth; Jupiter; Saturn; Uranus; 3
+What planet is farthest away from the sun?; Neptune; Uranus; Venus; Mercury; 1
+Which year did humans first land on the Moon?; 1967; 1969; 1986; 1981; 2
+Which of the following is our Solar System's only natural light source?; The Earth; The Moon; Lightbulbs; A Star; 4
+How many rings are there approximately around Saturn?; Hundreds; Fifty; Thousands; Five; 3
+The rings of Uranus circle it _____; Horizontally; Uranus doesn't have rings; Diagonally; Vertically; 4
+Which of these chemical elements is the most abundant in the sun?; Carbon; Hydrogen; Oxygen; Nitrogen; 2
+What is the name of the constellation shaped like a crab?; Cancer; Scorpius; Orion; Crux; 1
+What shape is the Milky Way?; Spiral; Circle; Square; No shape; 1
+How may moons does the planet Mars have?; 1; 2; 5; 7; 2
+Which planet in our solar system takes the shortest time to orbit the sun?; Earth; Mars; Mercury; Venus; 3
