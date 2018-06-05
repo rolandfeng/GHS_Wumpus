@@ -85,6 +85,7 @@ namespace wumpus.components {
                 sound.playSound(Sound.Sounds.ArrowImpact);
                 sound.playSound(Sound.Sounds.MonsterDie);
                 graphics.Show("You killed the Wumpus!");
+                graphics.endGame(true);
                 int playerScore = player.getScore();
                 highscores.LoadHighScores();
                 form.Show();
@@ -93,7 +94,6 @@ namespace wumpus.components {
                     highscores.StoreHighScore(form.getName(), playerScore);
                     highscores.DisplayHighScores();
                 };           
-                //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);
                 if (cave.isAdjacent(map.getPlayerLocation(), map.getWumpusLocation())) {
@@ -104,7 +104,7 @@ namespace wumpus.components {
                 if (player.getArrowCount() == 0) {
                     graphics.Show("You ran out of arrows!");
                     sound.playSound(Sound.Sounds.PlayerDie);
-                    //end game
+                    graphics.endGame(false);
                 }
                 map.changeWumpusLocation(wumpusFleeLoc(false));
             }
@@ -250,7 +250,7 @@ namespace wumpus.components {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     sound.playSound(Sound.Sounds.PlayerDie);
                     graphics.Show("Oh dear, you are dead!");
-                    //endgame
+                    graphics.endGame(false);
                 } else {
                     sound.playSound(Sound.Sounds.TriviaRight);
                     graphics.Show("You survived!");

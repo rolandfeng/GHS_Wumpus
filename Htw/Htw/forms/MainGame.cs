@@ -590,8 +590,13 @@ namespace wumpus.forms
             NumberOfArrowsLabel.Visible = false;
             NumberOfCoinsLabel.Visible = false;
             PurchaseArrowsButton.Visible = false;
-            PurchaseSecretButton.Visible = false;
+            buySecretButton.Visible = false;
             ShootArrowButton.Visible = false;
+            if (result) {
+                BackgroundImage = Properties.Resources.gameOverWin;
+            } else {
+                BackgroundImage = Properties.Resources.gameOverLose;
+            }
              
 
         }
