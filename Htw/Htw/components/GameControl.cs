@@ -63,7 +63,6 @@ namespace wumpus.components {
             player.updateStatus();
             graphics.update(newLoc);
             hazardWarnings(hazards);
-            //sound.playSound(Sound.Sounds.BackgroundMusic);
             if (map.pitFall()) {
                 pitInstance();
             }
@@ -75,6 +74,7 @@ namespace wumpus.components {
                 openTrivia(5, 3, 1);
                 map.changeWumpusLocation(wumpusFleeLoc(true));
             }
+            sound.playSound(Sound.Sounds.BackgroundMusic);
         }
 
         public void shootArrows(wumpus.common.Direction direction) {
