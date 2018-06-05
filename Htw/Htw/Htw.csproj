@@ -249,6 +249,8 @@
     <None Include="Resources\ShipMove.wav" />
     <None Include="Resources\MainMenu3.wav" />
     <None Include="Resources\MonsterTeleport.wav" />
+    <None Include="Resources\gameOverWin.jpg" />
+    <None Include="Resources\gameOverLose.jpg" />
     <Content Include="Resource\CaveStarter.txt" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="Resource\HighScores.txt" />
