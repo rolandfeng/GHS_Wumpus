@@ -256,6 +256,9 @@
     <Content Include="Resource\AlternativeCave.txt" />
     <Content Include="Resource\ExtraWallsCave.txt" />
     <Content Include="Resource\SpiralCave.txt" />
+    <EmbeddedResource Include="Resource\TriviaFacts.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>
