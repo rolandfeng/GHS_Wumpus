@@ -87,7 +87,6 @@
     <Compile Include="forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="components\Example.cs" />
     <Compile Include="forms\TriviaForm.cs">
       <SubType>Form</SubType>
     </Compile>
