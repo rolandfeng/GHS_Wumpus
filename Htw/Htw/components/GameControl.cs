@@ -69,12 +69,12 @@ namespace wumpus.components {
                 int playerScore = player.getScore();
                 highscores.LoadHighScores();
                 form.Show();
-                while (form.getIsValid())
+                form.FormHiding += (send, args) =>
                 {
                     highscores.StoreHighScore(form.getName(), playerScore);
                     highscores.DisplayHighScores();
-                    form.changeValid(false);
-                }               
+                };
+                               
                 //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);

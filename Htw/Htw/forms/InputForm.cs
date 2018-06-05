@@ -12,6 +12,8 @@ namespace wumpus.forms
 {
     public partial class InputForm : Form
     {
+        public event EventHandler FormHiding;
+
         public InputForm()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace wumpus.forms
         {
             name = nameBox.Text;
             this.Hide();
+            FormHiding.Invoke(this, null);
             validName = true;
         }
     }
