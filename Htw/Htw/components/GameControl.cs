@@ -92,8 +92,9 @@ namespace wumpus.components {
         }
 
         public void buyArrows() {
-            //openTrivia(3, 2, 3);
-            map.changeWumpusLocation(7);
+            openTrivia(3, 2, 3);
+            //map.changeWumpusLocation(7);
+            //graphics.Show("The Wumpus is room 7 now");
         }
 
         public void openTrivia(int asked, int needed, int type) {
@@ -143,7 +144,7 @@ namespace wumpus.components {
         }
 
         public void displayHighscores() {
-            highscores.StoreHighScore("bokchewy", 234);
+            highscores.LoadHighScores();
             highscores.DisplayHighScores();
         }
 
