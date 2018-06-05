@@ -56,14 +56,13 @@ namespace wumpus.components {
         public void moveRoom(wumpus.common.Direction direction) {
             sound.playSound(Sound.Sounds.PlayerWalk);
             int currentLoc = map.getPlayerLocation();
-            System.Diagnostics.Debug.WriteLine("Direction: " + direction);
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
             map.changePlayerLocation(newLoc);
             player.updateStatus();
             graphics.update(newLoc);
             hazardWarnings(hazards);
-            //sound.playSound(Sound.Sounds.BackgroundMusic);
+
             if (map.pitFall()) {
                 pitInstance();
             }
@@ -75,6 +74,8 @@ namespace wumpus.components {
                 openTrivia(5, 3, 1);
                 map.changeWumpusLocation(wumpusFleeLoc(true));
             }
+            graphics.Show(trivia.triviaFact());
+            sound.playSound(Sound.Sounds.BackgroundMusic);
         }
 
         public void shootArrows(wumpus.common.Direction direction) {
