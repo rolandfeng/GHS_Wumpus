@@ -13,6 +13,7 @@ namespace wumpus.components
     {
         private TriviaForm triviaForm;
         private GameControl gameControl;
+
         private String[][] questions;
         private int questionsAsk;
         private int answerCorrect;
@@ -20,19 +21,43 @@ namespace wumpus.components
         private int rightAnswerIndex;
         private int numQuestions;
         private int type;
+
         private ArrayList randomArr;
+
+        private ArrayList fact;
+        private int countFact;
+
 
         public Trivia(GameControl gameControl)
         {
             triviaForm = new TriviaForm(this);
             this.gameControl = gameControl;
             randomArr = new ArrayList();
+            fact = new ArrayList();
+
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
             questions = new String[lines.Length][];
             for (int i = 0; i < lines.Length; i++)
             {
                 questions[i] = lines[i].Split(';');
             }
+
+            String[] factArr = File.ReadAllLines(path: "Resource/TriviaFacts.txt");
+            for (int k = 0; k < factArr.Length; k++)
+            {
+                fact.Add(factArr[k]);
+            }
+            countFact = -1;
+        }
+
+        public String triviaFact()
+        {
+            countFact++;
+            if (countFact > fact.Count)
+            {
+                countFact = 0;
+            }
+            return (String)fact[countFact];
         }
 
         public void ShowTrivia()
@@ -40,7 +65,7 @@ namespace wumpus.components
             triviaForm.Show();
         }
 
-        public void ask(int questionsAsk, int answerCorrect, int type) 
+        public void ask(int questionsAsk, int answerCorrect, int type)
         {
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
@@ -62,7 +87,6 @@ namespace wumpus.components
                 }
                 numQuestions = 0;
                 incrementCorrect = 0;
-                randomArr.Clear();
             }
             else
             {
@@ -75,24 +99,27 @@ namespace wumpus.components
             if (triviaForm.RightAnswer())
             {
                 incrementCorrect++;
-            } 
-            ask(questionsAsk, answerCorrect, type); 
+            }
+            ask(questionsAsk, answerCorrect, type);
         }
 
         public int randomGenerator()
         {
+            if (randomArr.Count == questions.Length)
+            {
+                randomArr.Clear();
+            }
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
-            if (randomArr.Contains(randomIndex))
-            {
-                int randomIndex2 = random.Next(0, questions.Length);
-                randomArr.Add(randomIndex2);
-                return randomIndex2;
-            }
+            while (randomArr.Contains(randomIndex)) { 
+                randomIndex = random.Next(0, questions.Length);
             randomArr.Add(randomIndex);
+        }
+
             return randomIndex;
 
         }
+
         public void askQuestion()
         {
             int randomIndex = randomGenerator();

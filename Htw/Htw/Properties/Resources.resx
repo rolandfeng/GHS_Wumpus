@@ -217,62 +217,20 @@
   <data name="planet9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\planet9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ArrowImpact" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ArrowImpact.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ArrowMiss" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ArrowMiss.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BatCall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BatCall.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="BatsInCave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BatsInCave.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MonsterDie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MonsterDie.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="MonsterGrowl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MonsterGrowl.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MonsterRoar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MonsterRoar.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MonsterWalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MonsterWalk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="NoError" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NoError.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="PlayerDie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerDie.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PlayerWalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerWalk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ScaryScream" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ScaryScream.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ScarySound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ScarySound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TriviaRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TriviaRight.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TriviaWrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TriviaWrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MainMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MainMenu.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BackgroundMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BackgroundMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="PlayerWalk2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerWalk2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ArrowImpact2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ArrowImpact2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BatsInCave2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BatsInCave2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -289,9 +247,6 @@
   <data name="ScaryScream2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ScaryScream2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ScarySound2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ScarySound2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ScarySound3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ScarySound3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -301,9 +256,6 @@
   <data name="TriviaWrong2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TriviaWrong2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="BackgroundMusic3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BackgroundMusic3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="MainMenu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MainMenu3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -312,5 +264,11 @@
   </data>
   <data name="ShipMove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShipMove.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BackgroundMusicRepeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundMusicRepeat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LaserShoot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LaserShoot.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

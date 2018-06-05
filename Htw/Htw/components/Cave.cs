@@ -20,7 +20,7 @@ public class Cave
         {
             this.caveName = "CaveStarter.txt";
             fillCave();
-            randomize();
+            randomizeConnections();
         } 
     }
 
@@ -91,15 +91,20 @@ public class Cave
         return 0;
     }
 
-    private void randomize()
+    private void randomizeConnections()
     {
         Random random = new Random();
-        for (int row = 0; row < cave.Length; row++)
+        ArrayList rowList = new ArrayList();
+        for (int z = 0; z < cave.Length; z++)
+        {
+            rowList.Add(z);
+        }
+        for (int rowNum = 0; rowNum < cave.Length; rowNum++)
         {
             // Choosing 3 random locations for walls
-            ArrayList list = new ArrayList(6);
+            ArrayList list = new ArrayList();
             for (int i = 1; i <= 6; i++)
-                list[i - 1] = i;
+                list.Add(i);
             int[] locs = new int[3];
             int num;
             for (int j = 0; j < 3; j++)
@@ -109,9 +114,16 @@ public class Cave
                 list.RemoveAt(num);
             }
 
+            int row = (int) rowList[random.Next(0, rowList.Count)];
             for (int column = 1; column < cave[row].Length; column++)
             {
-                
+                if (column == locs[0] || column == locs[1] || column == locs[2])
+                    for (int k = 0; k < cave[0].Length; k++)
+                    {
+                        if (cave[Math.Abs(cave[row][column]) - 1][k] == cave[row][0])
+                              cave[Math.Abs(cave[row][column]) - 1][k] = - cave[Math.Abs(cave[row][column]) - 1][k];
+                    }
+                    cave[row][column] = -cave[row][column];
             }
         }
     }

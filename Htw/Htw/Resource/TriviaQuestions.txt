@@ -1,8 +1,4 @@
 ﻿What percent of the solar system’s mass does the Sun hold?; 85.3%; 99.8%; 94.6%; 89.2%; 2
-Each time that a loop "loops" is known as a(n); Index; Count; Increment; Iteration; 4
-Which of the following is not a primitive data type?; String; Int; Double; Char; 1
-Which of the following classes is included in the java.util package?; Color; Image; Scanner; Graphics2D; 3
-Which of the following data types are ideal for numbers?; String; Boolean; Char; Double; 4
 Which one is not a type of galaxy?; Spiral; Orbital; Irregular; Elliptical; 2
 What process fuels the sun?; Nuclear fusion; Photsynthesis; Precipitation; Condensation; 1
 What galaxy is made of old stars?; Spiral; Irregular; Elliptical; Lenticular; 3
@@ -18,7 +14,7 @@ How many planets are in the Solar System?; 9; 7; 8; 6; 3
 In which galaxy is the Earth?; Solar Galaxy; Milky Way; Shiny Way; Andromeda Galaxy; 2
 Who was the first human in space?; Lance Armstrong; Buzz Aldrin; Valentina Tereshkova; Yuri Gagarin; 4
 A shooting star is also known as...; A meteor; A comet; A moon; A satellite; 1
-Who was the first animat to orbit the Earth?; Laika the Dog; Bernard the Monkey; Edward the Elephant; Ham the Chimp; 1
+Who was the first animal to orbit the Earth?; Laika the Dog; Bernard the Monkey; Edward the Elephant; Ham the Chimp; 1
 What is the main ingedient of rocket fuel?; Methane gas; Liquid oxygen; Vinegar and baking soda; Helium gas; 2
 How many stars are in the big dipper?; 5; 9; 7; 11; 3
 Which planet is nicknamed the "Red Planet"?; Mercury; Uranus; Jupiter; Mars; 4
