@@ -3,7 +3,6 @@
     partial class InputForm
     {
         private string name;
-        private bool validName;
         /// <summary>
         /// Required designer variable.
         /// </summary>

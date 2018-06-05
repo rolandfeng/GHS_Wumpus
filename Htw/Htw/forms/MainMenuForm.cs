@@ -30,16 +30,12 @@ namespace wumpus
 
         private void startGameButton_Click(object sender, EventArgs e)
         {
-            //GameControl gameControl = new GameControl();
             gameControl.startGame();
             this.Visible = false;
-
             gameControl.GameClosing += (send, args) =>
             {
                 this.Close();
             };
-
-            //this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
