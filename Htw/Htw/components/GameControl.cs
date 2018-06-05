@@ -73,8 +73,7 @@ namespace wumpus.components {
                 {
                     highscores.StoreHighScore(form.getName(), playerScore);
                     highscores.DisplayHighScores();
-                };
-                               
+                };           
                 //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);

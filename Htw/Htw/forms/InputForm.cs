@@ -24,7 +24,6 @@ namespace wumpus.forms
             name = nameBox.Text;
             this.Hide();
             FormHiding.Invoke(this, null);
-            validName = true;
         }
     }
 }

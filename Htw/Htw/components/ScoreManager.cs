@@ -13,9 +13,8 @@ namespace wumpus.components
         private List<HighScore> highScoresList;
         private const int MAX_NUMBER_OF_HIGH_SCORES = 10;
 
-        public ScoreManager(string name)
+        public ScoreManager()
         {
-
         }
 
         public void LoadHighScores()
