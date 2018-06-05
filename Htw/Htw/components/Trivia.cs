@@ -53,7 +53,7 @@ namespace wumpus.components
         public String triviaFact()
         {
             countFact++;
-            if (countFact > fact.Count)
+            if (countFact >= fact.Count)
             {
                 countFact = 0;
             }
@@ -111,9 +111,10 @@ namespace wumpus.components
             }
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
-            while (randomArr.Contains(randomIndex)) { 
+            while (randomArr.Contains(randomIndex)) {
+                random = new Random();
                 randomIndex = random.Next(0, questions.Length);
-            randomArr.Add(randomIndex);
+                randomArr.Add(randomIndex);
         }
 
             return randomIndex;
