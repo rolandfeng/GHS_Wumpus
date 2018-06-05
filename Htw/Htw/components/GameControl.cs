@@ -25,7 +25,7 @@ namespace wumpus.components {
             sound = new Sound();
             trivia = new Trivia(this);
             form = new InputForm();
-            highscores = new ScoreManager("temp");
+            highscores = new ScoreManager();
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
         }
@@ -95,6 +95,7 @@ namespace wumpus.components {
         public void buyArrows() {
             //openTrivia(3, 2, 3);
             map.changeWumpusLocation(7);
+            graphics.Show("The Wumpus is in room 7 now");
         }
 
         public void openTrivia(int asked, int needed, int type) {
