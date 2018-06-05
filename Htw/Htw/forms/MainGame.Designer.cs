@@ -51,6 +51,8 @@
             this.southWestButton = new RoundButton();
             this.northEastButton = new RoundButton();
             this.northButton = new RoundButton();
+            this.playAgain = new System.Windows.Forms.Button();
+            this.quitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.arrowPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             this.SuspendLayout();
@@ -288,6 +290,26 @@
             this.northButton.UseVisualStyleBackColor = true;
             this.northButton.Click += new System.EventHandler(this.northButton_Click);
             // 
+            // playAgain
+            // 
+            this.playAgain.Location = new System.Drawing.Point(221, 363);
+            this.playAgain.Name = "playAgain";
+            this.playAgain.Size = new System.Drawing.Size(113, 52);
+            this.playAgain.TabIndex = 22;
+            this.playAgain.Text = "Play Again";
+            this.playAgain.UseVisualStyleBackColor = true;
+            this.playAgain.Click += new System.EventHandler(this.playAgain_Click);
+            // 
+            // quitButton
+            // 
+            this.quitButton.Location = new System.Drawing.Point(434, 363);
+            this.quitButton.Name = "quitButton";
+            this.quitButton.Size = new System.Drawing.Size(125, 52);
+            this.quitButton.TabIndex = 23;
+            this.quitButton.Text = "Quit";
+            this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +317,8 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1268, 989);
+            this.Controls.Add(this.quitButton);
+            this.Controls.Add(this.playAgain);
             this.Controls.Add(this.spaceshipPicture);
             this.Controls.Add(this.arrowPicture);
             this.Controls.Add(this.buySecretButton);
@@ -345,5 +369,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox arrowPicture;
         private System.Windows.Forms.PictureBox spaceshipPicture;
+        private System.Windows.Forms.Button playAgain;
+        private System.Windows.Forms.Button quitButton;
     }
 }
