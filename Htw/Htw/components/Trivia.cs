@@ -27,6 +27,7 @@ namespace wumpus.components
         private String[] fact;
         private int countFact;
 
+
         public Trivia(GameControl gameControl)
         {
             triviaForm = new TriviaForm(this);
@@ -41,6 +42,7 @@ namespace wumpus.components
             }
 
             fact = File.ReadAllLines("Resource/TriviaFacts.txt");
+            fact = new String[fact.Length];
             countFact = -1;
         }
 
