@@ -105,23 +105,25 @@ namespace wumpus.components
 
         public int randomGenerator()
         {
+            if (randomArr.Count == questions.Length)
+            {
+                randomArr.Clear();
+            }
+            int randomNum = 0;
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
             if (randomArr.Contains(randomIndex))
             {
                 int randomIndex2 = random.Next(0, questions.Length);
                 randomArr.Add(randomIndex2);
-                return randomIndex2;
+                randomNum = randomIndex2;
             }
             else
             {
                 randomArr.Add(randomIndex);
+                randomNum = randomIndex;
             }
-            if(randomArr.Count == questions.Length)
-            {
-                randomArr.Clear();
-            }
-            return randomIndex;
+            return randomNum;
 
         }
         public void askQuestion()
