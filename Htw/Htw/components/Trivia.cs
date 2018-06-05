@@ -24,7 +24,7 @@ namespace wumpus.components
 
         private ArrayList randomArr;
 
-        private String[] fact;
+        private ArrayList fact;
         private int countFact;
 
 
@@ -33,6 +33,7 @@ namespace wumpus.components
             triviaForm = new TriviaForm(this);
             this.gameControl = gameControl;
             randomArr = new ArrayList();
+            fact = new ArrayList();
 
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
             questions = new String[lines.Length][];
@@ -41,19 +42,22 @@ namespace wumpus.components
                 questions[i] = lines[i].Split(';');
             }
 
-            fact = File.ReadAllLines("Resource/TriviaFacts.txt");
-            fact = new String[fact.Length];
+            String[] factArr = File.ReadAllLines(path: "Resource/TriviaFacts.txt");
+            for (int k = 0; k < factArr.Length; k++)
+            {
+                fact.Add(factArr[k]);
+            }
             countFact = -1;
         }
 
         public String triviaFact()
         {
             countFact++;
-            if(countFact > fact.Length)
+            if(countFact > fact.Count)
             {
                 countFact = 0;
             }
-            return fact[countFact];
+            return (String) fact[countFact];
         }
 
         public void ShowTrivia()
@@ -109,7 +113,10 @@ namespace wumpus.components
                 randomArr.Add(randomIndex2);
                 return randomIndex2;
             }
-            randomArr.Add(randomIndex);
+            else
+            {
+                randomArr.Add(randomIndex);
+            }
             if(randomArr.Count == questions.Length)
             {
                 randomArr.Clear();
