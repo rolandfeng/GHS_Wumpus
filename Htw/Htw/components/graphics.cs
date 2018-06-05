@@ -57,7 +57,12 @@ namespace wumpus.components
         {
              System.Windows.Forms.MessageBox.Show(message);
 
-         }
+        }
+
+        public void endGame(bool success)
+        {
+            mainGame.endGame(success);
+        }
 
 
 
