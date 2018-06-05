@@ -25,7 +25,7 @@ namespace wumpus.components {
             sound = new Sound();
             trivia = new Trivia(this);
             form = new InputForm();
-            highscores = new ScoreManager(form.getName());
+            highscores = new ScoreManager("temp");
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
         }
@@ -45,6 +45,7 @@ namespace wumpus.components {
             player.updateStatus();
             graphics.update(newLoc);
             hazardWarnings(hazards);
+            //sound.playSound(Sound.Sounds.BackgroundMusic);
             if (map.pitFall()) {
                 pitInstance();
             }
@@ -67,7 +68,10 @@ namespace wumpus.components {
                 graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
                 if (highscores.testScore(playerScore)) {
-                    highscores.StoreHighScore(playerScore); 
+                    form.Show();
+                    string username = form.Text;
+                    //highscores.StoreHighScore(username, playerScore); 
+                    highscores.StoreHighScore(playerScore);
                 }
                 highscores.DisplayHighScores();
                 //end game --- option to play again?
@@ -88,7 +92,10 @@ namespace wumpus.components {
         }
 
         public void buyArrows() {
-            openTrivia(3, 2, 3);        
+            openTrivia(3, 2, 3);
+            /*int northRoom = (cave.getAllConnections(map.getWumpusLocation())[0]);
+            map.changePlayerLocation(northRoom);
+            graphics.update(northRoom);*/
         }
 
         public void openTrivia(int asked, int needed, int type) {
@@ -274,8 +281,6 @@ namespace wumpus.components {
             graphics.update(1);
             hazardWarnings(getHazardArray(1));
             sound.playSound(Sound.Sounds.BackgroundMusic);
-            form.Show();
-            displayHighscores();
         }
     }
 }
