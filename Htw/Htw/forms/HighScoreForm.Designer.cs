@@ -74,8 +74,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.Replay = new System.Windows.Forms.Button();
-            this.Quit = new System.Windows.Forms.Button();
+            this.Close = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,11 +84,10 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.39682F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.39683F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.39683F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.68072F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.17433F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07248F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07248F));
             this.tableLayoutPanel1.Controls.Add(this.ScoreColumn, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.DateColumn, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.PlayerColumn, 1, 0);
@@ -136,7 +134,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 10);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(50, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090361F));
@@ -160,7 +158,7 @@
             this.ScoreColumn.BackColor = System.Drawing.Color.Transparent;
             this.ScoreColumn.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoreColumn.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.ScoreColumn.Location = new System.Drawing.Point(326, 7);
+            this.ScoreColumn.Location = new System.Drawing.Point(330, 7);
             this.ScoreColumn.Name = "ScoreColumn";
             this.ScoreColumn.Size = new System.Drawing.Size(88, 31);
             this.ScoreColumn.TabIndex = 1;
@@ -173,7 +171,7 @@
             this.DateColumn.BackColor = System.Drawing.Color.Transparent;
             this.DateColumn.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateColumn.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.DateColumn.Location = new System.Drawing.Point(484, 7);
+            this.DateColumn.Location = new System.Drawing.Point(485, 7);
             this.DateColumn.Name = "DateColumn";
             this.DateColumn.Size = new System.Drawing.Size(78, 31);
             this.DateColumn.TabIndex = 2;
@@ -186,7 +184,7 @@
             this.PlayerColumn.BackColor = System.Drawing.Color.Transparent;
             this.PlayerColumn.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlayerColumn.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.PlayerColumn.Location = new System.Drawing.Point(168, 7);
+            this.PlayerColumn.Location = new System.Drawing.Point(174, 7);
             this.PlayerColumn.Name = "PlayerColumn";
             this.PlayerColumn.Size = new System.Drawing.Size(99, 31);
             this.PlayerColumn.TabIndex = 3;
@@ -199,7 +197,7 @@
             this.HighScore0.BackColor = System.Drawing.Color.Transparent;
             this.HighScore0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.HighScore0.ForeColor = System.Drawing.Color.White;
-            this.HighScore0.Location = new System.Drawing.Point(300, 56);
+            this.HighScore0.Location = new System.Drawing.Point(304, 56);
             this.HighScore0.Name = "HighScore0";
             this.HighScore0.Size = new System.Drawing.Size(140, 23);
             this.HighScore0.TabIndex = 4;
@@ -209,7 +207,7 @@
             // 
             this.HighScore1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore1.AutoSize = true;
-            this.HighScore1.Location = new System.Drawing.Point(301, 101);
+            this.HighScore1.Location = new System.Drawing.Point(305, 101);
             this.HighScore1.Name = "HighScore1";
             this.HighScore1.Size = new System.Drawing.Size(137, 23);
             this.HighScore1.TabIndex = 5;
@@ -219,7 +217,7 @@
             // 
             this.HighScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore2.AutoSize = true;
-            this.HighScore2.Location = new System.Drawing.Point(301, 146);
+            this.HighScore2.Location = new System.Drawing.Point(305, 146);
             this.HighScore2.Name = "HighScore2";
             this.HighScore2.Size = new System.Drawing.Size(138, 23);
             this.HighScore2.TabIndex = 6;
@@ -229,7 +227,7 @@
             // 
             this.HighScore3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore3.AutoSize = true;
-            this.HighScore3.Location = new System.Drawing.Point(301, 191);
+            this.HighScore3.Location = new System.Drawing.Point(305, 191);
             this.HighScore3.Name = "HighScore3";
             this.HighScore3.Size = new System.Drawing.Size(138, 23);
             this.HighScore3.TabIndex = 7;
@@ -239,7 +237,7 @@
             // 
             this.HighScore4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore4.AutoSize = true;
-            this.HighScore4.Location = new System.Drawing.Point(300, 236);
+            this.HighScore4.Location = new System.Drawing.Point(304, 236);
             this.HighScore4.Name = "HighScore4";
             this.HighScore4.Size = new System.Drawing.Size(140, 23);
             this.HighScore4.TabIndex = 8;
@@ -249,7 +247,7 @@
             // 
             this.HighScore5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore5.AutoSize = true;
-            this.HighScore5.Location = new System.Drawing.Point(300, 281);
+            this.HighScore5.Location = new System.Drawing.Point(304, 281);
             this.HighScore5.Name = "HighScore5";
             this.HighScore5.Size = new System.Drawing.Size(139, 23);
             this.HighScore5.TabIndex = 9;
@@ -259,7 +257,7 @@
             // 
             this.HighScore6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore6.AutoSize = true;
-            this.HighScore6.Location = new System.Drawing.Point(300, 326);
+            this.HighScore6.Location = new System.Drawing.Point(304, 326);
             this.HighScore6.Name = "HighScore6";
             this.HighScore6.Size = new System.Drawing.Size(139, 23);
             this.HighScore6.TabIndex = 10;
@@ -269,7 +267,7 @@
             // 
             this.HighScore7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore7.AutoSize = true;
-            this.HighScore7.Location = new System.Drawing.Point(300, 371);
+            this.HighScore7.Location = new System.Drawing.Point(304, 371);
             this.HighScore7.Name = "HighScore7";
             this.HighScore7.Size = new System.Drawing.Size(139, 23);
             this.HighScore7.TabIndex = 11;
@@ -279,7 +277,7 @@
             // 
             this.HighScore8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore8.AutoSize = true;
-            this.HighScore8.Location = new System.Drawing.Point(300, 416);
+            this.HighScore8.Location = new System.Drawing.Point(304, 416);
             this.HighScore8.Name = "HighScore8";
             this.HighScore8.Size = new System.Drawing.Size(140, 23);
             this.HighScore8.TabIndex = 12;
@@ -289,7 +287,7 @@
             // 
             this.HighScore9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HighScore9.AutoSize = true;
-            this.HighScore9.Location = new System.Drawing.Point(300, 463);
+            this.HighScore9.Location = new System.Drawing.Point(304, 463);
             this.HighScore9.Name = "HighScore9";
             this.HighScore9.Size = new System.Drawing.Size(139, 23);
             this.HighScore9.TabIndex = 13;
@@ -302,7 +300,7 @@
             this.Player0.BackColor = System.Drawing.Color.Transparent;
             this.Player0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Player0.ForeColor = System.Drawing.Color.White;
-            this.Player0.Location = new System.Drawing.Point(168, 56);
+            this.Player0.Location = new System.Drawing.Point(173, 56);
             this.Player0.Name = "Player0";
             this.Player0.Size = new System.Drawing.Size(100, 23);
             this.Player0.TabIndex = 14;
@@ -312,7 +310,7 @@
             // 
             this.Player1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player1.AutoSize = true;
-            this.Player1.Location = new System.Drawing.Point(169, 101);
+            this.Player1.Location = new System.Drawing.Point(175, 101);
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(97, 23);
             this.Player1.TabIndex = 15;
@@ -322,7 +320,7 @@
             // 
             this.Player2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player2.AutoSize = true;
-            this.Player2.Location = new System.Drawing.Point(169, 146);
+            this.Player2.Location = new System.Drawing.Point(174, 146);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(98, 23);
             this.Player2.TabIndex = 16;
@@ -332,7 +330,7 @@
             // 
             this.Player3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player3.AutoSize = true;
-            this.Player3.Location = new System.Drawing.Point(169, 191);
+            this.Player3.Location = new System.Drawing.Point(174, 191);
             this.Player3.Name = "Player3";
             this.Player3.Size = new System.Drawing.Size(98, 23);
             this.Player3.TabIndex = 17;
@@ -342,7 +340,7 @@
             // 
             this.Player4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player4.AutoSize = true;
-            this.Player4.Location = new System.Drawing.Point(168, 236);
+            this.Player4.Location = new System.Drawing.Point(173, 236);
             this.Player4.Name = "Player4";
             this.Player4.Size = new System.Drawing.Size(100, 23);
             this.Player4.TabIndex = 18;
@@ -352,7 +350,7 @@
             // 
             this.Player5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player5.AutoSize = true;
-            this.Player5.Location = new System.Drawing.Point(168, 281);
+            this.Player5.Location = new System.Drawing.Point(174, 281);
             this.Player5.Name = "Player5";
             this.Player5.Size = new System.Drawing.Size(99, 23);
             this.Player5.TabIndex = 19;
@@ -362,7 +360,7 @@
             // 
             this.Player6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player6.AutoSize = true;
-            this.Player6.Location = new System.Drawing.Point(168, 326);
+            this.Player6.Location = new System.Drawing.Point(174, 326);
             this.Player6.Name = "Player6";
             this.Player6.Size = new System.Drawing.Size(99, 23);
             this.Player6.TabIndex = 20;
@@ -372,7 +370,7 @@
             // 
             this.Player7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player7.AutoSize = true;
-            this.Player7.Location = new System.Drawing.Point(168, 371);
+            this.Player7.Location = new System.Drawing.Point(174, 371);
             this.Player7.Name = "Player7";
             this.Player7.Size = new System.Drawing.Size(99, 23);
             this.Player7.TabIndex = 21;
@@ -382,7 +380,7 @@
             // 
             this.Player8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player8.AutoSize = true;
-            this.Player8.Location = new System.Drawing.Point(168, 416);
+            this.Player8.Location = new System.Drawing.Point(173, 416);
             this.Player8.Name = "Player8";
             this.Player8.Size = new System.Drawing.Size(100, 23);
             this.Player8.TabIndex = 22;
@@ -392,7 +390,7 @@
             // 
             this.Player9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player9.AutoSize = true;
-            this.Player9.Location = new System.Drawing.Point(168, 463);
+            this.Player9.Location = new System.Drawing.Point(174, 463);
             this.Player9.Name = "Player9";
             this.Player9.Size = new System.Drawing.Size(99, 23);
             this.Player9.TabIndex = 23;
@@ -405,7 +403,7 @@
             this.Date0.BackColor = System.Drawing.Color.Transparent;
             this.Date0.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Date0.ForeColor = System.Drawing.Color.White;
-            this.Date0.Location = new System.Drawing.Point(485, 56);
+            this.Date0.Location = new System.Drawing.Point(486, 56);
             this.Date0.Name = "Date0";
             this.Date0.Size = new System.Drawing.Size(76, 23);
             this.Date0.TabIndex = 24;
@@ -418,7 +416,7 @@
             this.Date1.BackColor = System.Drawing.Color.Transparent;
             this.Date1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Date1.ForeColor = System.Drawing.Color.White;
-            this.Date1.Location = new System.Drawing.Point(486, 101);
+            this.Date1.Location = new System.Drawing.Point(488, 101);
             this.Date1.Name = "Date1";
             this.Date1.Size = new System.Drawing.Size(73, 23);
             this.Date1.TabIndex = 25;
@@ -431,7 +429,7 @@
             this.Date2.BackColor = System.Drawing.Color.Transparent;
             this.Date2.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.Date2.ForeColor = System.Drawing.Color.White;
-            this.Date2.Location = new System.Drawing.Point(486, 146);
+            this.Date2.Location = new System.Drawing.Point(487, 146);
             this.Date2.Name = "Date2";
             this.Date2.Size = new System.Drawing.Size(74, 23);
             this.Date2.TabIndex = 26;
@@ -441,7 +439,7 @@
             // 
             this.Date3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date3.AutoSize = true;
-            this.Date3.Location = new System.Drawing.Point(486, 191);
+            this.Date3.Location = new System.Drawing.Point(487, 191);
             this.Date3.Name = "Date3";
             this.Date3.Size = new System.Drawing.Size(74, 23);
             this.Date3.TabIndex = 27;
@@ -451,7 +449,7 @@
             // 
             this.Date4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date4.AutoSize = true;
-            this.Date4.Location = new System.Drawing.Point(485, 236);
+            this.Date4.Location = new System.Drawing.Point(486, 236);
             this.Date4.Name = "Date4";
             this.Date4.Size = new System.Drawing.Size(76, 23);
             this.Date4.TabIndex = 28;
@@ -461,7 +459,7 @@
             // 
             this.Date5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date5.AutoSize = true;
-            this.Date5.Location = new System.Drawing.Point(485, 281);
+            this.Date5.Location = new System.Drawing.Point(487, 281);
             this.Date5.Name = "Date5";
             this.Date5.Size = new System.Drawing.Size(75, 23);
             this.Date5.TabIndex = 29;
@@ -471,7 +469,7 @@
             // 
             this.Date6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date6.AutoSize = true;
-            this.Date6.Location = new System.Drawing.Point(485, 326);
+            this.Date6.Location = new System.Drawing.Point(487, 326);
             this.Date6.Name = "Date6";
             this.Date6.Size = new System.Drawing.Size(75, 23);
             this.Date6.TabIndex = 30;
@@ -481,7 +479,7 @@
             // 
             this.Date7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date7.AutoSize = true;
-            this.Date7.Location = new System.Drawing.Point(485, 371);
+            this.Date7.Location = new System.Drawing.Point(487, 371);
             this.Date7.Name = "Date7";
             this.Date7.Size = new System.Drawing.Size(75, 23);
             this.Date7.TabIndex = 31;
@@ -491,7 +489,7 @@
             // 
             this.Date8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date8.AutoSize = true;
-            this.Date8.Location = new System.Drawing.Point(485, 416);
+            this.Date8.Location = new System.Drawing.Point(486, 416);
             this.Date8.Name = "Date8";
             this.Date8.Size = new System.Drawing.Size(76, 23);
             this.Date8.TabIndex = 32;
@@ -501,7 +499,7 @@
             // 
             this.Date9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Date9.AutoSize = true;
-            this.Date9.Location = new System.Drawing.Point(485, 463);
+            this.Date9.Location = new System.Drawing.Point(487, 463);
             this.Date9.Name = "Date9";
             this.Date9.Size = new System.Drawing.Size(75, 23);
             this.Date9.TabIndex = 33;
@@ -514,7 +512,7 @@
             this.RankColumn.BackColor = System.Drawing.Color.Transparent;
             this.RankColumn.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RankColumn.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.RankColumn.Location = new System.Drawing.Point(28, 7);
+            this.RankColumn.Location = new System.Drawing.Point(31, 7);
             this.RankColumn.Name = "RankColumn";
             this.RankColumn.Size = new System.Drawing.Size(85, 31);
             this.RankColumn.TabIndex = 34;
@@ -527,7 +525,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 57);
+            this.label1.Location = new System.Drawing.Point(63, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 21);
             this.label1.TabIndex = 35;
@@ -537,7 +535,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 101);
+            this.label2.Location = new System.Drawing.Point(64, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 23);
             this.label2.TabIndex = 36;
@@ -547,7 +545,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 146);
+            this.label3.Location = new System.Drawing.Point(64, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 23);
             this.label3.TabIndex = 37;
@@ -557,7 +555,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 191);
+            this.label4.Location = new System.Drawing.Point(63, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 23);
             this.label4.TabIndex = 38;
@@ -567,7 +565,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 236);
+            this.label5.Location = new System.Drawing.Point(63, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 23);
             this.label5.TabIndex = 39;
@@ -577,7 +575,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 281);
+            this.label6.Location = new System.Drawing.Point(63, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 23);
             this.label6.TabIndex = 40;
@@ -587,7 +585,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(60, 326);
+            this.label7.Location = new System.Drawing.Point(63, 326);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 23);
             this.label7.TabIndex = 41;
@@ -597,7 +595,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(60, 371);
+            this.label8.Location = new System.Drawing.Point(63, 371);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 23);
             this.label8.TabIndex = 42;
@@ -607,7 +605,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(60, 416);
+            this.label9.Location = new System.Drawing.Point(63, 416);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 23);
             this.label9.TabIndex = 43;
@@ -617,35 +615,23 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(55, 463);
+            this.label10.Location = new System.Drawing.Point(58, 463);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 23);
             this.label10.TabIndex = 44;
             this.label10.Text = "10";
             // 
-            // Replay
+            // Close
             // 
-            this.Replay.BackColor = System.Drawing.Color.Transparent;
-            this.Replay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Replay.BackgroundImage")));
-            this.Replay.ForeColor = System.Drawing.Color.White;
-            this.Replay.Location = new System.Drawing.Point(155, 506);
-            this.Replay.Name = "Replay";
-            this.Replay.Size = new System.Drawing.Size(113, 43);
-            this.Replay.TabIndex = 1;
-            this.Replay.Text = "Play Again";
-            this.Replay.UseVisualStyleBackColor = false;
-            // 
-            // Quit
-            // 
-            this.Quit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Quit.BackgroundImage")));
-            this.Quit.ForeColor = System.Drawing.Color.White;
-            this.Quit.Location = new System.Drawing.Point(321, 507);
-            this.Quit.Name = "Quit";
-            this.Quit.Size = new System.Drawing.Size(107, 42);
-            this.Quit.TabIndex = 2;
-            this.Quit.Text = "Quit";
-            this.Quit.UseVisualStyleBackColor = true;
-            this.Quit.Click += new System.EventHandler(this.Quit_Click);
+            this.Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Close.BackgroundImage")));
+            this.Close.ForeColor = System.Drawing.Color.White;
+            this.Close.Location = new System.Drawing.Point(242, 507);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(107, 42);
+            this.Close.TabIndex = 2;
+            this.Close.Text = "Close";
+            this.Close.UseVisualStyleBackColor = true;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // HighScoresForm
             // 
@@ -653,9 +639,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.Quit);
-            this.Controls.Add(this.Replay);
+            this.ClientSize = new System.Drawing.Size(684, 561);
+            this.Controls.Add(this.Close);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "HighScoresForm";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -670,8 +655,7 @@
         private System.Windows.Forms.Label ScoreColumn;
         private System.Windows.Forms.Label DateColumn;
         private System.Windows.Forms.Label PlayerColumn;
-        private System.Windows.Forms.Button Replay;
-        private System.Windows.Forms.Button Quit;
+        private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Label HighScore0;
         private System.Windows.Forms.Label HighScore1;
         private System.Windows.Forms.Label HighScore2;

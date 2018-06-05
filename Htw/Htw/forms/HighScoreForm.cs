@@ -58,16 +58,11 @@ namespace wumpus.forms
             Date9.Text = "" + highScoresList.ElementAt(9).getDate();
         }
 
-        private void Replay_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainMenuForm mainMenuForm = new MainMenuForm();
-            mainMenuForm.Show();
         }
 
-        private void Quit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
     }
 }
