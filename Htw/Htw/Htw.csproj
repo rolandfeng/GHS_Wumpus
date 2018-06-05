@@ -87,7 +87,6 @@
     <Compile Include="forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="components\Example.cs" />
     <Compile Include="forms\TriviaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +255,9 @@
     <Content Include="Resource\AlternativeCave.txt" />
     <Content Include="Resource\ExtraWallsCave.txt" />
     <Content Include="Resource\SpiralCave.txt" />
+    <EmbeddedResource Include="Resource\TriviaFacts.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>
