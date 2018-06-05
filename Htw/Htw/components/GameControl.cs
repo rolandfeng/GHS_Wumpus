@@ -74,7 +74,7 @@ namespace wumpus.components {
                 openTrivia(5, 3, 1);
                 map.changeWumpusLocation(wumpusFleeLoc(true));
             }
-            graphics.Show(trivia.triviaFact());
+            graphics.Show("Fun fact: " + trivia.triviaFact());
             sound.playSound(Sound.Sounds.BackgroundMusic);
         }
 
