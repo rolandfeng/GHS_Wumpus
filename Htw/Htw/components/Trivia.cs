@@ -53,11 +53,11 @@ namespace wumpus.components
         public String triviaFact()
         {
             countFact++;
-            if(countFact > fact.Count)
+            if (countFact > fact.Count)
             {
                 countFact = 0;
             }
-            return (String) fact[countFact];
+            return (String)fact[countFact];
         }
 
         public void ShowTrivia()
@@ -65,7 +65,7 @@ namespace wumpus.components
             triviaForm.Show();
         }
 
-        public void ask(int questionsAsk, int answerCorrect, int type) 
+        public void ask(int questionsAsk, int answerCorrect, int type)
         {
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
@@ -99,8 +99,8 @@ namespace wumpus.components
             if (triviaForm.RightAnswer())
             {
                 incrementCorrect++;
-            } 
-            ask(questionsAsk, answerCorrect, type); 
+            }
+            ask(questionsAsk, answerCorrect, type);
         }
 
         public int randomGenerator()
@@ -109,23 +109,17 @@ namespace wumpus.components
             {
                 randomArr.Clear();
             }
-            int randomNum = 0;
             Random random = new Random();
             int randomIndex = random.Next(0, questions.Length);
-            if (randomArr.Contains(randomIndex))
-            {
-                int randomIndex2 = random.Next(0, questions.Length);
-                randomArr.Add(randomIndex2);
-                randomNum = randomIndex2;
-            }
-            else
-            {
-                randomArr.Add(randomIndex);
-                randomNum = randomIndex;
-            }
-            return randomNum;
+            while (randomArr.Contains(randomIndex)) { 
+                randomIndex = random.Next(0, questions.Length);
+            randomArr.Add(randomIndex);
+        }
+
+            return randomIndex;
 
         }
+
         public void askQuestion()
         {
             int randomIndex = randomGenerator();
