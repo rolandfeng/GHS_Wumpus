@@ -67,13 +67,14 @@ namespace wumpus.components {
                 sound.playSound(Sound.Sounds.MonsterDie);
                 graphics.Show("You killed the Wumpus!");
                 int playerScore = player.getScore();
-                if (highscores.testScore(playerScore)) {
-                    form.Show();
-                    string username = form.Text;
-                    //highscores.StoreHighScore(username, playerScore); 
-                    highscores.StoreHighScore(playerScore);
-                }
-                highscores.DisplayHighScores();
+                highscores.LoadHighScores();
+                form.Show();
+                while (form.getIsValid())
+                {
+                    highscores.StoreHighScore(form.getName(), playerScore);
+                    highscores.DisplayHighScores();
+                    form.changeValid(false);
+                }               
                 //end game --- option to play again?
             } else {
                 sound.playSound(Sound.Sounds.ArrowMiss);
@@ -92,10 +93,8 @@ namespace wumpus.components {
         }
 
         public void buyArrows() {
-            openTrivia(3, 2, 3);
-            /*int northRoom = (cave.getAllConnections(map.getWumpusLocation())[0]);
-            map.changePlayerLocation(northRoom);
-            graphics.update(northRoom);*/
+            //openTrivia(3, 2, 3);
+            map.changeWumpusLocation(7);
         }
 
         public void openTrivia(int asked, int needed, int type) {
@@ -145,8 +144,7 @@ namespace wumpus.components {
         }
 
         public void displayHighscores() {
-            highscores.setName("bokchewy");
-            highscores.StoreHighScore(234);
+            highscores.StoreHighScore("bokchewy", 234);
             highscores.DisplayHighScores();
         }
 

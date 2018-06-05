@@ -20,7 +20,8 @@ namespace wumpus.forms
         private void Proceed_Click(object sender, EventArgs e)
         {
             name = nameBox.Text;
-            this.Close();
+            this.Hide();
+            validName = true;
         }
     }
 }

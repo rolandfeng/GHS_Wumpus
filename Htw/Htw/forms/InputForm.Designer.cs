@@ -2,7 +2,8 @@
 {
     partial class InputForm
     {
-        string name;
+        private string name;
+        private bool validName;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -29,9 +30,18 @@
         /// </summary>
         public string getName()
         {
-            return this.name;
+            return name;
         }
 
+        public bool getIsValid()
+        {
+            return validName;
+        }
+
+        public void changeValid(bool done)
+        {
+            validName = done;
+        }
 
         private void InitializeComponent()
         {
