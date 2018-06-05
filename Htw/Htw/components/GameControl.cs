@@ -30,9 +30,27 @@ namespace wumpus.components {
             graphics = new Graphics(this, player, map, cave);
         }
 
-        public void closeGame()
-        {
+        public void closeGame() {
             GameClosing.Invoke(this, null);
+        }
+
+        public void pitInstance() {
+            openTrivia(3, 2, 2);
+        }
+
+        public void buySecret() {
+            openTrivia(3, 2, 4);
+        }
+
+        public void buyArrows() {
+            openTrivia(3, 2, 3);
+            //map.changeWumpusLocation(7);
+            //graphics.Show("The Wumpus is room 7 now");
+        }
+
+        public void displayHighscores() {
+            highscores.LoadHighScores();
+            highscores.DisplayHighScores();
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
@@ -91,12 +109,6 @@ namespace wumpus.components {
             }
         }
 
-        public void buyArrows() {
-            openTrivia(3, 2, 3);
-            //map.changeWumpusLocation(7);
-            //graphics.Show("The Wumpus is room 7 now");
-        }
-
         public void openTrivia(int asked, int needed, int type) {
             if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
@@ -109,9 +121,6 @@ namespace wumpus.components {
             }
         }
 
-        public void buySecret() {
-            openTrivia(3, 2, 4);
-        }
         public string produceSecret() {
             Random r = new Random();
             int whichHint = r.Next(0, 8); //(0, n) = range from 0 to n-1
@@ -138,14 +147,6 @@ namespace wumpus.components {
             else { //more troll hints, can add more
                 return ("It is turn " + player.getTurn() + "!");
             }
-        }
-        public void pitInstance() {
-            openTrivia(3, 2, 2);
-        }
-
-        public void displayHighscores() {
-            highscores.LoadHighScores();
-            highscores.DisplayHighScores();
         }
 
         private bool[] getHazardArray(int newLoc) { //create array of booleans for each obstacle, if near or same room
