@@ -32,16 +32,6 @@
             return name;
         }
 
-        public bool getIsValid()
-        {
-            return validName;
-        }
-
-        public void changeValid(bool done)
-        {
-            validName = done;
-        }
-
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputForm));

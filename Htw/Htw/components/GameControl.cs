@@ -94,7 +94,6 @@ namespace wumpus.components {
         public void buyArrows() {
             //openTrivia(3, 2, 3);
             map.changeWumpusLocation(7);
-            graphics.Show("The Wumpus is in room 7 now");
         }
 
         public void openTrivia(int asked, int needed, int type) {
