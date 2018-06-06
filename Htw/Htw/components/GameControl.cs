@@ -62,7 +62,6 @@ namespace wumpus.components {
             player.updateStatus();
             graphics.update(newLoc);
             hazardWarnings(hazards);
-
             if (map.pitFall()) {
                 pitInstance();
             }
