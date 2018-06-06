@@ -668,7 +668,7 @@ namespace wumpus.forms
 
         private void playAgain_Click(object sender, EventArgs e)
         {
-            gameControl.closeGame();
+            //gameControl.closeGame();
             gameControl.startGame();
         }
 

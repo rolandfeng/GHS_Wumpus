@@ -62,7 +62,6 @@ namespace wumpus.components {
             player.updateStatus();
             graphics.update(newLoc);
             hazardWarnings(hazards);
-
             if (map.pitFall()) {
                 pitInstance();
             }
@@ -114,6 +113,7 @@ namespace wumpus.components {
             if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for trivia!");
+                graphics.endGame(false);
             } else {
                 player.changeCoinCount(-2);
                 graphics.updateCoins();
