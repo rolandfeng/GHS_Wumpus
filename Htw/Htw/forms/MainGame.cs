@@ -74,6 +74,7 @@ namespace wumpus.forms
             this.timer = true;
             playAgain.Visible = false;
             quitButton.Visible = false;
+            viewHighscores.Visible = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -596,6 +597,7 @@ namespace wumpus.forms
             ShootArrowButton.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
+            viewHighscores.Visible = true;
             if (result) {
                 BackgroundImage = Properties.Resources.gameOverWin;
             } else {
@@ -614,6 +616,11 @@ namespace wumpus.forms
         private void quitButton_Click(object sender, EventArgs e)
         {
             gameControl.closeGame();
+        }
+
+        private void viewHighscores_Click(object sender, EventArgs e)
+        {
+            gameControl.displayHighscores();
         }
     }
 }
