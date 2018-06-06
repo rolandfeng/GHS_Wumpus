@@ -76,9 +76,9 @@
             this.NumberOfArrowsLabel.Location = new System.Drawing.Point(2214, 65);
             this.NumberOfArrowsLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NumberOfArrowsLabel.Name = "NumberOfArrowsLabel";
-            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(248, 28);
+            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(229, 28);
             this.NumberOfArrowsLabel.TabIndex = 7;
-            this.NumberOfArrowsLabel.Text = "Number of Arrows";
+            this.NumberOfArrowsLabel.Text = "Number of Lasers\r\n";
             // 
             // NorthRoomsLabel
             // 
@@ -166,7 +166,7 @@
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(324, 44);
             this.PurchaseArrowsButton.TabIndex = 15;
-            this.PurchaseArrowsButton.Text = "Purchase Arrows";
+            this.PurchaseArrowsButton.Text = "Purchase Lasers";
             this.PurchaseArrowsButton.UseVisualStyleBackColor = true;
             this.PurchaseArrowsButton.Click += new System.EventHandler(this.PurchaseArrowsButton_Click);
             // 
@@ -178,7 +178,7 @@
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(324, 44);
             this.ShootArrowButton.TabIndex = 16;
-            this.ShootArrowButton.Text = "Shoot Arrow";
+            this.ShootArrowButton.Text = "Shoot Lasers";
             this.ShootArrowButton.UseVisualStyleBackColor = true;
             this.ShootArrowButton.Click += new System.EventHandler(this.ShootArrowButton_Click);
             // 
