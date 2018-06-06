@@ -310,34 +310,49 @@
             // 
             // playAgain
             // 
+            this.playAgain.AutoSize = true;
+            this.playAgain.BackColor = System.Drawing.Color.Transparent;
+            this.playAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.playAgain.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playAgain.ForeColor = System.Drawing.Color.White;
             this.playAgain.Location = new System.Drawing.Point(680, 499);
             this.playAgain.Margin = new System.Windows.Forms.Padding(6);
             this.playAgain.Name = "playAgain";
             this.playAgain.Size = new System.Drawing.Size(250, 100);
             this.playAgain.TabIndex = 22;
             this.playAgain.Text = "Play Again";
-            this.playAgain.UseVisualStyleBackColor = true;
+            this.playAgain.UseVisualStyleBackColor = false;
             this.playAgain.Click += new System.EventHandler(this.playAgain_Click);
             // 
             // quitButton
             // 
+            this.quitButton.AutoSize = true;
+            this.quitButton.BackColor = System.Drawing.Color.Transparent;
+            this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.quitButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quitButton.ForeColor = System.Drawing.Color.White;
             this.quitButton.Location = new System.Drawing.Point(1547, 500);
             this.quitButton.Margin = new System.Windows.Forms.Padding(6);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(250, 100);
             this.quitButton.TabIndex = 23;
             this.quitButton.Text = "Quit";
-            this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.UseVisualStyleBackColor = false;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // viewHighscores
             // 
+            this.viewHighscores.AutoSize = true;
+            this.viewHighscores.BackColor = System.Drawing.Color.Transparent;
+            this.viewHighscores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.viewHighscores.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewHighscores.ForeColor = System.Drawing.Color.White;
             this.viewHighscores.Location = new System.Drawing.Point(1111, 499);
             this.viewHighscores.Name = "viewHighscores";
-            this.viewHighscores.Size = new System.Drawing.Size(250, 100);
+            this.viewHighscores.Size = new System.Drawing.Size(317, 100);
             this.viewHighscores.TabIndex = 24;
             this.viewHighscores.Text = "View Highscores";
-            this.viewHighscores.UseVisualStyleBackColor = true;
+            this.viewHighscores.UseVisualStyleBackColor = false;
             this.viewHighscores.Click += new System.EventHandler(this.viewHighscores_Click);
             // 
             // MainGame
