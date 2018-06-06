@@ -359,7 +359,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::wumpus.Properties.Resources.gameOverWin;
+            this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2536, 1783);
             this.Controls.Add(this.viewHighscores);
