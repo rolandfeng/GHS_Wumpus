@@ -16,6 +16,7 @@ namespace wumpus.components {
         private InputForm form;
         private ScoreManager highscores;
         private Player player;
+        private bool hazardInstance;
 
         public event EventHandler GameClosing;
 
@@ -28,6 +29,7 @@ namespace wumpus.components {
             highscores = new ScoreManager();
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
+            hazardInstance = false;
         }
 
         public void closeGame() {
@@ -35,6 +37,7 @@ namespace wumpus.components {
         }
 
         public void pitInstance() {
+            hazardInstance = true;
             openTrivia(3, 2, 2);
         }
 
@@ -70,6 +73,7 @@ namespace wumpus.components {
                 hazardWarnings(getHazardArray(map.getPlayerLocation()));
             }
             if (newLoc == map.getWumpusLocation()) {
+                hazardInstance = true;
                 openTrivia(5, 3, 1);
                 map.changeWumpusLocation(wumpusFleeLoc(true));
             }
@@ -113,10 +117,14 @@ namespace wumpus.components {
             if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for trivia!");
-                graphics.endGame(false);
+                if (hazardInstance) {
+                    graphics.endGame(false);
+                    hazardInstance = false;
+                }
             } else {
                 player.changeCoinCount(-2);
                 graphics.updateCoins();
+                graphics.Show("Answer " + needed + " of " + asked + " questions correctly to win!");
                 trivia.ShowTrivia();
                 trivia.ask(asked, needed, type);
             }
