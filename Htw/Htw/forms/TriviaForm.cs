@@ -62,7 +62,7 @@ namespace wumpus.forms
         private void button1_Click(object sender, EventArgs e)
         {
             int x = 1;
-            if (rightAnswerIndex == x)
+            if (rightAnswerIndex == x)  //checks if button clicked is right answer
             {
                 answerRight = true;
             }
@@ -137,6 +137,7 @@ namespace wumpus.forms
 
         private void TriviaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //does not allow user to exit trivia form
             e.Cancel = true;
         }
  
