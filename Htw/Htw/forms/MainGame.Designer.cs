@@ -60,6 +60,7 @@
             this.laserSouthWestPicture = new System.Windows.Forms.PictureBox();
             this.laserNorthEastPicture = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.planetLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.laserNorthPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserSouthPicture)).BeginInit();
@@ -419,6 +420,18 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // planetLabel
+            // 
+            this.planetLabel.AutoSize = true;
+            this.planetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.planetLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.planetLabel.ForeColor = System.Drawing.Color.White;
+            this.planetLabel.Location = new System.Drawing.Point(26, 25);
+            this.planetLabel.Name = "planetLabel";
+            this.planetLabel.Size = new System.Drawing.Size(238, 40);
+            this.planetLabel.TabIndex = 30;
+            this.planetLabel.Text = "planetLabel";
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -426,6 +439,7 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1443, 840);
+            this.Controls.Add(this.planetLabel);
             this.Controls.Add(this.laserNorthEastPicture);
             this.Controls.Add(this.laserSouthWestPicture);
             this.Controls.Add(this.laserSouthEastPicture);
@@ -499,5 +513,6 @@
         private System.Windows.Forms.PictureBox laserSouthWestPicture;
         private System.Windows.Forms.PictureBox laserNorthEastPicture;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label planetLabel;
     }
 }

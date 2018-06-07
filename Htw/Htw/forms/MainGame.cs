@@ -122,6 +122,10 @@ namespace wumpus.forms
             //update arrows
             NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
 
+            //update label
+            //planetLabel.Text = "Current Planet: " + name[currentRoom - 1];
+
+            
             //update available doors
             
             if (count == 0)
@@ -136,6 +140,7 @@ namespace wumpus.forms
                 southEastButton.Visible = false;
                 SouthEastRoomsLabel.Visible = false;
                 BackgroundImage = image[0];
+                planetLabel.Text = "Current Planet: Pandora-1";
                 count++;
             }
         }
@@ -168,6 +173,8 @@ namespace wumpus.forms
             int[] connections;
             connections = cave.getAllConnections(currentRoom);
             RoundButton[] buttonArray = { northButton, northEastButton, northWestButton, southButton, southEastButton, southWestButton };
+            planetLabel.Text = "Current Planet: " + name[currentRoom - 1];
+
             Label[] labelArray = { NorthRoomsLabel, NorthEastRoomsLabel, NorthWestRoomsLabel, SouthRoomsLabel, SouthEastRoomsLabel, SouthWestRoomsLabel };
             for (int i = 0; i < 6; i++)
             {
@@ -549,6 +556,7 @@ namespace wumpus.forms
             PurchaseArrowsButton.Visible = false;
             buySecretButton.Visible = false;
             ShootArrowButton.Visible = false;
+            planetLabel.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
             viewHighscores.Visible = true;
