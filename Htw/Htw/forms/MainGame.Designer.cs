@@ -206,6 +206,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // laserNorthPicture
@@ -214,7 +215,7 @@
             this.laserNorthPicture.ErrorImage = ((System.Drawing.Image)(resources.GetObject("laserNorthPicture.ErrorImage")));
             this.laserNorthPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserNorthPicture.Image")));
             this.laserNorthPicture.Location = new System.Drawing.Point(549, 201);
-            this.laserNorthPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laserNorthPicture.Margin = new System.Windows.Forms.Padding(2);
             this.laserNorthPicture.Name = "laserNorthPicture";
             this.laserNorthPicture.Size = new System.Drawing.Size(51, 35);
             this.laserNorthPicture.TabIndex = 20;
@@ -225,7 +226,7 @@
             this.spaceshipPicture.BackColor = System.Drawing.Color.Transparent;
             this.spaceshipPicture.Image = ((System.Drawing.Image)(resources.GetObject("spaceshipPicture.Image")));
             this.spaceshipPicture.Location = new System.Drawing.Point(533, 260);
-            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(2);
             this.spaceshipPicture.Name = "spaceshipPicture";
             this.spaceshipPicture.Size = new System.Drawing.Size(122, 101);
             this.spaceshipPicture.TabIndex = 21;
@@ -341,7 +342,7 @@
             this.viewHighscores.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewHighscores.ForeColor = System.Drawing.Color.White;
             this.viewHighscores.Location = new System.Drawing.Point(555, 259);
-            this.viewHighscores.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.viewHighscores.Margin = new System.Windows.Forms.Padding(1);
             this.viewHighscores.Name = "viewHighscores";
             this.viewHighscores.Size = new System.Drawing.Size(166, 52);
             this.viewHighscores.TabIndex = 24;
@@ -354,7 +355,7 @@
             this.laserSouthPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserSouthPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserSouthPicture.Image")));
             this.laserSouthPicture.Location = new System.Drawing.Point(549, 335);
-            this.laserSouthPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laserSouthPicture.Margin = new System.Windows.Forms.Padding(2);
             this.laserSouthPicture.Name = "laserSouthPicture";
             this.laserSouthPicture.Size = new System.Drawing.Size(58, 36);
             this.laserSouthPicture.TabIndex = 25;
@@ -365,7 +366,7 @@
             this.laserNorthWestPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserNorthWestPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserNorthWestPicture.BackgroundImage")));
             this.laserNorthWestPicture.Location = new System.Drawing.Point(479, 246);
-            this.laserNorthWestPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laserNorthWestPicture.Margin = new System.Windows.Forms.Padding(2);
             this.laserNorthWestPicture.Name = "laserNorthWestPicture";
             this.laserNorthWestPicture.Size = new System.Drawing.Size(51, 30);
             this.laserNorthWestPicture.TabIndex = 26;
@@ -376,7 +377,7 @@
             this.laserSouthEastPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserSouthEastPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserSouthEastPicture.BackgroundImage")));
             this.laserSouthEastPicture.Location = new System.Drawing.Point(626, 302);
-            this.laserSouthEastPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laserSouthEastPicture.Margin = new System.Windows.Forms.Padding(2);
             this.laserSouthEastPicture.Name = "laserSouthEastPicture";
             this.laserSouthEastPicture.Size = new System.Drawing.Size(54, 30);
             this.laserSouthEastPicture.TabIndex = 27;
@@ -387,7 +388,7 @@
             this.laserSouthWestPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserSouthWestPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserSouthWestPicture.BackgroundImage")));
             this.laserSouthWestPicture.Location = new System.Drawing.Point(479, 302);
-            this.laserSouthWestPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laserSouthWestPicture.Margin = new System.Windows.Forms.Padding(2);
             this.laserSouthWestPicture.Name = "laserSouthWestPicture";
             this.laserSouthWestPicture.Size = new System.Drawing.Size(51, 30);
             this.laserSouthWestPicture.TabIndex = 28;
@@ -398,7 +399,7 @@
             this.laserNorthEastPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserNorthEastPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserNorthEastPicture.BackgroundImage")));
             this.laserNorthEastPicture.Location = new System.Drawing.Point(626, 246);
-            this.laserNorthEastPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laserNorthEastPicture.Margin = new System.Windows.Forms.Padding(2);
             this.laserNorthEastPicture.Name = "laserNorthEastPicture";
             this.laserNorthEastPicture.Size = new System.Drawing.Size(48, 30);
             this.laserNorthEastPicture.TabIndex = 29;
@@ -406,6 +407,7 @@
             // 
             // timer2
             // 
+            this.timer2.Interval = 20;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // planetLabel
