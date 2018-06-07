@@ -117,6 +117,7 @@ namespace wumpus.components {
                     graphics.endGame(false);
                 }
                 map.changeWumpusLocation(wumpusFleeLoc(false));
+                sound.playSound(Sound.Sounds.BackgroundMusic);
             }
         }
 
