@@ -105,7 +105,7 @@ namespace wumpus.components {
                     highscores.DisplayHighScores();
                 };           
             } else {
-                sound.playSound(Sound.Sounds.ArrowMiss);
+                sound.playSound(Sound.Sounds.ArrowImpact);
                 if (cave.isAdjacent(map.getPlayerLocation(), map.getWumpusLocation())) {
                     graphics.Show("You missed but alerted the Wumpus! The Wumpus has moved to a new planet!");
                 } else {
@@ -117,6 +117,7 @@ namespace wumpus.components {
                     graphics.endGame(false);
                 }
                 map.changeWumpusLocation(wumpusFleeLoc(false));
+                sound.playSound(Sound.Sounds.BackgroundMusic);
             }
         }
 
@@ -124,6 +125,7 @@ namespace wumpus.components {
             if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for trivia!");
+                sound.playSound(Sound.Sounds.BackgroundMusic);
                 if (hazardInstance) {
                     graphics.endGame(false);
                     hazardInstance = false;
@@ -269,24 +271,29 @@ namespace wumpus.components {
                 } else {
                     sound.playSound(Sound.Sounds.TriviaRight);
                     graphics.Show("You survived!");
+                    sound.playSound(Sound.Sounds.BackgroundMusic);
                 }
             } else if (type == 3) {//arrows
                 if (succeed) {
                     player.changeArrowCount(2);
                     sound.playSound(Sound.Sounds.TriviaRight);
                     graphics.Show("Well done!");
+                    sound.playSound(Sound.Sounds.BackgroundMusic);
                 } else {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     graphics.Show("Better luck next time!");
+                    sound.playSound(Sound.Sounds.BackgroundMusic);
                 }
                 graphics.updateArrows();
             } else if (type == 4) {//secret
                 if (succeed) {
                     sound.playSound(Sound.Sounds.TriviaRight);
                     graphics.Show(produceSecret());
+                    sound.playSound(Sound.Sounds.BackgroundMusic);
                 } else {
                     sound.playSound(Sound.Sounds.TriviaWrong);
                     graphics.Show("Better luck next time!");
+                    sound.playSound(Sound.Sounds.BackgroundMusic);
                 }
             }
         }
