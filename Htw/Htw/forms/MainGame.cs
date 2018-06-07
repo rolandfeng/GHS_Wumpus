@@ -668,8 +668,9 @@ namespace wumpus.forms
 
         private void playAgain_Click(object sender, EventArgs e)
         {
-            //gameControl.closeGame();
-            gameControl.startGame();
+            MainMenuForm playAgain = new MainMenuForm();
+            playAgain.Show();
+            this.Hide();
         }
 
         private void quitButton_Click(object sender, EventArgs e)
