@@ -88,7 +88,7 @@ namespace wumpus.forms
                                      Properties.Resources.planet28, Properties.Resources.planet29, Properties.Resources.planet30,
                                      Properties.Resources.gameOverWin, Properties.Resources.gameOverLose };
             this.name = new string[] {"Pandora-1", "Aurora-2", "Avalon-3", "Zion-4", "Nova-5",
-                                      "Spartania-6", "Artemis-7", "Genesis-8", "Xenon-9", "Orion-10",
+                                      "Spartan-6", "Artemis-7", "Genesis-8", "Xenon-9", "Orion-10",
                                       "Apollo-11", "Stardust-12", "Hyperion-13", "Divinity-14", "Trinity-15",
                                       "Osiris-16", "Elysium-17", "Nirvana-18", "Styx-19", "Vortex-20",
                                       "Oblivion-21", "Argon-22", "Exodus-23", "Celestial-24", "Equinox-25",            
@@ -508,6 +508,7 @@ namespace wumpus.forms
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.X == 900 && spaceshipPicture.Location.Y == 228) {
+                    
                     timer1.Enabled = false;
                     this.northEastClicked = false;
                     this.timer = false;
@@ -546,7 +547,7 @@ namespace wumpus.forms
                 System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.Y == 400)
                 {
-                    //System.Diagnostics.Debug.WriteLine("entered inner if");
+                    System.Diagnostics.Debug.WriteLine("entered inner if");
                     timer1.Enabled = false;
                     //moveRoom(currentRoom);
                     this.southClicked = false;
@@ -609,7 +610,7 @@ namespace wumpus.forms
                     timer2.Enabled = false;
                     laserNorthPicture.Visible = false;
                     this.northShootClicked = false;
-                    this.spaceshipY = 270;
+                    this.laserY = 270;
                     this.arrowAnimationFinished = true;
                 }
             }
@@ -625,7 +626,7 @@ namespace wumpus.forms
                     timer2.Enabled = false;
                     laserSouthPicture.Visible = false;
                     this.southShootClicked = false;
-                    this.spaceshipY = 270;
+                    this.laserY = 270;
                     this.arrowAnimationFinished = true;
                 }
             }
