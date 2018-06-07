@@ -91,6 +91,7 @@ public class Cave
         return 0;
     }
 
+    // Goes through the cave and randomly places at least 3 walls for each room
     private void randomizeConnections()
     {
         Random random = new Random();
@@ -120,6 +121,7 @@ public class Cave
                 if (column == locs[0] || column == locs[1] || column == locs[2])
                     for (int k = 0; k < cave[0].Length; k++)
                     {
+                        // adding corresponding wall (to avoid 1-way connections)
                         if (cave[Math.Abs(cave[row][column]) - 1][k] == cave[row][0])
                               cave[Math.Abs(cave[row][column]) - 1][k] = - cave[Math.Abs(cave[row][column]) - 1][k];
                     }
