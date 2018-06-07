@@ -57,6 +57,18 @@
     <Compile Include="components\Trivia.cs" />
     <Compile Include="components\GameControl.cs" />
     <Compile Include="components\Graphics.cs" />
+    <Compile Include="forms\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\InputForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +93,6 @@
     <Compile Include="forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="components\Example.cs" />
     <Compile Include="forms\TriviaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\HighScoreForm.resx">
       <DependentUpon>HighScoreForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,11 +254,21 @@
     <None Include="Resources\TriviaWrong2.wav" />
     <None Include="Resources\NoError2.wav" />
     <None Include="Resources\ScarySound3.wav" />
+    <None Include="Resources\BackgroundMusic3.wav" />
+    <None Include="Resources\ShipMove.wav" />
+    <None Include="Resources\MainMenu3.wav" />
+    <None Include="Resources\MonsterTeleport.wav" />
+    <None Include="Resources\gameOverWin.jpg" />
+    <None Include="Resources\gameOverLose.jpg" />
+    <Content Include="Resource\CaveStarter.txt" />
     <Content Include="Resource\StandardCave.txt" />
     <Content Include="Resource\HighScores.txt" />
     <Content Include="Resource\AlternativeCave.txt" />
     <Content Include="Resource\ExtraWallsCave.txt" />
     <Content Include="Resource\SpiralCave.txt" />
+    <EmbeddedResource Include="Resource\TriviaFacts.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="sounds\SqueekingDoor.mp3" />
   </ItemGroup>
   <ItemGroup>

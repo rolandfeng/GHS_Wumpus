@@ -44,7 +44,7 @@ namespace wumpus.components
             {
                 case Sounds.ArrowImpact:
                     //playMp3();
-                    playSoundFromFile(Properties.Resources.ArrowImpact2);
+                    playSoundFromFile(Properties.Resources.LaserShoot);
                     break;
                 case Sounds.ArrowMiss:
                     playSoundFromFile(Properties.Resources.ArrowMiss);
@@ -65,7 +65,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.MonsterRoar2);
                     break;
                 case Sounds.MonsterWalk:
-                    playSoundFromFile(Properties.Resources.MonsterWalk);
+                    playSoundFromFile(Properties.Resources.MonsterTeleport);
                     break;
                 case Sounds.NoError:
                     playSoundFromFile(Properties.Resources.NoError2);
@@ -74,7 +74,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.PlayerDie);
                     break;
                 case Sounds.PlayerWalk:
-                    playSoundFromFile(Properties.Resources.PlayerWalk2);
+                    playSoundFromFile(Properties.Resources.ShipMove);
                     break;
                 case Sounds.ScaryScream:
                     playSoundFromFile(Properties.Resources.ScaryScream2);
@@ -89,10 +89,10 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.TriviaWrong2);
                     break;
                 case Sounds.MainMenu:
-                    playSoundFromFile(Properties.Resources.MainMenu);
+                    playSoundFromFile(Properties.Resources.MainMenu3);
                     break;
                 case Sounds.BackgroundMusic:
-                    playSoundFromFile(Properties.Resources.BackgroundMusic);
+                    playSoundFromFile(Properties.Resources.BackgroundMusicRepeat);
                     //change
                     break;
             }

@@ -14,11 +14,13 @@ namespace wumpus
 {
     public partial class MainMenuForm : Form
     {
+        GameControl gameControl = new GameControl();
         public MainMenuForm()
         {
             InitializeComponent();
             Sound test = new Sound();
-            test.playSound(Sound.Sounds.ArrowImpact);
+            test.playSound(Sound.Sounds.MainMenu);
+
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -28,17 +30,22 @@ namespace wumpus
 
         private void startGameButton_Click(object sender, EventArgs e)
         {
-            GameControl gameControl = new GameControl();
             gameControl.startGame();
             this.Visible = false;
-
             gameControl.GameClosing += (send, args) =>
             {
                 this.Close();
             };
-
-            //this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            gameControl.displayHighscores();
+        }
+
+        private void OpenHelp_Click(object sender, EventArgs e)
+        {
+            gameControl.displayHelp();
+        }
     }
 }

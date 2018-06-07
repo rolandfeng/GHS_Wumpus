@@ -11,16 +11,13 @@ namespace wumpus.components
         private int arrowCount;
         private int coinCount;
         private int turn;
-        //private int score;
-        //private String name;
 
         public Player() //put back names in these two constructors
         {
             arrowCount = 3;
-            coinCount = 10;
+            coinCount = 0;
             turn = 0;
-            //score = 0;
-            //this.name = name;
+
         }
         
         public Player(int arrows, int coins)
@@ -28,8 +25,7 @@ namespace wumpus.components
             this.arrowCount = arrows;
             this.coinCount = coins;
             turn = 0;
-            //score = 0;
-            //this.name = name;
+
         }
 
         public int getArrowCount()
@@ -39,7 +35,7 @@ namespace wumpus.components
 
         public int getCoinCount()
         {
-            return arrowCount;
+            return coinCount;
         }
 
         public void changeArrowCount(int change)
@@ -71,7 +67,6 @@ namespace wumpus.components
         {
             turn++;
             coinCount++;
-            //score = 100 - turn + coinCount + (10 * arrowCount);
         }
     }
 }
