@@ -34,3 +34,10 @@ What is the name of the constellation shaped like a crab?; Cancer; Scorpius; Ori
 What shape is the Milky Way?; Spiral; Circle; Square; No shape; 1
 How many moons does the planet Mars have?; 1; 2; 5; 7; 2
 Which planet in our solar system takes the shortest time to orbit the sun?; Earth; Mars; Mercury; Venus; 3
+What is the term for a natural satellite?; A star; A planet; Rings; A moon; 4
+Which planet is the densest?; Jupiter; Earth; Mercury; Saturn; 2
+About what percent of the universe is dark matter?; 68%; 5%; 27%; 54%; 3
+How many moons does Jupiter have?; 67; 62; 14; 28; 1
+How many stars are in the little dipper?; 4; 5; 6; 7; 3
+What is the color of the sun?; Black; Red; Yellow; White; 4
+How many minutes does it take for light to travel from the Sun to Earth?; 8.3; 7.8; 10.2; 6.9; 1

@@ -132,12 +132,12 @@ namespace wumpus.forms
 
         private void TriviaForm_Load(object sender, EventArgs e)
         {
-            ControlBox = false;
+            //ControlBox = false;
         }
 
         private void TriviaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //e.Cancel = true;
+            e.Cancel = true;
         }
  
     }
