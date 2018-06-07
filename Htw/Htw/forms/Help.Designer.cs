@@ -49,9 +49,9 @@
             // 
             this.Close.BackColor = System.Drawing.Color.SkyBlue;
             this.Close.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(967, 894);
+            this.Close.Location = new System.Drawing.Point(645, 54);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(139, 23);
+            this.Close.Size = new System.Drawing.Size(184, 69);
             this.Close.TabIndex = 1;
             this.Close.Text = "Close";
             this.Close.UseVisualStyleBackColor = false;
@@ -62,12 +62,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1167, 989);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(634, 514);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.richTextBox1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Help";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

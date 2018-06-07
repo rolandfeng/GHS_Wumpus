@@ -176,7 +176,7 @@
             // ShootArrowButton
             // 
             this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShootArrowButton.Location = new System.Drawing.Point(1094, 90);
+            this.ShootArrowButton.Location = new System.Drawing.Point(1094, 85);
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(162, 23);
             this.ShootArrowButton.TabIndex = 16;
@@ -196,7 +196,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(1094, 119);
+            this.buySecretButton.Location = new System.Drawing.Point(1094, 110);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(162, 23);
             this.buySecretButton.TabIndex = 17;
@@ -430,6 +430,7 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1268, 989);
+            this.Controls.Add(this.displayHelp);
             this.Controls.Add(this.planetLabel);
             this.Controls.Add(this.laserNorthEastPicture);
             this.Controls.Add(this.laserSouthWestPicture);
@@ -460,6 +461,7 @@
             this.Controls.Add(this.northButton);
             this.Name = "MainGame";
             this.Text = "MainGame";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.laserNorthPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserSouthPicture)).EndInit();
@@ -504,5 +506,6 @@
         private System.Windows.Forms.PictureBox laserNorthEastPicture;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label planetLabel;
+        private System.Windows.Forms.Button displayHelp;
     }
 }

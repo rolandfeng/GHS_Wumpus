@@ -90,9 +90,9 @@ namespace wumpus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream BatsInCave2 {
+        internal static System.IO.UnmanagedMemoryStream BatsInCave3 {
             get {
-                return ResourceManager.GetStream("BatsInCave2", resourceCulture);
+                return ResourceManager.GetStream("BatsInCave3", resourceCulture);
             }
         }
         
@@ -546,11 +546,11 @@ namespace wumpus.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to What percent of the solar system’s mass does the Sun hold?; 85.3%; 99.8%; 94.6%; 89.2%; 2
-        ///Each time that a loop &quot;loops&quot; is known as a(n); Index; Count; Increment; Iteration; 4
-        ///Which of the following is not a primitive data type?; String; Int; Double; Char; 1
-        ///Which of the following classes is included in the java.util package?; Color; Image; Scanner; Graphics2D; 3
-        ///Which of the following data types are ideal for numbers?; String; Boolean; Char; Double; 4
-        ///Which one is not a type of galaxy?; Spiral; Orbita [rest of string was truncated]&quot;;.
+        ///Which one is not a type of galaxy?; Spiral; Orbital; Irregular; Elliptical; 2
+        ///What process fuels the sun?; Nuclear fusion; Photsynthesis; Precipitation; Condensation; 1
+        ///What galaxy is made of old stars?; Spiral; Irregular; Elliptical; Lenticular; 3
+        ///The last layer of the suns atmosphere is the:; Chromosphere; Corona; Core; Prominence; 2
+        ///When the moon is unilluminated it is called the ______ moon.; New; Gibbous; Ful [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string TriviaQuestions {
             get {
@@ -573,6 +573,24 @@ namespace wumpus.Properties {
         internal static System.IO.UnmanagedMemoryStream TriviaWrong2 {
             get {
                 return ResourceManager.GetStream("TriviaWrong2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream UfoNear {
+            get {
+                return ResourceManager.GetStream("UfoNear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream UfoTeleport {
+            get {
+                return ResourceManager.GetStream("UfoTeleport", resourceCulture);
             }
         }
     }
