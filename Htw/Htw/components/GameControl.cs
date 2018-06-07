@@ -105,7 +105,7 @@ namespace wumpus.components {
                     highscores.DisplayHighScores();
                 };           
             } else {
-                sound.playSound(Sound.Sounds.ArrowMiss);
+                sound.playSound(Sound.Sounds.ArrowImpact);
                 if (cave.isAdjacent(map.getPlayerLocation(), map.getWumpusLocation())) {
                     graphics.Show("You missed but alerted the Wumpus! The Wumpus has moved to a new planet!");
                 } else {
