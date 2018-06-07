@@ -21,13 +21,13 @@ namespace wumpus.components {
 
         public event EventHandler GameClosing;
 
-        public GameControl() {
-            cave = new Cave("../../Resource/StandardCave.txt");
+        public GameControl(string caveName, Help help) {
+            cave = new Cave("../../Resource/" + caveName);
             map = new Map();
             sound = new Sound();
             trivia = new Trivia(this);
             form = new InputForm();
-            help = new Help();
+            this.help = help;
             highscores = new ScoreManager();
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
