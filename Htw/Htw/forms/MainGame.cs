@@ -590,6 +590,11 @@ namespace wumpus.forms
         {
             return this.arrowAnimationFinished;
         }
+
+        private void displayHelp_Click(object sender, EventArgs e)
+        {
+            gameControl.displayHelp();
+        }
     }
 }
 

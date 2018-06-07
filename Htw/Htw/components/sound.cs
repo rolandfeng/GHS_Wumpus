@@ -52,7 +52,7 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.BatCall);
                     break;
                 case Sounds.BatsInCave:
-                    playSoundFromFile(Properties.Resources.BatsInCave2);
+                    playSoundFromFile(Properties.Resources.BatsInCave3);
                     break;
                 case Sounds.MonsterDie:
                     playSoundFromFile(Properties.Resources.MonsterDie2);
