@@ -70,23 +70,26 @@ namespace wumpus.components
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
             this.type = type;
-            if (incrementCorrect == answerCorrect || numQuestions == questionsAsk)
+            if (answerCorrect == incrementCorrect)
             {
                 triviaForm.Hide();
-                if (incrementCorrect == answerCorrect && numQuestions == questionsAsk)
-                {
-                    gameControl.doneWithTrivia(true, type);
-                }
-                else if (incrementCorrect == answerCorrect)
-                {
-                    gameControl.doneWithTrivia(true, type);
-                }
-                else if (numQuestions == questionsAsk)
-                {
-                    gameControl.doneWithTrivia(false, type);
-                }
                 numQuestions = 0;
                 incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
+            }
+            else if (numQuestions == questionsAsk)
+            {
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(false, type);
+            }
+            else if (incrementCorrect == answerCorrect && numQuestions == questionsAsk)
+            {
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
             }
             else
             {
