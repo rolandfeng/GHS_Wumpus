@@ -32,5 +32,5 @@ The rings of Uranus circle it _____; Horizontally; Uranus doesn't have rings; Di
 Which of these chemical elements is the most abundant in the sun?; Carbon; Hydrogen; Oxygen; Nitrogen; 2
 What is the name of the constellation shaped like a crab?; Cancer; Scorpius; Orion; Crux; 1
 What shape is the Milky Way?; Spiral; Circle; Square; No shape; 1
-How may moons does the planet Mars have?; 1; 2; 5; 7; 2
+How many moons does the planet Mars have?; 1; 2; 5; 7; 2
 Which planet in our solar system takes the shortest time to orbit the sun?; Earth; Mars; Mercury; Venus; 3
