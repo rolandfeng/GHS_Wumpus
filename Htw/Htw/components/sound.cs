@@ -49,10 +49,10 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.ArrowMiss);
                     break;
                 case Sounds.BatCall:
-                    playSoundFromFile(Properties.Resources.BatCall);
+                    playSoundFromFile(Properties.Resources.UfoNear);
                     break;
                 case Sounds.BatsInCave:
-                    playSoundFromFile(Properties.Resources.BatsInCave3);
+                    playSoundFromFile(Properties.Resources.UfoTeleport);
                     break;
                 case Sounds.MonsterDie:
                     playSoundFromFile(Properties.Resources.MonsterDie2);

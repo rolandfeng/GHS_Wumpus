@@ -105,8 +105,7 @@ namespace wumpus.forms
         public void UpdateGraphics(int currentRoom)
         {
             this.currentRoom = currentRoom;
-            // start timer
-            timer1.Enabled = true;
+            updateRooms(currentRoom);
 
             // laser picture
             laserNorthPicture.Visible = false;
@@ -122,27 +121,7 @@ namespace wumpus.forms
             //update arrows
             NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
 
-            //update label
-            //planetLabel.Text = "Current Planet: " + name[currentRoom - 1];
-
-            
-            //update available doors
-            
-            if (count == 0)
-            {
-                currentRoom = 1;
-                northButton.Visible = false;
-                NorthRoomsLabel.Visible = false;
-                northEastButton.Visible = false;
-                NorthEastRoomsLabel.Visible = false;
-                northWestButton.Visible = false;
-                NorthWestRoomsLabel.Visible = false;
-                southEastButton.Visible = false;
-                SouthEastRoomsLabel.Visible = false;
-                BackgroundImage = image[0];
-                planetLabel.Text = "Current Planet: Pandora-1";
-                count++;
-            }
+      
         }
 
         // update coins
@@ -166,8 +145,8 @@ namespace wumpus.forms
             }
         }
 
-        // update room
-        public void moveRoom(int currentRoom)
+        // update rooms
+        public void updateRooms(int currentRoom)
         {
             this.currentRoom = currentRoom;
             int[] connections;
@@ -195,7 +174,9 @@ namespace wumpus.forms
             }
             else
             {
-                gameControl.moveRoom(direction);
+                // start timer
+                timer1.Enabled = true;
+                
             }
         }
 
@@ -309,6 +290,26 @@ namespace wumpus.forms
             gameControl.buySecret();
         }
         
+        private void animationCompleted()
+        {
+            timer1.Enabled = false;
+            this.timer = false;
+
+            Timer endOfAnimationTimer = new Timer();
+            endOfAnimationTimer.Interval = 800;
+            endOfAnimationTimer.Tick += (s, e) =>
+            {
+                BackgroundImage = image[currentRoom - 1];
+                this.spaceshipX = 540;
+                this.spaceshipY = 300;
+                spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
+                endOfAnimationTimer.Enabled = false;
+                endOfAnimationTimer.Stop();
+                gameControl.moveRoom(direction);
+            };
+            endOfAnimationTimer.Start();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             
@@ -317,12 +318,8 @@ namespace wumpus.forms
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.Y == 220) {
-                    timer1.Enabled = false;
-                    this.timer = false;
                     this.northClicked = false;
-                    this.spaceshipY = 300;
-                    BackgroundImage = image[currentRoom - 1];
-                    moveRoom(currentRoom);
+                    animationCompleted();
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
@@ -335,13 +332,8 @@ namespace wumpus.forms
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.X == 900 && spaceshipPicture.Location.Y == 228) {
                     
-                    timer1.Enabled = false;
                     this.northEastClicked = false;
-                    this.timer = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
-                    BackgroundImage = image[currentRoom - 1];
-                    moveRoom(currentRoom);
+                    animationCompleted();
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
@@ -354,13 +346,8 @@ namespace wumpus.forms
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.X == 300 && spaceshipPicture.Location.Y == 252)
                 {
-                    timer1.Enabled = false;
                     this.northWestClicked = false;
-                    this.timer = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
-                    BackgroundImage = image[currentRoom - 1];
-                    moveRoom(currentRoom);
+                    animationCompleted();
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
@@ -373,13 +360,9 @@ namespace wumpus.forms
                 System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.Y == 400)
                 {
-                    //System.Diagnostics.Debug.WriteLine("entered inner if");
-                    timer1.Enabled = false;
-                    //moveRoom(currentRoom);
                     this.southClicked = false;
-                    this.spaceshipY = 300;
-                    BackgroundImage = image[currentRoom - 1];
-                    moveRoom(currentRoom);
+                    animationCompleted();
+
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
@@ -392,13 +375,9 @@ namespace wumpus.forms
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.X == 860 && spaceshipPicture.Location.Y == 364)
                 {
-                    timer1.Enabled = false;
                     this.southEastClicked = false;
-                    this.timer = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
-                    BackgroundImage = image[currentRoom - 1];
-                    moveRoom(currentRoom);
+                    animationCompleted();
+
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
@@ -413,13 +392,9 @@ namespace wumpus.forms
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.X == 260 && spaceshipPicture.Location.Y == 356)
                 {
-                    timer1.Enabled = false;
                     this.southWestClicked = false;
-                    this.timer = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
-                    BackgroundImage = image[currentRoom - 1];
-                    moveRoom(currentRoom);
+                    animationCompleted();
+
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
