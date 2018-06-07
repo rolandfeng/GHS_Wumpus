@@ -575,5 +575,23 @@ namespace wumpus.Properties {
                 return ResourceManager.GetStream("TriviaWrong2", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream UfoNear {
+            get {
+                return ResourceManager.GetStream("UfoNear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream UfoTeleport {
+            get {
+                return ResourceManager.GetStream("UfoTeleport", resourceCulture);
+            }
+        }
     }
 }
