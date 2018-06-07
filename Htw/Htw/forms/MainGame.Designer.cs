@@ -460,6 +460,7 @@
             this.Controls.Add(this.northButton);
             this.Name = "MainGame";
             this.Text = "MainGame";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.laserNorthPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserSouthPicture)).EndInit();
