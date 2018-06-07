@@ -118,6 +118,7 @@
             this.Margin = new System.Windows.Forms.Padding(16, 13, 16, 13);
             this.Name = "TriviaForm";
             this.Text = "TriviaForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TriviaForm_FormClosing);
             this.Load += new System.EventHandler(this.TriviaForm_Load);
             this.ResumeLayout(false);
 

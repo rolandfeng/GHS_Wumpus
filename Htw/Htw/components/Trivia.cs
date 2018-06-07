@@ -114,11 +114,9 @@ namespace wumpus.components
             while (randomArr.Contains(randomIndex)) {
                 random = new Random();
                 randomIndex = random.Next(0, questions.Length);
-                randomArr.Add(randomIndex);
         }
-
+            randomArr.Add(randomIndex);
             return randomIndex;
-
         }
 
         public void askQuestion()

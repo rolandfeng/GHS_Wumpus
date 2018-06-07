@@ -134,5 +134,10 @@ namespace wumpus.forms
         {
 
         }
+
+        private void TriviaForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }
