@@ -24,7 +24,7 @@ namespace wumpus.components
 
         private ArrayList randomArr;
 
-        private String[] fact;
+        private ArrayList fact;
         private int countFact;
 
 
@@ -33,6 +33,7 @@ namespace wumpus.components
             triviaForm = new TriviaForm(this);
             this.gameControl = gameControl;
             randomArr = new ArrayList();
+            fact = new ArrayList();
 
             String[] lines = File.ReadAllLines("Resource/TriviaQuestions.txt");
             questions = new String[lines.Length][];
@@ -41,19 +42,22 @@ namespace wumpus.components
                 questions[i] = lines[i].Split(';');
             }
 
-            fact = File.ReadAllLines("Resource/TriviaFacts.txt");
-            fact = new String[fact.Length];
+            String[] factArr = File.ReadAllLines(path: "Resource/TriviaFacts.txt");
+            for (int k = 0; k < factArr.Length; k++)
+            {
+                fact.Add(factArr[k]);
+            }
             countFact = -1;
         }
 
         public String triviaFact()
         {
             countFact++;
-            if(countFact > fact.Length)
+            if (countFact >= fact.Count)
             {
                 countFact = 0;
             }
-            return fact[countFact];
+            return (String)fact[countFact];
         }
 
         public void ShowTrivia()
@@ -61,28 +65,31 @@ namespace wumpus.components
             triviaForm.Show();
         }
 
-        public void ask(int questionsAsk, int answerCorrect, int type) 
+        public void ask(int questionsAsk, int answerCorrect, int type)
         {
             this.questionsAsk = questionsAsk;
             this.answerCorrect = answerCorrect;
             this.type = type;
-            if (incrementCorrect == answerCorrect || numQuestions == questionsAsk)
+            if (answerCorrect == incrementCorrect)
             {
                 triviaForm.Hide();
-                if (incrementCorrect == answerCorrect && numQuestions == questionsAsk)
-                {
-                    gameControl.doneWithTrivia(true, type);
-                }
-                else if (incrementCorrect == answerCorrect)
-                {
-                    gameControl.doneWithTrivia(true, type);
-                }
-                else if (numQuestions == questionsAsk)
-                {
-                    gameControl.doneWithTrivia(false, type);
-                }
                 numQuestions = 0;
                 incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
+            }
+            else if (numQuestions == questionsAsk)
+            {
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(false, type);
+            }
+            else if (incrementCorrect == answerCorrect && numQuestions == questionsAsk)
+            {
+                triviaForm.Hide();
+                numQuestions = 0;
+                incrementCorrect = 0;
+                gameControl.doneWithTrivia(true, type);
             }
             else
             {
@@ -95,28 +102,26 @@ namespace wumpus.components
             if (triviaForm.RightAnswer())
             {
                 incrementCorrect++;
-            } 
-            ask(questionsAsk, answerCorrect, type); 
+            }
+            ask(questionsAsk, answerCorrect, type);
         }
 
         public int randomGenerator()
         {
-            Random random = new Random();
-            int randomIndex = random.Next(0, questions.Length);
-            if (randomArr.Contains(randomIndex))
-            {
-                int randomIndex2 = random.Next(0, questions.Length);
-                randomArr.Add(randomIndex2);
-                return randomIndex2;
-            }
-            randomArr.Add(randomIndex);
-            if(randomArr.Count == questions.Length)
+            if (randomArr.Count == questions.Length)
             {
                 randomArr.Clear();
             }
-            return randomIndex;
-
+            Random random = new Random();
+            int randomIndex = random.Next(0, questions.Length);
+            while (randomArr.Contains(randomIndex)) {
+                random = new Random();
+                randomIndex = random.Next(0, questions.Length);
         }
+            randomArr.Add(randomIndex);
+            return randomIndex;
+        }
+
         public void askQuestion()
         {
             int randomIndex = randomGenerator();

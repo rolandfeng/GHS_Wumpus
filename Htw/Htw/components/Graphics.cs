@@ -43,6 +43,11 @@ namespace wumpus.components
             mainGame.UpdateGraphics(currentRoom);
         }
 
+        public bool getArrowAnimationFinished()
+        {
+            return mainGame.getArrowAnimationFinished();
+        }
+
         public void updateCoins()
         {
             mainGame.updateCoins();
@@ -57,7 +62,12 @@ namespace wumpus.components
         {
              System.Windows.Forms.MessageBox.Show(message);
 
-         }
+        }
+
+        public void endGame(bool success)
+        {
+            mainGame.endGame(success);
+        }
 
 
 
