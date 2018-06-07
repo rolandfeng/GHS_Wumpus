@@ -41,6 +41,7 @@ namespace wumpus
             Cave3.Visible = true;
             Cave4.Visible = true;
             Cave5.Visible = true;
+            startGameButton.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
