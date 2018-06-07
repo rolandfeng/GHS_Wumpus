@@ -32,5 +32,22 @@ The rings of Uranus circle it _____; Horizontally; Uranus doesn't have rings; Di
 Which of these chemical elements is the most abundant in the sun?; Carbon; Hydrogen; Oxygen; Nitrogen; 2
 What is the name of the constellation shaped like a crab?; Cancer; Scorpius; Orion; Crux; 1
 What shape is the Milky Way?; Spiral; Circle; Square; No shape; 1
-How may moons does the planet Mars have?; 1; 2; 5; 7; 2
+How many moons does the planet Mars have?; 1; 2; 5; 7; 2
 Which planet in our solar system takes the shortest time to orbit the sun?; Earth; Mars; Mercury; Venus; 3
+What is the term for a natural satellite?; A star; A planet; Rings; A moon; 4
+Which planet is the densest?; Jupiter; Earth; Mercury; Saturn; 2
+About what percent of the universe is dark matter?; 68%; 5%; 27%; 54%; 3
+How many moons does Jupiter have?; 67; 62; 14; 28; 1
+How many stars are in the little dipper?; 4; 5; 6; 7; 3
+What is the color of the sun?; Black; Red; Yellow; White; 4
+The known rings of planet Uranus are...; 13; 16; 12; 15; 1
+How many minutes does it take for light to travel from the Sun to Earth?; 8.3; 7.8; 10.2; 6.9; 1
+How long was the shortest space flight?; 1 day; 15 minutes; 2 hours; 45 minutes; 2
+How many moons are in our solar system?; 181; 168; 201; 134; 1
+What is the smallest planet in our solar system?; Mars; Mercury; Earth; Uranus; 2
+The kind of eclipse in which Moon blocks out the Sun entirely is classified as...; Annular eclipse; Titanic eclipse; Total eclipse; Partial eclipse; 3
+The name of the most massive 'dwarf' planet is...; Saturn; Ceres; Eris; Pluto; 3
+In June solstice, the season in the north of the equator is...; Summer; Winter; Spring; Fall; 1
+Second closest 'dwarf' planet to the Sun is...; Eris; Pluto; Saturn; Ceres; 2
+What is the current stage of the star "Sun"?; White dwarf; Red giant; Yellow dwarf; Orange dwarf; 3
+The largest moon in the Solar System lies in...; Neptune; Jupiter; Saturn; Uranus; 2

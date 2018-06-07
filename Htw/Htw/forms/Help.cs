@@ -17,5 +17,9 @@ namespace wumpus.forms
             InitializeComponent();
         }
 
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

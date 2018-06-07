@@ -120,7 +120,7 @@ namespace wumpus.forms
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
 
             //update arrows
-            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+            NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
 
             //update label
             //planetLabel.Text = "Current Planet: " + name[currentRoom - 1];
@@ -188,7 +188,7 @@ namespace wumpus.forms
             if (shootButtonClicked)
             {
                 gameControl.shootArrows(this.direction);
-                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
                 shootButtonClicked = false;
                 this.arrowAnimationFinished = false;
                 timer2.Enabled = true;
@@ -288,27 +288,27 @@ namespace wumpus.forms
         // update arrows
         public void updateArrows()
         {
-            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+            NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
         }
 
         private void ShootArrowButton_Click(object sender, EventArgs e)
         {
             shootButtonClicked = true;
-            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+            NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
 
         }
 
         private void PurchaseArrowsButton_Click(object sender, EventArgs e)
         {
             gameControl.buyArrows();
-            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+            NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
         }
 
         private void buySecretButton_Click(object sender, EventArgs e)
         {
             gameControl.buySecret();
         }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             
@@ -589,6 +589,11 @@ namespace wumpus.forms
         public bool getArrowAnimationFinished()
         {
             return this.arrowAnimationFinished;
+        }
+
+        private void displayHelp_Click(object sender, EventArgs e)
+        {
+            gameControl.displayHelp();
         }
     }
 }

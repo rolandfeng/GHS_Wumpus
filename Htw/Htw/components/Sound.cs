@@ -10,29 +10,28 @@ namespace wumpus.components
 
     public class Sound
     {
+        System.Media.SoundPlayer player;
         public Sound()
         {
             
         }
         private void playSoundFromFile(Stream resourceName)
         {
+            // stop previous sound
+            if (player != null)
+            {
+                player.Stop();
+                player = null;
+            }
+
             //load the file
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(resourceName);
+            player = new System.Media.SoundPlayer(resourceName);
             player.Play();
           
            
             //rp.Open(new WaveReader(resourceName));
          
             //play the sound
-        }
-
-        private void playMp3()
-        {
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            
-            wplayer.URL = @"../../sounds/SqueekingDoor.mp3";
-            wplayer.controls.play();
-
         }
 
         public enum Sounds {ArrowImpact, ArrowMiss, BatCall, BatsInCave, MonsterDie, MonsterGrowl, MonsterRoar, MonsterWalk,
@@ -50,10 +49,10 @@ namespace wumpus.components
                     playSoundFromFile(Properties.Resources.ArrowMiss);
                     break;
                 case Sounds.BatCall:
-                    playSoundFromFile(Properties.Resources.BatCall);
+                    playSoundFromFile(Properties.Resources.UfoNear);
                     break;
                 case Sounds.BatsInCave:
-                    playSoundFromFile(Properties.Resources.BatsInCave2);
+                    playSoundFromFile(Properties.Resources.UfoTeleport);
                     break;
                 case Sounds.MonsterDie:
                     playSoundFromFile(Properties.Resources.MonsterDie2);
