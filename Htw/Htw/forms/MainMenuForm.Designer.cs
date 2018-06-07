@@ -104,7 +104,7 @@
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(634, 514);
+            this.ClientSize = new System.Drawing.Size(1268, 989);
             this.Controls.Add(this.OpenHelp);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -112,7 +112,6 @@
             this.Controls.Add(this.startGameButton);
             this.Name = "MainMenuForm";
             this.Text = "Wumpus";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
