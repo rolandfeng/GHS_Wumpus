@@ -39,10 +39,9 @@
             // 
             this.startGameButton.BackColor = System.Drawing.Color.MistyRose;
             this.startGameButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startGameButton.Location = new System.Drawing.Point(1186, 1015);
-            this.startGameButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.startGameButton.Location = new System.Drawing.Point(593, 528);
             this.startGameButton.Name = "startGameButton";
-            this.startGameButton.Size = new System.Drawing.Size(194, 67);
+            this.startGameButton.Size = new System.Drawing.Size(97, 35);
             this.startGameButton.TabIndex = 0;
             this.startGameButton.Text = "Start Game";
             this.startGameButton.UseVisualStyleBackColor = false;
@@ -52,10 +51,9 @@
             // 
             this.exitButton.BackColor = System.Drawing.Color.MistyRose;
             this.exitButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(1186, 1242);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.exitButton.Location = new System.Drawing.Point(593, 646);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(194, 67);
+            this.exitButton.Size = new System.Drawing.Size(97, 35);
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -67,10 +65,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(916, 877);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(458, 456);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(743, 92);
+            this.label1.Size = new System.Drawing.Size(373, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "Hunt the Wumpus";
             // 
@@ -78,10 +75,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.MistyRose;
             this.button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1186, 1092);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(593, 568);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 67);
+            this.button1.Size = new System.Drawing.Size(97, 35);
             this.button1.TabIndex = 3;
             this.button1.Text = "High Scores";
             this.button1.UseVisualStyleBackColor = false;
@@ -91,9 +88,10 @@
             // 
             this.OpenHelp.BackColor = System.Drawing.Color.MistyRose;
             this.OpenHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpenHelp.Location = new System.Drawing.Point(1186, 1166);
+            this.OpenHelp.Location = new System.Drawing.Point(593, 606);
+            this.OpenHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OpenHelp.Name = "OpenHelp";
-            this.OpenHelp.Size = new System.Drawing.Size(194, 67);
+            this.OpenHelp.Size = new System.Drawing.Size(97, 35);
             this.OpenHelp.TabIndex = 4;
             this.OpenHelp.Text = "Help";
             this.OpenHelp.UseVisualStyleBackColor = false;
@@ -101,18 +99,17 @@
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2536, 1783);
+            this.ClientSize = new System.Drawing.Size(1268, 989);
             this.Controls.Add(this.OpenHelp);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startGameButton);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "MainMenuForm";
             this.Text = "Wumpus";
             this.ResumeLayout(false);
