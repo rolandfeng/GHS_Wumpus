@@ -61,6 +61,7 @@
             this.laserNorthEastPicture = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.planetLabel = new System.Windows.Forms.Label();
+            this.displayHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.laserNorthPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserSouthPicture)).BeginInit();
@@ -176,7 +177,7 @@
             // ShootArrowButton
             // 
             this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShootArrowButton.Location = new System.Drawing.Point(1094, 90);
+            this.ShootArrowButton.Location = new System.Drawing.Point(1094, 85);
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(162, 23);
             this.ShootArrowButton.TabIndex = 16;
@@ -196,7 +197,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(1094, 119);
+            this.buySecretButton.Location = new System.Drawing.Point(1094, 110);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(162, 23);
             this.buySecretButton.TabIndex = 17;
@@ -423,6 +424,17 @@
             this.planetLabel.TabIndex = 30;
             this.planetLabel.Text = "planetLabel";
             // 
+            // displayHelp
+            // 
+            this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayHelp.Location = new System.Drawing.Point(1094, 135);
+            this.displayHelp.Name = "displayHelp";
+            this.displayHelp.Size = new System.Drawing.Size(162, 23);
+            this.displayHelp.TabIndex = 31;
+            this.displayHelp.Text = "Open Help";
+            this.displayHelp.UseVisualStyleBackColor = true;
+            this.displayHelp.Click += new System.EventHandler(this.displayHelp_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +442,7 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1268, 989);
+            this.Controls.Add(this.displayHelp);
             this.Controls.Add(this.planetLabel);
             this.Controls.Add(this.laserNorthEastPicture);
             this.Controls.Add(this.laserSouthWestPicture);
@@ -505,5 +518,6 @@
         private System.Windows.Forms.PictureBox laserNorthEastPicture;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label planetLabel;
+        private System.Windows.Forms.Button displayHelp;
     }
 }
