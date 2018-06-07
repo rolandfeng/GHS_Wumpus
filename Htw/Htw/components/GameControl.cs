@@ -14,8 +14,10 @@ namespace wumpus.components {
         private Sound sound;
         private Trivia trivia;
         private InputForm form;
+        private Help help;
         private ScoreManager highscores;
         private Player player;
+        private bool hazardInstance;
 
         public event EventHandler GameClosing;
 
@@ -25,9 +27,11 @@ namespace wumpus.components {
             sound = new Sound();
             trivia = new Trivia(this);
             form = new InputForm();
+            help = new Help();
             highscores = new ScoreManager();
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
+            hazardInstance = false;
         }
 
         public void closeGame() {
@@ -35,6 +39,7 @@ namespace wumpus.components {
         }
 
         public void pitInstance() {
+            hazardInstance = true;
             openTrivia(3, 2, 2);
         }
 
@@ -53,6 +58,10 @@ namespace wumpus.components {
             highscores.DisplayHighScores();
         }
 
+        public void displayHelp() {
+            help.Show();
+        }
+
         public void moveRoom(wumpus.common.Direction direction) {
             sound.playSound(Sound.Sounds.PlayerWalk);
             int currentLoc = map.getPlayerLocation();
@@ -62,7 +71,6 @@ namespace wumpus.components {
             player.updateStatus();
             graphics.update(newLoc);
             hazardWarnings(hazards);
-
             if (map.pitFall()) {
                 pitInstance();
             }
@@ -71,6 +79,7 @@ namespace wumpus.components {
                 hazardWarnings(getHazardArray(map.getPlayerLocation()));
             }
             if (newLoc == map.getWumpusLocation()) {
+                hazardInstance = true;
                 openTrivia(5, 3, 1);
                 map.changeWumpusLocation(wumpusFleeLoc(true));
             }
@@ -114,9 +123,14 @@ namespace wumpus.components {
             if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
                 graphics.Show("Not enough coins for trivia!");
+                if (hazardInstance) {
+                    graphics.endGame(false);
+                    hazardInstance = false;
+                }
             } else {
                 player.changeCoinCount(-2);
                 graphics.updateCoins();
+                graphics.Show("Answer " + needed + " of " + asked + " questions correctly to succeed!");
                 trivia.ShowTrivia();
                 trivia.ask(asked, needed, type);
             }

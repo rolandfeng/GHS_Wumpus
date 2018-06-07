@@ -43,6 +43,11 @@ namespace wumpus.components
             mainGame.UpdateGraphics(currentRoom);
         }
 
+        public bool getArrowAnimationFinished()
+        {
+            return mainGame.getArrowAnimationFinished();
+        }
+
         public void updateCoins()
         {
             mainGame.updateCoins();

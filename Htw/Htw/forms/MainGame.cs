@@ -27,12 +27,12 @@ namespace wumpus.forms
         bool southClicked;
         bool southWestClicked;
         bool southEastClicked;
-        bool northShootClicked = false;
-        bool northWestShootClicked = false;
-        bool northEastShootClicked = false;
-        bool southShootClicked = false;
-        bool southWestShootClicked = false;
-        bool southEastShootClicked = false;
+        bool northShootClicked;
+        bool northWestShootClicked;
+        bool northEastShootClicked;
+        bool southShootClicked;
+        bool southWestShootClicked;
+        bool southEastShootClicked;
         bool timer;
         Image[] image;
         String[] name;
@@ -42,6 +42,7 @@ namespace wumpus.forms
         int laserY;
         int count;
         int currentRoom;
+        bool arrowAnimationFinished;
 
         public MainGame(GameControl gameControl, Player player, Map map, Cave cave)
         {
@@ -72,6 +73,9 @@ namespace wumpus.forms
             this.southWestShootClicked = false;
             this.southEastShootClicked = false;
             this.timer = true;
+            playAgain.Visible = false;
+            quitButton.Visible = false;
+            viewHighscores.Visible = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -93,6 +97,7 @@ namespace wumpus.forms
             this.spaceshipY = 300;
             this.laserY = 270;
             this.count = 0;
+            this.arrowAnimationFinished = false;
         }
 
         // update graphics
@@ -103,7 +108,12 @@ namespace wumpus.forms
             timer1.Enabled = true;
 
             // laser picture
-            arrowPicture.Visible = false;
+            laserNorthPicture.Visible = false;
+            laserNorthEastPicture.Visible = false;
+            laserNorthWestPicture.Visible = false;
+            laserSouthPicture.Visible = false;
+            laserSouthEastPicture.Visible = false;
+            laserSouthWestPicture.Visible = false;
 
             // update coins
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
@@ -127,85 +137,6 @@ namespace wumpus.forms
                 BackgroundImage = image[0];
                 count++;
             }
-            
-            int[] connections;
-            connections = cave.getAllConnections(currentRoom);
-
-            /*if (connections[0] == 0) {
-                northButton.Visible = false;
-                NorthRoomsLabel.Visible = false;
-            } else {
-                
-                    northButton.Visible = true;
-                    NorthRoomsLabel.Visible = true;
-                    NorthRoomsLabel.Text = name[connections[0] - 1];
-                    northButton.Image = image[connections[0] - 1];
-                
-            }
-
-            if (connections[1] == 0) {
-                northEastButton.Visible = false;
-                NorthEastRoomsLabel.Visible = false;
-            } else {
-                    northEastButton.Visible = true;
-                    NorthEastRoomsLabel.Visible = true;
-                    NorthEastRoomsLabel.Text = name[connections[1] - 1];
-                    northEastButton.Image = image[connections[1] - 1];
-                
-            }
-
-            if (connections[2] == 0) {
-                northWestButton.Visible = false;
-                NorthWestRoomsLabel.Visible = false;
-            } else {
-                    northWestButton.Visible = true;
-                    NorthWestRoomsLabel.Visible = true;
-                    NorthWestRoomsLabel.Text = name[connections[2] - 1];
-                    northWestButton.Image = image[connections[2] - 1];
-                
-            }
-
-            if (connections[3] == 0) {
-                southButton.Visible = false;
-                SouthRoomsLabel.Visible = false;
-            } else {
-
-                    southButton.Visible = true;
-                    SouthRoomsLabel.Visible = true;
-                    SouthRoomsLabel.Text = name[connections[3] - 1];
-                    southButton.Image = image[connections[3] - 1];
-              
-            }
-
-            if (connections[4] == 0) {
-                southEastButton.Visible = false;
-                SouthEastRoomsLabel.Visible = false;
-            } else {
-
-                    southEastButton.Visible = true;
-                    SouthEastRoomsLabel.Visible = true;
-                    SouthEastRoomsLabel.Text = name[connections[4] - 1];
-                    southEastButton.Image = image[connections[4] - 1];
-                
-            }
-
-            if (connections[5] == 0) {
-                southWestButton.Visible = false;
-                SouthWestRoomsLabel.Visible = false;
-            } else {
-                southWestButton.Visible = true;
-                SouthWestRoomsLabel.Visible = true;
-                SouthWestRoomsLabel.Text = name[connections[5] - 1];
-                southWestButton.Image = image[connections[5] - 1];
-            }
-            */
-            
-
-
-
-            //update room
-            //BackgroundImage = image[currentRoom - 1];
-
         }
 
         // update coins
@@ -213,9 +144,36 @@ namespace wumpus.forms
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
         }
 
+        public void changeRoom(RoundButton button, Label label, int currentRoom, int direction, int[] connections)
+        {
+            if (connections[direction] == 0)
+            {
+                button.Visible = false;
+                label.Visible = false;
+            }
+            else
+            {
+                button.Visible = true;
+                label.Visible = true;
+                label.Text = name[connections[direction] - 1];
+                button.Image = image[connections[direction] - 1];
+            }
+        }
+
+        // update room
         public void moveRoom(int currentRoom)
         {
             this.currentRoom = currentRoom;
+            int[] connections;
+            connections = cave.getAllConnections(currentRoom);
+            RoundButton[] buttonArray = { northButton, northEastButton, northWestButton, southButton, southEastButton, southWestButton };
+            Label[] labelArray = { NorthRoomsLabel, NorthEastRoomsLabel, NorthWestRoomsLabel, SouthRoomsLabel, SouthEastRoomsLabel, SouthWestRoomsLabel };
+            for (int i = 0; i < 6; i++)
+            {
+                changeRoom(buttonArray[i], labelArray[i], currentRoom, i, connections);
+            }
+
+            /*this.currentRoom = currentRoom;
             int[] connections;
             connections = cave.getAllConnections(currentRoom);
             if (connections[0] == 0)
@@ -303,20 +261,40 @@ namespace wumpus.forms
                 SouthWestRoomsLabel.Text = name[connections[5] - 1];
                 southWestButton.Image = image[connections[5] - 1];
             }
+            */
 
         }
         
 
-
-
-        // update arrows
-        public void updateArrows() {
-            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+        public void buttonClick(bool directionClicked, Direction direction, bool directionShootClicked)
+        {
+            if (shootButtonClicked)
+            {
+                gameControl.shootArrows(this.direction);
+                NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
+                shootButtonClicked = false;
+                this.arrowAnimationFinished = false;
+                timer2.Enabled = true;
+            }
+            else
+            {
+                gameControl.moveRoom(direction);
+            }
         }
 
         //buttons clicked
         private void northButton_Click(object sender, EventArgs e) {
-            if (shootButtonClicked == false) {
+            this.direction = Direction.NORTH;
+            if (shootButtonClicked)
+            {
+                this.northShootClicked = true;
+            }
+            else
+            {
+                this.northClicked = true;
+            }
+            buttonClick(this.northClicked, Direction.NORTH, this.northShootClicked);
+            /*if (shootButtonClicked == false) {
                 this.northClicked = true;
                 gameControl.moveRoom(Direction.NORTH);
                 this.direction = Direction.NORTH;
@@ -326,12 +304,24 @@ namespace wumpus.forms
                 NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
                 shootButtonClicked = false;
                 this.northShootClicked = true;
+                timer2.Enabled = true;
             }
+            */
         }
 
         private void northEastButton_Click(object sender, EventArgs e)
         {
-            if (shootButtonClicked == false)
+            this.direction = Direction.NORTH_EAST;
+            if (shootButtonClicked)
+            {
+                this.northEastShootClicked = true;
+            }
+            else
+            {
+                this.northEastClicked = true;
+            }
+            buttonClick(this.northEastClicked, Direction.NORTH_EAST, this.northEastShootClicked);
+            /*if (shootButtonClicked == false)
             {
                 this.northEastClicked = true;
                 gameControl.moveRoom(Direction.NORTH_EAST);
@@ -346,11 +336,22 @@ namespace wumpus.forms
                 shootButtonClicked = false;
                 this.northEastShootClicked = true;
             }
+            */
         }
 
         private void southEastButton_Click(object sender, EventArgs e)
         {
-            if (shootButtonClicked == false)
+            this.direction = Direction.SOUTH_EAST;
+            if (shootButtonClicked)
+            {
+                this.southEastShootClicked = true;
+            }
+            else
+            {
+                this.southEastClicked = true;
+            }
+            buttonClick(this.southEastClicked, Direction.SOUTH_EAST, this.southEastShootClicked);
+            /*if (shootButtonClicked == false)
             {
                 this.southEastClicked = true;
                 gameControl.moveRoom(Direction.SOUTH_EAST);
@@ -365,11 +366,23 @@ namespace wumpus.forms
                 shootButtonClicked = false;
                 this.southEastShootClicked = true;
             }
+            */
         }
 
         private void southButton_Click(object sender, EventArgs e)
         {
-            if (shootButtonClicked == false)
+            this.direction = Direction.SOUTH;
+            if (shootButtonClicked)
+            {
+                this.southShootClicked = true;
+
+            }
+            else
+            {
+                this.southClicked = true;
+            }
+            buttonClick(this.southClicked, Direction.SOUTH, this.southShootClicked);
+            /*if (shootButtonClicked == false)
             {
                 this.southClicked = true;
                 gameControl.moveRoom(Direction.SOUTH);
@@ -384,12 +397,22 @@ namespace wumpus.forms
                 shootButtonClicked = false;
                 this.southShootClicked = true;
             }
+            */
         }
 
         private void southWestButton_Click(object sender, EventArgs e)
-
         {
-            if (shootButtonClicked == false)
+            this.direction = Direction.SOUTH_WEST;
+            if (shootButtonClicked)
+            {
+                this.southWestShootClicked = true;
+            }
+            else
+            {
+                this.southWestClicked = true;
+            }
+            buttonClick(this.southWestClicked, Direction.SOUTH_WEST, this.southWestShootClicked);
+            /*if (shootButtonClicked == false)
             {
                 this.southWestClicked = true;
                 gameControl.moveRoom(Direction.SOUTH_WEST);
@@ -404,11 +427,22 @@ namespace wumpus.forms
                 shootButtonClicked = false;
                 this.southWestShootClicked = true;
             }
+            */
         }
 
         private void northWestButton_Click(object sender, EventArgs e)
         {
-            if (shootButtonClicked == false)
+            this.direction = Direction.NORTH_WEST;
+            if (shootButtonClicked)
+            {
+                this.northWestShootClicked = true;
+            }
+            else
+            {
+                this.northWestClicked = true;
+            }
+            buttonClick(this.northWestClicked, Direction.NORTH_WEST, this.northWestShootClicked);
+            /*if (shootButtonClicked == false)
             {
                 this.northWestClicked = true;
                 gameControl.moveRoom(Direction.NORTH_WEST);
@@ -423,6 +457,13 @@ namespace wumpus.forms
                 shootButtonClicked = false;
                 this.northWestShootClicked = true;
             }
+            */
+        }
+
+        // update arrows
+        public void updateArrows()
+        {
+            NumberOfArrowsLabel.Text = "Number of Arrows: " + player.getArrowCount();
         }
 
         private void ShootArrowButton_Click(object sender, EventArgs e)
@@ -553,21 +594,42 @@ namespace wumpus.forms
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
+        }
 
-
+        private void timer2_Tick(object sender, EventArgs e)
+        {
             if (this.northShootClicked == true)
             {
-                arrowPicture.Visible = true;
-                this.laserX = 535; 
+                laserNorthPicture.Visible = true;
+                this.laserX = 535;
                 this.laserY = this.laserY - 5;
-                arrowPicture.Location = new Point(laserX, laserY);
-                if (arrowPicture.Location.Y == 200)
+                laserNorthPicture.Location = new Point(laserX, laserY);
+                if (laserNorthPicture.Location.Y == 200)
                 {
-                    timer1.Enabled = false;
-                    arrowPicture.Visible = false;
+                    timer2.Enabled = false;
+                    laserNorthPicture.Visible = false;
+                    this.northShootClicked = false;
+                    this.spaceshipY = 270;
+                    this.arrowAnimationFinished = true;
                 }
-            }          
-
+            }
+            if (this.southShootClicked == true)
+            {
+               
+                laserSouthPicture.Visible = true;
+                this.laserX = 535;
+                this.laserY = this.laserY + 5;
+                laserSouthPicture.Location = new Point(laserX, laserY);
+                if (laserSouthPicture.Location.Y == 400)
+                {
+                    timer2.Enabled = false;
+                    laserSouthPicture.Visible = false;
+                    this.southShootClicked = false;
+                    this.spaceshipY = 270;
+                    this.arrowAnimationFinished = true;
+                }
+            }
+            
         }
 
         // end game
@@ -586,12 +648,15 @@ namespace wumpus.forms
             SouthEastRoomsLabel.Visible = false;
             SouthWestRoomsLabel.Visible = false;
             spaceshipPicture.Visible = false;
-            arrowPicture.Visible = false;
+            laserNorthPicture.Visible = false;
             NumberOfArrowsLabel.Visible = false;
             NumberOfCoinsLabel.Visible = false;
             PurchaseArrowsButton.Visible = false;
             buySecretButton.Visible = false;
             ShootArrowButton.Visible = false;
+            playAgain.Visible = true;
+            quitButton.Visible = true;
+            viewHighscores.Visible = true;
             if (result) {
                 BackgroundImage = Properties.Resources.gameOverWin;
             } else {
@@ -601,7 +666,29 @@ namespace wumpus.forms
 
         }
 
+        private void playAgain_Click(object sender, EventArgs e)
+        {
+            MainMenuForm playAgain = new MainMenuForm();
+            playAgain.Show();
+            this.Hide();
+        }
 
+        private void quitButton_Click(object sender, EventArgs e)
+        {
+            gameControl.closeGame();
+        }
+
+        private void viewHighscores_Click(object sender, EventArgs e)
+        {
+            gameControl.displayHighscores();
+        }
+
+        
+
+        public bool getArrowAnimationFinished()
+        {
+            return this.arrowAnimationFinished;
+        }
     }
 }
 
