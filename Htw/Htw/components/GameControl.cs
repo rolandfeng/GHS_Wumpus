@@ -28,7 +28,7 @@ namespace wumpus.components {
             trivia = new Trivia(this);
             form = new InputForm();
             this.help = help;
-            highscores = new ScoreManager();
+            this.highscores = highscores;
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
             hazardInstance = false;
@@ -76,6 +76,12 @@ namespace wumpus.components {
             if (map.batCheck()){
                 graphics.update(map.getPlayerLocation());
                 hazardWarnings(getHazardArray(map.getPlayerLocation()));
+                if (newLoc == map.getWumpusLocation())
+                {
+                    hazardInstance = true;
+                    openTrivia(5, 3, 1);
+                    map.changeWumpusLocation(wumpusFleeLoc(true));
+                }
             }
             if (newLoc == map.getWumpusLocation()) {
                 hazardInstance = true;
