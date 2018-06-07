@@ -14,6 +14,7 @@ namespace wumpus.components {
         private Sound sound;
         private Trivia trivia;
         private InputForm form;
+        private Help help;
         private ScoreManager highscores;
         private Player player;
         private bool hazardInstance;
@@ -26,6 +27,7 @@ namespace wumpus.components {
             sound = new Sound();
             trivia = new Trivia(this);
             form = new InputForm();
+            help = new Help();
             highscores = new ScoreManager();
             player = new Player();
             graphics = new Graphics(this, player, map, cave);
@@ -54,6 +56,10 @@ namespace wumpus.components {
         public void displayHighscores() {
             highscores.LoadHighScores();
             highscores.DisplayHighScores();
+        }
+
+        public void displayHelp() {
+            help.Show();
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
@@ -124,7 +130,7 @@ namespace wumpus.components {
             } else {
                 player.changeCoinCount(-2);
                 graphics.updateCoins();
-                graphics.Show("Answer " + needed + " of " + asked + " questions correctly to win!");
+                graphics.Show("Answer " + needed + " of " + asked + " questions correctly to succeed!");
                 trivia.ShowTrivia();
                 trivia.ask(asked, needed, type);
             }

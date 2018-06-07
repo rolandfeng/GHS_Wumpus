@@ -42,5 +42,10 @@ namespace wumpus
         {
             gameControl.displayHighscores();
         }
+
+        private void OpenHelp_Click(object sender, EventArgs e)
+        {
+            gameControl.displayHelp();
+        }
     }
 }
