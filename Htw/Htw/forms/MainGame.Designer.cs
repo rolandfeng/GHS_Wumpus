@@ -60,6 +60,7 @@
             this.laserSouthWestPicture = new System.Windows.Forms.PictureBox();
             this.laserNorthEastPicture = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.planetLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.laserNorthPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserSouthPicture)).BeginInit();
@@ -87,7 +88,7 @@
             this.NumberOfArrowsLabel.Location = new System.Drawing.Point(1660, 52);
             this.NumberOfArrowsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NumberOfArrowsLabel.Name = "NumberOfArrowsLabel";
-            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(190, 20);
+            this.NumberOfArrowsLabel.Size = new System.Drawing.Size(176, 20);
             this.NumberOfArrowsLabel.TabIndex = 7;
             this.NumberOfArrowsLabel.Text = "Number of Lasers\r\n";
             // 
@@ -223,9 +224,9 @@
             this.laserNorthPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserNorthPicture.ErrorImage = ((System.Drawing.Image)(resources.GetObject("laserNorthPicture.ErrorImage")));
             this.laserNorthPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserNorthPicture.Image")));
-            this.laserNorthPicture.Location = new System.Drawing.Point(786, 356);
+            this.laserNorthPicture.Location = new System.Drawing.Point(824, 310);
             this.laserNorthPicture.Name = "laserNorthPicture";
-            this.laserNorthPicture.Size = new System.Drawing.Size(137, 38);
+            this.laserNorthPicture.Size = new System.Drawing.Size(77, 54);
             this.laserNorthPicture.TabIndex = 20;
             this.laserNorthPicture.TabStop = false;
             // 
@@ -369,9 +370,9 @@
             // 
             this.laserSouthPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserSouthPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserSouthPicture.Image")));
-            this.laserSouthPicture.Location = new System.Drawing.Point(786, 517);
+            this.laserSouthPicture.Location = new System.Drawing.Point(824, 515);
             this.laserSouthPicture.Name = "laserSouthPicture";
-            this.laserSouthPicture.Size = new System.Drawing.Size(137, 38);
+            this.laserSouthPicture.Size = new System.Drawing.Size(87, 56);
             this.laserSouthPicture.TabIndex = 25;
             this.laserSouthPicture.TabStop = false;
             // 
@@ -381,7 +382,7 @@
             this.laserNorthWestPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserNorthWestPicture.BackgroundImage")));
             this.laserNorthWestPicture.Location = new System.Drawing.Point(718, 379);
             this.laserNorthWestPicture.Name = "laserNorthWestPicture";
-            this.laserNorthWestPicture.Size = new System.Drawing.Size(76, 50);
+            this.laserNorthWestPicture.Size = new System.Drawing.Size(76, 46);
             this.laserNorthWestPicture.TabIndex = 26;
             this.laserNorthWestPicture.TabStop = false;
             // 
@@ -389,9 +390,9 @@
             // 
             this.laserSouthEastPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserSouthEastPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserSouthEastPicture.BackgroundImage")));
-            this.laserSouthEastPicture.Location = new System.Drawing.Point(928, 484);
+            this.laserSouthEastPicture.Location = new System.Drawing.Point(939, 464);
             this.laserSouthEastPicture.Name = "laserSouthEastPicture";
-            this.laserSouthEastPicture.Size = new System.Drawing.Size(75, 50);
+            this.laserSouthEastPicture.Size = new System.Drawing.Size(81, 46);
             this.laserSouthEastPicture.TabIndex = 27;
             this.laserSouthEastPicture.TabStop = false;
             // 
@@ -399,9 +400,9 @@
             // 
             this.laserSouthWestPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserSouthWestPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserSouthWestPicture.BackgroundImage")));
-            this.laserSouthWestPicture.Location = new System.Drawing.Point(731, 457);
+            this.laserSouthWestPicture.Location = new System.Drawing.Point(718, 464);
             this.laserSouthWestPicture.Name = "laserSouthWestPicture";
-            this.laserSouthWestPicture.Size = new System.Drawing.Size(49, 77);
+            this.laserSouthWestPicture.Size = new System.Drawing.Size(76, 46);
             this.laserSouthWestPicture.TabIndex = 28;
             this.laserSouthWestPicture.TabStop = false;
             // 
@@ -409,15 +410,27 @@
             // 
             this.laserNorthEastPicture.BackColor = System.Drawing.Color.Transparent;
             this.laserNorthEastPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserNorthEastPicture.BackgroundImage")));
-            this.laserNorthEastPicture.Location = new System.Drawing.Point(929, 324);
+            this.laserNorthEastPicture.Location = new System.Drawing.Point(939, 379);
             this.laserNorthEastPicture.Name = "laserNorthEastPicture";
-            this.laserNorthEastPicture.Size = new System.Drawing.Size(43, 83);
+            this.laserNorthEastPicture.Size = new System.Drawing.Size(72, 46);
             this.laserNorthEastPicture.TabIndex = 29;
             this.laserNorthEastPicture.TabStop = false;
             // 
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // planetLabel
+            // 
+            this.planetLabel.AutoSize = true;
+            this.planetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.planetLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.planetLabel.ForeColor = System.Drawing.Color.White;
+            this.planetLabel.Location = new System.Drawing.Point(26, 25);
+            this.planetLabel.Name = "planetLabel";
+            this.planetLabel.Size = new System.Drawing.Size(238, 40);
+            this.planetLabel.TabIndex = 30;
+            this.planetLabel.Text = "planetLabel";
             // 
             // MainGame
             // 
@@ -426,6 +439,7 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1443, 840);
+            this.Controls.Add(this.planetLabel);
             this.Controls.Add(this.laserNorthEastPicture);
             this.Controls.Add(this.laserSouthWestPicture);
             this.Controls.Add(this.laserSouthEastPicture);
@@ -499,5 +513,6 @@
         private System.Windows.Forms.PictureBox laserSouthWestPicture;
         private System.Windows.Forms.PictureBox laserNorthEastPicture;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label planetLabel;
     }
 }
