@@ -217,7 +217,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // laserNorthPicture
             // 
@@ -226,7 +225,7 @@
             this.laserNorthPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserNorthPicture.Image")));
             this.laserNorthPicture.Location = new System.Drawing.Point(824, 310);
             this.laserNorthPicture.Name = "laserNorthPicture";
-            this.laserNorthPicture.Size = new System.Drawing.Size(65, 40);
+            this.laserNorthPicture.Size = new System.Drawing.Size(77, 54);
             this.laserNorthPicture.TabIndex = 20;
             this.laserNorthPicture.TabStop = false;
             // 
@@ -372,7 +371,7 @@
             this.laserSouthPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserSouthPicture.Image")));
             this.laserSouthPicture.Location = new System.Drawing.Point(824, 515);
             this.laserSouthPicture.Name = "laserSouthPicture";
-            this.laserSouthPicture.Size = new System.Drawing.Size(65, 40);
+            this.laserSouthPicture.Size = new System.Drawing.Size(87, 56);
             this.laserSouthPicture.TabIndex = 25;
             this.laserSouthPicture.TabStop = false;
             // 
@@ -382,7 +381,7 @@
             this.laserNorthWestPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserNorthWestPicture.BackgroundImage")));
             this.laserNorthWestPicture.Location = new System.Drawing.Point(718, 379);
             this.laserNorthWestPicture.Name = "laserNorthWestPicture";
-            this.laserNorthWestPicture.Size = new System.Drawing.Size(65, 40);
+            this.laserNorthWestPicture.Size = new System.Drawing.Size(76, 46);
             this.laserNorthWestPicture.TabIndex = 26;
             this.laserNorthWestPicture.TabStop = false;
             // 
@@ -392,7 +391,7 @@
             this.laserSouthEastPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserSouthEastPicture.BackgroundImage")));
             this.laserSouthEastPicture.Location = new System.Drawing.Point(939, 464);
             this.laserSouthEastPicture.Name = "laserSouthEastPicture";
-            this.laserSouthEastPicture.Size = new System.Drawing.Size(65, 40);
+            this.laserSouthEastPicture.Size = new System.Drawing.Size(81, 46);
             this.laserSouthEastPicture.TabIndex = 27;
             this.laserSouthEastPicture.TabStop = false;
             // 
@@ -402,7 +401,7 @@
             this.laserSouthWestPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserSouthWestPicture.BackgroundImage")));
             this.laserSouthWestPicture.Location = new System.Drawing.Point(718, 464);
             this.laserSouthWestPicture.Name = "laserSouthWestPicture";
-            this.laserSouthWestPicture.Size = new System.Drawing.Size(65, 40);
+            this.laserSouthWestPicture.Size = new System.Drawing.Size(76, 46);
             this.laserSouthWestPicture.TabIndex = 28;
             this.laserSouthWestPicture.TabStop = false;
             // 
@@ -412,9 +411,13 @@
             this.laserNorthEastPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("laserNorthEastPicture.BackgroundImage")));
             this.laserNorthEastPicture.Location = new System.Drawing.Point(939, 379);
             this.laserNorthEastPicture.Name = "laserNorthEastPicture";
-            this.laserNorthEastPicture.Size = new System.Drawing.Size(65, 40);
+            this.laserNorthEastPicture.Size = new System.Drawing.Size(72, 46);
             this.laserNorthEastPicture.TabIndex = 29;
             this.laserNorthEastPicture.TabStop = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // MainGame
             // 
