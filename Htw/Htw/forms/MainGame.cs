@@ -294,12 +294,15 @@ namespace wumpus.forms
         {
             timer1.Enabled = false;
             this.timer = false;
-            BackgroundImage = image[currentRoom - 1];
 
             Timer endOfAnimationTimer = new Timer();
             endOfAnimationTimer.Interval = 800;
             endOfAnimationTimer.Tick += (s, e) =>
             {
+                BackgroundImage = image[currentRoom - 1];
+                this.spaceshipX = 540;
+                this.spaceshipY = 300;
+                spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 endOfAnimationTimer.Enabled = false;
                 endOfAnimationTimer.Stop();
                 gameControl.moveRoom(direction);
@@ -316,7 +319,6 @@ namespace wumpus.forms
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.Y == 220) {
                     this.northClicked = false;
-                    this.spaceshipY = 300;
                     animationCompleted();
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
@@ -331,8 +333,6 @@ namespace wumpus.forms
                 if (spaceshipPicture.Location.X == 900 && spaceshipPicture.Location.Y == 228) {
                     
                     this.northEastClicked = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
                     animationCompleted();
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
@@ -347,8 +347,6 @@ namespace wumpus.forms
                 if (spaceshipPicture.Location.X == 300 && spaceshipPicture.Location.Y == 252)
                 {
                     this.northWestClicked = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
                     animationCompleted();
                 }
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
@@ -363,7 +361,6 @@ namespace wumpus.forms
                 if (spaceshipPicture.Location.Y == 400)
                 {
                     this.southClicked = false;
-                    this.spaceshipY = 300;
                     animationCompleted();
 
                 }
@@ -379,8 +376,6 @@ namespace wumpus.forms
                 if (spaceshipPicture.Location.X == 860 && spaceshipPicture.Location.Y == 364)
                 {
                     this.southEastClicked = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
                     animationCompleted();
 
                 }
@@ -398,8 +393,6 @@ namespace wumpus.forms
                 if (spaceshipPicture.Location.X == 260 && spaceshipPicture.Location.Y == 356)
                 {
                     this.southWestClicked = false;
-                    this.spaceshipX = 540;
-                    this.spaceshipY = 300;
                     animationCompleted();
 
                 }
