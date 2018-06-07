@@ -308,7 +308,7 @@ namespace wumpus.forms
         {
             gameControl.buySecret();
         }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             
