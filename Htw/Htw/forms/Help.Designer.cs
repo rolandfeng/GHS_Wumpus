@@ -38,10 +38,10 @@
             this.richTextBox1.BackColor = System.Drawing.Color.Black;
             this.richTextBox1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(302, 161);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Location = new System.Drawing.Point(604, 310);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(851, 765);
+            this.richTextBox1.Size = new System.Drawing.Size(1698, 1467);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -49,9 +49,10 @@
             // 
             this.Close.BackColor = System.Drawing.Color.SkyBlue;
             this.Close.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(967, 894);
+            this.Close.Location = new System.Drawing.Point(1290, 103);
+            this.Close.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(139, 23);
+            this.Close.Size = new System.Drawing.Size(367, 132);
             this.Close.TabIndex = 1;
             this.Close.Text = "Close";
             this.Close.UseVisualStyleBackColor = false;
@@ -59,13 +60,14 @@
             // 
             // Help
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1167, 989);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(2334, 1783);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.richTextBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Help";
             this.Text = "Form1";
             this.ResumeLayout(false);
