@@ -556,7 +556,6 @@ namespace wumpus.forms
             gameControl.displayHighscores();
         }
 
-        
         public bool getArrowAnimationFinished()
         {
             return this.arrowAnimationFinished;
