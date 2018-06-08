@@ -106,7 +106,7 @@
             this.NorthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.NorthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NorthEastRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(988, 157);
+            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(973, 157);
             this.NorthEastRoomsLabel.Name = "NorthEastRoomsLabel";
             this.NorthEastRoomsLabel.Size = new System.Drawing.Size(40, 28);
             this.NorthEastRoomsLabel.TabIndex = 9;
@@ -143,7 +143,7 @@
             this.SouthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.SouthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SouthEastRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(973, 481);
+            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(964, 481);
             this.SouthEastRoomsLabel.Name = "SouthEastRoomsLabel";
             this.SouthEastRoomsLabel.Size = new System.Drawing.Size(37, 28);
             this.SouthEastRoomsLabel.TabIndex = 12;
@@ -215,7 +215,7 @@
             this.laserPicture.ErrorImage = ((System.Drawing.Image)(resources.GetObject("laserPicture.ErrorImage")));
             this.laserPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserPicture.Image")));
             this.laserPicture.Location = new System.Drawing.Point(549, 201);
-            this.laserPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laserPicture.Margin = new System.Windows.Forms.Padding(2);
             this.laserPicture.Name = "laserPicture";
             this.laserPicture.Size = new System.Drawing.Size(51, 45);
             this.laserPicture.TabIndex = 20;
@@ -226,7 +226,7 @@
             this.spaceshipPicture.BackColor = System.Drawing.Color.Transparent;
             this.spaceshipPicture.Image = ((System.Drawing.Image)(resources.GetObject("spaceshipPicture.Image")));
             this.spaceshipPicture.Location = new System.Drawing.Point(549, 280);
-            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(2);
             this.spaceshipPicture.Name = "spaceshipPicture";
             this.spaceshipPicture.Size = new System.Drawing.Size(122, 101);
             this.spaceshipPicture.TabIndex = 21;
@@ -270,7 +270,7 @@
             this.viewHighscores.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewHighscores.ForeColor = System.Drawing.Color.White;
             this.viewHighscores.Location = new System.Drawing.Point(540, 259);
-            this.viewHighscores.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.viewHighscores.Margin = new System.Windows.Forms.Padding(1);
             this.viewHighscores.Name = "viewHighscores";
             this.viewHighscores.Size = new System.Drawing.Size(166, 52);
             this.viewHighscores.TabIndex = 24;
@@ -300,7 +300,7 @@
             // 
             this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayHelp.Location = new System.Drawing.Point(1094, 137);
-            this.displayHelp.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.displayHelp.Margin = new System.Windows.Forms.Padding(1);
             this.displayHelp.Name = "displayHelp";
             this.displayHelp.Size = new System.Drawing.Size(162, 23);
             this.displayHelp.TabIndex = 31;
@@ -410,7 +410,7 @@
             // 
             this.displayCheats.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayCheats.Location = new System.Drawing.Point(1183, 791);
-            this.displayCheats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayCheats.Margin = new System.Windows.Forms.Padding(2);
             this.displayCheats.Name = "displayCheats";
             this.displayCheats.Size = new System.Drawing.Size(75, 31);
             this.displayCheats.TabIndex = 33;
@@ -422,7 +422,7 @@
             // 
             this.LasersCoins.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LasersCoins.Location = new System.Drawing.Point(1183, 647);
-            this.LasersCoins.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LasersCoins.Margin = new System.Windows.Forms.Padding(2);
             this.LasersCoins.Name = "LasersCoins";
             this.LasersCoins.Size = new System.Drawing.Size(75, 36);
             this.LasersCoins.TabIndex = 34;
@@ -434,7 +434,7 @@
             // 
             this.Victory.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Victory.Location = new System.Drawing.Point(1183, 608);
-            this.Victory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Victory.Margin = new System.Windows.Forms.Padding(2);
             this.Victory.Name = "Victory";
             this.Victory.Size = new System.Drawing.Size(75, 36);
             this.Victory.TabIndex = 35;
@@ -446,7 +446,7 @@
             // 
             this.Defeat.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Defeat.Location = new System.Drawing.Point(1183, 569);
-            this.Defeat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Defeat.Margin = new System.Windows.Forms.Padding(2);
             this.Defeat.Name = "Defeat";
             this.Defeat.Size = new System.Drawing.Size(75, 36);
             this.Defeat.TabIndex = 36;
@@ -458,7 +458,7 @@
             // 
             this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HazardsLoc.Location = new System.Drawing.Point(1183, 530);
-            this.HazardsLoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HazardsLoc.Margin = new System.Windows.Forms.Padding(2);
             this.HazardsLoc.Name = "HazardsLoc";
             this.HazardsLoc.Size = new System.Drawing.Size(75, 36);
             this.HazardsLoc.TabIndex = 37;
