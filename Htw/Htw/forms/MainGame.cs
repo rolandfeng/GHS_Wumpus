@@ -536,7 +536,7 @@ namespace wumpus.forms
             ShootArrowButton.Visible = false;
             planetLabel.Visible = false;
             displayHelp.Visible = false;
-            openMap.Visible = false;
+            mapOpen.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
             viewHighscores.Visible = true;
@@ -589,7 +589,7 @@ namespace wumpus.forms
             gameControl.displayHelp();
         }
 
-        private void openMap_Click(object sender, EventArgs e)
+        private void mapOpen_Click(object sender, EventArgs e)
         {
             gameControl.displayMap();
         }
