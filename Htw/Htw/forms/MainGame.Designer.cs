@@ -128,7 +128,7 @@
             this.SouthRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.SouthRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SouthRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.SouthRoomsLabel.Location = new System.Drawing.Point(837, 1002);
+            this.SouthRoomsLabel.Location = new System.Drawing.Point(752, 940);
             this.SouthRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SouthRoomsLabel.Name = "SouthRoomsLabel";
             this.SouthRoomsLabel.Size = new System.Drawing.Size(51, 40);
@@ -154,7 +154,7 @@
             this.SouthWestRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.SouthWestRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SouthWestRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(102, 590);
+            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(26, 585);
             this.SouthWestRoomsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SouthWestRoomsLabel.Name = "SouthWestRoomsLabel";
             this.SouthWestRoomsLabel.Size = new System.Drawing.Size(69, 40);
@@ -211,6 +211,10 @@
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer 2
+            //
+            //this.timer2.Interval = 20;
+            //this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // laserPicture
             // 
             this.laserPicture.BackColor = System.Drawing.Color.Transparent;
@@ -282,7 +286,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 20;
+            this.timer2.Interval = 10;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // planetLabel
@@ -367,7 +371,7 @@
             this.northButton.BackColor = System.Drawing.Color.Red;
             this.northButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northButton.Location = new System.Drawing.Point(510, -168);
+            this.northButton.Location = new System.Drawing.Point(510, -195);
             this.northButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.northButton.Name = "northButton";
             this.northButton.Size = new System.Drawing.Size(494, 575);
@@ -379,7 +383,7 @@
             // 
             this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayHelp.Location = new System.Drawing.Point(1641, 208);
-            this.displayHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayHelp.Margin = new System.Windows.Forms.Padding(2);
             this.displayHelp.Name = "displayHelp";
             this.displayHelp.Size = new System.Drawing.Size(243, 35);
             this.displayHelp.TabIndex = 31;
@@ -393,13 +397,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1443, 840);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.displayHelp);
             this.Controls.Add(this.planetLabel);
             this.Controls.Add(this.viewHighscores);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.playAgain);
-            this.Controls.Add(this.spaceshipPicture);
             this.Controls.Add(this.laserPicture);
             this.Controls.Add(this.buySecretButton);
             this.Controls.Add(this.ShootArrowButton);
@@ -418,6 +421,7 @@
             this.Controls.Add(this.southWestButton);
             this.Controls.Add(this.northEastButton);
             this.Controls.Add(this.northButton);
+            this.Controls.Add(this.spaceshipPicture);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainGame";
             this.Text = "MainGame";

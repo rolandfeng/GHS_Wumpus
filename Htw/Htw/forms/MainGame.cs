@@ -318,6 +318,7 @@ namespace wumpus.forms
                     this.northClicked = false;
                     animationCompleted();
                 }
+                
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
 
@@ -399,7 +400,6 @@ namespace wumpus.forms
             laserPicture.Visible = true;
             if (this.northShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserY[0] = laserY[0] - 5;
                 laserPicture.Location = new Point(laserX[1], laserY[0]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
@@ -415,12 +415,11 @@ namespace wumpus.forms
 
             if (this.northEastShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserX[2] = laserX[2] + 20;
                 laserY[1] = laserY[1] - 4;
                 laserPicture.Location = new Point(laserX[2], laserY[1]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
-                if (laserPicture.Location.X == 960 && laserPicture.Location.Y == 228)
+                if (laserPicture.Location.X == 980 && laserPicture.Location.Y == 228)
                 {
                     timer2.Enabled = false;
                     laserPicture.Visible = false;
@@ -433,7 +432,6 @@ namespace wumpus.forms
 
             if (this.northWestShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserX[0] = laserX[0] - 20;
                 laserY[1] = laserY[1] - 4;
                 laserPicture.Location = new Point(laserX[0], laserY[1]);
@@ -451,7 +449,6 @@ namespace wumpus.forms
 
             if (this.southShootClicked == true)
             {
-                //laserPicture.Visible = true;
                 laserY[3] = laserY[3] + 5;
                 laserPicture.Location = new Point(laserX[1], laserY[3]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
@@ -467,12 +464,11 @@ namespace wumpus.forms
 
             if (this.southEastShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserX[2] = laserX[2] + 20;
                 laserY[2] = laserY[2] + 4;
                 laserPicture.Location = new Point(laserX[2], laserY[2]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
-                if (laserPicture.Location.X == 960 && laserPicture.Location.Y == 402)
+                if (laserPicture.Location.X == 980 && laserPicture.Location.Y == 402)
                 {
                     timer2.Enabled = false;
                     laserPicture.Visible = false;
@@ -485,7 +481,6 @@ namespace wumpus.forms
 
             if (this.southWestShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserX[0] = laserX[0] - 20;
                 laserY[2] = laserY[2] + 4;
                 laserPicture.Location = new Point(laserX[0], laserY[2]);
@@ -565,6 +560,8 @@ namespace wumpus.forms
         {
             gameControl.displayHelp();
         }
+
+
     }
 }
 
