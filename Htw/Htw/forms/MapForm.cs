@@ -15,6 +15,7 @@ namespace wumpus.forms
     {
         public MapForm()
         {
+            this.ControlBox = false;
             InitializeComponent();
         }
 

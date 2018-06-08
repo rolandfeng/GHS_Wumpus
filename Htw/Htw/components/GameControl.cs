@@ -66,7 +66,7 @@ namespace wumpus.components {
 
         public void displayMap() {
             mapForm.UpdatePlayerLoc(map.getPlayerLocation());
-            mapForm.Show();
+                mapForm.Show();
         }
 
         public void moveRoom(wumpus.common.Direction direction) {
