@@ -13,8 +13,10 @@ namespace wumpus.forms
 {
     public partial class MapForm : Form
     {
+
         public MapForm()
         {
+            this.ControlBox = false;
             InitializeComponent();
         }
 
