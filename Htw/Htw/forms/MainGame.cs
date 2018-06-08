@@ -33,6 +33,7 @@ namespace wumpus.forms
         bool southShootClicked;
         bool southWestShootClicked;
         bool southEastShootClicked;
+        bool arrowShot;
         Image[] image;
         String[] name;
         int spaceshipX;
@@ -73,6 +74,8 @@ namespace wumpus.forms
             playAgain.Visible = false;
             quitButton.Visible = false;
             viewHighscores.Visible = false;
+            displayCheats.Visible = false;
+            LasersCoins.Visible = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -95,6 +98,7 @@ namespace wumpus.forms
             this.laserY = new int [] { 270, 300, 330, 360};
             this.laserX = new int[] { 500, 560, 620 };
             this.arrowAnimationFinished = false;
+            this.arrowShot = false;
         }
 
         // update graphics
@@ -310,6 +314,7 @@ namespace wumpus.forms
         // timer 1
         private void timer1_Tick(object sender, EventArgs e)
         {         
+            
             if (this.northClicked) {
                 this.spaceshipY = this.spaceshipY - 10;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
@@ -342,7 +347,7 @@ namespace wumpus.forms
                 this.spaceshipY = this.spaceshipY - 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.X == 300 && spaceshipPicture.Location.Y == 252)
+                if (spaceshipPicture.Location.X == 290 && spaceshipPicture.Location.Y == 250)
                 {
                     this.northWestClicked = false;
                     animationCompleted();
@@ -370,7 +375,7 @@ namespace wumpus.forms
                 this.spaceshipY = this.spaceshipY + 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.X == 860 && spaceshipPicture.Location.Y == 364)
+                if (spaceshipPicture.Location.X == 870 && spaceshipPicture.Location.Y == 366)
                 {
                     this.southEastClicked = false;
                     animationCompleted();
@@ -397,6 +402,7 @@ namespace wumpus.forms
         // timer 2
         private void timer2_Tick(object sender, EventArgs e)
         {
+            this.arrowShot = true;
             laserPicture.Visible = true;
             if (this.northShootClicked)
             {
@@ -410,6 +416,7 @@ namespace wumpus.forms
                     this.northShootClicked = false;
                     laserY[0] = 270;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -427,6 +434,7 @@ namespace wumpus.forms
                     laserY[1] = 300;
                     laserX[2] = 620;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -444,6 +452,7 @@ namespace wumpus.forms
                     laserY[1] = 300;
                     laserX[0] = 500;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -459,6 +468,7 @@ namespace wumpus.forms
                     this.southShootClicked = false;
                     laserY[3] = 360;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -476,6 +486,7 @@ namespace wumpus.forms
                     laserY[2] = 330;
                     laserX[2] = 620;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -493,10 +504,16 @@ namespace wumpus.forms
                     laserY[2] = 330;
                     laserX[0] = 500;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
         }
-        
+
+        public RoundButton getNorthButton()
+        {
+            return northButton;
+        }
+
         // end game
         public void endGame(bool result)
         {
@@ -557,14 +574,53 @@ namespace wumpus.forms
             return this.arrowAnimationFinished;
         }
 
+        public bool setArrowAnimationFinished(bool arrowAnimationFinished)
+        {
+            this.arrowAnimationFinished = arrowAnimationFinished;
+            return this.arrowAnimationFinished;
+        }
+
+        public bool getArrowShot()
+        {
+            return this.arrowShot;
+        }
+
+        
         private void displayHelp_Click(object sender, EventArgs e)
         {
             gameControl.displayHelp();
+            if (currentRoom == 1 && shootButtonClicked) {
+                displayCheats.Visible = true;
+            }
         }
 
         private void mapOpen_Click(object sender, EventArgs e)
         {
             gameControl.displayMap();
+        }
+
+        private void displayCheats_Click(object sender, EventArgs e)
+        {
+            LasersCoins.Visible = true;
+            displayCheats.Visible = false;
+        }
+
+        private void LasersCoins_Click(object sender, EventArgs e)
+        {
+            player.changeArrowCount(2018);
+            player.changeCoinCount(2018);
+            NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
+            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+        }
+
+        private void Defeat_Click(object sender, EventArgs e)
+        {
+            endGame(false);
+        }
+
+        private void Victory_Click(object sender, EventArgs e)
+        {
+            endGame(true);
         }
     }
 }
