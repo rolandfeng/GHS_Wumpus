@@ -166,7 +166,7 @@
             // PurchaseArrowsButton
             // 
             this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PurchaseArrowsButton.Location = new System.Drawing.Point(1260, 26);
+            this.PurchaseArrowsButton.Location = new System.Drawing.Point(1773, 8);
             this.PurchaseArrowsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(200, 50);
@@ -199,7 +199,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(1260, 881);
+            this.buySecretButton.Location = new System.Drawing.Point(1773, 1250);
             this.buySecretButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(200, 50);
