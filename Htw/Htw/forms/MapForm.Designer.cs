@@ -59,6 +59,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.closeMap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -361,6 +362,17 @@
             this.label30.TabIndex = 29;
             this.label30.Text = "Sagittarius-30";
             // 
+            // closeMap
+            // 
+            this.closeMap.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeMap.Location = new System.Drawing.Point(27, 1002);
+            this.closeMap.Name = "closeMap";
+            this.closeMap.Size = new System.Drawing.Size(150, 60);
+            this.closeMap.TabIndex = 30;
+            this.closeMap.Text = "Close";
+            this.closeMap.UseVisualStyleBackColor = true;
+            this.closeMap.Click += new System.EventHandler(this.closeMap_Click);
+            // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -368,6 +380,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 1090);
+            this.Controls.Add(this.closeMap);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label28);
@@ -438,5 +451,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button closeMap;
     }
 }

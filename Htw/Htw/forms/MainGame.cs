@@ -526,6 +526,7 @@ namespace wumpus.forms
             ShootArrowButton.Visible = false;
             planetLabel.Visible = false;
             displayHelp.Visible = false;
+            openMap.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
             viewHighscores.Visible = true;
