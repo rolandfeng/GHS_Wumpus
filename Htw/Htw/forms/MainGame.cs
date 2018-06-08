@@ -101,7 +101,7 @@ namespace wumpus.forms
         public void UpdateGraphics(int currentRoom)
         {
             //this.currentRoom = currentRoom;
-            BackgroundImage = image[0];
+            BackgroundImage = image[currentRoom - 1];
             updateRooms(currentRoom);
 
             // laser picture
