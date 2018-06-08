@@ -92,8 +92,8 @@ namespace wumpus.forms
                                       "Nebula-26", "Andromeda-27", "Galactic-28", "Titanium-29", "Sagittarius-30"};
             this.spaceshipX = 540;
             this.spaceshipY = 300;
-            this.laserY = new int [] { 270, 300, 330, 400};
-            this.laserX = new int[] { 500, 540, 600 };
+            this.laserY = new int [] { 270, 300, 330, 360};
+            this.laserX = new int[] { 500, 560, 620 };
             this.arrowAnimationFinished = false;
         }
 
@@ -401,7 +401,7 @@ namespace wumpus.forms
             {
                 //laserPicture.Visible = true;
                 laserY[0] = laserY[0] - 5;
-                laserPicture.Location = new Point(laserX[0], laserY[0]);
+                laserPicture.Location = new Point(laserX[1], laserY[0]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
                 if (laserPicture.Location.Y == 190)
                 {
@@ -426,7 +426,7 @@ namespace wumpus.forms
                     laserPicture.Visible = false;
                     this.northEastShootClicked = false;
                     laserY[1] = 300;
-                    laserX[2] = 600;
+                    laserX[2] = 620;
                     this.arrowAnimationFinished = true;
                 }
             }
@@ -460,7 +460,7 @@ namespace wumpus.forms
                     timer2.Enabled = false;
                     laserPicture.Visible = false;
                     this.southShootClicked = false;
-                    laserY[3] = 400;
+                    laserY[3] = 360;
                     this.arrowAnimationFinished = true;
                 }
             }
@@ -478,7 +478,7 @@ namespace wumpus.forms
                     laserPicture.Visible = false;
                     this.southEastShootClicked = false;
                     laserY[2] = 330;
-                    laserX[2] = 600;
+                    laserX[2] = 620;
                     this.arrowAnimationFinished = true;
                 }
             }
