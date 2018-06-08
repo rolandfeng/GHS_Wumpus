@@ -56,7 +56,7 @@
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.MistyRose;
-            this.exitButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.exitButton.Location = new System.Drawing.Point(636, 637);
             this.exitButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.exitButton.Name = "exitButton";
@@ -82,7 +82,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.button1.Location = new System.Drawing.Point(636, 559);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
@@ -95,7 +95,7 @@
             // OpenHelp
             // 
             this.OpenHelp.BackColor = System.Drawing.Color.MistyRose;
-            this.OpenHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpenHelp.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.OpenHelp.Location = new System.Drawing.Point(636, 598);
             this.OpenHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OpenHelp.Name = "OpenHelp";
