@@ -552,6 +552,11 @@ namespace wumpus.forms
             }           
         }
 
+        public void wumpusImage()
+        {
+            //BackgroundImage = Properties.Resources.Wumpus;
+        }
+
         // play again button clicked
         private void playAgain_Click(object sender, EventArgs e)
         {
