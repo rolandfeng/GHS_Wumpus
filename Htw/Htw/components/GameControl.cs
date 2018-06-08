@@ -64,6 +64,10 @@ namespace wumpus.components {
             help.Show();
         }
 
+        public void displayMap() {
+            mapForm.Show();
+        }
+
         public void moveRoom(wumpus.common.Direction direction) {
             int currentLoc = map.getPlayerLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);

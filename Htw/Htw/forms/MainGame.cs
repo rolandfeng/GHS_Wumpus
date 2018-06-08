@@ -569,7 +569,7 @@ namespace wumpus.forms
 
         private void openMap_Click(object sender, EventArgs e)
         {
-
+            gameControl.displayMap();
         }
     }
 }
