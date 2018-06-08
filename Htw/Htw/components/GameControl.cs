@@ -14,6 +14,7 @@ namespace wumpus.components {
         private Sound sound;
         private Trivia trivia;
         private InputForm form;
+        private MapForm mapForm;
         private Help help;
         private ScoreManager highscores;
         private Player player;
@@ -27,6 +28,7 @@ namespace wumpus.components {
             sound = new Sound();
             trivia = new Trivia(this);
             form = new InputForm();
+            mapForm = new MapForm();
             this.help = help;
             this.highscores = highscores;
             player = new Player();
@@ -60,6 +62,10 @@ namespace wumpus.components {
 
         public void displayHelp() {
             help.Show();
+        }
+
+        public void displayMap() {
+            mapForm.Show();
         }
 
         public void moveRoom(wumpus.common.Direction direction) {

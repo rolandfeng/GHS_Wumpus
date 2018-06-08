@@ -101,7 +101,7 @@ namespace wumpus.forms
         public void UpdateGraphics(int currentRoom)
         {
             //this.currentRoom = currentRoom;
-            BackgroundImage = image[0];
+            BackgroundImage = image[currentRoom - 1];
             updateRooms(currentRoom);
 
             // laser picture
@@ -565,6 +565,11 @@ namespace wumpus.forms
         private void displayHelp_Click(object sender, EventArgs e)
         {
             gameControl.displayHelp();
+        }
+
+        private void openMap_Click(object sender, EventArgs e)
+        {
+            gameControl.displayMap();
         }
     }
 }
