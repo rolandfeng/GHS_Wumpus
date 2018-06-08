@@ -72,7 +72,7 @@
             // 
             this.NumberOfCoinsLabel.AutoSize = true;
             this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(859, 743);
+            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(1077, 181);
             this.NumberOfCoinsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
             this.NumberOfCoinsLabel.Size = new System.Drawing.Size(186, 23);
@@ -199,7 +199,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(1081, 731);
+            this.buySecretButton.Location = new System.Drawing.Point(1081, 211);
             this.buySecretButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(200, 50);
@@ -338,7 +338,7 @@
             // displayCheats
             // 
             this.displayCheats.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayCheats.Location = new System.Drawing.Point(1049, 241);
+            this.displayCheats.Location = new System.Drawing.Point(1049, 262);
             this.displayCheats.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.displayCheats.Name = "displayCheats";
             this.displayCheats.Size = new System.Drawing.Size(250, 60);
