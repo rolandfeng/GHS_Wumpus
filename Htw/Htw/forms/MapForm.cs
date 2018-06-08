@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace wumpus.forms
 {
-    public partial class Form3 : Form
+    public partial class MapForm : Form
     {
-        public Form3()
+        public MapForm()
         {
             InitializeComponent();
         }
