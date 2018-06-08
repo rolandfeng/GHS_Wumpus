@@ -51,12 +51,6 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.planetLabel = new System.Windows.Forms.Label();
             this.displayHelp = new System.Windows.Forms.Button();
-            this.southEastButton = new RoundButton();
-            this.southButton = new RoundButton();
-            this.northWestButton = new RoundButton();
-            this.southWestButton = new RoundButton();
-            this.northEastButton = new RoundButton();
-            this.northButton = new RoundButton();
             this.openMap = new System.Windows.Forms.Button();
             this.mapOpen = new System.Windows.Forms.Button();
             this.displayCheats = new System.Windows.Forms.Button();
@@ -64,6 +58,12 @@
             this.Victory = new System.Windows.Forms.Button();
             this.Defeat = new System.Windows.Forms.Button();
             this.HazardsLoc = new System.Windows.Forms.Button();
+            this.southEastButton = new RoundButton();
+            this.southButton = new RoundButton();
+            this.northWestButton = new RoundButton();
+            this.southWestButton = new RoundButton();
+            this.northEastButton = new RoundButton();
+            this.northButton = new RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.laserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             this.SuspendLayout();
@@ -72,8 +72,7 @@
             // 
             this.NumberOfCoinsLabel.AutoSize = true;
             this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(2226, 19);
-            this.NumberOfCoinsLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(941, 710);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
             this.NumberOfCoinsLabel.Size = new System.Drawing.Size(215, 28);
             this.NumberOfCoinsLabel.TabIndex = 6;
@@ -204,8 +203,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(2188, 212);
-            this.buySecretButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buySecretButton.Location = new System.Drawing.Point(1085, 706);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(324, 44);
             this.buySecretButton.TabIndex = 17;
@@ -310,92 +308,14 @@
             // displayHelp
             // 
             this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayHelp.Location = new System.Drawing.Point(2188, 263);
-            this.displayHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayHelp.Location = new System.Drawing.Point(10, 706);
+            this.displayHelp.Margin = new System.Windows.Forms.Padding(1);
             this.displayHelp.Name = "displayHelp";
             this.displayHelp.Size = new System.Drawing.Size(324, 44);
             this.displayHelp.TabIndex = 31;
             this.displayHelp.Text = "HELP";
             this.displayHelp.UseVisualStyleBackColor = true;
             this.displayHelp.Click += new System.EventHandler(this.displayHelp_Click);
-            // 
-            // southEastButton
-            // 
-            this.southEastButton.BackColor = System.Drawing.Color.Red;
-            this.southEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
-            this.southEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southEastButton.Location = new System.Drawing.Point(1348, 335);
-            this.southEastButton.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.southEastButton.Name = "southEastButton";
-            this.southEastButton.Size = new System.Drawing.Size(614, 644);
-            this.southEastButton.TabIndex = 19;
-            this.southEastButton.UseVisualStyleBackColor = true;
-            this.southEastButton.Click += new System.EventHandler(this.southEastButton_Click);
-            // 
-            // southButton
-            // 
-            this.southButton.BackColor = System.Drawing.Color.Red;
-            this.southButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
-            this.southButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southButton.Location = new System.Drawing.Point(718, 498);
-            this.southButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.southButton.Name = "southButton";
-            this.southButton.Size = new System.Drawing.Size(736, 923);
-            this.southButton.TabIndex = 19;
-            this.southButton.UseVisualStyleBackColor = true;
-            this.southButton.Click += new System.EventHandler(this.southButton_Click);
-            // 
-            // northWestButton
-            // 
-            this.northWestButton.BackColor = System.Drawing.Color.Red;
-            this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
-            this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northWestButton.Location = new System.Drawing.Point(106, -60);
-            this.northWestButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.northWestButton.Name = "northWestButton";
-            this.northWestButton.Size = new System.Drawing.Size(634, 690);
-            this.northWestButton.TabIndex = 19;
-            this.northWestButton.UseVisualStyleBackColor = true;
-            this.northWestButton.Click += new System.EventHandler(this.northWestButton_Click);
-            // 
-            // southWestButton
-            // 
-            this.southWestButton.BackColor = System.Drawing.Color.Red;
-            this.southWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
-            this.southWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southWestButton.Location = new System.Drawing.Point(88, 327);
-            this.southWestButton.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.southWestButton.Name = "southWestButton";
-            this.southWestButton.Size = new System.Drawing.Size(706, 619);
-            this.southWestButton.TabIndex = 19;
-            this.southWestButton.UseVisualStyleBackColor = true;
-            this.southWestButton.Click += new System.EventHandler(this.southWestButton_Click);
-            // 
-            // northEastButton
-            // 
-            this.northEastButton.BackColor = System.Drawing.Color.Red;
-            this.northEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
-            this.northEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northEastButton.Location = new System.Drawing.Point(1354, -60);
-            this.northEastButton.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.northEastButton.Name = "northEastButton";
-            this.northEastButton.Size = new System.Drawing.Size(708, 737);
-            this.northEastButton.TabIndex = 19;
-            this.northEastButton.UseVisualStyleBackColor = true;
-            this.northEastButton.Click += new System.EventHandler(this.northEastButton_Click);
-            // 
-            // northButton
-            // 
-            this.northButton.BackColor = System.Drawing.Color.Red;
-            this.northButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
-            this.northButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northButton.Location = new System.Drawing.Point(718, -281);
-            this.northButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.northButton.Name = "northButton";
-            this.northButton.Size = new System.Drawing.Size(658, 719);
-            this.northButton.TabIndex = 19;
-            this.northButton.UseVisualStyleBackColor = true;
-            this.northButton.Click += new System.EventHandler(this.northButton_Click);
             // 
             // openMap
             // 
@@ -411,8 +331,7 @@
             // mapOpen
             // 
             this.mapOpen.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mapOpen.Location = new System.Drawing.Point(2188, 315);
-            this.mapOpen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mapOpen.Location = new System.Drawing.Point(10, 679);
             this.mapOpen.Name = "mapOpen";
             this.mapOpen.Size = new System.Drawing.Size(324, 44);
             this.mapOpen.TabIndex = 32;
@@ -480,6 +399,82 @@
             this.HazardsLoc.UseVisualStyleBackColor = true;
             this.HazardsLoc.Click += new System.EventHandler(this.HazardsLoc_Click);
             // 
+            // southEastButton
+            // 
+            this.southEastButton.BackColor = System.Drawing.Color.Red;
+            this.southEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.southEastButton.ForeColor = System.Drawing.Color.Transparent;
+            this.southEastButton.Location = new System.Drawing.Point(674, 174);
+            this.southEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.southEastButton.Name = "southEastButton";
+            this.southEastButton.Size = new System.Drawing.Size(307, 335);
+            this.southEastButton.TabIndex = 19;
+            this.southEastButton.UseVisualStyleBackColor = true;
+            this.southEastButton.Click += new System.EventHandler(this.southEastButton_Click);
+            // 
+            // southButton
+            // 
+            this.southButton.BackColor = System.Drawing.Color.Red;
+            this.southButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.southButton.ForeColor = System.Drawing.Color.Transparent;
+            this.southButton.Location = new System.Drawing.Point(359, 259);
+            this.southButton.Name = "southButton";
+            this.southButton.Size = new System.Drawing.Size(368, 480);
+            this.southButton.TabIndex = 19;
+            this.southButton.UseVisualStyleBackColor = true;
+            this.southButton.Click += new System.EventHandler(this.southButton_Click);
+            // 
+            // northWestButton
+            // 
+            this.northWestButton.BackColor = System.Drawing.Color.Red;
+            this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
+            this.northWestButton.Location = new System.Drawing.Point(53, -31);
+            this.northWestButton.Name = "northWestButton";
+            this.northWestButton.Size = new System.Drawing.Size(317, 359);
+            this.northWestButton.TabIndex = 19;
+            this.northWestButton.UseVisualStyleBackColor = true;
+            this.northWestButton.Click += new System.EventHandler(this.northWestButton_Click);
+            // 
+            // southWestButton
+            // 
+            this.southWestButton.BackColor = System.Drawing.Color.Red;
+            this.southWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.southWestButton.ForeColor = System.Drawing.Color.Transparent;
+            this.southWestButton.Location = new System.Drawing.Point(44, 170);
+            this.southWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.southWestButton.Name = "southWestButton";
+            this.southWestButton.Size = new System.Drawing.Size(353, 322);
+            this.southWestButton.TabIndex = 19;
+            this.southWestButton.UseVisualStyleBackColor = true;
+            this.southWestButton.Click += new System.EventHandler(this.southWestButton_Click);
+            // 
+            // northEastButton
+            // 
+            this.northEastButton.BackColor = System.Drawing.Color.Red;
+            this.northEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.northEastButton.ForeColor = System.Drawing.Color.Transparent;
+            this.northEastButton.Location = new System.Drawing.Point(677, -31);
+            this.northEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.northEastButton.Name = "northEastButton";
+            this.northEastButton.Size = new System.Drawing.Size(354, 383);
+            this.northEastButton.TabIndex = 19;
+            this.northEastButton.UseVisualStyleBackColor = true;
+            this.northEastButton.Click += new System.EventHandler(this.northEastButton_Click);
+            // 
+            // northButton
+            // 
+            this.northButton.BackColor = System.Drawing.Color.Red;
+            this.northButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
+            this.northButton.ForeColor = System.Drawing.Color.Transparent;
+            this.northButton.Location = new System.Drawing.Point(359, -146);
+            this.northButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.northButton.Name = "northButton";
+            this.northButton.Size = new System.Drawing.Size(329, 374);
+            this.northButton.TabIndex = 19;
+            this.northButton.UseVisualStyleBackColor = true;
+            this.northButton.Click += new System.EventHandler(this.northButton_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -517,9 +512,9 @@
             this.Controls.Add(this.northEastButton);
             this.Controls.Add(this.northButton);
             this.Controls.Add(this.spaceshipPicture);
-            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.MaximumSize = new System.Drawing.Size(2544, 1636);
-            this.MinimumSize = new System.Drawing.Size(2544, 1369);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximumSize = new System.Drawing.Size(1285, 778);
+            this.MinimumSize = new System.Drawing.Size(1285, 746);
             this.Name = "MainGame";
             this.Text = "MainGame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
