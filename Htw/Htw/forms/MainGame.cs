@@ -631,7 +631,9 @@ namespace wumpus.forms
 
         private void HazardsLoc_Click(object sender, EventArgs e)
         {
-            string locations = "Wumpus: " + map.getWumpusLocation() + " UFOs: " + map.getBatLocations().ToString() + " BlackHoles: " + map.getPitLocations().ToString();
+            int[] UFOs = map.getBatLocations();
+            int[] Holes = map.getPitLocations();
+            string locations = "Wumpus: " + map.getWumpusLocation() + " UFOs: " + UFOs[0] + ", " + UFOs[1] + " BlackHoles: " + Holes[0] + ", " + Holes[1];
             gameControl.display(locations);
         }
     }
