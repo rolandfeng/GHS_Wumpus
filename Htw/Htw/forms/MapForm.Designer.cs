@@ -59,6 +59,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.closeMap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -331,12 +332,24 @@
             this.label30.TabIndex = 29;
             this.label30.Text = "Sagittarius-30";
             // 
-            // Form3
+            // closeMap
+            // 
+            this.closeMap.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeMap.Location = new System.Drawing.Point(28, 503);
+            this.closeMap.Name = "closeMap";
+            this.closeMap.Size = new System.Drawing.Size(88, 46);
+            this.closeMap.TabIndex = 30;
+            this.closeMap.Text = "Close";
+            this.closeMap.UseVisualStyleBackColor = true;
+            // 
+            // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(579, 567);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.closeMap);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label28);
@@ -367,7 +380,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
+            this.MaximumSize = new System.Drawing.Size(600, 600);
+            this.MinimumSize = new System.Drawing.Size(600, 600);
+            this.Name = "MapForm";
             this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -406,5 +421,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button closeMap;
     }
 }

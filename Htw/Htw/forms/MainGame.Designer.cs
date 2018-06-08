@@ -57,6 +57,7 @@
             this.southWestButton = new RoundButton();
             this.northEastButton = new RoundButton();
             this.northButton = new RoundButton();
+            this.openMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.laserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             this.SuspendLayout();
@@ -385,6 +386,17 @@
             this.northButton.UseVisualStyleBackColor = true;
             this.northButton.Click += new System.EventHandler(this.northButton_Click);
             // 
+            // openMap
+            // 
+            this.openMap.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openMap.Location = new System.Drawing.Point(2400, 310);
+            this.openMap.Name = "openMap";
+            this.openMap.Size = new System.Drawing.Size(324, 44);
+            this.openMap.TabIndex = 32;
+            this.openMap.Text = "Map";
+            this.openMap.UseVisualStyleBackColor = true;
+            this.openMap.Click += new System.EventHandler(this.openMap_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -455,5 +467,6 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label planetLabel;
         private System.Windows.Forms.Button displayHelp;
+        private System.Windows.Forms.Button openMap;
     }
 }

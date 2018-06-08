@@ -39,9 +39,9 @@
             this.richTextBox1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(417, 248);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1906, 750);
+            this.richTextBox1.Size = new System.Drawing.Size(1906, 1112);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -49,7 +49,7 @@
             // 
             this.Close.BackColor = System.Drawing.Color.Firebrick;
             this.Close.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(1239, 1145);
+            this.Close.Location = new System.Drawing.Point(1206, 1390);
             this.Close.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(368, 132);
@@ -67,7 +67,7 @@
             this.ClientSize = new System.Drawing.Size(2740, 1783);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.richTextBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Help";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -101,7 +101,7 @@ namespace wumpus.forms
         public void UpdateGraphics(int currentRoom)
         {
             //this.currentRoom = currentRoom;
-            BackgroundImage = image[0];
+            BackgroundImage = image[currentRoom - 1];
             updateRooms(currentRoom);
 
             // laser picture
@@ -521,6 +521,7 @@ namespace wumpus.forms
             ShootArrowButton.Visible = false;
             planetLabel.Visible = false;
             displayHelp.Visible = false;
+            openMap.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
             viewHighscores.Visible = true;
@@ -551,7 +552,6 @@ namespace wumpus.forms
             gameControl.displayHighscores();
         }
 
-        
         public bool getArrowAnimationFinished()
         {
             return this.arrowAnimationFinished;
@@ -562,7 +562,10 @@ namespace wumpus.forms
             gameControl.displayHelp();
         }
 
-
+        private void openMap_Click(object sender, EventArgs e)
+        {
+            gameControl.displayMap();
+        }
     }
 }
 
