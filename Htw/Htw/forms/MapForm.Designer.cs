@@ -374,6 +374,7 @@
             this.closeMap.TabIndex = 30;
             this.closeMap.Text = "Close";
             this.closeMap.UseVisualStyleBackColor = true;
+            this.closeMap.Click += new System.EventHandler(this.closeMap_Click);
             // 
             // astronaut
             // 

@@ -562,7 +562,7 @@ namespace wumpus.forms
             gameControl.displayHelp();
         }
 
-        private void openMap_Click(object sender, EventArgs e)
+        private void mapOpen_Click(object sender, EventArgs e)
         {
             gameControl.displayMap();
         }

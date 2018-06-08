@@ -65,6 +65,7 @@ namespace wumpus.components {
         }
 
         public void displayMap() {
+            mapForm.UpdatePlayerLoc(map.getPlayerLocation());
             mapForm.Show();
         }
 

@@ -86,5 +86,6 @@ namespace wumpus.forms
         {
             this.Hide();
         }
+
     }
 }
