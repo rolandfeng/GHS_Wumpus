@@ -76,6 +76,9 @@ namespace wumpus.forms
             viewHighscores.Visible = false;
             displayCheats.Visible = false;
             LasersCoins.Visible = false;
+            Victory.Visible = false;
+            Defeat.Visible = false;
+            HazardsLoc.Visible = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -602,6 +605,9 @@ namespace wumpus.forms
         private void displayCheats_Click(object sender, EventArgs e)
         {
             LasersCoins.Visible = true;
+            Victory.Visible = true;
+            Defeat.Visible = true;
+            HazardsLoc.Visible = true;
             displayCheats.Visible = false;
         }
 
@@ -621,6 +627,12 @@ namespace wumpus.forms
         private void Victory_Click(object sender, EventArgs e)
         {
             endGame(true);
+        }
+
+        private void HazardsLoc_Click(object sender, EventArgs e)
+        {
+            string locations = "Wumpus: " + map.getWumpusLocation() + " UFOs: " + map.getBatLocations().ToString() + " BlackHoles: " + map.getPitLocations().ToString();
+            gameControl.display(locations);
         }
     }
 }
