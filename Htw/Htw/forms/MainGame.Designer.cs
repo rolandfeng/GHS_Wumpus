@@ -466,7 +466,7 @@
             // 
             // HazardsLoc
             // 
-            this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HazardsLoc.Location = new System.Drawing.Point(2366, 1020);
             this.HazardsLoc.Name = "HazardsLoc";
             this.HazardsLoc.Size = new System.Drawing.Size(150, 70);
