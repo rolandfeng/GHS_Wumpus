@@ -83,7 +83,7 @@ namespace wumpus.components {
             if (map.batCheck()){
                 graphics.update(map.getPlayerLocation());
                 hazardWarnings(getHazardArray(map.getPlayerLocation()));
-                if (newLoc == map.getWumpusLocation())
+                if (map.getPlayerLocation() == map.getWumpusLocation())
                 {
                     hazardInstance = true;
                     openTrivia(5, 3, 1);
