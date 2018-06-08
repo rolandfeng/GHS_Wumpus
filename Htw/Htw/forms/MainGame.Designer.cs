@@ -57,6 +57,7 @@
             this.southWestButton = new RoundButton();
             this.northEastButton = new RoundButton();
             this.northButton = new RoundButton();
+            this.openMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.laserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +66,7 @@
             // 
             this.NumberOfCoinsLabel.AutoSize = true;
             this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(2227, 19);
+            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(2400, 19);
             this.NumberOfCoinsLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
             this.NumberOfCoinsLabel.Size = new System.Drawing.Size(215, 28);
@@ -76,7 +77,7 @@
             // 
             this.NumberOfArrowsLabel.AutoSize = true;
             this.NumberOfArrowsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(2213, 65);
+            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(2400, 65);
             this.NumberOfArrowsLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.NumberOfArrowsLabel.Name = "NumberOfArrowsLabel";
             this.NumberOfArrowsLabel.Size = new System.Drawing.Size(229, 28);
@@ -164,7 +165,7 @@
             // PurchaseArrowsButton
             // 
             this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PurchaseArrowsButton.Location = new System.Drawing.Point(2188, 115);
+            this.PurchaseArrowsButton.Location = new System.Drawing.Point(2400, 115);
             this.PurchaseArrowsButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(324, 44);
@@ -176,7 +177,7 @@
             // ShootArrowButton
             // 
             this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShootArrowButton.Location = new System.Drawing.Point(2188, 162);
+            this.ShootArrowButton.Location = new System.Drawing.Point(2400, 162);
             this.ShootArrowButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(324, 44);
@@ -197,7 +198,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(2188, 212);
+            this.buySecretButton.Location = new System.Drawing.Point(2400, 212);
             this.buySecretButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(324, 44);
@@ -217,7 +218,7 @@
             this.laserPicture.ErrorImage = ((System.Drawing.Image)(resources.GetObject("laserPicture.ErrorImage")));
             this.laserPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserPicture.Image")));
             this.laserPicture.Location = new System.Drawing.Point(1099, 388);
-            this.laserPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.laserPicture.Margin = new System.Windows.Forms.Padding(4);
             this.laserPicture.Name = "laserPicture";
             this.laserPicture.Size = new System.Drawing.Size(101, 88);
             this.laserPicture.TabIndex = 20;
@@ -228,7 +229,7 @@
             this.spaceshipPicture.BackColor = System.Drawing.Color.Transparent;
             this.spaceshipPicture.Image = ((System.Drawing.Image)(resources.GetObject("spaceshipPicture.Image")));
             this.spaceshipPicture.Location = new System.Drawing.Point(1067, 500);
-            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(4);
             this.spaceshipPicture.Name = "spaceshipPicture";
             this.spaceshipPicture.Size = new System.Drawing.Size(244, 194);
             this.spaceshipPicture.TabIndex = 21;
@@ -303,7 +304,7 @@
             // displayHelp
             // 
             this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayHelp.Location = new System.Drawing.Point(2188, 260);
+            this.displayHelp.Location = new System.Drawing.Point(2400, 260);
             this.displayHelp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.displayHelp.Name = "displayHelp";
             this.displayHelp.Size = new System.Drawing.Size(324, 44);
@@ -390,6 +391,17 @@
             this.northButton.UseVisualStyleBackColor = true;
             this.northButton.Click += new System.EventHandler(this.northButton_Click);
             // 
+            // openMap
+            // 
+            this.openMap.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openMap.Location = new System.Drawing.Point(2400, 310);
+            this.openMap.Name = "openMap";
+            this.openMap.Size = new System.Drawing.Size(324, 44);
+            this.openMap.TabIndex = 32;
+            this.openMap.Text = "Map";
+            this.openMap.UseVisualStyleBackColor = true;
+            this.openMap.Click += new System.EventHandler(this.openMap_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -397,6 +409,7 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2740, 1783);
+            this.Controls.Add(this.openMap);
             this.Controls.Add(this.displayHelp);
             this.Controls.Add(this.planetLabel);
             this.Controls.Add(this.viewHighscores);
@@ -460,5 +473,6 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label planetLabel;
         private System.Windows.Forms.Button displayHelp;
+        private System.Windows.Forms.Button openMap;
     }
 }
