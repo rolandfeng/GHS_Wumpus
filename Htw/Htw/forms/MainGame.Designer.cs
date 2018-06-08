@@ -72,7 +72,7 @@
             // 
             this.NumberOfCoinsLabel.AutoSize = true;
             this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(859, 16);
+            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(859, 21);
             this.NumberOfCoinsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
             this.NumberOfCoinsLabel.Size = new System.Drawing.Size(186, 23);
