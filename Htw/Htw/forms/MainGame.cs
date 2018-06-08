@@ -292,7 +292,7 @@ namespace wumpus.forms
         {
             timer1.Enabled = false;
             Timer endOfAnimationTimer = new Timer();
-            endOfAnimationTimer.Interval = 800;
+            endOfAnimationTimer.Interval = 300;
             endOfAnimationTimer.Tick += (s, e) =>
             {               
                 this.spaceshipX = 540;
@@ -311,23 +311,24 @@ namespace wumpus.forms
         private void timer1_Tick(object sender, EventArgs e)
         {         
             if (this.northClicked) {
-                this.spaceshipY = this.spaceshipY - 20;
+                this.spaceshipY = this.spaceshipY - 10;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
-                //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.Y == 220) {
+                System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
+                if (spaceshipPicture.Location.Y == 210) {
                     this.northClicked = false;
                     animationCompleted();
                 }
+                
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
             }
 
             if (this.northEastClicked)
             {
-                this.spaceshipX = this.spaceshipX + 20;
-                this.spaceshipY = this.spaceshipY - 4;
+                this.spaceshipX = this.spaceshipX + 10;
+                this.spaceshipY = this.spaceshipY - 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.X == 900 && spaceshipPicture.Location.Y == 228) {
+                if (spaceshipPicture.Location.X == 910 && spaceshipPicture.Location.Y == 226) {
                     
                     this.northEastClicked = false;
                     animationCompleted();
@@ -337,8 +338,8 @@ namespace wumpus.forms
 
             if (this.northWestClicked)
             {
-                this.spaceshipX = this.spaceshipX - 20;
-                this.spaceshipY = this.spaceshipY - 4;
+                this.spaceshipX = this.spaceshipX - 10;
+                this.spaceshipY = this.spaceshipY - 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.X == 300 && spaceshipPicture.Location.Y == 252)
@@ -351,10 +352,10 @@ namespace wumpus.forms
 
             if (this.southClicked)
             {
-                this.spaceshipY = this.spaceshipY + 20;
+                this.spaceshipY = this.spaceshipY + 10;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.Y == 400)
+                if (spaceshipPicture.Location.Y == 410)
                 {
                     this.southClicked = false;
                     animationCompleted();
@@ -365,8 +366,8 @@ namespace wumpus.forms
 
             if (this.southEastClicked)
             {
-                this.spaceshipX = this.spaceshipX + 20;
-                this.spaceshipY = this.spaceshipY + 4;
+                this.spaceshipX = this.spaceshipX + 10;
+                this.spaceshipY = this.spaceshipY + 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
                 if (spaceshipPicture.Location.X == 860 && spaceshipPicture.Location.Y == 364)
@@ -379,11 +380,11 @@ namespace wumpus.forms
 
             if (this.southWestClicked)
             {
-                this.spaceshipX = this.spaceshipX - 20;
-                this.spaceshipY = this.spaceshipY + 4;
+                this.spaceshipX = this.spaceshipX - 10;
+                this.spaceshipY = this.spaceshipY + 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
-                //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.X == 260 && spaceshipPicture.Location.Y == 356)
+                System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
+                if (spaceshipPicture.Location.X == 300 && spaceshipPicture.Location.Y == 348)
                 {
                     this.southWestClicked = false;
                     animationCompleted();
@@ -399,7 +400,6 @@ namespace wumpus.forms
             laserPicture.Visible = true;
             if (this.northShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserY[0] = laserY[0] - 5;
                 laserPicture.Location = new Point(laserX[1], laserY[0]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
@@ -415,12 +415,11 @@ namespace wumpus.forms
 
             if (this.northEastShootClicked)
             {
-                //laserPicture.Visible = true;
-                laserX[2] = laserX[2] + 20;
-                laserY[1] = laserY[1] - 4;
+                laserX[2] = laserX[2] + 10;
+                laserY[1] = laserY[1] - 2;
                 laserPicture.Location = new Point(laserX[2], laserY[1]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
-                if (laserPicture.Location.X == 960 && laserPicture.Location.Y == 228)
+                if (laserPicture.Location.X == 980 && laserPicture.Location.Y == 228)
                 {
                     timer2.Enabled = false;
                     laserPicture.Visible = false;
@@ -433,9 +432,8 @@ namespace wumpus.forms
 
             if (this.northWestShootClicked)
             {
-                //laserPicture.Visible = true;
-                laserX[0] = laserX[0] - 20;
-                laserY[1] = laserY[1] - 4;
+                laserX[0] = laserX[0] - 10;
+                laserY[1] = laserY[1] - 2;
                 laserPicture.Location = new Point(laserX[0], laserY[1]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
                 if (laserPicture.Location.X == 280 && laserPicture.Location.Y == 256)
@@ -451,7 +449,6 @@ namespace wumpus.forms
 
             if (this.southShootClicked == true)
             {
-                //laserPicture.Visible = true;
                 laserY[3] = laserY[3] + 5;
                 laserPicture.Location = new Point(laserX[1], laserY[3]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
@@ -467,12 +464,11 @@ namespace wumpus.forms
 
             if (this.southEastShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserX[2] = laserX[2] + 20;
                 laserY[2] = laserY[2] + 4;
                 laserPicture.Location = new Point(laserX[2], laserY[2]);
                 System.Diagnostics.Debug.WriteLine(laserPicture.Location.X + "," + laserPicture.Location.Y);
-                if (laserPicture.Location.X == 960 && laserPicture.Location.Y == 402)
+                if (laserPicture.Location.X == 980 && laserPicture.Location.Y == 402)
                 {
                     timer2.Enabled = false;
                     laserPicture.Visible = false;
@@ -485,7 +481,6 @@ namespace wumpus.forms
 
             if (this.southWestShootClicked)
             {
-                //laserPicture.Visible = true;
                 laserX[0] = laserX[0] - 20;
                 laserY[2] = laserY[2] + 4;
                 laserPicture.Location = new Point(laserX[0], laserY[2]);
