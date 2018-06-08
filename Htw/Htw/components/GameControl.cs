@@ -306,7 +306,7 @@ namespace wumpus.components {
 
         public void startGame() {
             graphics.startGame();
-            displayHelp();
+            //displayHelp();
             graphics.update(1);
             hazardWarnings(getHazardArray(1));
             sound.playSound(Sound.Sounds.BackgroundMusic);
