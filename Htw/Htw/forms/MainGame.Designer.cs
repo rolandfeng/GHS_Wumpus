@@ -63,6 +63,7 @@
             this.LasersCoins = new System.Windows.Forms.Button();
             this.Victory = new System.Windows.Forms.Button();
             this.Defeat = new System.Windows.Forms.Button();
+            this.HazardsLoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.laserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             this.SuspendLayout();
@@ -463,6 +464,17 @@
             this.Defeat.UseVisualStyleBackColor = true;
             this.Defeat.Click += new System.EventHandler(this.Defeat_Click);
             // 
+            // HazardsLoc
+            // 
+            this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HazardsLoc.Location = new System.Drawing.Point(2366, 1020);
+            this.HazardsLoc.Name = "HazardsLoc";
+            this.HazardsLoc.Size = new System.Drawing.Size(150, 70);
+            this.HazardsLoc.TabIndex = 37;
+            this.HazardsLoc.Text = "Hazard Locs";
+            this.HazardsLoc.UseVisualStyleBackColor = true;
+            this.HazardsLoc.Click += new System.EventHandler(this.HazardsLoc_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -470,6 +482,7 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2528, 1594);
+            this.Controls.Add(this.HazardsLoc);
             this.Controls.Add(this.Defeat);
             this.Controls.Add(this.Victory);
             this.Controls.Add(this.LasersCoins);
@@ -546,5 +559,6 @@
         private System.Windows.Forms.Button LasersCoins;
         private System.Windows.Forms.Button Victory;
         private System.Windows.Forms.Button Defeat;
+        private System.Windows.Forms.Button HazardsLoc;
     }
 }
