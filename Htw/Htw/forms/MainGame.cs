@@ -602,7 +602,7 @@ namespace wumpus.forms
         private void displayCheats_Click(object sender, EventArgs e)
         {
             LasersCoins.Visible = true;
-            this.Visible = false;
+            displayCheats.Visible = false;
         }
 
         private void LasersCoins_Click(object sender, EventArgs e)
