@@ -313,7 +313,7 @@
             this.southEastButton.BackColor = System.Drawing.Color.Red;
             this.southEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southEastButton.Location = new System.Drawing.Point(1212, 203);
+            this.southEastButton.Location = new System.Drawing.Point(1208, 238);
             this.southEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.southEastButton.Name = "southEastButton";
             this.southEastButton.Size = new System.Drawing.Size(460, 515);
@@ -352,7 +352,7 @@
             this.southWestButton.BackColor = System.Drawing.Color.Red;
             this.southWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southWestButton.Location = new System.Drawing.Point(-28, 212);
+            this.southWestButton.Location = new System.Drawing.Point(-28, 258);
             this.southWestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.southWestButton.Name = "southWestButton";
             this.southWestButton.Size = new System.Drawing.Size(530, 495);
@@ -365,7 +365,7 @@
             this.northEastButton.BackColor = System.Drawing.Color.Red;
             this.northEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northEastButton.Location = new System.Drawing.Point(1212, -65);
+            this.northEastButton.Location = new System.Drawing.Point(1208, -30);
             this.northEastButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.northEastButton.Name = "northEastButton";
             this.northEastButton.Size = new System.Drawing.Size(531, 590);

@@ -342,7 +342,7 @@ namespace wumpus.forms
                 this.spaceshipY = this.spaceshipY - 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.X == 300 && spaceshipPicture.Location.Y == 252)
+                if (spaceshipPicture.Location.X == 290 && spaceshipPicture.Location.Y == 250)
                 {
                     this.northWestClicked = false;
                     animationCompleted();
@@ -370,7 +370,7 @@ namespace wumpus.forms
                 this.spaceshipY = this.spaceshipY + 2;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
                 //System.Diagnostics.Debug.WriteLine(spaceshipPicture.Location.X + "," + spaceshipPicture.Location.Y);
-                if (spaceshipPicture.Location.X == 860 && spaceshipPicture.Location.Y == 364)
+                if (spaceshipPicture.Location.X == 870 && spaceshipPicture.Location.Y == 366)
                 {
                     this.southEastClicked = false;
                     animationCompleted();
