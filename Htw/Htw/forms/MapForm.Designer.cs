@@ -380,9 +380,9 @@
             this.astronaut.BackColor = System.Drawing.Color.Transparent;
             this.astronaut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("astronaut.BackgroundImage")));
             this.astronaut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.astronaut.Location = new System.Drawing.Point(604, 127);
+            this.astronaut.Location = new System.Drawing.Point(63, 38);
             this.astronaut.Name = "astronaut";
-            this.astronaut.Size = new System.Drawing.Size(84, 82);
+            this.astronaut.Size = new System.Drawing.Size(100, 100);
             this.astronaut.TabIndex = 31;
             this.astronaut.TabStop = false;
             // 
