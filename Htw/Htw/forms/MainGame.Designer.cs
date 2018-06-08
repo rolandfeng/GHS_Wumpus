@@ -89,7 +89,7 @@
             this.NorthRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.NorthRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NorthRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.NorthRoomsLabel.Location = new System.Drawing.Point(590, 23);
+            this.NorthRoomsLabel.Location = new System.Drawing.Point(590, 16);
             this.NorthRoomsLabel.Name = "NorthRoomsLabel";
             this.NorthRoomsLabel.Size = new System.Drawing.Size(42, 28);
             this.NorthRoomsLabel.TabIndex = 8;
@@ -101,7 +101,7 @@
             this.NorthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.NorthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NorthEastRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(1003, 183);
+            this.NorthEastRoomsLabel.Location = new System.Drawing.Point(988, 164);
             this.NorthEastRoomsLabel.Name = "NorthEastRoomsLabel";
             this.NorthEastRoomsLabel.Size = new System.Drawing.Size(40, 28);
             this.NorthEastRoomsLabel.TabIndex = 9;
@@ -113,7 +113,7 @@
             this.NorthWestRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.NorthWestRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NorthWestRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.NorthWestRoomsLabel.Location = new System.Drawing.Point(151, 177);
+            this.NorthWestRoomsLabel.Location = new System.Drawing.Point(193, 157);
             this.NorthWestRoomsLabel.Name = "NorthWestRoomsLabel";
             this.NorthWestRoomsLabel.Size = new System.Drawing.Size(51, 28);
             this.NorthWestRoomsLabel.TabIndex = 10;
@@ -125,7 +125,7 @@
             this.SouthRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.SouthRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SouthRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.SouthRoomsLabel.Location = new System.Drawing.Point(598, 763);
+            this.SouthRoomsLabel.Location = new System.Drawing.Point(598, 569);
             this.SouthRoomsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SouthRoomsLabel.Name = "SouthRoomsLabel";
             this.SouthRoomsLabel.Size = new System.Drawing.Size(34, 28);
@@ -138,7 +138,7 @@
             this.SouthEastRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.SouthEastRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SouthEastRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(992, 578);
+            this.SouthEastRoomsLabel.Location = new System.Drawing.Point(973, 481);
             this.SouthEastRoomsLabel.Name = "SouthEastRoomsLabel";
             this.SouthEastRoomsLabel.Size = new System.Drawing.Size(37, 28);
             this.SouthEastRoomsLabel.TabIndex = 12;
@@ -150,7 +150,7 @@
             this.SouthWestRoomsLabel.BackColor = System.Drawing.Color.Transparent;
             this.SouthWestRoomsLabel.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SouthWestRoomsLabel.ForeColor = System.Drawing.Color.White;
-            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(151, 587);
+            this.SouthWestRoomsLabel.Location = new System.Drawing.Point(193, 458);
             this.SouthWestRoomsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SouthWestRoomsLabel.Name = "SouthWestRoomsLabel";
             this.SouthWestRoomsLabel.Size = new System.Drawing.Size(48, 28);
@@ -164,7 +164,7 @@
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(162, 23);
             this.PurchaseArrowsButton.TabIndex = 15;
-            this.PurchaseArrowsButton.Text = "Purchase Lasers";
+            this.PurchaseArrowsButton.Text = "Charge Lasers";
             this.PurchaseArrowsButton.UseVisualStyleBackColor = true;
             this.PurchaseArrowsButton.Click += new System.EventHandler(this.PurchaseArrowsButton_Click);
             // 
@@ -220,7 +220,7 @@
             // 
             this.spaceshipPicture.BackColor = System.Drawing.Color.Transparent;
             this.spaceshipPicture.Image = ((System.Drawing.Image)(resources.GetObject("spaceshipPicture.Image")));
-            this.spaceshipPicture.Location = new System.Drawing.Point(549, 375);
+            this.spaceshipPicture.Location = new System.Drawing.Point(549, 280);
             this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(2);
             this.spaceshipPicture.Name = "spaceshipPicture";
             this.spaceshipPicture.Size = new System.Drawing.Size(122, 101);
@@ -308,7 +308,7 @@
             this.southEastButton.BackColor = System.Drawing.Color.Red;
             this.southEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southEastButton.Location = new System.Drawing.Point(693, 271);
+            this.southEastButton.Location = new System.Drawing.Point(675, 183);
             this.southEastButton.Name = "southEastButton";
             this.southEastButton.Size = new System.Drawing.Size(307, 335);
             this.southEastButton.TabIndex = 19;
@@ -320,7 +320,7 @@
             this.southButton.BackColor = System.Drawing.Color.Red;
             this.southButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southButton.Location = new System.Drawing.Point(359, 449);
+            this.southButton.Location = new System.Drawing.Point(359, 259);
             this.southButton.Name = "southButton";
             this.southButton.Size = new System.Drawing.Size(368, 480);
             this.southButton.TabIndex = 19;
@@ -332,7 +332,7 @@
             this.northWestButton.BackColor = System.Drawing.Color.Red;
             this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northWestButton.Location = new System.Drawing.Point(18, 16);
+            this.northWestButton.Location = new System.Drawing.Point(53, -31);
             this.northWestButton.Name = "northWestButton";
             this.northWestButton.Size = new System.Drawing.Size(317, 359);
             this.northWestButton.TabIndex = 19;
@@ -344,7 +344,7 @@
             this.southWestButton.BackColor = System.Drawing.Color.Red;
             this.southWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southWestButton.ForeColor = System.Drawing.Color.Transparent;
-            this.southWestButton.Location = new System.Drawing.Point(12, 284);
+            this.southWestButton.Location = new System.Drawing.Point(53, 164);
             this.southWestButton.Name = "southWestButton";
             this.southWestButton.Size = new System.Drawing.Size(353, 322);
             this.southWestButton.TabIndex = 19;
@@ -356,7 +356,7 @@
             this.northEastButton.BackColor = System.Drawing.Color.Red;
             this.northEastButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northEastButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northEastButton.Location = new System.Drawing.Point(693, 10);
+            this.northEastButton.Location = new System.Drawing.Point(675, -31);
             this.northEastButton.Name = "northEastButton";
             this.northEastButton.Size = new System.Drawing.Size(354, 383);
             this.northEastButton.TabIndex = 19;
@@ -368,7 +368,7 @@
             this.northButton.BackColor = System.Drawing.Color.Red;
             this.northButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northButton.ForeColor = System.Drawing.Color.Transparent;
-            this.northButton.Location = new System.Drawing.Point(359, -128);
+            this.northButton.Location = new System.Drawing.Point(359, -146);
             this.northButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.northButton.Name = "northButton";
             this.northButton.Size = new System.Drawing.Size(329, 374);
