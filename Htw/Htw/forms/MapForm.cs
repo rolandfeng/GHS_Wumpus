@@ -89,5 +89,9 @@ namespace wumpus.forms
             this.Hide();
         }
 
+        private void astronaut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

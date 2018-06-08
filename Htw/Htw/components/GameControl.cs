@@ -154,7 +154,7 @@ namespace wumpus.components {
 
         public string produceSecret() {
             Random r = new Random();
-            int whichHint = r.Next(0, 8); //(0, n) = range from 0 to n-1
+            int whichHint = r.Next(0, 7); //(0, n) = range from 0 to n-1
             if (whichHint == 0 || whichHint == 1) { //bat rooms
                 int[] bats = map.getBatLocations();
                 return ("There is a UFO in planet " + bats[whichHint] + "!");
@@ -169,12 +169,12 @@ namespace wumpus.components {
             else if (whichHint == 5) { //bogus hint
                 return ("You are in planet " + map.getPlayerLocation() + "!");
             }
-            else if (whichHint == 6) {//Wumpus is 2 rooms away or not
+            /*else if (whichHint == 6) {//Wumpus is 2 rooms away or not
                 if (withinTwoRooms())
                     return ("The Wumpus is 1 or 2 planets away!");
                 else
                     return ("The Wumpus is further than 2 planets away!");
-            }
+            }*/
             else { //more troll hints, can add more
                 return ("It is turn " + player.getTurn() + "!");
             }
@@ -260,7 +260,7 @@ namespace wumpus.components {
             return finalLoc;
         }
 
-        private bool withinTwoRooms() { //returns if wumpus is 1 or 2 rooms away from player
+        /*private bool withinTwoRooms() { //returns if wumpus is 1 or 2 rooms away from player
             int[] currentConnections = cave.getAllConnections(map.getPlayerLocation());
             int[] wumpusConnections = cave.getAllConnections(map.getWumpusLocation());
             for (int i = 0; i < currentConnections.Length; i++) {//outer loop
@@ -272,7 +272,7 @@ namespace wumpus.components {
 
             }
             return false;
-        }
+        }   */
 
         public void doneWithTrivia(bool succeed, int type) {
             if (type == 1 || type == 2) {//wumpus or pit
