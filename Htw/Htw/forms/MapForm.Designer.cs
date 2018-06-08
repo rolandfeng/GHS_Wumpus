@@ -52,18 +52,16 @@
             this.astronaut.BackColor = System.Drawing.Color.Transparent;
             this.astronaut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("astronaut.BackgroundImage")));
             this.astronaut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.astronaut.Location = new System.Drawing.Point(61, 61);
+            this.astronaut.Location = new System.Drawing.Point(550, 485);
             this.astronaut.Name = "astronaut";
-            this.astronaut.Size = new System.Drawing.Size(100, 100);
+            this.astronaut.Size = new System.Drawing.Size(110, 110);
             this.astronaut.TabIndex = 31;
             this.astronaut.TabStop = false;
-            this.astronaut.Click += new System.EventHandler(this.astronaut_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(61, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(581, 540);
@@ -72,11 +70,11 @@
             // 
             // MapForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(671, 572);
+            this.ClientSize = new System.Drawing.Size(681, 604);
             this.Controls.Add(this.astronaut);
             this.Controls.Add(this.closeMap);
             this.Controls.Add(this.pictureBox1);

@@ -23,65 +23,65 @@ namespace wumpus.forms
         public void UpdatePlayerLoc(int newLoc)
         {
             if (newLoc == 1)
-                astronaut.Location = new Point(63, 38);
+                astronaut.Location = new Point(18, 4);
             else if (newLoc == 2)
-                astronaut.Location = new Point(151, 86);
+                astronaut.Location = new Point(123, 56);
             else if (newLoc == 3)
-                astronaut.Location = new Point(233, 38);
+                astronaut.Location = new Point(227, 4);
             else if (newLoc == 4)
-                astronaut.Location = new Point(322, 86);
+                astronaut.Location = new Point(333, 55);
             else if (newLoc == 5)
-                astronaut.Location = new Point(405, 35);
+                astronaut.Location = new Point(435, 2);
             else if (newLoc == 6)
-                astronaut.Location = new Point(493, 80);
-            else if (newLoc == 7)
-                astronaut.Location = new Point(65, 133);
+                astronaut.Location = new Point(542, 52);
+            else if (newLoc == 7) 
+                astronaut.Location = new Point(21, 113);
             else if (newLoc == 8)
-                astronaut.Location = new Point(154, 182);
+                astronaut.Location = new Point(129,168);
             else if (newLoc == 9)
-                astronaut.Location = new Point(238, 133);
+                astronaut.Location = new Point(229, 112);
             else if (newLoc == 10)
-                astronaut.Location = new Point(324, 179);
+                astronaut.Location = new Point(335, 162);
             else if (newLoc == 11)
-                astronaut.Location = new Point(407, 130);
+                astronaut.Location = new Point(438, 108);
             else if (newLoc == 12)
-                astronaut.Location = new Point(495, 175);
+                astronaut.Location = new Point(545, 158);
             else if (newLoc == 13)
-                astronaut.Location = new Point(69, 230);
+                astronaut.Location = new Point(25, 222);
             else if (newLoc == 14)
-                astronaut.Location = new Point(158, 278);
+                astronaut.Location = new Point(132, 275);
             else if (newLoc == 15)
-                astronaut.Location = new Point(240, 227);
+                astronaut.Location = new Point(236, 219);
             else if (newLoc == 16)
-                astronaut.Location = new Point(326, 273);
+                astronaut.Location = new Point(339, 270);
             else if (newLoc == 17)
-                astronaut.Location = new Point(410, 223);
+                astronaut.Location = new Point(441, 214);
             else if (newLoc == 18)
-                astronaut.Location = new Point(497, 269);
+                astronaut.Location = new Point(547, 266);
             else if (newLoc == 19)
-                astronaut.Location = new Point(74, 327);
+                astronaut.Location = new Point(31, 330);
             else if (newLoc == 20)
-                astronaut.Location = new Point(161, 372);
+                astronaut.Location = new Point(137, 382);
             else if (newLoc == 21)
-                astronaut.Location = new Point(243, 322);
+                astronaut.Location = new Point(238, 327);
             else if (newLoc == 22)
-                astronaut.Location = new Point(330, 367);
+                astronaut.Location = new Point(342, 376);
             else if (newLoc == 23)
-                astronaut.Location = new Point(413, 318);
+                astronaut.Location = new Point(443, 320);
             else if (newLoc == 24)
-                astronaut.Location = new Point(499, 365);
+                astronaut.Location = new Point(549, 372);
             else if (newLoc == 25)
-                astronaut.Location = new Point(77, 422);
+                astronaut.Location = new Point(34, 437);
             else if (newLoc == 26)
-                astronaut.Location = new Point(162, 468);
+                astronaut.Location = new Point(138, 488);
             else if (newLoc == 27)
-                astronaut.Location = new Point(246, 418);
+                astronaut.Location = new Point(240, 434);
             else if (newLoc == 28)
-                astronaut.Location = new Point(331, 463);
+                astronaut.Location = new Point(344, 483);
             else if (newLoc == 29)
-                astronaut.Location = new Point(414, 414);
+                astronaut.Location = new Point(446, 428);
             else if (newLoc == 30)
-                astronaut.Location = new Point(501, 460);
+                astronaut.Location = new Point(550, 481);
         }
 
         private void closeMap_Click(object sender, EventArgs e)
@@ -89,9 +89,5 @@ namespace wumpus.forms
             this.Hide();
         }
 
-        private void astronaut_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
