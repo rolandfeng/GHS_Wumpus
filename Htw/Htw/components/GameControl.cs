@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using wumpus.common;
 using wumpus.forms;
+using System.ComponentModel;
+using System.Threading;
 
 namespace wumpus.components {
     public class GameControl {
@@ -19,6 +21,9 @@ namespace wumpus.components {
         private ScoreManager highscores;
         private Player player;
         private bool hazardInstance;
+        private Direction arrowDirection;
+        private System.Threading.Thread demoThread;
+        private BackgroundWorker worker;
 
         public event EventHandler GameClosing;
 
@@ -35,7 +40,7 @@ namespace wumpus.components {
             graphics = new Graphics(this, player, map, cave);
             hazardInstance = false;
         }
-
+       
         public void closeGame() {
             GameClosing.Invoke(this, null);
         }
@@ -51,8 +56,6 @@ namespace wumpus.components {
 
         public void buyArrows() {
             openTrivia(3, 2, 3);
-            //map.changeWumpusLocation(7);
-            //graphics.Show("The Wumpus is room 7 now");
         }
 
         public void displayHighscores() {
@@ -68,7 +71,7 @@ namespace wumpus.components {
             mapForm.Show();
         }
 
-        public void moveRoom(wumpus.common.Direction direction) {
+        public void moveRoom(wumpus.common.Direction direction) {         
             int currentLoc = map.getPlayerLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
             bool[] hazards = getHazardArray(newLoc);
@@ -100,10 +103,12 @@ namespace wumpus.components {
             sound.playSound(Sound.Sounds.BackgroundMusic);
         }
 
-        public void shootArrows(wumpus.common.Direction direction) {
+        void arrowDone_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             player.changeArrowCount(-1);
             int currentLoc = map.getPlayerLocation();
-            if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, direction)) {
+            if (map.getWumpusLocation() == cave.getConnectedRoom(currentLoc, arrowDirection))
+            {
                 sound.playSound(Sound.Sounds.ArrowImpact);
                 sound.playSound(Sound.Sounds.MonsterDie);
                 graphics.Show("You killed the Wumpus!");
@@ -115,15 +120,21 @@ namespace wumpus.components {
                 {
                     highscores.StoreHighScore(form.getName(), playerScore);
                     highscores.DisplayHighScores();
-                };           
-            } else {
+                };
+            }
+            else
+            {
                 sound.playSound(Sound.Sounds.ArrowImpact);
-                if (cave.isAdjacent(map.getPlayerLocation(), map.getWumpusLocation())) {
+                if (cave.isAdjacent(map.getPlayerLocation(), map.getWumpusLocation()))
+                {
                     graphics.Show("You missed but alerted the Wumpus! The Wumpus has moved to a new planet!");
-                } else {
+                }
+                else
+                {
                     graphics.Show("You missed!");
                 }
-                if (player.getArrowCount() == 0) {
+                if (player.getArrowCount() == 0)
+                {
                     graphics.Show("You ran out of arrows!");
                     sound.playSound(Sound.Sounds.PlayerDie);
                     graphics.endGame(false);
@@ -131,6 +142,24 @@ namespace wumpus.components {
                 map.changeWumpusLocation(wumpusFleeLoc(false));
                 sound.playSound(Sound.Sounds.BackgroundMusic);
             }
+            graphics.setArrowAnimationFinished(false);
+        }
+
+
+        public void waitArrow_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while(!graphics.getArrowAnimationFinished())
+            {
+                Thread.Sleep(500);
+            }
+        }
+
+        public void shootArrows(wumpus.common.Direction direction) {
+            worker = new BackgroundWorker();
+            worker.DoWork += new DoWorkEventHandler(waitArrow_DoWork);
+            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler
+                    (arrowDone_RunWorkerCompleted);
+            worker.RunWorkerAsync();
         }
 
         public void openTrivia(int asked, int needed, int type) {

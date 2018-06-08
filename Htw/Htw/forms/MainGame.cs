@@ -33,6 +33,7 @@ namespace wumpus.forms
         bool southShootClicked;
         bool southWestShootClicked;
         bool southEastShootClicked;
+        bool arrowShot;
         Image[] image;
         String[] name;
         int spaceshipX;
@@ -95,6 +96,7 @@ namespace wumpus.forms
             this.laserY = new int [] { 270, 300, 330, 360};
             this.laserX = new int[] { 500, 560, 620 };
             this.arrowAnimationFinished = false;
+            this.arrowShot = false;
         }
 
         // update graphics
@@ -310,6 +312,7 @@ namespace wumpus.forms
         // timer 1
         private void timer1_Tick(object sender, EventArgs e)
         {         
+            
             if (this.northClicked) {
                 this.spaceshipY = this.spaceshipY - 10;
                 spaceshipPicture.Location = new Point(spaceshipX, spaceshipY);
@@ -397,6 +400,7 @@ namespace wumpus.forms
         // timer 2
         private void timer2_Tick(object sender, EventArgs e)
         {
+            this.arrowShot = true;
             laserPicture.Visible = true;
             if (this.northShootClicked)
             {
@@ -410,6 +414,7 @@ namespace wumpus.forms
                     this.northShootClicked = false;
                     laserY[0] = 270;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -427,6 +432,7 @@ namespace wumpus.forms
                     laserY[1] = 300;
                     laserX[2] = 620;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -444,6 +450,7 @@ namespace wumpus.forms
                     laserY[1] = 300;
                     laserX[0] = 500;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -459,6 +466,7 @@ namespace wumpus.forms
                     this.southShootClicked = false;
                     laserY[3] = 360;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -476,6 +484,7 @@ namespace wumpus.forms
                     laserY[2] = 330;
                     laserX[2] = 620;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
 
@@ -493,10 +502,16 @@ namespace wumpus.forms
                     laserY[2] = 330;
                     laserX[0] = 500;
                     this.arrowAnimationFinished = true;
+                    
                 }
             }
         }
-        
+
+        public RoundButton getNorthButton()
+        {
+            return northButton;
+        }
+
         // end game
         public void endGame(bool result)
         {
@@ -557,6 +572,18 @@ namespace wumpus.forms
             return this.arrowAnimationFinished;
         }
 
+        public bool setArrowAnimationFinished(bool arrowAnimationFinished)
+        {
+            this.arrowAnimationFinished = arrowAnimationFinished;
+            return this.arrowAnimationFinished;
+        }
+
+        public bool getArrowShot()
+        {
+            return this.arrowShot;
+        }
+
+        
         private void displayHelp_Click(object sender, EventArgs e)
         {
             gameControl.displayHelp();

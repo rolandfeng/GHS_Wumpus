@@ -48,6 +48,11 @@ namespace wumpus.components
             return mainGame.getArrowAnimationFinished();
         }
 
+        public bool setArrowAnimationFinished(bool arrowAnimationFinished)
+        {
+            return mainGame.setArrowAnimationFinished(arrowAnimationFinished);
+        }
+
         public void updateCoins()
         {
             mainGame.updateCoins();
@@ -69,7 +74,10 @@ namespace wumpus.components
             mainGame.endGame(success);
         }
 
-
+        public RoundButton getNorthButton()
+        {
+            return mainGame.getNorthButton();
+        }
 
     }
 }
