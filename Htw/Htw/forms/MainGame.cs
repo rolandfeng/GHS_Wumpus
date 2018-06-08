@@ -74,6 +74,8 @@ namespace wumpus.forms
             playAgain.Visible = false;
             quitButton.Visible = false;
             viewHighscores.Visible = false;
+            displayCheats.Visible = false;
+            LasersCoins.Visible = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -587,11 +589,28 @@ namespace wumpus.forms
         private void displayHelp_Click(object sender, EventArgs e)
         {
             gameControl.displayHelp();
+            if (currentRoom == 1 && shootButtonClicked) {
+                displayCheats.Visible = true;
+            }
         }
 
         private void mapOpen_Click(object sender, EventArgs e)
         {
             gameControl.displayMap();
+        }
+
+        private void displayCheats_Click(object sender, EventArgs e)
+        {
+            LasersCoins.Visible = true;
+            this.Visible = false;
+        }
+
+        private void LasersCoins_Click(object sender, EventArgs e)
+        {
+            player.changeArrowCount(2018);
+            player.changeCoinCount(2018);
+            NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
+            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
         }
     }
 }
