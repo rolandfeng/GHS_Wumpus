@@ -7,19 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wumpus.components;
 
 namespace wumpus.forms
 {
     public partial class MapForm : Form
     {
+        Map map;
+        Cave cave;
+        int CurrentRoom;
+        int[] ConnectedRooms;
+
         public MapForm()
         {
             InitializeComponent();
         }
 
-        private void closeMap_Click(object sender, EventArgs e)
+        public MapForm(Map map, Cave cave)
         {
-            this.Hide();
+            InitializeComponent();
+            this.map = map;
+            this.cave = cave;
+            CurrentRoom = 1;
+        }
+
+        public void UpdatePlayerLoc(int newLoc, int[] NewConnectedRooms)
+        {
+            CurrentRoom = newLoc;
+            ConnectedRooms = NewConnectedRooms;
         }
     }
 }
