@@ -76,7 +76,7 @@
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
             this.NumberOfCoinsLabel.Size = new System.Drawing.Size(215, 28);
             this.NumberOfCoinsLabel.TabIndex = 6;
-            this.NumberOfCoinsLabel.Text = "Number of Coins";
+            this.NumberOfCoinsLabel.Text = "Energy Charges";
             // 
             // NumberOfArrowsLabel
             // 
@@ -169,9 +169,8 @@
             // 
             // PurchaseArrowsButton
             // 
-            this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PurchaseArrowsButton.Location = new System.Drawing.Point(2188, 115);
-            this.PurchaseArrowsButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseArrowsButton.Location = new System.Drawing.Point(1094, 60);
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(324, 44);
             this.PurchaseArrowsButton.TabIndex = 15;
@@ -181,9 +180,8 @@
             // 
             // ShootArrowButton
             // 
-            this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShootArrowButton.Location = new System.Drawing.Point(2188, 162);
-            this.ShootArrowButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShootArrowButton.Location = new System.Drawing.Point(1094, 84);
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(324, 44);
             this.ShootArrowButton.TabIndex = 16;
@@ -202,8 +200,8 @@
             // 
             // buySecretButton
             // 
-            this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(1085, 706);
+            this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buySecretButton.Location = new System.Drawing.Point(1094, 110);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(324, 44);
             this.buySecretButton.TabIndex = 17;
@@ -307,8 +305,8 @@
             // 
             // displayHelp
             // 
-            this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayHelp.Location = new System.Drawing.Point(10, 706);
+            this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayHelp.Location = new System.Drawing.Point(1094, 137);
             this.displayHelp.Margin = new System.Windows.Forms.Padding(1);
             this.displayHelp.Name = "displayHelp";
             this.displayHelp.Size = new System.Drawing.Size(324, 44);
@@ -474,6 +472,88 @@
             this.northButton.TabIndex = 19;
             this.northButton.UseVisualStyleBackColor = true;
             this.northButton.Click += new System.EventHandler(this.northButton_Click);
+            // 
+            // openMap
+            // 
+            this.openMap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.openMap.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openMap.Location = new System.Drawing.Point(0, 0);
+            this.openMap.Name = "openMap";
+            this.openMap.Size = new System.Drawing.Size(100, 100);
+            this.openMap.TabIndex = 32;
+            this.openMap.Text = "Map";
+            this.openMap.UseVisualStyleBackColor = true;
+            // 
+            // mapOpen
+            // 
+            this.mapOpen.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mapOpen.Location = new System.Drawing.Point(1094, 164);
+            this.mapOpen.Name = "mapOpen";
+            this.mapOpen.Size = new System.Drawing.Size(162, 23);
+            this.mapOpen.TabIndex = 32;
+            this.mapOpen.Text = "MAP";
+            this.mapOpen.UseVisualStyleBackColor = true;
+            this.mapOpen.Click += new System.EventHandler(this.mapOpen_Click);
+            // 
+            // displayCheats
+            // 
+            this.displayCheats.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayCheats.Location = new System.Drawing.Point(1183, 791);
+            this.displayCheats.Margin = new System.Windows.Forms.Padding(2);
+            this.displayCheats.Name = "displayCheats";
+            this.displayCheats.Size = new System.Drawing.Size(75, 31);
+            this.displayCheats.TabIndex = 33;
+            this.displayCheats.Text = "Cheats";
+            this.displayCheats.UseVisualStyleBackColor = true;
+            this.displayCheats.Click += new System.EventHandler(this.displayCheats_Click);
+            // 
+            // LasersCoins
+            // 
+            this.LasersCoins.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LasersCoins.Location = new System.Drawing.Point(1183, 647);
+            this.LasersCoins.Margin = new System.Windows.Forms.Padding(2);
+            this.LasersCoins.Name = "LasersCoins";
+            this.LasersCoins.Size = new System.Drawing.Size(75, 36);
+            this.LasersCoins.TabIndex = 34;
+            this.LasersCoins.Text = "Coins and Lasers";
+            this.LasersCoins.UseVisualStyleBackColor = true;
+            this.LasersCoins.Click += new System.EventHandler(this.LasersCoins_Click);
+            // 
+            // Victory
+            // 
+            this.Victory.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Victory.Location = new System.Drawing.Point(1183, 608);
+            this.Victory.Margin = new System.Windows.Forms.Padding(2);
+            this.Victory.Name = "Victory";
+            this.Victory.Size = new System.Drawing.Size(75, 36);
+            this.Victory.TabIndex = 35;
+            this.Victory.Text = "Victory";
+            this.Victory.UseVisualStyleBackColor = true;
+            this.Victory.Click += new System.EventHandler(this.Victory_Click);
+            // 
+            // Defeat
+            // 
+            this.Defeat.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Defeat.Location = new System.Drawing.Point(1183, 569);
+            this.Defeat.Margin = new System.Windows.Forms.Padding(2);
+            this.Defeat.Name = "Defeat";
+            this.Defeat.Size = new System.Drawing.Size(75, 36);
+            this.Defeat.TabIndex = 36;
+            this.Defeat.Text = "Defeat";
+            this.Defeat.UseVisualStyleBackColor = true;
+            this.Defeat.Click += new System.EventHandler(this.Defeat_Click);
+            // 
+            // HazardsLoc
+            // 
+            this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HazardsLoc.Location = new System.Drawing.Point(1183, 530);
+            this.HazardsLoc.Margin = new System.Windows.Forms.Padding(2);
+            this.HazardsLoc.Name = "HazardsLoc";
+            this.HazardsLoc.Size = new System.Drawing.Size(75, 36);
+            this.HazardsLoc.TabIndex = 37;
+            this.HazardsLoc.Text = "Hazard Locs";
+            this.HazardsLoc.UseVisualStyleBackColor = true;
+            this.HazardsLoc.Click += new System.EventHandler(this.HazardsLoc_Click);
             // 
             // MainGame
             // 
