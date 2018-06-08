@@ -365,13 +365,12 @@
             // closeMap
             // 
             this.closeMap.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeMap.Location = new System.Drawing.Point(27, 1002);
+            this.closeMap.Location = new System.Drawing.Point(32, 997);
             this.closeMap.Name = "closeMap";
             this.closeMap.Size = new System.Drawing.Size(150, 60);
             this.closeMap.TabIndex = 30;
             this.closeMap.Text = "Close";
             this.closeMap.UseVisualStyleBackColor = true;
-            this.closeMap.Click += new System.EventHandler(this.closeMap_Click);
             // 
             // MapForm
             // 
