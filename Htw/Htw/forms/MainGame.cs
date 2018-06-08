@@ -88,7 +88,7 @@ namespace wumpus.forms
                                       "Spartan-6", "Artemis-7", "Genesis-8", "Xenon-9", "Orion-10",
                                       "Apollo-11", "Stardust-12", "Hyperion-13", "Divinity-14", "Trinity-15",
                                       "Osiris-16", "Elysium-17", "Nirvana-18", "Styx-19", "Vortex-20",
-                                      "Oblivion-21", "Argon-22", "Exodus-23", "Celestial-24", "Equinox-25",            
+                                      "Oblivion-21", "Argon-22", "Exodus-23", "Starlight-24", "Equinox-25",            
                                       "Nebula-26", "Andromeda-27", "Galactic-28", "Titanium-29", "Sagittarius-30"};
             this.spaceshipX = 540;
             this.spaceshipY = 300;

@@ -136,13 +136,7 @@ Hazards: Beware of hazards! There are two types of hazards: black holes and UFOs
 
 Ways to Lose: You can lose if you run out of arrows before killing the Wumpus, if you do not answer 3 out of 5 trivia questions correctly when you end up in the same planet as the Wumpus, and if you run out of coins.
 
-I wish you luck, Captain! To infinity and beyond!
-
-
-                 
-
-
-</value>
+I wish you luck, Captain! To infinity and beyond!</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
