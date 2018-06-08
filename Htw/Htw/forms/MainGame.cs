@@ -634,6 +634,7 @@ namespace wumpus.forms
             string locations = "Wumpus: " + map.getWumpusLocation() + " UFOs: " + map.getBatLocations().ToString() + " BlackHoles: " + map.getPitLocations().ToString();
             gameControl.display(locations);
         }
+
     }
 }
 
