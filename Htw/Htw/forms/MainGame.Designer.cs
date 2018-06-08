@@ -72,7 +72,7 @@
             // 
             this.NumberOfCoinsLabel.AutoSize = true;
             this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(1077, 181);
+            this.NumberOfCoinsLabel.Location = new System.Drawing.Point(859, 16);
             this.NumberOfCoinsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
             this.NumberOfCoinsLabel.Size = new System.Drawing.Size(186, 23);
@@ -199,7 +199,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(1081, 211);
+            this.buySecretButton.Location = new System.Drawing.Point(848, 54);
             this.buySecretButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(200, 50);
@@ -243,7 +243,7 @@
             this.playAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.playAgain.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playAgain.ForeColor = System.Drawing.Color.White;
-            this.playAgain.Location = new System.Drawing.Point(259, 241);
+            this.playAgain.Location = new System.Drawing.Point(321, 241);
             this.playAgain.Name = "playAgain";
             this.playAgain.Size = new System.Drawing.Size(250, 75);
             this.playAgain.TabIndex = 22;
@@ -258,7 +258,7 @@
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.quitButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quitButton.ForeColor = System.Drawing.Color.White;
-            this.quitButton.Location = new System.Drawing.Point(795, 241);
+            this.quitButton.Location = new System.Drawing.Point(848, 241);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(250, 75);
             this.quitButton.TabIndex = 23;
@@ -273,7 +273,7 @@
             this.viewHighscores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.viewHighscores.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewHighscores.ForeColor = System.Drawing.Color.White;
-            this.viewHighscores.Location = new System.Drawing.Point(527, 241);
+            this.viewHighscores.Location = new System.Drawing.Point(585, 241);
             this.viewHighscores.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.viewHighscores.Name = "viewHighscores";
             this.viewHighscores.Size = new System.Drawing.Size(250, 75);
