@@ -33,6 +33,49 @@ namespace wumpus.forms
 
         public void UpdatePlayerLoc(int newLoc, int[] NewConnectedRooms)
         {
+            if (newLoc == 1)
+                astronaut.Location = new Point(62, 41);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 3)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 4)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 5)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 6)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 7)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 8)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 9)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 10)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 11)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 12)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+            else if (newLoc == 2)
+                astronaut.Location = new Point(135, 84);
+
             CurrentRoom = newLoc;
             ConnectedRooms = NewConnectedRooms;
         }
