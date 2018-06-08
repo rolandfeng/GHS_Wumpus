@@ -83,7 +83,7 @@
             // 
             this.NumberOfArrowsLabel.AutoSize = true;
             this.NumberOfArrowsLabel.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(1080, 20);
+            this.NumberOfArrowsLabel.Location = new System.Drawing.Point(1077, 20);
             this.NumberOfArrowsLabel.Name = "NumberOfArrowsLabel";
             this.NumberOfArrowsLabel.Size = new System.Drawing.Size(201, 23);
             this.NumberOfArrowsLabel.TabIndex = 7;
@@ -199,7 +199,7 @@
             // buySecretButton
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buySecretButton.Location = new System.Drawing.Point(848, 54);
+            this.buySecretButton.Location = new System.Drawing.Point(863, 54);
             this.buySecretButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(200, 50);
