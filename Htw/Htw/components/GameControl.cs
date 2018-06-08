@@ -21,7 +21,7 @@ namespace wumpus.components {
 
         public event EventHandler GameClosing;
 
-        public GameControl(string caveName, Help help) {
+        public GameControl(string caveName, Help help, ScoreManager highscores) {
             cave = new Cave("../../Resource/" + caveName);
             map = new Map();
             sound = new Sound();
