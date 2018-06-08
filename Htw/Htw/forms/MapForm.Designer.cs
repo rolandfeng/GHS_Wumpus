@@ -57,7 +57,6 @@
             this.astronaut.Size = new System.Drawing.Size(100, 100);
             this.astronaut.TabIndex = 31;
             this.astronaut.TabStop = false;
-            this.astronaut.Click += new System.EventHandler(this.astronaut_Click);
             // 
             // pictureBox1
             // 
