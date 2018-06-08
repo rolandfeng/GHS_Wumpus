@@ -36,5 +36,10 @@ namespace wumpus.forms
             CurrentRoom = newLoc;
             ConnectedRooms = NewConnectedRooms;
         }
+
+        private void closeMap_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
