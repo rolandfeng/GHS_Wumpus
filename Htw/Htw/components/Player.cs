@@ -66,7 +66,9 @@ namespace wumpus.components
         public void updateStatus() //should we do it in real time or at the end. If at end, just make this method return score
         {
             turn++;
-            coinCount++;
+            if (turn <= 100) {
+                coinCount++;
+            }
         }
     }
 }
