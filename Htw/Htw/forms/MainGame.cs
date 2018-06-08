@@ -525,6 +525,7 @@ namespace wumpus.forms
             buySecretButton.Visible = false;
             ShootArrowButton.Visible = false;
             planetLabel.Visible = false;
+            displayHelp.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
             viewHighscores.Visible = true;
