@@ -8,7 +8,7 @@ using wumpus.forms;
 
 namespace wumpus.components
 {
-    class ScoreManager
+    public class ScoreManager
     {
         private List<HighScore> highScoresList;
         private const int MAX_NUMBER_OF_HIGH_SCORES = 10;

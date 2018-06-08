@@ -21,7 +21,7 @@ namespace wumpus.components {
 
         public event EventHandler GameClosing;
 
-        public GameControl(string caveName, Help help) {
+        public GameControl(string caveName, Help help, ScoreManager highscores) {
             cave = new Cave("../../Resource/" + caveName);
             map = new Map();
             sound = new Sound();
@@ -306,7 +306,7 @@ namespace wumpus.components {
 
         public void startGame() {
             graphics.startGame();
-            displayHelp();
+            //displayHelp();
             graphics.update(1);
             hazardWarnings(getHazardArray(1));
             sound.playSound(Sound.Sounds.BackgroundMusic);
