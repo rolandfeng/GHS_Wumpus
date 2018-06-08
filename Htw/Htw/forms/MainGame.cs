@@ -612,6 +612,16 @@ namespace wumpus.forms
             NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
             NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
         }
+
+        private void Defeat_Click(object sender, EventArgs e)
+        {
+            endGame(false);
+        }
+
+        private void Victory_Click(object sender, EventArgs e)
+        {
+            endGame(true);
+        }
     }
 }
 

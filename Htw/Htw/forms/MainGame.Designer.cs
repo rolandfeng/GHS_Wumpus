@@ -61,6 +61,8 @@
             this.mapOpen = new System.Windows.Forms.Button();
             this.displayCheats = new System.Windows.Forms.Button();
             this.LasersCoins = new System.Windows.Forms.Button();
+            this.Victory = new System.Windows.Forms.Button();
+            this.Defeat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.laserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             this.SuspendLayout();
@@ -439,6 +441,28 @@
             this.LasersCoins.UseVisualStyleBackColor = true;
             this.LasersCoins.Click += new System.EventHandler(this.LasersCoins_Click);
             // 
+            // Victory
+            // 
+            this.Victory.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Victory.Location = new System.Drawing.Point(2366, 1169);
+            this.Victory.Name = "Victory";
+            this.Victory.Size = new System.Drawing.Size(150, 70);
+            this.Victory.TabIndex = 35;
+            this.Victory.Text = "Victory";
+            this.Victory.UseVisualStyleBackColor = true;
+            this.Victory.Click += new System.EventHandler(this.Victory_Click);
+            // 
+            // Defeat
+            // 
+            this.Defeat.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Defeat.Location = new System.Drawing.Point(2366, 1095);
+            this.Defeat.Name = "Defeat";
+            this.Defeat.Size = new System.Drawing.Size(150, 70);
+            this.Defeat.TabIndex = 36;
+            this.Defeat.Text = "Defeat";
+            this.Defeat.UseVisualStyleBackColor = true;
+            this.Defeat.Click += new System.EventHandler(this.Defeat_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -446,6 +470,8 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2528, 1594);
+            this.Controls.Add(this.Defeat);
+            this.Controls.Add(this.Victory);
             this.Controls.Add(this.LasersCoins);
             this.Controls.Add(this.displayCheats);
             this.Controls.Add(this.mapOpen);
@@ -518,5 +544,7 @@
         private System.Windows.Forms.Button mapOpen;
         private System.Windows.Forms.Button displayCheats;
         private System.Windows.Forms.Button LasersCoins;
+        private System.Windows.Forms.Button Victory;
+        private System.Windows.Forms.Button Defeat;
     }
 }
