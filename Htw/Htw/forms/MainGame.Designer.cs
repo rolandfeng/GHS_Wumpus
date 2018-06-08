@@ -74,9 +74,9 @@
             this.NumberOfCoinsLabel.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumberOfCoinsLabel.Location = new System.Drawing.Point(1113, 10);
             this.NumberOfCoinsLabel.Name = "NumberOfCoinsLabel";
-            this.NumberOfCoinsLabel.Size = new System.Drawing.Size(119, 14);
+            this.NumberOfCoinsLabel.Size = new System.Drawing.Size(114, 14);
             this.NumberOfCoinsLabel.TabIndex = 6;
-            this.NumberOfCoinsLabel.Text = "Number of Coins";
+            this.NumberOfCoinsLabel.Text = "Energy Charges";
             // 
             // NumberOfArrowsLabel
             // 
@@ -164,7 +164,7 @@
             // 
             // PurchaseArrowsButton
             // 
-            this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PurchaseArrowsButton.Location = new System.Drawing.Point(1094, 60);
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(162, 23);
@@ -175,7 +175,7 @@
             // 
             // ShootArrowButton
             // 
-            this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShootArrowButton.Location = new System.Drawing.Point(1094, 84);
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(162, 23);
@@ -195,7 +195,7 @@
             // 
             // buySecretButton
             // 
-            this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buySecretButton.Location = new System.Drawing.Point(1094, 110);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(162, 23);
@@ -298,7 +298,7 @@
             // 
             // displayHelp
             // 
-            this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayHelp.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayHelp.Location = new System.Drawing.Point(1094, 137);
             this.displayHelp.Margin = new System.Windows.Forms.Padding(1);
             this.displayHelp.Name = "displayHelp";
@@ -397,7 +397,7 @@
             // 
             // mapOpen
             // 
-            this.mapOpen.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mapOpen.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mapOpen.Location = new System.Drawing.Point(1094, 164);
             this.mapOpen.Name = "mapOpen";
             this.mapOpen.Size = new System.Drawing.Size(162, 23);
@@ -432,7 +432,7 @@
             // 
             // Victory
             // 
-            this.Victory.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Victory.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Victory.Location = new System.Drawing.Point(1183, 608);
             this.Victory.Margin = new System.Windows.Forms.Padding(2);
             this.Victory.Name = "Victory";
@@ -444,7 +444,7 @@
             // 
             // Defeat
             // 
-            this.Defeat.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Defeat.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Defeat.Location = new System.Drawing.Point(1183, 569);
             this.Defeat.Margin = new System.Windows.Forms.Padding(2);
             this.Defeat.Name = "Defeat";
@@ -456,7 +456,7 @@
             // 
             // HazardsLoc
             // 
-            this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HazardsLoc.Location = new System.Drawing.Point(1183, 530);
             this.HazardsLoc.Margin = new System.Windows.Forms.Padding(2);
             this.HazardsLoc.Name = "HazardsLoc";

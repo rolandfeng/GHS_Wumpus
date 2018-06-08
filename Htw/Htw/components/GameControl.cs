@@ -140,7 +140,7 @@ namespace wumpus.components {
                 }
                 if (player.getArrowCount() == 0)
                 {
-                    graphics.Show("You ran out of arrows!");
+                    graphics.Show("You ran out of lasers!");
                     sound.playSound(Sound.Sounds.PlayerDie);
                     graphics.endGame(false);
                 }
@@ -170,7 +170,7 @@ namespace wumpus.components {
         public void openTrivia(int asked, int needed, int type) {
             if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
-                graphics.Show("Not enough coins for trivia!");
+                graphics.Show("Not enough charges for trivia!");
                 sound.playSound(Sound.Sounds.BackgroundMusic);
                 if (hazardInstance) {
                     graphics.endGame(false);
