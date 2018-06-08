@@ -243,7 +243,7 @@
             this.playAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.playAgain.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playAgain.ForeColor = System.Drawing.Color.White;
-            this.playAgain.Location = new System.Drawing.Point(211, 241);
+            this.playAgain.Location = new System.Drawing.Point(259, 241);
             this.playAgain.Name = "playAgain";
             this.playAgain.Size = new System.Drawing.Size(250, 75);
             this.playAgain.TabIndex = 22;
@@ -273,7 +273,7 @@
             this.viewHighscores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.viewHighscores.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewHighscores.ForeColor = System.Drawing.Color.White;
-            this.viewHighscores.Location = new System.Drawing.Point(501, 241);
+            this.viewHighscores.Location = new System.Drawing.Point(527, 241);
             this.viewHighscores.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.viewHighscores.Name = "viewHighscores";
             this.viewHighscores.Size = new System.Drawing.Size(250, 75);
