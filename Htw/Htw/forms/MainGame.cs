@@ -115,7 +115,7 @@ namespace wumpus.forms
             laserPicture.Visible = false;
 
             // update coins
-            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+            NumberOfCoinsLabel.Text = "Energy Charges: " + player.getCoinCount();
 
             //update arrows
             NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();   
@@ -123,7 +123,7 @@ namespace wumpus.forms
 
         // update coins
         public void updateCoins() {
-            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+            NumberOfCoinsLabel.Text = "Energy Charges: " + player.getCoinCount();
         }
 
         // update arrows
@@ -616,7 +616,7 @@ namespace wumpus.forms
             player.changeArrowCount(2018);
             player.changeCoinCount(2018);
             NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
-            NumberOfCoinsLabel.Text = "Number of Coins: " + player.getCoinCount();
+            NumberOfCoinsLabel.Text = "Energy Charges: " + player.getCoinCount();
         }
 
         private void Defeat_Click(object sender, EventArgs e)
@@ -631,7 +631,9 @@ namespace wumpus.forms
 
         private void HazardsLoc_Click(object sender, EventArgs e)
         {
-            string locations = "Wumpus: " + map.getWumpusLocation() + " UFOs: " + map.getBatLocations().ToString() + " BlackHoles: " + map.getPitLocations().ToString();
+            int[] UFOs = map.getBatLocations();
+            int[] Holes = map.getPitLocations();
+            string locations = "Wumpus: " + map.getWumpusLocation() + " UFOs: " + UFOs[0] + ", " + UFOs[1] + " BlackHoles: " + Holes[0] + ", " + Holes[1];
             gameControl.display(locations);
         }
 
