@@ -80,6 +80,9 @@ namespace wumpus.forms
             Defeat.Visible = false;
             HazardsLoc.Visible = false;
             UFOButton.Visible = false;
+            UFOTele.Visible = false;
+            WumpusButton.Visible = false;
+            PlayerReturn.Visible = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -543,7 +546,7 @@ namespace wumpus.forms
             planetLabel.Visible = false;
             displayHelp.Visible = false;
             mapOpen.Visible = false;
-            UFOButton.Visible = false;
+            //UFOButton.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
             viewHighscores.Visible = true;
@@ -617,6 +620,9 @@ namespace wumpus.forms
             Defeat.Visible = true;
             HazardsLoc.Visible = true;
             UFOButton.Visible = true;
+            UFOTele.Visible = true;
+            WumpusButton.Visible = true;
+            PlayerReturn.Visible = true;
             displayCheats.Visible = false;
         }
 
@@ -648,11 +654,33 @@ namespace wumpus.forms
 
         private void UFOButton_Click(object sender, EventArgs e)
         {
-            int[] UFOs = map.getBatLocations();
+            /*int[] UFOs = map.getBatLocations();
             int UFORoom = UFOs[0];
             map.changePlayerLocation(UFORoom);
-            map.batCheck();
-            gameControl.batInstance();
+            if (map.batCheck())
+            {
+                gameControl.batInstance();
+            }*/
+            gameControl.playPit();
+            gameControl.pitInstance();
+        }
+
+        private void UFOTele_Click(object sender, EventArgs e)
+        {
+            gameControl.playUFO();
+            map.changeBatLocation(7);
+        }
+
+        private void WumpusButton_Click(object sender, EventArgs e)
+        {
+            gameControl.playWumpus();
+            map.changeWumpusLocation(25);
+        }
+
+        private void PlayerReturn_Click(object sender, EventArgs e)
+        {
+            map.changePlayerLocation(1);
+            gameControl.drawRoom1();       
         }
     }
 }

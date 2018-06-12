@@ -65,6 +65,9 @@
             this.northEastButton = new RoundButton();
             this.northButton = new RoundButton();
             this.UFOButton = new System.Windows.Forms.Button();
+            this.UFOTele = new System.Windows.Forms.Button();
+            this.WumpusButton = new System.Windows.Forms.Button();
+            this.PlayerReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.laserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaceshipPicture)).BeginInit();
             this.SuspendLayout();
@@ -173,7 +176,7 @@
             // 
             this.PurchaseArrowsButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PurchaseArrowsButton.Location = new System.Drawing.Point(2168, 104);
-            this.PurchaseArrowsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PurchaseArrowsButton.Margin = new System.Windows.Forms.Padding(4);
             this.PurchaseArrowsButton.Name = "PurchaseArrowsButton";
             this.PurchaseArrowsButton.Size = new System.Drawing.Size(400, 96);
             this.PurchaseArrowsButton.TabIndex = 15;
@@ -185,7 +188,7 @@
             // 
             this.ShootArrowButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShootArrowButton.Location = new System.Drawing.Point(2168, 221);
-            this.ShootArrowButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShootArrowButton.Margin = new System.Windows.Forms.Padding(4);
             this.ShootArrowButton.Name = "ShootArrowButton";
             this.ShootArrowButton.Size = new System.Drawing.Size(400, 96);
             this.ShootArrowButton.TabIndex = 16;
@@ -206,7 +209,7 @@
             // 
             this.buySecretButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buySecretButton.Location = new System.Drawing.Point(1726, 104);
-            this.buySecretButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buySecretButton.Margin = new System.Windows.Forms.Padding(4);
             this.buySecretButton.Name = "buySecretButton";
             this.buySecretButton.Size = new System.Drawing.Size(400, 96);
             this.buySecretButton.TabIndex = 17;
@@ -225,7 +228,7 @@
             this.laserPicture.ErrorImage = ((System.Drawing.Image)(resources.GetObject("laserPicture.ErrorImage")));
             this.laserPicture.Image = ((System.Drawing.Image)(resources.GetObject("laserPicture.Image")));
             this.laserPicture.Location = new System.Drawing.Point(1348, 633);
-            this.laserPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.laserPicture.Margin = new System.Windows.Forms.Padding(4);
             this.laserPicture.Name = "laserPicture";
             this.laserPicture.Size = new System.Drawing.Size(102, 87);
             this.laserPicture.TabIndex = 20;
@@ -236,7 +239,7 @@
             this.spaceshipPicture.BackColor = System.Drawing.Color.Transparent;
             this.spaceshipPicture.Image = ((System.Drawing.Image)(resources.GetObject("spaceshipPicture.Image")));
             this.spaceshipPicture.Location = new System.Drawing.Point(1096, 562);
-            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spaceshipPicture.Margin = new System.Windows.Forms.Padding(4);
             this.spaceshipPicture.Name = "spaceshipPicture";
             this.spaceshipPicture.Size = new System.Drawing.Size(244, 194);
             this.spaceshipPicture.TabIndex = 21;
@@ -250,7 +253,7 @@
             this.playAgain.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playAgain.ForeColor = System.Drawing.Color.White;
             this.playAgain.Location = new System.Drawing.Point(642, 463);
-            this.playAgain.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.playAgain.Margin = new System.Windows.Forms.Padding(6);
             this.playAgain.Name = "playAgain";
             this.playAgain.Size = new System.Drawing.Size(500, 144);
             this.playAgain.TabIndex = 22;
@@ -266,7 +269,7 @@
             this.quitButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quitButton.ForeColor = System.Drawing.Color.White;
             this.quitButton.Location = new System.Drawing.Point(1696, 463);
-            this.quitButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(6);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(500, 144);
             this.quitButton.TabIndex = 23;
@@ -282,7 +285,7 @@
             this.viewHighscores.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewHighscores.ForeColor = System.Drawing.Color.White;
             this.viewHighscores.Location = new System.Drawing.Point(1170, 463);
-            this.viewHighscores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.viewHighscores.Margin = new System.Windows.Forms.Padding(2);
             this.viewHighscores.Name = "viewHighscores";
             this.viewHighscores.Size = new System.Drawing.Size(500, 144);
             this.viewHighscores.TabIndex = 24;
@@ -335,7 +338,7 @@
             // 
             this.mapOpen.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mapOpen.Location = new System.Drawing.Point(18, 1429);
-            this.mapOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mapOpen.Margin = new System.Windows.Forms.Padding(4);
             this.mapOpen.Name = "mapOpen";
             this.mapOpen.Size = new System.Drawing.Size(400, 98);
             this.mapOpen.TabIndex = 32;
@@ -347,7 +350,7 @@
             // 
             this.displayCheats.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayCheats.Location = new System.Drawing.Point(2098, 504);
-            this.displayCheats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayCheats.Margin = new System.Windows.Forms.Padding(2);
             this.displayCheats.Name = "displayCheats";
             this.displayCheats.Size = new System.Drawing.Size(500, 115);
             this.displayCheats.TabIndex = 33;
@@ -359,7 +362,7 @@
             // 
             this.LasersCoins.Font = new System.Drawing.Font("Showcard Gothic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LasersCoins.Location = new System.Drawing.Point(2162, 623);
-            this.LasersCoins.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LasersCoins.Margin = new System.Windows.Forms.Padding(2);
             this.LasersCoins.Name = "LasersCoins";
             this.LasersCoins.Size = new System.Drawing.Size(400, 96);
             this.LasersCoins.TabIndex = 34;
@@ -371,7 +374,7 @@
             // 
             this.Victory.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Victory.Location = new System.Drawing.Point(2162, 723);
-            this.Victory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Victory.Margin = new System.Windows.Forms.Padding(2);
             this.Victory.Name = "Victory";
             this.Victory.Size = new System.Drawing.Size(400, 96);
             this.Victory.TabIndex = 35;
@@ -383,7 +386,7 @@
             // 
             this.Defeat.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Defeat.Location = new System.Drawing.Point(2162, 823);
-            this.Defeat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Defeat.Margin = new System.Windows.Forms.Padding(2);
             this.Defeat.Name = "Defeat";
             this.Defeat.Size = new System.Drawing.Size(400, 96);
             this.Defeat.TabIndex = 36;
@@ -395,7 +398,7 @@
             // 
             this.HazardsLoc.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HazardsLoc.Location = new System.Drawing.Point(2162, 923);
-            this.HazardsLoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HazardsLoc.Margin = new System.Windows.Forms.Padding(2);
             this.HazardsLoc.Name = "HazardsLoc";
             this.HazardsLoc.Size = new System.Drawing.Size(400, 96);
             this.HazardsLoc.TabIndex = 37;
@@ -422,7 +425,7 @@
             this.southButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.southButton.ForeColor = System.Drawing.Color.Transparent;
             this.southButton.Location = new System.Drawing.Point(712, 381);
-            this.southButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.southButton.Margin = new System.Windows.Forms.Padding(4);
             this.southButton.Name = "southButton";
             this.southButton.Size = new System.Drawing.Size(612, 617);
             this.southButton.TabIndex = 19;
@@ -435,7 +438,7 @@
             this.northWestButton.BackgroundImage = global::wumpus.Properties.Resources.planet1;
             this.northWestButton.ForeColor = System.Drawing.Color.Transparent;
             this.northWestButton.Location = new System.Drawing.Point(194, 83);
-            this.northWestButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.northWestButton.Margin = new System.Windows.Forms.Padding(4);
             this.northWestButton.Name = "northWestButton";
             this.northWestButton.Size = new System.Drawing.Size(628, 587);
             this.northWestButton.TabIndex = 19;
@@ -488,9 +491,42 @@
             this.UFOButton.Name = "UFOButton";
             this.UFOButton.Size = new System.Drawing.Size(400, 96);
             this.UFOButton.TabIndex = 38;
-            this.UFOButton.Text = "UFO Tele";
+            this.UFOButton.Text = "Black Hole";
             this.UFOButton.UseVisualStyleBackColor = true;
             this.UFOButton.Click += new System.EventHandler(this.UFOButton_Click);
+            // 
+            // UFOTele
+            // 
+            this.UFOTele.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UFOTele.Location = new System.Drawing.Point(2162, 1123);
+            this.UFOTele.Name = "UFOTele";
+            this.UFOTele.Size = new System.Drawing.Size(400, 96);
+            this.UFOTele.TabIndex = 39;
+            this.UFOTele.Text = "UFO Tele";
+            this.UFOTele.UseVisualStyleBackColor = true;
+            this.UFOTele.Click += new System.EventHandler(this.UFOTele_Click);
+            // 
+            // WumpusButton
+            // 
+            this.WumpusButton.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WumpusButton.Location = new System.Drawing.Point(2162, 1223);
+            this.WumpusButton.Name = "WumpusButton";
+            this.WumpusButton.Size = new System.Drawing.Size(400, 96);
+            this.WumpusButton.TabIndex = 40;
+            this.WumpusButton.Text = "Wumpus Tele";
+            this.WumpusButton.UseVisualStyleBackColor = true;
+            this.WumpusButton.Click += new System.EventHandler(this.WumpusButton_Click);
+            // 
+            // PlayerReturn
+            // 
+            this.PlayerReturn.Font = new System.Drawing.Font("Showcard Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerReturn.Location = new System.Drawing.Point(2162, 1323);
+            this.PlayerReturn.Name = "PlayerReturn";
+            this.PlayerReturn.Size = new System.Drawing.Size(400, 96);
+            this.PlayerReturn.TabIndex = 41;
+            this.PlayerReturn.Text = "Return to 1";
+            this.PlayerReturn.UseVisualStyleBackColor = true;
+            this.PlayerReturn.Click += new System.EventHandler(this.PlayerReturn_Click);
             // 
             // MainGame
             // 
@@ -499,6 +535,9 @@
             this.BackgroundImage = global::wumpus.Properties.Resources.startBackgroundCrop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2740, 1656);
+            this.Controls.Add(this.PlayerReturn);
+            this.Controls.Add(this.WumpusButton);
+            this.Controls.Add(this.UFOTele);
             this.Controls.Add(this.UFOButton);
             this.Controls.Add(this.HazardsLoc);
             this.Controls.Add(this.Defeat);
@@ -578,5 +617,8 @@
         private System.Windows.Forms.Button Defeat;
         private System.Windows.Forms.Button HazardsLoc;
         private System.Windows.Forms.Button UFOButton;
+        private System.Windows.Forms.Button UFOTele;
+        private System.Windows.Forms.Button WumpusButton;
+        private System.Windows.Forms.Button PlayerReturn;
     }
 }

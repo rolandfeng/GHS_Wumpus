@@ -83,6 +83,13 @@ namespace wumpus.components
             occupiedHazard[playerLocation - 1] = true;
         }
 
+        public void changeBatLocation(int newLoc) {
+            if (batLocations[0] != newLoc || batLocations[1] != newLoc)
+            {
+                batLocations[0] = newLoc;
+            }
+        }
+
         //changes if a room has a hazard
         private void updateHazardCheck(int room, Boolean change) 
         {

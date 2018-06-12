@@ -85,6 +85,22 @@ namespace wumpus.components {
                 mapForm.Show();
         }
 
+        public void playPit() {
+            sound.playSound(Sound.Sounds.ScaryScream);
+        }
+
+        public void playUFO() {
+            sound.playSound(Sound.Sounds.BatCall);
+        }
+
+        public void playWumpus() {
+            sound.playSound(Sound.Sounds.MonsterGrowl);
+        }
+
+        public void drawRoom1() {
+            graphics.update(1);
+        }
+
         public void batInstance() {
             graphics.update(map.getPlayerLocation());
             hazardWarnings(getHazardArray(map.getPlayerLocation()));
