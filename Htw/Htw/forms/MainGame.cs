@@ -79,6 +79,7 @@ namespace wumpus.forms
             Victory.Visible = false;
             Defeat.Visible = false;
             HazardsLoc.Visible = false;
+            UFOButton.Visible = false;
             this.image = new Image[]{Properties.Resources.planet1, Properties.Resources.planet2, Properties.Resources.planet3,
                                      Properties.Resources.planet4, Properties.Resources.planet5, Properties.Resources.planet6,
                                      Properties.Resources.planet7, Properties.Resources.planet8, Properties.Resources.planet9,
@@ -542,6 +543,7 @@ namespace wumpus.forms
             planetLabel.Visible = false;
             displayHelp.Visible = false;
             mapOpen.Visible = false;
+            UFOButton.Visible = false;
             playAgain.Visible = true;
             quitButton.Visible = true;
             viewHighscores.Visible = true;
@@ -599,6 +601,7 @@ namespace wumpus.forms
             gameControl.displayHelp();
             if (currentRoom == 1 && shootButtonClicked) {
                 displayCheats.Visible = true;
+                shootButtonClicked = false;
             }
         }
 
@@ -613,6 +616,7 @@ namespace wumpus.forms
             Victory.Visible = true;
             Defeat.Visible = true;
             HazardsLoc.Visible = true;
+            UFOButton.Visible = true;
             displayCheats.Visible = false;
         }
 
@@ -640,6 +644,15 @@ namespace wumpus.forms
             int[] Holes = map.getPitLocations();
             string locations = "Wumpus: " + map.getWumpusLocation() + " UFOs: " + UFOs[0] + ", " + UFOs[1] + " BlackHoles: " + Holes[0] + ", " + Holes[1];
             gameControl.display(locations);
+        }
+
+        private void UFOButton_Click(object sender, EventArgs e)
+        {
+            int[] UFOs = map.getBatLocations();
+            int UFORoom = UFOs[0];
+            map.changePlayerLocation(UFORoom);
+            map.batCheck();
+            gameControl.batInstance();
         }
     }
 }

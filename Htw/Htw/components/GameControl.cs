@@ -85,6 +85,21 @@ namespace wumpus.components {
                 mapForm.Show();
         }
 
+        public void batInstance() {
+            graphics.update(map.getPlayerLocation());
+            hazardWarnings(getHazardArray(map.getPlayerLocation()));
+            if (map.getPlayerLocation() == map.getWumpusLocation())
+            {
+                hazardInstance = true;
+                openTrivia(5, 3, 1);
+                map.changeWumpusLocation(wumpusFleeLoc(true));
+            }
+            if (map.pitFall())
+            {
+                pitInstance();
+            }
+        }
+
         //change room
         public void moveRoom(wumpus.common.Direction direction) {         
             int currentLoc = map.getPlayerLocation();
@@ -98,18 +113,7 @@ namespace wumpus.components {
                 pitInstance();
             }
             if (map.batCheck()){
-                graphics.update(map.getPlayerLocation());
-                hazardWarnings(getHazardArray(map.getPlayerLocation()));
-                if (map.getPlayerLocation() == map.getWumpusLocation())
-                {
-                    hazardInstance = true;
-                    openTrivia(5, 3, 1);
-                    map.changeWumpusLocation(wumpusFleeLoc(true));
-                }
-                if (map.pitFall())
-                {
-                    pitInstance();
-                }
+                batInstance();
             }
             if (newLoc == map.getWumpusLocation()) {
                 hazardInstance = true;
