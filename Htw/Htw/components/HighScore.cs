@@ -34,6 +34,7 @@ namespace wumpus.components
             return date;
         }
 
+        //Comparable interface to sort list
         public int CompareTo(HighScore that)
         {
             if (this.highScore > that.highScore)

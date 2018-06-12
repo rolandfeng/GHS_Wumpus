@@ -169,7 +169,7 @@ namespace wumpus.forms
         {
             if (shootButtonClicked)
             {
-                gameControl.shootArrows(this.direction);
+                gameControl.shootArrows(direction);
                 NumberOfArrowsLabel.Text = "Number of Lasers: " + player.getArrowCount();
                 shootButtonClicked = false;
                 this.arrowAnimationFinished = false;

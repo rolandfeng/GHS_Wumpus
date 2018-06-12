@@ -27,6 +27,7 @@ namespace wumpus.components {
 
         public event EventHandler GameClosing;
 
+        //constructor
         public GameControl(string caveName, Help help, ScoreManager highscores) {
             cave = new Cave("../../Resource/" + caveName);
             map = new Map();
@@ -41,41 +42,50 @@ namespace wumpus.components {
             hazardInstance = false;
         }
        
+        //exit game
         public void closeGame() {
             GameClosing.Invoke(this, null);
         }
 
+        //if same room as pit
         public void pitInstance() {
             hazardInstance = true;
             openTrivia(3, 2, 2);
         }
 
+        //if user purchases secret
         public void buySecret() {
             openTrivia(3, 2, 4);
         }
 
+        //if user buys arrows
         public void buyArrows() {
             openTrivia(3, 2, 3);
         }
 
+        //open highscores
         public void displayHighscores() {
             highscores.LoadHighScores();
             highscores.DisplayHighScores();
         }
 
+        //open help form
         public void displayHelp() {
             help.Show();
         }
 
+        //display a message
         public void display(string message) {
             graphics.Show(message);
         }
 
+        //open map
         public void displayMap() {
             mapForm.UpdatePlayerLoc(map.getPlayerLocation());
                 mapForm.Show();
         }
 
+        //change room
         public void moveRoom(wumpus.common.Direction direction) {         
             int currentLoc = map.getPlayerLocation();
             int newLoc = cave.getConnectedRoom(currentLoc, direction);
@@ -95,6 +105,10 @@ namespace wumpus.components {
                     hazardInstance = true;
                     openTrivia(5, 3, 1);
                     map.changeWumpusLocation(wumpusFleeLoc(true));
+                }
+                if (map.pitFall())
+                {
+                    pitInstance();
                 }
             }
             if (newLoc == map.getWumpusLocation()) {
@@ -159,7 +173,9 @@ namespace wumpus.components {
             }
         }
 
+        //if user shoots an arrow
         public void shootArrows(wumpus.common.Direction direction) {
+            arrowDirection = direction;
             worker = new BackgroundWorker();
             worker.DoWork += new DoWorkEventHandler(waitArrow_DoWork);
             worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler
@@ -167,6 +183,7 @@ namespace wumpus.components {
             worker.RunWorkerAsync();
         }
 
+        //display trivia form
         public void openTrivia(int asked, int needed, int type) {
             if (player.getCoinCount() < 2) {
                 sound.playSound(Sound.Sounds.NoError);
@@ -185,6 +202,7 @@ namespace wumpus.components {
             }
         }
 
+        //generate a random hint
         public string produceSecret() {
             Random r = new Random();
             int whichHint = r.Next(0, 7); //(0, n) = range from 0 to n-1
@@ -213,6 +231,7 @@ namespace wumpus.components {
             }
         }
 
+        //returns boolean array of hazards nearby/in room
         private bool[] getHazardArray(int newLoc) { //create array of booleans for each obstacle, if near or same room
             bool[] hazards = new bool[6];
             int wumpusLoc = map.getWumpusLocation();
@@ -237,6 +256,7 @@ namespace wumpus.components {
             return hazards;
         }
 
+        //traverse array and then play corresponding warnings
         private void hazardWarnings(bool[] hazards) {
             if (hazards[0]) {//same room as wumpus 
                 sound.playSound(Sound.Sounds.MonsterRoar);
@@ -264,6 +284,7 @@ namespace wumpus.components {
             }
         }
 
+        //determines new random location of wumpus
         private int wumpusFleeLoc(bool multiple) { 
             Random r = new Random();
             int prevLoc = 0;
@@ -307,6 +328,8 @@ namespace wumpus.components {
             return false;
         }   */
 
+
+        //trivia calls when it is done with the form
         public void doneWithTrivia(bool succeed, int type) {
             if (type == 1 || type == 2) {//wumpus or pit
                 if (!succeed) {
@@ -344,6 +367,7 @@ namespace wumpus.components {
             }
         }
 
+        //initialize game
         public void startGame() {
             graphics.startGame();
             //displayHelp();

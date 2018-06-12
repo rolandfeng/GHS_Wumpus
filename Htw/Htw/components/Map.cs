@@ -15,6 +15,7 @@ namespace wumpus.components
         private bool[] occupiedHazard; //see if a room has a hazard in it or not
         private Random num;
 
+        //creates the initial locations of all the hazards
         public Map()
         {
             num = new Random();
@@ -50,26 +51,31 @@ namespace wumpus.components
             occupiedHazard[batLocations[1] - 1] = true;
         }
 
+        //returns Black hole locations
         public int[] getPitLocations()
         {
             return pitLocations;
         }
 
+        //returns UFO locations
         public int[] getBatLocations()
         {
             return batLocations;
         }
 
+        //returns Wumpus location
         public int getWumpusLocation()
         {
             return wumpusLocation;
         }
 
+        //return player's current location
         public int getPlayerLocation()
         {
             return playerLocation;
         }
 
+        //modify player's current location
         public void changePlayerLocation(int newLoc)
         {
             occupiedHazard[playerLocation - 1] = false;
@@ -77,11 +83,14 @@ namespace wumpus.components
             occupiedHazard[playerLocation - 1] = true;
         }
 
-        private void updateHazardCheck(int room, Boolean change) //idk if this is better than what i have been doing
+        //changes if a room has a hazard
+        private void updateHazardCheck(int room, Boolean change) 
         {
             occupiedHazard[room - 1] = change;
         }
 
+
+        //checks if there is a black hole in the room
         public bool pitFall()
         {
             if (playerLocation == pitLocations[0] || playerLocation == pitLocations[1])
@@ -91,6 +100,7 @@ namespace wumpus.components
             return false;
         }
 
+        //checks to see if there is a UFO in the room
         public bool batCheck() //only changes location of player and bat
         {
             if (playerLocation == batLocations[0])
@@ -126,7 +136,8 @@ namespace wumpus.components
                 return false;
             }
         }
-                    
+        
+        //change location of Wumpus
         public void changeWumpusLocation(int room)
         {
             occupiedHazard[wumpusLocation - 1] = false;
