@@ -27,22 +27,17 @@ namespace wumpus.components
             //load the file
             player = new System.Media.SoundPlayer(resourceName);
             player.Play();
-          
-           
-            //rp.Open(new WaveReader(resourceName));
-         
-            //play the sound
         }
 
         public enum Sounds {ArrowImpact, ArrowMiss, BatCall, BatsInCave, MonsterDie, MonsterGrowl, MonsterRoar, MonsterWalk,
         NoError, PlayerDie, PlayerWalk, ScaryScream, ScarySound, TriviaRight, TriviaWrong, MainMenu, BackgroundMusic}
 
+        //play a selected sound
         public void playSound(Sounds sound)
         {
             switch (sound)
             {
                 case Sounds.ArrowImpact:
-                    //playMp3();
                     playSoundFromFile(Properties.Resources.LaserShoot);
                     break;
                 case Sounds.ArrowMiss:
